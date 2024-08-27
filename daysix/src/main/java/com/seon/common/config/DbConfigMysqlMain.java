@@ -36,7 +36,7 @@ public class DbConfigMysqlMain {
     @Primary
     @Bean(name=SqlSessionFactoryName)
     public SqlSessionFactory sqlSessionFactory(@Qualifier(datasourceName) DataSource datasource
-            , ApplicationContext applicationContext) throws Exception{
+    		, ApplicationContext applicationContext) throws Exception{
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(datasource);
         sqlSessionFactoryBean.setMapperLocations(
