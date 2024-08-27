@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.seon.infra.code.CodeDao">
+
+	<resultMap type="com.seon.infra.code.CodeDto" id="resultMapObj"></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+	</select>
+
+</mapper>

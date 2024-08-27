@@ -1,12 +1,12 @@
 package com.seon.infra.code;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CodeDao {
+public interface CodeDao {
 	
-	public void selectList() {
-		
-	}
+	public List<CodeDto> selectList();
 
 }

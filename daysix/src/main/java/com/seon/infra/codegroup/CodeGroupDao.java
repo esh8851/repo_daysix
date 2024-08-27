@@ -1,12 +1,12 @@
 package com.seon.infra.codegroup;
 
+import java.util.List;
+
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CodeGroupDao {
+public interface CodeGroupDao {
 	
-	public void selectList() {
-		
-	}
+	public List<CodeGroupDto> selectList();
 
 }
