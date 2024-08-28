@@ -12,17 +12,14 @@ public class CodeController {
 	@Autowired
 	CodeService codeService;
 	
-	@RequestMapping(value="/v1/infra/code/codeXdmList")
-	public String codeXdmList() {
-		List<CodeDto> codeGroups = codeService.selectList();
-		
-		System.out.println("codeGroups.size() : " + codeGroups.size());
-		
-		for(CodeDto codeGroup: codeGroups) {
-			System.out.println(codeGroup.getSeq() + " | " + codeGroup.getcName() + " | " + codeGroup.getcUseNy() + " | " + codeGroup.getcOrder() + " | " + codeGroup.getDelNy() + " | " + codeGroup.getcDateTime() + " | " + codeGroup.getcDateTimeSvr() + " | " + codeGroup.getCodeGroup_seq());
+	@RequestMapping(value="/v1/infra/code/codeXdmSignUp")
+	public String codeXdmSignUp() {
+		List<CodeDto> codeGroup = codeService.selectService();
+		System.out.println(codeGroup.size());
+		for(CodeDto groups: codeGroup) {
+			System.out.println(groups.getSeq() + "|" + groups.getcName() + "|" + groups.getcUseNy() + "|" + groups.getcOrder() + "|" + groups.getDelNy() + "|" + groups.getcDateTime() + "|" + groups.getcDateTimeSvr() + "|" + groups.getCodeGroup_seq());
 		}
-		
-		return "xdm/v1/infra/code/codeXdmList";
+		return "/xdm/v1/infra/code/codeXdmSignUp";
 	}
 
 }

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.seon.infra.restaurant.RestaurantDao">
+<!-- namespace :  mapper와 연결될 dao -->
+<!-- xml에서 주석 단축키 : Ctrl + Shift + C -->
+
+	<resultMap type="com.seon.infra.restaurant.RestaurantDto" id="resultMapObj"></resultMap>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		select
+			a.seq
+			,a.restaurantType
+		    ,a.restaurantName
+		    ,a.restaurantOpenTime
+		    ,a.restaurantCloseTime
+		    ,a.restaurantPhone
+		    ,a.restaurantHomePage
+		    ,a.restaurantParkingNy
+		    ,a.restaurantRegNy
+		    ,a.restaurantCorkageNy
+		    ,a.restaurantIntroText
+		    ,a.restaurantRegDateTime
+		    ,a.restaurantModDateTime
+		from restaurant a
+		order by
+			a.seq desc
+	</select>
+	  
+</mapper>

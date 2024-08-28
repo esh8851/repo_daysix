@@ -1,12 +1,12 @@
-package com.seon.infra.code;
+package com.seon.infra.hoewon;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CodeDao {
+public interface hoewonDao {
 	
-	List<CodeDto> selectList();
+	List<hoewonDto> selectList();
 
 }

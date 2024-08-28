@@ -8,12 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class CodeGroupService {
 	
-//	CodeGroupDao codeGroupDao = new CodeGroupDao();
 	@Autowired
 	CodeGroupDao codeGroupDao;
 	
-	public List<CodeGroupDto> selectService() {
-//		codeGroupDao.selectList();
+	public List<CodeGroupDto> selectService(){
 		List<CodeGroupDto> codeGroups = codeGroupDao.selectList();
 		return codeGroups;
 	}

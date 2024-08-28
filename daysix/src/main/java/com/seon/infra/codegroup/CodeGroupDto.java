@@ -62,5 +62,5 @@ public class CodeGroupDto {
 		this.cgDateTimeSvr = cgDateTimeSvr;
 	}
 	
-	
+
 }
