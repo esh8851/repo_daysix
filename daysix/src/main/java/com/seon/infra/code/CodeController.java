@@ -21,5 +21,5 @@ public class CodeController {
 		}
 		return "/xdm/v1/infra/code/codeXdmSignUp";
 	}
-
+	
 }
