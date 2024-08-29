@@ -12,9 +12,6 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-
-<!-- thymeleaf 사용 -->
-<!-- xmlns:th="http://www.thymeleaf.org" -->
 <html
   xmlns:th="http://www.thymeleaf.org"
   lang="en"
@@ -685,42 +682,34 @@
                             <tr class="text-nowrap text-center">
                               <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
                               <th>#</th>
-                              <th>관리자</th>
-                              <th>이름</th>
-                              <th>아이디</th>
-                              <th>비밀번호</th>
-                              <th>성별</th>
-                              <th>생일</th>
-                              <th>이메일</th>
-                              <th>핸드폰</th>
-                              <th>설명</th>
+                              <th>코드 이름</th>
+                              <th>사용</th>
+                              <th>순서</th>
+                              <th>삭제 여부</th>
                               <th>등록일</th>
                               <th>수정일</th>
+                              <th>코드그룹 번호</th>
                               <th></th>
                             </tr>
                           </thead>
                           <tbody>
-                          	<tr th:if="${#lists.isEmpty(list)}">
-                          		<td colspan="16">
-                          			<p class="fw-bold text-center mt-3">데이터 없음</p>
-                          		</td>
-                          	</tr>
+                            <tr class="text-center" th:if="${#lists.isEmpty(list)}">
+                              <td colspan="10">
+                              	<p class="fw-bold text-center mt-3">데이터 없음</p>
+                              </td>
+                            </tr>
                             <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
                               <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
                               <td scope="row" th:text="${list.seq}"></td>
-                              <td th:if="${list.adminNy eq 0}">N</td>
-                              <td th:unless="${list.adminNy eq 0}">Y</td>
-                              <td><span class="text-primary"><b th:text="${list.hoewonName}"></b></span></td>
-                              <td th:text="${list.hoewonId}"></td>
-                              <td th:text="${list.hoewonPw}"></td>
-                              <td th:if="${list.hoewonGender eq 0}">남</td>
-                              <td th:unless="${list.hoewonGender eq 0}">여</td>
-                              <td th:text="${#dates.format(list.hoewonBirth,'yyyyMMdd')}"></td>
-                              <td th:text="${list.hoewonEmail}"></td>
-                              <td th:text="${list.hoewonPhone}"></td>
-                              <td th:text="${list.hoewonDesc}"></td>
-                              <td th:text="${#dates.format(list.hoewonRegDateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
-                              <td th:text="${#dates.format(list.hoewonModDateTime, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                              <td><span class="text-primary"><b th:text="${list.cName}"></b></span></td>
+                              <td th:if="${list.cUseNy eq 0}">N</td>
+                              <td th:unless="${list.cUseNy eq 0}">Y</td>
+                              <td th:text="${list.cOrder}"></td>
+                              <td th:if="${list.delNy eq 0}">N</td>
+                              <td th:unless="${list.delNy eq 0}">Y</td>
+                              <td th:text="${#dates.format(list.cDateTime,'yyyy-MM-dd HH:mm:ss')}">2023-10-12 16:02:31</td>
+                              <td th:text="${#dates.format(list.cDateTimeSvr,'yyyy-MM-dd HH:mm:ss')}">2023-10-12 16:02:31</td>
+                              <td th:text="${list.codeGroup_seq}"></td>
                               <td><h3>&nbsp;</h3></td>
                             </tr>
                           </tbody>
