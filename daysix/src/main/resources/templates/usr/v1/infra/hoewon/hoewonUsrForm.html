@@ -599,46 +599,35 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/v1/infra/codegroup/codeGroupXdmInst">
+                      <form id="form" name="form" method="post" action="/v1/infra/hoewon/hoewonUsrInst">
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">코드그룹<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                <option value="">선택하세요</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                              <label for="exampleFormControlSelect1" class="form-label">관리자 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="exampleFormControlSelect1" name="adminNy" aria-label="Default select example">
+                                <option value="0">미사용</option>
+                                <option value="1">사용</option>
                               </select>
                             </div>
                           </div>
-                        </div>
-                        <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" placeholder="자동생성"
-                                readonly="">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 (ANOTHER)</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
-                              aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 이름</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">이름<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="hoewonName" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 이름 (영문)</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">아이디<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="hoewonId" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">비밀번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="hoewonPw" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -646,17 +635,24 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
-                                <option value="1" th:selected="${item?.cgUseNy == 1}">사용</option>
-                                <option value="0" th:selected="${item?.cgUseNy == 0}">미사용</option>
+                              <label for="exampleFormControlSelect1" class="form-label">성별<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="exampleFormControlSelect1" name="hoewonGender" aria-label="Default select example">
+                                <option value="0" th:selected="${item?.hoewonGender == 0}">남자</option>
+                                <option value="1"  th:selected="${item?.hoewonGender == 1}">여자</option>
                               </select>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgOrder" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">이메일<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="hoewonEmail" placeholder="@gmail.com"
+                                aria-describedby="defaultFormControlHelp">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">핸드폰<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="hoewonPhone" placeholder="000-0000-0000"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -665,7 +661,7 @@
                           <div class="col-6">
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cgDesc" rows="3"></textarea>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" name="hoewonDesc" rows="3"></textarea>
                             </div>
                           </div>
                         </div>

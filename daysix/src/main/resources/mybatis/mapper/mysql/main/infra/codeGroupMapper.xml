@@ -22,5 +22,26 @@
 		order by
 			a.seq desc
 	</select>
+	
+	<insert id="insert">
+		insert into codeGroup(
+			cgName
+		    ,cgUseNy
+		    ,cgOrder
+		    ,cgDesc
+		    ,delNy
+		    ,cgDateTime
+		    ,cgDateTimeSvr
+		)
+		value(
+			#{cgName}
+		    ,#{cgUseNy}
+		    ,#{cgOrder}
+		    ,#{cgDesc}
+		    ,0
+		    ,now()
+		    ,now()
+		)
+	</insert>
 	  
 </mapper>

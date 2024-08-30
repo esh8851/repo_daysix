@@ -5,8 +5,10 @@ import java.util.List;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface hoewonDao {
+public interface HoewonDao {
 	
-	List<hoewonDto> selectList();
+	List<HoewonDto> selectList();
+	
+	public int insert(HoewonDto hoewonDto);
 
 }

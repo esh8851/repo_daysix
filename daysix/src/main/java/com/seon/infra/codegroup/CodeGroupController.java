@@ -15,10 +15,11 @@ public class CodeGroupController {
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmList")
 	public String codeGroupXdmList(Model model) {
-		List<CodeGroupDto> codeGroups = codeGroupService.selectService();
+		
 		
 //		자바객체를 html으로 전달할 때는 Model객체 사용
 //		codeGroups 자바 객체를 "list" 라는 이름의 변수명으로 html에 전달
+//		List<CodeGroupDto> codeGroups = codeGroupService.selectService();
 //		model.addAttribute("list", codeGroups);
 		
 //		자바에서 더 코딩을 하지않고 값만 넘겨줄 때 codeGroupService.selectService() 사용
@@ -31,6 +32,18 @@ public class CodeGroupController {
 //		}
 		
 		return "/xdm/v1/infra/codegroup/codeGroupXdmList";
+	}
+	
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmForm")
+	public String codeGroupXdmForm() {
+		return "/xdm/v1/infra/codegroup/codeGroupXdmForm";
+	}
+	
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmInst")
+	public String codeGroupXdmInst(CodeGroupDto codeGroupDto) {
+		System.out.println("codeGroupDto.getCgName() : " + codeGroupDto.getCgName());
+		codeGroupService.insert(codeGroupDto);
+		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
 	}
 
 }

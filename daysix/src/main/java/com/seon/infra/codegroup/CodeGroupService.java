@@ -19,5 +19,9 @@ public class CodeGroupService {
 	public List<CodeGroupDto> selectService(){
 		return codeGroupDao.selectList();
 	}
+	
+	public int insert(CodeGroupDto codeGroupDto) {
+		return codeGroupDao.insert(codeGroupDto);
+	}
 
 }

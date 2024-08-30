@@ -2,7 +2,7 @@ package com.seon.infra.hoewon;
 
 import java.util.Date;
 
-public class hoewonDto {
+public class HoewonDto {
 
 	private String seq;
 	private Integer adminNy;
