@@ -604,7 +604,7 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlReadOnlyInput1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly>
+                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly="">
                             </div>
                           </div>
                           <div class="col-3">
@@ -655,14 +655,14 @@
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTime" th:value="${#dates.format(item.cgDateTime, 'yyyy-MM-dd HH:mm:ss')}"
-                                aria-describedby="defaultFormControlHelp" readonly>
+                                aria-describedby="defaultFormControlHelp" disabled>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">수정일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTimeSvr" th:value="${#dates.format(item.cgDateTime, 'yyyy-MM-dd HH:mm:ss')}"
-                                aria-describedby="defaultFormControlHelp" readonly>
+                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTimeSvr" th:value="${#dates.format(item.cgDateTimeSvr, 'yyyy-MM-dd HH:mm:ss')}"
+                                aria-describedby="defaultFormControlHelp" disabled>
                             </div>
                           </div>
                         </div>

@@ -713,7 +713,8 @@
                               <td th:if="${list.cgUseNy eq 0}">N</td>
                               <td th:unless="${list.cgUseNy eq 0}">Y</td>
                               <td th:text="${list.cgOrder}"></td>
-                              <td th:text="${list.delNy}"></td>
+                              <td th:if="${list.delNy eq 0}">N</td>
+                              <td th:unless="${list.delNy eq 0}">Y</td>
                               <td th:text="${#dates.format(list.cgDateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
                               <td th:text="${#dates.format(list.cgDateTimeSvr,'yyyy-MM-dd HH:mm:ss')}"></td>
                               <td>20</td>
