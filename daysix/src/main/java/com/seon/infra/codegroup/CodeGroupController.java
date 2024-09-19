@@ -45,5 +45,27 @@ public class CodeGroupController {
 		codeGroupService.insert(codeGroupDto);
 		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
 	}
+	
+//	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmMForm")
+//	public String codeGroupXdmMForm(CodeGroupDto codeGroupDto, Model model) {
+//		CodeGroupDto dto = codeGroupService.selectOne(codeGroupDto);
+//		model.addAttribute("item", dto);
+//		return "/xdm/v1/infra/codegroup/codeGroupXdmMForm";
+//	}
+	
+//	축약
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmMForm")
+	public String codeGroupXdmMForm(CodeGroupDto codeGroupDto, Model model) {
+		model.addAttribute("item", codeGroupService.selectOne(codeGroupDto));
+		System.out.println("selectOne 잘 넘어감");
+		return "/xdm/v1/infra/codegroup/codeGroupXdmMForm";
+	}
+	
+	@RequestMapping(value="/xdm/v1/infra/codegroup/codeGroupXdmUpdt")
+	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
+		codeGroupService.update(codeGroupDto);
+		System.out.println("update 실행했다~");
+		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
+	}
 
 }

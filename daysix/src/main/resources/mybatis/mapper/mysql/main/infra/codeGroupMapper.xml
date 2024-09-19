@@ -43,5 +43,33 @@
 		    ,now()
 		)
 	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = #{seq}
+	</select>
+	
+	<update id="update">
+		update codeGroup
+			set
+				cgName = #{cgName}
+			    ,cgUseNy = #{cgUseNy}
+			    ,cgOrder = #{cgOrder}
+			    ,cgDesc = #{cgDesc}
+			    ,delNy = #{delNy}
+			where 1 = 1
+				and seq = #{seq}
+	</update>
 	  
 </mapper>
