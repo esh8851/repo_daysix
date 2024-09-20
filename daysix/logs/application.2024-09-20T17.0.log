@@ -1,0 +1,831 @@
+2024-09-20T17:00:31.717 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:00:31.720 [Thread-15] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:00:32.204 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14828 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:00:32.207 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:00:32.553 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:00:32.554 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:00:32.555 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:00:32.555 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:00:32.573 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:00:32.574 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 364 ms 
+2024-09-20T17:00:32.848 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:00:32.860 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:00:32.864 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:00:32.873 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.71 seconds (process running for 6325.138) 
+2024-09-20T17:00:32.876 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T17:01:18.728 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:01:18.730 [Thread-19] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:01:19.179 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14828 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:01:19.179 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:01:19.526 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:01:19.527 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:01:19.527 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:01:19.527 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:01:19.544 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:01:19.544 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 363 ms 
+2024-09-20T17:01:19.791 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:01:19.803 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:01:19.807 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:01:19.817 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.679 seconds (process running for 6372.082) 
+2024-09-20T17:01:19.819 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T17:04:19.057 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:04:19.059 [Thread-23] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:04:19.550 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14828 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:04:19.550 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:04:19.918 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:04:19.919 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:04:19.919 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:04:19.919 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:04:19.936 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:04:19.936 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 383 ms 
+2024-09-20T17:04:20.079 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmForm(Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model) mapped. 
+2024-09-20T17:04:20.080 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T17:04:20.091 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T17:04:20.122 [restartedMain] ERROR o.s.b.SpringApplication - Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmForm(Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.seon.DaysixApplication.main(DaysixApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmForm(Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 21 common frames omitted
+2024-09-20T17:04:58.967 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 10540 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:04:58.970 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:04:59.041 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T17:04:59.042 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T17:05:00.736 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:05:00.753 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:05:00.759 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:05:00.759 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:05:00.834 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:05:00.835 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1792 ms 
+2024-09-20T17:05:01.432 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped. 
+2024-09-20T17:05:01.436 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T17:05:01.460 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T17:05:01.491 [restartedMain] ERROR o.s.b.SpringApplication - Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.seon.DaysixApplication.main(DaysixApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 21 common frames omitted
+2024-09-20T17:05:57.614 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 7024 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:05:57.617 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:05:57.689 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T17:05:57.689 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T17:05:59.393 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:05:59.410 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:05:59.416 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:05:59.417 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:05:59.496 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:05:59.497 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1807 ms 
+2024-09-20T17:06:00.098 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped. 
+2024-09-20T17:06:00.103 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T17:06:00.126 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T17:06:00.158 [restartedMain] ERROR o.s.b.SpringApplication - Application run failed 
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.seon.DaysixApplication.main(DaysixApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'codeController' method 
+com.seon.infra.code.CodeController#codeXdmUpdt(CodeDto, Model)
+to { [/v1/infra/code/codeXdmForm]}: There is already 'codeController' bean method
+com.seon.infra.code.CodeController#codeXdmForm(Model) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:674)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:636)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:508)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:84)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:298)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:296)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:265)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:224)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:212)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:239)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 21 common frames omitted
+2024-09-20T17:06:13.461 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 13524 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:06:13.464 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:06:13.535 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T17:06:13.535 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T17:06:15.228 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:06:15.244 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:06:15.250 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:06:15.250 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:06:15.327 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:06:15.327 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1791 ms 
+2024-09-20T17:06:16.362 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:06:16.390 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:06:16.420 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:06:16.438 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 3.52 seconds (process running for 4.807) 
+2024-09-20T17:09:43.074 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:09:43.080 [Thread-5] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:09:43.575 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 13524 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:09:43.576 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:09:44.015 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:09:44.017 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:09:44.017 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:09:44.018 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:09:44.039 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:09:44.040 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 460 ms 
+2024-09-20T17:09:44.364 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:09:44.381 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:09:44.385 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:09:44.398 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.877 seconds (process running for 212.767) 
+2024-09-20T17:09:44.402 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T17:11:09.378 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:11:09.380 [Thread-7] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:11:09.810 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 13524 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:11:09.811 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:11:10.210 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:11:10.211 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:11:10.211 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:11:10.211 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:11:10.231 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:11:10.231 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 417 ms 
+2024-09-20T17:11:10.493 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:11:10.504 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:11:10.508 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:11:10.518 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.756 seconds (process running for 298.887) 
+2024-09-20T17:11:10.520 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T17:12:17.530 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T17:12:17.531 [Thread-11] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:12:17.971 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 13524 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T17:12:17.971 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T17:12:18.327 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T17:12:18.328 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:12:18.328 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T17:12:18.329 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T17:12:18.346 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T17:12:18.347 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 373 ms 
+2024-09-20T17:12:18.592 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T17:12:18.608 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:12:18.612 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T17:12:18.622 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.693 seconds (process running for 366.991) 
+2024-09-20T17:12:18.625 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T17:14:58.967 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-20T17:14:58.968 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-20T17:14:58.971 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+2024-09-20T17:14:59.055 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-20T17:14:59.547 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@36894874 
+2024-09-20T17:14:59.550 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-20T17:14:59.597 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 15 msec} 
+2024-09-20T17:15:00.098 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T17:15:05.653 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 2 msec} 
+2024-09-20T17:15:05.657 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:15:05.659 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:15:13.323 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T17:15:15.564 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-20T17:15:15.568 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:15:15.571 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:15:23.211 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T17:15:24.276 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-20T17:15:24.279 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:15:24.283 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:16:57.195 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-20T17:16:57.198 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:16:57.201 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:19:28.193 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-20T17:19:28.196 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:19:28.199 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:19:31.583 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T17:19:32.571 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-20T17:19:32.576 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:19:32.579 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:20:49.066 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-20T17:20:49.069 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:20:49.072 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:20:58.651 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-20T17:20:58.654 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:20:58.657 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:21:05.474 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 2 msec} 
+2024-09-20T17:21:05.478 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:21:05.481 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T17:21:06.423 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T17:21:07.715 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-20T17:21:07.719 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:21:07.722 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:22:23.551 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-20T17:22:23.554 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:22:23.556 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:22:27.906 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-20T17:22:27.909 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:22:27.912 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T17:23:22.118 [RMI TCP Connection(36)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-20T17:23:22.120 [RMI TCP Connection(36)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T17:23:22.447 [RMI TCP Connection(36)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-20T17:23:22.459 [RMI TCP Connection(36)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
