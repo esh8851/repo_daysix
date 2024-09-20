@@ -1,5 +1,7 @@
 package com.seon.infra.code;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,6 +22,27 @@ public class CodeController {
 //		}
 		model.addAttribute("list", codeService.selectService());
 		return "/xdm/v1/infra/code/codeXdmList";
+	}
+	
+	@RequestMapping(value="/v1/infra/code/codeXdmForm")
+	public String codeXdmForm(Model model) {
+		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
+		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
+		return "/xdm/v1/infra/code/codeXdmForm";
+	}
+	
+	@RequestMapping(value="/v1/infra/code/codeXdmInst")
+	public String codeXdmInst(CodeDto codeDto) {
+		codeService.insert(codeDto);
+		return "redirect:/v1/infra/code/codeXdmList";
+	}
+	
+	@RequestMapping(value="/v1/infra/code/codeXdmMForm")
+	public String codeXdmMForm(CodeDto codeDto, Model model) {
+		model.addAttribute("item", codeService.selectOne(codeDto));
+		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
+		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
+		return "/xdm/v1/infra/code/codeXdmMForm";
 	}
 	
 }

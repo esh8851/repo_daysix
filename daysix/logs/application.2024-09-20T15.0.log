@@ -1,0 +1,1124 @@
+2024-09-20T15:07:48.019 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 9764 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:07:48.019 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:07:48.370 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:07:48.371 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:07:48.374 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:07:48.390 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:07:48.390 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 368 ms 
+2024-09-20T15:07:48.618 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T15:07:48.632 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T15:07:48.641 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.786 seconds (process running for 1032.312) 
+2024-09-20T15:07:48.643 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T15:09:54.708 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-20T15:09:55.216 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 9764 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:09:55.217 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:09:55.596 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:09:55.598 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:09:55.598 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:09:55.616 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:09:55.617 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 397 ms 
+2024-09-20T15:09:55.653 [restartedMain] ERROR c.z.h.HikariConfig - Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b 
+2024-09-20T15:09:55.661 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'codeGroupController': Unsatisfied dependency expressed through field 'codeGroupService': Error creating bean with name 'codeGroupService': Unsatisfied dependency expressed through field 'codeGroupDao': Error creating bean with name 'codeGroupDao' defined in file [C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main\com\seon\infra\codegroup\CodeGroupDao.class]: Cannot resolve reference to bean 'sqlSessionFactoryMysqlMain' while setting bean property 'sqlSessionFactory' 
+2024-09-20T15:09:55.662 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T15:09:55.672 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T15:09:55.681 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.mysql.main' to javax.sql.DataSource:
+
+    Property: spring.datasource.mysql.main.driver-class-name
+    Value: "net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+    Origin: class path resource [application.properties] - 5:48
+    Reason: java.lang.RuntimeException: Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+ 
+2024-09-20T15:10:05.519 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 8140 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:10:05.522 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:10:05.594 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T15:10:05.595 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T15:10:07.326 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:10:07.343 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:10:07.349 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:10:07.350 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:10:07.431 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:10:07.432 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1836 ms 
+2024-09-20T15:10:07.541 [restartedMain] ERROR c.z.h.HikariConfig - Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b 
+2024-09-20T15:10:07.547 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'codeGroupController': Unsatisfied dependency expressed through field 'codeGroupService': Error creating bean with name 'codeGroupService': Unsatisfied dependency expressed through field 'codeGroupDao': Error creating bean with name 'codeGroupDao' defined in file [C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main\com\seon\infra\codegroup\CodeGroupDao.class]: Cannot resolve reference to bean 'sqlSessionFactoryMysqlMain' while setting bean property 'sqlSessionFactory' 
+2024-09-20T15:10:07.551 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T15:10:07.579 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T15:10:07.613 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.mysql.main' to javax.sql.DataSource:
+
+    Property: spring.datasource.mysql.main.driver-class-name
+    Value: "net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+    Origin: class path resource [application.properties] - 5:48
+    Reason: java.lang.RuntimeException: Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+ 
+2024-09-20T15:12:56.928 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 3652 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:12:56.931 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:12:57.006 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T15:12:57.006 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T15:12:58.698 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:12:58.715 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:12:58.721 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:12:58.722 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:12:58.805 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:12:58.805 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1798 ms 
+2024-09-20T15:12:58.917 [restartedMain] ERROR c.z.h.HikariConfig - Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@63947c6b 
+2024-09-20T15:12:58.923 [restartedMain] WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'codeGroupController': Unsatisfied dependency expressed through field 'codeGroupService': Error creating bean with name 'codeGroupService': Unsatisfied dependency expressed through field 'codeGroupDao': Error creating bean with name 'codeGroupDao' defined in file [C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main\com\seon\infra\codegroup\CodeGroupDao.class]: Cannot resolve reference to bean 'sqlSessionFactoryMysqlMain' while setting bean property 'sqlSessionFactory' 
+2024-09-20T15:12:58.927 [restartedMain] INFO o.a.c.c.StandardService - Stopping service [Tomcat] 
+2024-09-20T15:12:58.955 [restartedMain] INFO o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled. 
+2024-09-20T15:12:58.989 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.datasource.mysql.main' to javax.sql.DataSource:
+
+    Property: spring.datasource.mysql.main.driver-class-name
+    Value: "net.sf.log4jdbc.sql.jdbcapi.DriverSpy"
+    Origin: class path resource [application.properties] - 5:48
+    Reason: java.lang.RuntimeException: Failed to load driver class net.sf.log4jdbc.sql.jdbcapi.DriverSpy in either of HikariConfig class loader or Thread context classloader
+
+Action:
+
+Update your application's configuration
+ 
+2024-09-20T15:15:09.625 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14828 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:15:09.628 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:15:09.704 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable 
+2024-09-20T15:15:09.705 [restartedMain] INFO o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG' 
+2024-09-20T15:15:11.472 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:15:11.489 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:15:11.495 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:15:11.495 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:15:11.580 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:15:11.581 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1875 ms 
+2024-09-20T15:15:12.677 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T15:15:12.706 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:15:12.735 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T15:15:12.762 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 3.711 seconds (process running for 5.027) 
+2024-09-20T15:15:16.646 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-20T15:15:16.647 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-20T15:15:16.649 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+2024-09-20T15:15:16.745 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Starting... 
+2024-09-20T15:15:17.269 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-1 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@9412403 
+2024-09-20T15:15:17.273 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-1 - Start completed. 
+2024-09-20T15:15:17.324 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 16 msec} 
+2024-09-20T15:15:17.365 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:16:16.062 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:16:46.876 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:16:46.879 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:18:43.799 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:18:43.802 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:18:43.819 [http-nio-8080-exec-10] ERROR o.t.TemplateEngine - [THYMELEAF][http-nio-8080-exec-10] Exception processing template "/xdm/v1/infra/code/codeXdmForm": An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]") 
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "list.cgUseNy" (template: "/xdm/v1/infra/code/codeXdmForm" - line 633, col 96)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "list.cgUseNy" (template: "/xdm/v1/infra/code/codeXdmForm" - line 633, col 96)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'cgUseNy' cannot be found on object of type 'com.seon.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 75 common frames omitted
+2024-09-20T15:18:43.824 [http-nio-8080-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")] with root cause 
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'cgUseNy' cannot be found on object of type 'com.seon.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-20T15:18:43.858 [http-nio-8080-exec-10] ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [/v1/infra/code/codeXdmForm] and exception [An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")] as the response has already been committed. As a result, the response may have the wrong status code. 
+2024-09-20T15:21:35.693 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:21:35.696 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:21:35.712 [http-nio-8080-exec-6] ERROR o.t.TemplateEngine - [THYMELEAF][http-nio-8080-exec-6] Exception processing template "/xdm/v1/infra/code/codeXdmForm": An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]") 
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:241)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.attoparser.ParseException: Exception evaluating SpringEL expression: "list.cgUseNy" (template: "/xdm/v1/infra/code/codeXdmForm" - line 633, col 96)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:393)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 48 common frames omitted
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "list.cgUseNy" (template: "/xdm/v1/infra/code/codeXdmForm" - line 633, col 96)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	... 50 common frames omitted
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'cgUseNy' cannot be found on object of type 'com.seon.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 75 common frames omitted
+2024-09-20T15:21:35.714 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")] with root cause 
+org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property or field 'cgUseNy' cannot be found on object of type 'com.seon.infra.code.CodeDto' - maybe not public or not valid?
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:229)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:112)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorValueRef.getValue(PropertyOrFieldReference.java:417)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:97)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:114)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:338)
+	at org.thymeleaf.spring6.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:144)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.Model.process(Model.java:282)
+	at org.thymeleaf.engine.Model.process(Model.java:290)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.processIterationModel(IteratedGatheringModelProcessable.java:368)
+	at org.thymeleaf.engine.IteratedGatheringModelProcessable.process(IteratedGatheringModelProcessable.java:222)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleCloseElement(ProcessorTemplateHandler.java:1640)
+	at org.thymeleaf.engine.TemplateHandlerAdapterMarkupHandler.handleCloseElementEnd(TemplateHandlerAdapterMarkupHandler.java:388)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler$InlineMarkupAdapterPreProcessorHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:322)
+	at org.thymeleaf.standard.inline.OutputExpressionInlinePreProcessorHandler.handleCloseElementEnd(OutputExpressionInlinePreProcessorHandler.java:220)
+	at org.thymeleaf.templateparser.markup.InlinedOutputExpressionMarkupHandler.handleCloseElementEnd(InlinedOutputExpressionMarkupHandler.java:164)
+	at org.attoparser.HtmlElement.handleCloseElementEnd(HtmlElement.java:169)
+	at org.attoparser.HtmlMarkupHandler.handleCloseElementEnd(HtmlMarkupHandler.java:412)
+	at org.attoparser.MarkupEventProcessorHandler.handleCloseElementEnd(MarkupEventProcessorHandler.java:473)
+	at org.attoparser.ParsingElementMarkupUtil.parseCloseElement(ParsingElementMarkupUtil.java:201)
+	at org.attoparser.MarkupParser.parseBuffer(MarkupParser.java:725)
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:301)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1103)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1077)
+	at org.thymeleaf.spring6.view.ThymeleafView.renderFragment(ThymeleafView.java:372)
+	at org.thymeleaf.spring6.view.ThymeleafView.render(ThymeleafView.java:192)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1432)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1168)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1106)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-20T15:21:35.724 [http-nio-8080-exec-6] ERROR o.s.b.a.w.s.e.ErrorMvcAutoConfiguration$StaticView - Cannot render error page for request [/v1/infra/code/codeXdmForm] and exception [An error happened during template parsing (template: "class path resource [templates//xdm/v1/infra/code/codeXdmForm.html]")] as the response has already been committed. As a result, the response may have the wrong status code. 
+2024-09-20T15:23:26.796 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:23:26.799 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:23:40.666 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:23:43.074 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:23:43.077 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:23:51.081 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:23:51.947 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:23:51.952 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:23:56.882 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:25:40.491 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:25:40.495 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:26:17.508 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:26:17.511 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:26:20.874 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:26:20.877 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:26:58.926 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:26:58.929 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:27:01.446 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:27:01.449 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:27:04.926 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:27:04.929 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:27:30.674 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:27:32.779 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:27:32.782 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:28:00.864 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 2 msec} 
+2024-09-20T15:28:00.868 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+1. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:02.502 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 23 class path changes (0 additions, 0 deletions, 23 modifications) 
+2024-09-20T15:28:02.507 [Thread-5] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:28:02.853 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated... 
+2024-09-20T15:28:02.865 [Thread-5] INFO c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed. 
+2024-09-20T15:28:03.015 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14828 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-20T15:28:03.016 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-20T15:28:03.465 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-20T15:28:03.466 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:28:03.467 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-20T15:28:03.467 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-20T15:28:03.488 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-20T15:28:03.489 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 468 ms 
+2024-09-20T15:28:03.802 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-20T15:28:03.816 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-20T15:28:03.820 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-20T15:28:03.831 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.872 seconds (process running for 776.096) 
+2024-09-20T15:28:03.834 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-20T15:28:06.998 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-20T15:28:06.998 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-20T15:28:06.999 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-20T15:28:07.001 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Starting... 
+2024-09-20T15:28:07.031 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-2 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@7a07061e 
+2024-09-20T15:28:07.031 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-2 - Start completed. 
+2024-09-20T15:28:07.034 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:07.037 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:25.876 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:25.879 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:48.846 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:28:48.848 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:29:27.745 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:29:27.748 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:29:53.835 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:29:53.837 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:30:07.672 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. insert into code(
+			cName
+		    ,cUseNy
+		    ,cOrder
+		    ,cDesc
+		    ,delNy
+		    ,cDateTime
+		    ,cDateTimeSvr
+		    ,codeGroup_seq
+		)
+		value(
+			'알뜰폰'
+		    ,1
+		    ,1
+		    ,'알뜰폰'
+		    ,0
+		    ,now()
+		    ,now()
+		    ,'1'
+		)
+ {executed in 7 msec} 
+2024-09-20T15:30:07.683 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-20T15:30:29.458 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:30:29.461 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-20T15:30:44.232 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. insert into code(
+			cName
+		    ,cUseNy
+		    ,cOrder
+		    ,cDesc
+		    ,delNy
+		    ,cDateTime
+		    ,cDateTimeSvr
+		    ,codeGroup_seq
+		)
+		value(
+			'남자'
+		    ,1
+		    ,1
+		    ,'남자'
+		    ,0
+		    ,now()
+		    ,now()
+		    ,'2'
+		)
+ {executed in 4 msec} 
+2024-09-20T15:30:44.239 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+11. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		order by
+			a.seq desc
+ {executed in 1 msec} 

@@ -13,6 +13,7 @@
 		    ,a.cName
 		    ,a.cUseNy
 		    ,a.cOrder
+		    ,a.cDesc
 		    ,a.delNy
 		    ,a.cDateTime
 		    ,a.cDateTimeSvr
@@ -21,6 +22,57 @@
 			code a
 		order by
 			a.seq desc
+	</select>
+	
+	<select id="selectListCodeGroup" resultMap="resultMapObj">
+		select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+	</select>
+	
+	<insert id="insert">
+		insert into code(
+			cName
+		    ,cUseNy
+		    ,cOrder
+		    ,cDesc
+		    ,delNy
+		    ,cDateTime
+		    ,cDateTimeSvr
+		    ,codeGroup_seq
+		)
+		value(
+			#{cName}
+		    ,#{cUseNy}
+		    ,#{cOrder}
+		    ,#{cDesc}
+		    ,0
+		    ,now()
+		    ,now()
+		    ,#{codeGroup_seq}
+		)
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = #{seq}
 	</select>
 	  
 </mapper>
