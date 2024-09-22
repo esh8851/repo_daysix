@@ -681,6 +681,8 @@
                           <thead>
                             <tr class="text-nowrap text-center">
                               <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+                              <th>코드그룹 번호</th>
+                              <th>코드그룹 이름</th>
                               <th>No.</th>
                               <th>코드 번호</th>
                               <th>코드 이름</th>
@@ -689,7 +691,6 @@
                               <th>삭제 여부</th>
                               <th>등록일</th>
                               <th>수정일</th>
-                              <th>코드그룹 번호</th>
                               <th></th>
                             </tr>
                           </thead>
@@ -701,6 +702,8 @@
                             </tr>
                             <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
                               <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+                              <td th:text="${list.codeGroup_seq}"></td>
+                              <td th:text="${list.cgName}"></td>
                               <td></td>
                               <td scope="row" th:text="${list.seq}"></td>
                               <td><a th:href="@{/v1/infra/code/codeXdmMForm(seq=${list.seq})}"><span class="text-primary"><b th:text="${list.cName}"></b></span></a></td>
@@ -711,7 +714,6 @@
                               <td th:unless="${list.delNy eq 0}">Y</td>
                               <td th:text="${#dates.format(list.cDateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
                               <td th:text="${#dates.format(list.cDateTimeSvr,'yyyy-MM-dd HH:mm:ss')}"></td>
-                              <td th:text="${list.codeGroup_seq}"></td>
                               <td><h3>&nbsp;</h3></td>
                             </tr>
                           </tbody>

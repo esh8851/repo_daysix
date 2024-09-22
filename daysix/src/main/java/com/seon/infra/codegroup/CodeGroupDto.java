@@ -12,6 +12,8 @@ public class CodeGroupDto {
 	private Integer delNy;
 	private Date cgDateTime;
 	private Date cgDateTimeSvr;
+//	count추가
+	private Integer seqCount;
 //	-------
 	public String getSeq() {
 		return seq;
@@ -60,6 +62,13 @@ public class CodeGroupDto {
 	}
 	public void setCgDateTimeSvr(Date cgDateTimeSvr) {
 		this.cgDateTimeSvr = cgDateTimeSvr;
+	}
+//	count추가
+	public Integer getSeqCount() {
+		return seqCount;
+	}
+	public void setSeqCount(Integer seqCount) {
+		this.seqCount = seqCount;
 	}
 	
 

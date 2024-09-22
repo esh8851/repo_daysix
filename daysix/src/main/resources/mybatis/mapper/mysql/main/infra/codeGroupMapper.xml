@@ -17,8 +17,20 @@
 		    ,a.delNy
 		    ,a.cgDateTime
 		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
 		from
 			codeGroup a
+		where 1 = 1
+			<if test="shDelNy != null and !shDelNy.equals('')">and delNy = #{shDelNy}</if>
+			<if test="shcgUseNy != null and !shcgUseNy.equals('')">and cgUseNy = #{shcgUseNy}</if>
+			<choose>
+				<when test="shcgOptionDate == 1">AND a.cgDateTime BETWEEN #{shcgDateStart} AND #{shcgDateEnd}</when>
+				<when test="shcgOptionDate == 2">AND a.cgDateTimeSvr BETWEEN #{shcgDateStart} AND #{shcgDateEnd}</when>
+			</choose>
+			<choose>
+				<when test="shcgOption == 1">and seq = #{shcgValue}</when>
+				<when test="shcgOption == 2">and cgName like concat('%', #{shcgValue}, '%')</when>
+			</choose>
 		order by
 			a.seq desc
 	</select>
@@ -67,7 +79,9 @@
 			    ,cgUseNy = #{cgUseNy}
 			    ,cgOrder = #{cgOrder}
 			    ,cgDesc = #{cgDesc}
-			    ,delNy = #{delNy}
+			    ,delNy = 0
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
 			where 1 = 1
 				and seq = #{seq}
 	</update>

@@ -14,7 +14,7 @@ public class CodeGroupController {
 	CodeGroupService codeGroupService;
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmList")
-	public String codeGroupXdmList(Model model) {
+	public String codeGroupXdmList(CodeGroupVo codeGroupVo, Model model) {
 		
 		
 //		자바객체를 html으로 전달할 때는 Model객체 사용
@@ -23,7 +23,10 @@ public class CodeGroupController {
 //		model.addAttribute("list", codeGroups);
 		
 //		자바에서 더 코딩을 하지않고 값만 넘겨줄 때 codeGroupService.selectService() 사용
-		model.addAttribute("list", codeGroupService.selectService());
+		model.addAttribute("list", codeGroupService.selectService(codeGroupVo));
+		
+		codeGroupVo.setShcgDateStart(codeGroupVo.getShcgDateStart()+" 00:00:00");
+		codeGroupVo.setShcgDateEnd(codeGroupVo.getShcgDateEnd()+" 23:59:59");
 		
 //		System.out.println(codeGroups.size());
 //		

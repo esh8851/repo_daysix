@@ -18,8 +18,11 @@
 		    ,a.cDateTime
 		    ,a.cDateTimeSvr
 		    ,a.codeGroup_seq
+		    ,b.cgName
 		from
 			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
 		order by
 			a.seq desc
 	</select>
