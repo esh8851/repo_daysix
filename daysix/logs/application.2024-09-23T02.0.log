@@ -1,0 +1,1537 @@
+2024-09-23T02:02:45.647 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:02:45.651 [Thread-75] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:02:45.977 [Thread-75] INFO c.z.h.HikariDataSource - HikariPool-8 - Shutdown initiated... 
+2024-09-23T02:02:45.982 [Thread-75] INFO c.z.h.HikariDataSource - HikariPool-8 - Shutdown completed. 
+2024-09-23T02:02:46.160 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:02:46.163 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:02:46.554 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:02:46.555 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:02:46.556 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:02:46.556 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:02:46.572 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:02:46.572 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 406 ms 
+2024-09-23T02:02:46.889 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:02:46.902 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:02:46.906 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:02:46.915 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.792 seconds (process running for 7039.864) 
+2024-09-23T02:02:46.917 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:04:23.116 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:04:23.116 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:04:23.117 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:04:23.119 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-9 - Starting... 
+2024-09-23T02:04:23.143 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-9 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@76be4b52 
+2024-09-23T02:04:23.144 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-9 - Start completed. 
+2024-09-23T02:04:23.147 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:06:17.632 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:06:45.902 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+81. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:06:46.512 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:06:46.514 [Thread-79] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:46.830 [Thread-79] INFO c.z.h.HikariDataSource - HikariPool-9 - Shutdown initiated... 
+2024-09-23T02:06:46.834 [Thread-79] INFO c.z.h.HikariDataSource - HikariPool-9 - Shutdown completed. 
+2024-09-23T02:06:47.023 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:06:47.023 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:06:47.449 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:06:47.450 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:47.450 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:06:47.450 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:06:47.466 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:06:47.466 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 440 ms 
+2024-09-23T02:06:47.749 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:06:47.765 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:47.769 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:06:47.777 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.792 seconds (process running for 7280.727) 
+2024-09-23T02:06:47.779 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:06:50.324 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:06:50.326 [Thread-83] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:50.775 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:06:50.776 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:06:51.145 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:06:51.145 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:51.146 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:06:51.146 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:06:51.165 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:06:51.165 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 387 ms 
+2024-09-23T02:06:51.418 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:06:51.429 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:06:51.434 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:06:51.443 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.707 seconds (process running for 7284.392) 
+2024-09-23T02:06:51.444 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:07:27.460 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:07:27.460 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:07:27.461 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:07:27.462 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-10 - Starting... 
+2024-09-23T02:07:27.486 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-10 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@60d2207c 
+2024-09-23T02:07:27.486 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-10 - Start completed. 
+2024-09-23T02:07:27.488 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:07:37.827 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+91. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:08:49.076 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications) 
+2024-09-23T02:08:49.077 [Thread-87] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:08:49.399 [Thread-87] INFO c.z.h.HikariDataSource - HikariPool-10 - Shutdown initiated... 
+2024-09-23T02:08:49.404 [Thread-87] INFO c.z.h.HikariDataSource - HikariPool-10 - Shutdown completed. 
+2024-09-23T02:08:49.537 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:08:49.537 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:08:49.909 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:08:49.910 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:08:49.910 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:08:49.910 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:08:49.927 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:08:49.927 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 387 ms 
+2024-09-23T02:08:50.206 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:08:50.220 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:08:50.223 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:08:50.234 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.735 seconds (process running for 7403.184) 
+2024-09-23T02:08:50.237 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:09:32.927 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:09:32.928 [Thread-91] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:33.453 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:09:33.453 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:09:33.799 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:09:33.800 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:33.800 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:09:33.800 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:09:33.823 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:09:33.823 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 367 ms 
+2024-09-23T02:09:34.064 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:09:34.075 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:34.079 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:09:34.087 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.671 seconds (process running for 7447.037) 
+2024-09-23T02:09:34.089 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:09:47.230 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:09:47.232 [Thread-95] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:47.733 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:09:47.733 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:09:48.078 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:09:48.078 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:48.079 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:09:48.079 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:09:48.100 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:09:48.101 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 366 ms 
+2024-09-23T02:09:48.350 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:09:48.362 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:09:48.366 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:09:48.374 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.673 seconds (process running for 7461.324) 
+2024-09-23T02:09:48.376 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:10:53.126 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:10:53.126 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:10:53.127 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:10:53.129 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-11 - Starting... 
+2024-09-23T02:10:53.157 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-11 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@40b7f36f 
+2024-09-23T02:10:53.158 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-11 - Start completed. 
+2024-09-23T02:10:53.160 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+101. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:12:04.054 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+101. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:14:37.892 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+101. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:15:15.612 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+101. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:16:06.527 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+101. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:19:42.643 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:19:42.644 [Thread-99] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:42.964 [Thread-99] INFO c.z.h.HikariDataSource - HikariPool-11 - Shutdown initiated... 
+2024-09-23T02:19:42.968 [Thread-99] INFO c.z.h.HikariDataSource - HikariPool-11 - Shutdown completed. 
+2024-09-23T02:19:43.101 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:19:43.102 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:19:43.493 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:19:43.494 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:43.494 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:19:43.494 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:19:43.510 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:19:43.510 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 406 ms 
+2024-09-23T02:19:43.790 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:19:43.802 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:43.806 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:19:43.814 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.751 seconds (process running for 8056.763) 
+2024-09-23T02:19:43.816 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:19:57.989 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:19:57.990 [Thread-103] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:58.500 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:19:58.501 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:19:58.844 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:19:58.845 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:58.845 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:19:58.845 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:19:58.861 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:19:58.861 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 358 ms 
+2024-09-23T02:19:59.114 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:19:59.126 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:19:59.130 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:19:59.138 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.67 seconds (process running for 8072.088) 
+2024-09-23T02:19:59.140 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:20:46.021 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications) 
+2024-09-23T02:20:46.023 [Thread-107] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:20:46.474 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:20:46.474 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:20:46.831 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:20:46.832 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:20:46.832 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:20:46.832 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:20:46.848 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:20:46.848 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 372 ms 
+2024-09-23T02:20:47.086 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:20:47.098 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:20:47.101 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:20:47.109 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.67 seconds (process running for 8120.059) 
+2024-09-23T02:20:47.111 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:21:26.024 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications) 
+2024-09-23T02:21:26.026 [Thread-111] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:21:26.493 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:21:26.493 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:21:26.839 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:21:26.839 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:21:26.839 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:21:26.840 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:21:26.855 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:21:26.855 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 359 ms 
+2024-09-23T02:21:27.091 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:21:27.102 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:21:27.105 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:21:27.114 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.653 seconds (process running for 8160.063) 
+2024-09-23T02:21:27.115 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:22:28.868 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:22:28.871 [Thread-115] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:22:29.332 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:22:29.332 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:22:29.691 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:22:29.692 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:22:29.692 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:22:29.693 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:22:29.709 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:22:29.709 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 375 ms 
+2024-09-23T02:22:29.962 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:22:29.974 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:22:29.977 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:22:29.987 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.69 seconds (process running for 8222.936) 
+2024-09-23T02:22:29.989 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:22:45.079 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:22:45.079 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:22:45.080 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:22:45.113 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-12 - Starting... 
+2024-09-23T02:22:45.137 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-12 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@637c1331 
+2024-09-23T02:22:45.138 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-12 - Start completed. 
+2024-09-23T02:22:45.139 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:22:49.268 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:22:54.405 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:24:34.474 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:25:05.168 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:25:10.341 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:25:13.788 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+111. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:27:28.504 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:27:28.506 [Thread-119] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:27:28.824 [Thread-119] INFO c.z.h.HikariDataSource - HikariPool-12 - Shutdown initiated... 
+2024-09-23T02:27:28.828 [Thread-119] INFO c.z.h.HikariDataSource - HikariPool-12 - Shutdown completed. 
+2024-09-23T02:27:28.975 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:27:28.975 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:27:29.380 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:27:29.381 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:27:29.381 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:27:29.382 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:27:29.398 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:27:29.398 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 420 ms 
+2024-09-23T02:27:29.683 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:27:29.696 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:27:29.699 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:27:29.708 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.771 seconds (process running for 8522.658) 
+2024-09-23T02:27:29.710 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:28:15.555 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:28:15.557 [Thread-123] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:28:16.070 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:28:16.070 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:28:16.403 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:28:16.404 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:28:16.404 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:28:16.404 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:28:16.420 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:28:16.420 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 348 ms 
+2024-09-23T02:28:16.672 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:28:16.684 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:28:16.687 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:28:16.696 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.659 seconds (process running for 8569.646) 
+2024-09-23T02:28:16.698 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:29:04.817 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:29:04.817 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:29:04.818 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:29:04.821 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-13 - Starting... 
+2024-09-23T02:29:04.846 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-13 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2ad71163 
+2024-09-23T02:29:04.846 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-13 - Start completed. 
+2024-09-23T02:29:04.848 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:08.589 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 0 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:12.086 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:14.232 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:18.430 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 0 
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:29:22.423 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:50.937 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:29:57.185 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:00.147 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 0 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:03.041 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T02:30:39.360 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 0 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:49.420 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:52.652 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:56.525 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 1 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:30:58.084 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgUseNy = 0 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:31:00.837 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:31:03.955 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:31:07.904 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:31:15.092 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 1 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:31:19.332 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+121. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:33:48.358 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:33:48.360 [Thread-127] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:33:48.681 [Thread-127] INFO c.z.h.HikariDataSource - HikariPool-13 - Shutdown initiated... 
+2024-09-23T02:33:48.686 [Thread-127] INFO c.z.h.HikariDataSource - HikariPool-13 - Shutdown completed. 
+2024-09-23T02:33:48.803 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:33:48.804 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:33:49.164 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:33:49.164 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:33:49.164 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:33:49.165 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:33:49.181 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:33:49.181 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 375 ms 
+2024-09-23T02:33:49.415 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:33:49.427 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:33:49.430 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:33:49.439 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.669 seconds (process running for 8902.389) 
+2024-09-23T02:33:49.441 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:34:03.590 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:34:03.592 [Thread-131] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:04.036 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:34:04.036 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:34:04.382 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:34:04.383 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:04.383 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:34:04.383 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:34:04.399 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:34:04.399 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms 
+2024-09-23T02:34:04.635 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:34:04.647 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:04.650 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:34:04.658 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.655 seconds (process running for 8917.608) 
+2024-09-23T02:34:04.660 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:34:53.683 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:34:53.684 [Thread-135] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:54.137 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:34:54.137 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:34:54.522 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:34:54.523 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:54.523 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:34:54.523 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:34:54.539 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:34:54.539 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 399 ms 
+2024-09-23T02:34:54.776 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:34:54.787 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:34:54.790 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:34:54.799 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.697 seconds (process running for 8967.749) 
+2024-09-23T02:34:54.801 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:36:52.941 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:36:52.941 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:36:52.943 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+2024-09-23T02:36:52.947 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-14 - Starting... 
+2024-09-23T02:36:52.971 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-14 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4e93626f 
+2024-09-23T02:36:52.972 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-14 - Start completed. 
+2024-09-23T02:36:52.974 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:37:30.991 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:37:34.230 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and seq = '3' 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:37:37.996 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and seq = '2' 
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:37:40.759 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and seq = '2' 
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:37:44.508 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:38:06.741 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and cgName like concat('%', '통신사', '%') 
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:38:09.716 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:38:51.704 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T02:51:57.281 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T02:52:02.398 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T02:52:34.448 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.cDesc
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		    ,b.cgName
+		from
+			code a
+			join codeGroup as b
+				on b.seq = a.codeGroup_seq
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T02:52:36.900 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+		    ,a.cName
+		    ,a.cUseNy
+		    ,a.cOrder
+		    ,a.delNy
+		    ,a.cDateTime
+		    ,a.cDateTimeSvr
+		    ,a.codeGroup_seq
+		from
+			code a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T02:52:36.902 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 1 msec} 
+2024-09-23T02:52:36.904 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+131. select
+			a.seq
+			,a.cgName
+		from
+			codeGroup a
+		where 1 = 1
+			and a.delNy = 0
+		order by
+			a.cgOrder desc
+ {executed in 0 msec} 
+2024-09-23T02:57:15.744 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:57:15.746 [Thread-139] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:16.067 [Thread-139] INFO c.z.h.HikariDataSource - HikariPool-14 - Shutdown initiated... 
+2024-09-23T02:57:16.072 [Thread-139] INFO c.z.h.HikariDataSource - HikariPool-14 - Shutdown completed. 
+2024-09-23T02:57:16.213 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:57:16.214 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:57:16.620 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:57:16.621 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:16.621 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:57:16.621 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:57:16.638 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:57:16.638 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 421 ms 
+2024-09-23T02:57:16.939 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:57:16.952 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:16.955 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:57:16.966 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.791 seconds (process running for 10309.915) 
+2024-09-23T02:57:16.968 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:57:23.759 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:57:23.760 [Thread-143] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:24.295 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:57:24.295 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:57:24.635 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:57:24.636 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:24.636 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:57:24.636 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:57:24.657 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:57:24.657 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 360 ms 
+2024-09-23T02:57:24.890 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:57:24.901 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:24.905 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:57:24.915 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.652 seconds (process running for 10317.864) 
+2024-09-23T02:57:24.917 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:57:54.888 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:57:54.889 [Thread-147] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:55.405 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:57:55.405 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:57:55.744 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:57:55.744 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:55.744 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:57:55.745 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:57:55.765 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:57:55.765 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 358 ms 
+2024-09-23T02:57:56.005 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:57:56.016 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:57:56.020 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:57:56.029 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.656 seconds (process running for 10348.978) 
+2024-09-23T02:57:56.031 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:59:05.138 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:59:05.140 [Thread-151] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:05.578 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:59:05.578 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:59:05.943 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:59:05.944 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:05.944 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:59:05.944 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:59:05.960 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:59:05.960 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 379 ms 
+2024-09-23T02:59:06.204 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:59:06.216 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:06.219 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:59:06.228 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.684 seconds (process running for 10419.177) 
+2024-09-23T02:59:06.229 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:59:13.778 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:59:13.778 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:59:13.779 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T02:59:13.784 [http-nio-8080-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause 
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'shcgOptionDate' in 'class com.seon.infra.codegroup.CodeGroupVo'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:153)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:102)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:112)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3344)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTEq.getValueBody(ASTEq.java:50)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:586)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:550)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
+	at org.apache.ibatis.scripting.xmltags.ChooseSqlNode.apply(ChooseSqlNode.java:35)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:320)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:88)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor15.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy65.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy42/jdk.proxy42.$Proxy453.selectList(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy42/jdk.proxy42.$Proxy454.selectList(Unknown Source)
+	at com.seon.infra.codegroup.CodeGroupService.selectService(CodeGroupService.java:20)
+	at com.seon.infra.codegroup.CodeGroupController.codeGroupXdmList(CodeGroupController.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-23T02:59:30.403 [http-nio-8080-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.mybatis.spring.MyBatisSystemException] with root cause 
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'shcgOptionDate' in 'class com.seon.infra.codegroup.CodeGroupVo'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:385)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:160)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:153)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:116)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:102)
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:112)
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3344)
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.ASTEq.getValueBody(ASTEq.java:50)
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212)
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:586)
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:550)
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46)
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32)
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34)
+	at org.apache.ibatis.scripting.xmltags.ChooseSqlNode.apply(ChooseSqlNode.java:35)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32)
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39)
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:320)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:88)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:142)
+	at jdk.internal.reflect.GeneratedMethodAccessor15.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:425)
+	at jdk.proxy2/jdk.proxy2.$Proxy65.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:224)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:141)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:86)
+	at jdk.proxy42/jdk.proxy42.$Proxy453.selectList(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy42/jdk.proxy42.$Proxy454.selectList(Unknown Source)
+	at com.seon.infra.codegroup.CodeGroupService.selectService(CodeGroupService.java:20)
+	at com.seon.infra.codegroup.CodeGroupController.codeGroupXdmList(CodeGroupController.java:26)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-09-23T02:59:41.545 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T02:59:41.547 [Thread-155] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:42.031 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T02:59:42.032 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T02:59:42.378 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T02:59:42.378 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:42.379 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T02:59:42.379 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T02:59:42.395 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T02:59:42.395 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 361 ms 
+2024-09-23T02:59:42.625 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T02:59:42.637 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T02:59:42.640 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T02:59:42.649 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.652 seconds (process running for 10455.598) 
+2024-09-23T02:59:42.651 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T02:59:44.687 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T02:59:44.687 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T02:59:44.689 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+2024-09-23T02:59:44.692 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-15 - Starting... 
+2024-09-23T02:59:44.719 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-15 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@3613717f 
+2024-09-23T02:59:44.719 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-15 - Start completed. 
+2024-09-23T02:59:44.721 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+141. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 

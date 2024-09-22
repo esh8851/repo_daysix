@@ -1,0 +1,1500 @@
+2024-09-23T03:00:52.852 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:00:52.854 [Thread-159] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:00:53.179 [Thread-159] INFO c.z.h.HikariDataSource - HikariPool-15 - Shutdown initiated... 
+2024-09-23T03:00:53.183 [Thread-159] INFO c.z.h.HikariDataSource - HikariPool-15 - Shutdown completed. 
+2024-09-23T03:00:53.323 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:00:53.326 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:00:53.684 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:00:53.685 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:00:53.685 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:00:53.685 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:00:53.701 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:00:53.701 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 373 ms 
+2024-09-23T03:00:53.956 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:00:53.969 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:00:53.972 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:00:53.980 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.692 seconds (process running for 10526.93) 
+2024-09-23T03:00:53.982 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:01:08.206 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:01:08.207 [Thread-163] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:01:08.661 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:01:08.662 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:01:09.000 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:01:09.000 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:01:09.001 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:01:09.001 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:01:09.015 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:01:09.015 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 351 ms 
+2024-09-23T03:01:09.266 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:01:09.277 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:01:09.281 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:01:09.289 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.66 seconds (process running for 10542.238) 
+2024-09-23T03:01:09.291 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:01:47.995 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:01:47.995 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:01:47.996 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:01:48.000 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-16 - Starting... 
+2024-09-23T03:01:48.027 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-16 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@77557339 
+2024-09-23T03:01:48.027 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-16 - Start completed. 
+2024-09-23T03:01:48.030 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:02:26.853 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:03:10.571 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:03:46.137 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:04:59.178 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:05:06.943 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:05:18.497 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:05:26.248 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:05:50.885 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:05:59.885 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 0 msec} 
+2024-09-23T03:06:03.186 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 0
+			    ,cgOrder = 1
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = NULL
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:06:03.201 [http-nio-8080-exec-10] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T03:07:06.852 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+151. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:07:07.547 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:07:07.548 [Thread-167] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:07:07.864 [Thread-167] INFO c.z.h.HikariDataSource - HikariPool-16 - Shutdown initiated... 
+2024-09-23T03:07:07.868 [Thread-167] INFO c.z.h.HikariDataSource - HikariPool-16 - Shutdown completed. 
+2024-09-23T03:07:08.006 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:07:08.006 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:07:08.383 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:07:08.384 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:07:08.384 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:07:08.384 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:07:08.400 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:07:08.400 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 391 ms 
+2024-09-23T03:07:08.675 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:07:08.687 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:07:08.690 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:07:08.698 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.729 seconds (process running for 10901.648) 
+2024-09-23T03:07:08.700 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:07:10.039 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:07:10.039 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:07:10.041 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:07:10.043 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-17 - Starting... 
+2024-09-23T03:07:10.066 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-17 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@59fc2ea5 
+2024-09-23T03:07:10.066 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-17 - Start completed. 
+2024-09-23T03:07:10.067 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 0 msec} 
+2024-09-23T03:07:12.201 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 0
+			    ,cgOrder = 3
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = NULL
+			    ,cgDateTime = NULL
+			    ,cgDateTimeSvr = NULL
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:07:12.211 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:08:18.644 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:08:23.586 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 0 msec} 
+2024-09-23T03:08:43.258 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 0 msec} 
+2024-09-23T03:08:48.370 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 1
+			    ,cgOrder = 3
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = NULL
+			    ,cgDateTime = NULL
+			    ,cgDateTimeSvr = NULL
+			where 1 = 1
+				and seq = '3'
+ {executed in 7 msec} 
+2024-09-23T03:08:48.378 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:08:55.600 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:10:53.596 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T03:10:58.168 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:11:05.439 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 1
+			    ,cgOrder = 1
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = NULL
+			    ,cgDateTime = NULL
+			    ,cgDateTimeSvr = NULL
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:11:05.446 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:11:31.152 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:11:36.463 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+161. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:12:24.201 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:12:24.203 [Thread-171] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:12:24.527 [Thread-171] INFO c.z.h.HikariDataSource - HikariPool-17 - Shutdown initiated... 
+2024-09-23T03:12:24.531 [Thread-171] INFO c.z.h.HikariDataSource - HikariPool-17 - Shutdown completed. 
+2024-09-23T03:12:24.649 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:12:24.649 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:12:25.061 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:12:25.061 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:12:25.062 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:12:25.062 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:12:25.078 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:12:25.078 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 426 ms 
+2024-09-23T03:12:25.354 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:12:25.366 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:12:25.369 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:12:25.378 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.765 seconds (process running for 11218.327) 
+2024-09-23T03:12:25.379 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:12:25.648 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:12:25.648 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:12:25.649 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:12:25.651 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-18 - Starting... 
+2024-09-23T03:12:25.674 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-18 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2c92e8e3 
+2024-09-23T03:12:25.674 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-18 - Start completed. 
+2024-09-23T03:12:25.675 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:12:30.758 [http-nio-8080-exec-8] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 1
+			    ,cgOrder = 3
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = NULL
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:12:30.770 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:12:34.456 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 0 msec} 
+2024-09-23T03:12:36.456 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. update codeGroup
+			set
+				cgName = '성별'
+			    ,cgUseNy = 1
+			    ,cgOrder = 2
+			    ,cgDesc = '성별'
+			    ,delNy = NULL
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
+			where 1 = 1
+				and seq = '2'
+ {executed in 4 msec} 
+2024-09-23T03:12:36.465 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 2 msec} 
+2024-09-23T03:12:41.152 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:12:52.906 [http-nio-8080-exec-5] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+171. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '2'
+ {executed in 1 msec} 
+2024-09-23T03:13:11.218 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:13:11.220 [Thread-175] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:13:11.548 [Thread-175] INFO c.z.h.HikariDataSource - HikariPool-18 - Shutdown initiated... 
+2024-09-23T03:13:11.552 [Thread-175] INFO c.z.h.HikariDataSource - HikariPool-18 - Shutdown completed. 
+2024-09-23T03:13:11.692 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:13:11.693 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:13:12.040 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:13:12.041 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:13:12.041 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:13:12.041 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:13:12.057 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:13:12.057 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 362 ms 
+2024-09-23T03:13:12.296 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:13:12.308 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:13:12.311 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:13:12.319 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.659 seconds (process running for 11265.269) 
+2024-09-23T03:13:12.321 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:13:12.382 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:13:12.382 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:13:12.383 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:13:12.386 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-19 - Starting... 
+2024-09-23T03:13:12.406 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-19 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@59b7f44e 
+2024-09-23T03:13:12.406 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-19 - Start completed. 
+2024-09-23T03:13:12.408 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:13:49.893 [http-nio-8080-exec-9] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:13:53.689 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:13:59.855 [http-nio-8080-exec-4] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 1
+			    ,cgOrder = 4
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = 0
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:13:59.865 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:14:04.104 [http-nio-8080-exec-7] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '3'
+ {executed in 1 msec} 
+2024-09-23T03:14:05.630 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. update codeGroup
+			set
+				cgName = '이젠'
+			    ,cgUseNy = 1
+			    ,cgOrder = 3
+			    ,cgDesc = '컴퓨터'
+			    ,delNy = 0
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
+			where 1 = 1
+				and seq = '3'
+ {executed in 4 msec} 
+2024-09-23T03:14:05.639 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:14:08.127 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		from
+			codeGroup a
+		where 1 = 1
+			and a.seq = '1'
+ {executed in 1 msec} 
+2024-09-23T03:14:09.569 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. update codeGroup
+			set
+				cgName = '통신사'
+			    ,cgUseNy = 1
+			    ,cgOrder = 1
+			    ,cgDesc = '통신사'
+			    ,delNy = 0
+			    ,cgDateTime = now()
+			    ,cgDateTimeSvr = now()
+			where 1 = 1
+				and seq = '1'
+ {executed in 4 msec} 
+2024-09-23T03:14:09.578 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:14:28.753 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:14:37.102 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:15:02.512 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+181. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:16:36.779 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:16:36.780 [Thread-179] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:16:37.104 [Thread-179] INFO c.z.h.HikariDataSource - HikariPool-19 - Shutdown initiated... 
+2024-09-23T03:16:37.108 [Thread-179] INFO c.z.h.HikariDataSource - HikariPool-19 - Shutdown completed. 
+2024-09-23T03:16:37.239 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:16:37.240 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:16:37.603 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:16:37.604 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:16:37.604 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:16:37.604 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:16:37.619 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:16:37.620 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 378 ms 
+2024-09-23T03:16:37.885 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:16:37.898 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:16:37.901 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:16:37.910 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.705 seconds (process running for 11470.859) 
+2024-09-23T03:16:37.912 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:16:41.056 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:16:41.056 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:16:41.057 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:16:41.061 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-20 - Starting... 
+2024-09-23T03:16:41.087 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-20 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@25b4c416 
+2024-09-23T03:16:41.087 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-20 - Start completed. 
+2024-09-23T03:16:41.090 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+191. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:16:44.225 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+191. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:16:50.614 [http-nio-8080-exec-3] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+191. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:18:02.922 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:18:02.924 [Thread-183] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:18:03.243 [Thread-183] INFO c.z.h.HikariDataSource - HikariPool-20 - Shutdown initiated... 
+2024-09-23T03:18:03.247 [Thread-183] INFO c.z.h.HikariDataSource - HikariPool-20 - Shutdown completed. 
+2024-09-23T03:18:03.382 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:18:03.383 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:18:03.777 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:18:03.778 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:18:03.778 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:18:03.779 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:18:03.795 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:18:03.795 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 410 ms 
+2024-09-23T03:18:04.061 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:18:04.073 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:18:04.076 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:18:04.085 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.739 seconds (process running for 11557.034) 
+2024-09-23T03:18:04.087 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:18:11.904 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:18:11.904 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:18:11.905 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:18:11.908 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-21 - Starting... 
+2024-09-23T03:18:11.932 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-21 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@4bb5a2bf 
+2024-09-23T03:18:11.932 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-21 - Start completed. 
+2024-09-23T03:18:11.934 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+201. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:18:14.182 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+201. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:18:15.063 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+201. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:18:19.303 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+201. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:19:38.644 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:19:38.646 [Thread-187] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:19:38.969 [Thread-187] INFO c.z.h.HikariDataSource - HikariPool-21 - Shutdown initiated... 
+2024-09-23T03:19:38.974 [Thread-187] INFO c.z.h.HikariDataSource - HikariPool-21 - Shutdown completed. 
+2024-09-23T03:19:39.095 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:19:39.095 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:19:39.459 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:19:39.460 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:19:39.460 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:19:39.460 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:19:39.477 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:19:39.477 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 379 ms 
+2024-09-23T03:19:39.732 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:19:39.744 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:19:39.749 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:19:39.758 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.698 seconds (process running for 11652.708) 
+2024-09-23T03:19:39.760 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:19:40.503 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:19:40.503 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:19:40.505 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 2 ms 
+2024-09-23T03:19:40.507 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-22 - Starting... 
+2024-09-23T03:19:40.529 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-22 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@26e9d142 
+2024-09-23T03:19:40.529 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-22 - Start completed. 
+2024-09-23T03:19:40.531 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+211. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:20:08.189 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+211. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 and seq = '3' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:20:12.876 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+211. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+			 and delNy = 0 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:20:54.400 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+211. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:21:22.639 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:21:22.641 [Thread-191] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:21:22.970 [Thread-191] INFO c.z.h.HikariDataSource - HikariPool-22 - Shutdown initiated... 
+2024-09-23T03:21:22.974 [Thread-191] INFO c.z.h.HikariDataSource - HikariPool-22 - Shutdown completed. 
+2024-09-23T03:21:23.118 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:21:23.118 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:21:23.481 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:21:23.482 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:21:23.482 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:21:23.482 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:21:23.498 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:21:23.498 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 377 ms 
+2024-09-23T03:21:23.761 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:21:23.773 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:21:23.776 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:21:23.784 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.703 seconds (process running for 11756.734) 
+2024-09-23T03:21:23.786 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:27:38.805 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:27:38.807 [Thread-195] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:27:39.266 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:27:39.266 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:27:39.663 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:27:39.664 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:27:39.664 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:27:39.664 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:27:39.680 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:27:39.680 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 411 ms 
+2024-09-23T03:27:39.967 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:27:39.979 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:27:39.983 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:27:39.992 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.763 seconds (process running for 12132.942) 
+2024-09-23T03:27:39.994 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:27:43.942 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:27:43.943 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:27:43.944 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:27:43.947 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-23 - Starting... 
+2024-09-23T03:27:43.970 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-23 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@73d3b772 
+2024-09-23T03:27:43.970 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-23 - Start completed. 
+2024-09-23T03:27:43.972 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+221. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:27:48.685 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+221. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:29:44.207 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+221. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:30:09.676 [http-nio-8080-exec-6] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+221. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:04.505 [File Watcher] INFO o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification) 
+2024-09-23T03:31:04.507 [Thread-199] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:31:04.829 [Thread-199] INFO c.z.h.HikariDataSource - HikariPool-23 - Shutdown initiated... 
+2024-09-23T03:31:04.833 [Thread-199] INFO c.z.h.HikariDataSource - HikariPool-23 - Shutdown completed. 
+2024-09-23T03:31:04.959 [restartedMain] INFO c.s.DaysixApplication - Starting DaysixApplication using Java 17.0.11 with PID 14392 (C:\factory\ws_sts4_4250\repo_daysix\daysix\bin\main started by user in C:\factory\ws_sts4_4250\repo_daysix\daysix) 
+2024-09-23T03:31:04.959 [restartedMain] INFO c.s.DaysixApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-09-23T03:31:05.341 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-09-23T03:31:05.342 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:31:05.342 [restartedMain] INFO o.a.c.c.StandardService - Starting service [Tomcat] 
+2024-09-23T03:31:05.342 [restartedMain] INFO o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.28] 
+2024-09-23T03:31:05.361 [restartedMain] INFO o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext 
+2024-09-23T03:31:05.361 [restartedMain] INFO o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 400 ms 
+2024-09-23T03:31:05.614 [restartedMain] INFO o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729 
+2024-09-23T03:31:05.626 [restartedMain] INFO o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:31:05.629 [restartedMain] INFO o.s.b.w.e.t.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/' 
+2024-09-23T03:31:05.639 [restartedMain] INFO c.s.DaysixApplication - Started DaysixApplication in 0.714 seconds (process running for 12338.587) 
+2024-09-23T03:31:05.639 [restartedMain] INFO o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged 
+2024-09-23T03:31:06.714 [http-nio-8080-exec-1] INFO o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-09-23T03:31:06.714 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-09-23T03:31:06.715 [http-nio-8080-exec-1] INFO o.s.w.s.DispatcherServlet - Completed initialization in 1 ms 
+2024-09-23T03:31:06.718 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-24 - Starting... 
+2024-09-23T03:31:06.742 [http-nio-8080-exec-1] INFO c.z.h.p.HikariPool - HikariPool-24 - Added connection net.sf.log4jdbc.sql.jdbcapi.ConnectionSpy@2f83a1af 
+2024-09-23T03:31:06.742 [http-nio-8080-exec-1] INFO c.z.h.HikariDataSource - HikariPool-24 - Start completed. 
+2024-09-23T03:31:06.744 [http-nio-8080-exec-1] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:09.437 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:15.212 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:23.629 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-21' AND '2024-09-21' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:28.876 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTimeSvr BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:32.971 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:37.995 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-23' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:31:47.035 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+			 AND a.cgDateTime BETWEEN '2024-09-23' AND '2024-09-24' 
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:32:02.580 [http-nio-8080-exec-2] DEBUG j.sqltiming -  com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+231. select
+			a.seq
+		    ,a.cgName
+		    ,a.cgUseNy
+		    ,a.cgOrder
+		    ,a.cgDesc
+		    ,a.delNy
+		    ,a.cgDateTime
+		    ,a.cgDateTimeSvr
+		    ,(select count(seq) from code as b where 1 = 1 and codeGroup_seq = a.seq) as seqCount
+		from
+			codeGroup a
+		where 1 = 1
+
+		order by
+			a.seq desc
+ {executed in 1 msec} 
+2024-09-23T03:32:28.587 [RMI TCP Connection(370)-127.0.0.1] INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested. 
+2024-09-23T03:32:28.588 [RMI TCP Connection(370)-127.0.0.1] INFO o.a.c.h.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"] 
+2024-09-23T03:32:28.909 [RMI TCP Connection(370)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-24 - Shutdown initiated... 
+2024-09-23T03:32:28.914 [RMI TCP Connection(370)-127.0.0.1] INFO c.z.h.HikariDataSource - HikariPool-24 - Shutdown completed. 
