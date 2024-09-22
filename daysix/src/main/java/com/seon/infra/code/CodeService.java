@@ -28,4 +28,16 @@ public class CodeService {
 		return codeDao.selectOne(codeDto);
 	}
 	
+	public int update(CodeDto codeDto) {
+		return codeDao.update(codeDto);
+	}
+	
+	public int uelete(CodeDto codeDto) {
+		return codeDao.uelete(codeDto);
+	}
+	
+	public int delete(CodeDto codeDto) {
+		return codeDao.delete(codeDto);
+	}
+	
 }

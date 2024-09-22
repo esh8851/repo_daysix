@@ -15,4 +15,10 @@ public interface CodeDao {
 	
 	public CodeDto selectOne(CodeDto codeDto);
 	
+	public int update(CodeDto codeDto);
+	
+	public int uelete(CodeDto codeDto);
+	
+	public int delete(CodeDto codeDto);
+	
 }

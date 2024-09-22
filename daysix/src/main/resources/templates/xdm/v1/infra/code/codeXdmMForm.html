@@ -630,7 +630,7 @@
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cUseNy" aria-label="Default select example">
                                 <option value="" selected disabled>사용 여부</option>
-                                <option value="1" th:selected="${item?.cUseNy == 0}">Y</option>
+                                <option value="1" th:selected="${item?.cUseNy == 1}">Y</option>
                                 <option value="0" th:selected="${item?.cUseNy == 0}">N</option>
                               </select>
                             </div>
@@ -640,9 +640,9 @@
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cOrder" aria-label="Default select example">
                                 <option value="" selected disabled>순서</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="2">3</option>
+                                <option value="1" th:selected="${item?.cOrder == 1}">1</option>
+                                <option value="2" th:selected="${item?.cOrder == 2}">2</option>
+                                <option value="3" th:selected="${item?.cOrder == 3}">3</option>
                               </select>
                             </div>
                           </div>
@@ -656,12 +656,44 @@
                           </div>
                         </div>
                         <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="exampleFormControlSelect1" name="delNy" aria-label="Default select example" disabled>
+                                <option value="" selected disabled>삭제 여부</option>
+                                <option value="1" th:selected="${item?.delNy == 0}">Y</option>
+                                <option value="0" th:selected="${item?.delNy == 0}">N</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlReadOnlyInput1" class="form-label">등록날짜<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="cDateTime" th:value="${#dates.format(item.cDateTime, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성" disabled>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlReadOnlyInput1" class="form-label">수정날짜<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="cDateTimeSvt" th:value="${#dates.format(item.cDateTimeSvr, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성" disabled>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
                           <div class="col d-flex justify-content-between">
+                          	<div>
                           	<a href="/v1/infra/code/codeXdmList">
-	                          	<button type="button" class="btn btn-icon btn-outline-primary">
+	                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
 	                              <span class="tf-icons bx bx-list-ul"></span>
 	                            </button>
                           	</a>
+                          	<button type="button" class="btn btn-icon btn-danger" id="btnUel">
+                              <span class="tf-icons bx bx-x"></span>
+                            </button>
+                            <button type="button" class="btn btn-icon btn-danger" id="btnDel">
+                              <span class="tf-icons bx bx-trash"></span>
+                            </button>
+                          	</div>
                             <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
@@ -741,6 +773,22 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+    	document.getElementById("btnUel").onclick = function(){
+    		alert("UELETE 확인");
+    		let form = document.querySelector("form[name=form]");
+    		form.action = "/v1/infra/code/codeXdmUel";
+    		form.submit();
+    	}
+    </script>
+    <script>
+    	document.getElementById("btnDel").onclick = function(){
+    		alert("DELETE 확인");
+    		let form = document.querySelector("form[name=form]");
+    		form.action = "/v1/infra/code/codeXdmDel";
+    		form.submit();
+    	}
+    </script>
     <script>
       // Flat pickr
       const flatPickrEL = $(".flatpickr-validation");
