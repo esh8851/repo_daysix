@@ -610,9 +610,16 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">코드그룹번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <label for="exampleFormControlSelect1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="exampleFormControlSelect1" name="codeGroup_seq" aria-label="Default select example" disabled>
+                                <option th:each="list:${listCodeGroup}" th:value="${list.seq}" th:text="${list.seq}" th:selected="${list.seq == item?.codeGroup_seq}"></option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlSelect1" class="form-label">코드그룹 이름<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="codeGroup_seq" aria-label="Default select example">
-                                <option value="" selected disabled>코드그룹번호</option>
                                 <option th:each="list:${listCodeGroup}" th:value="${list.seq}" th:text="${list.cgName}" th:selected="${list.seq == item?.codeGroup_seq}"></option>
                               </select>
                             </div>
@@ -629,7 +636,7 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cUseNy" aria-label="Default select example">
-                                <option value="" selected disabled>사용 여부</option>
+                                <option value="">사용 여부</option>
                                 <option value="1" th:selected="${item?.cUseNy == 1}">Y</option>
                                 <option value="0" th:selected="${item?.cUseNy == 0}">N</option>
                               </select>
@@ -660,7 +667,7 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="delNy" aria-label="Default select example" disabled>
-                                <option value="" selected disabled>삭제 여부</option>
+                                <option value="">삭제 여부</option>
                                 <option value="1" th:selected="${item?.delNy == 0}">Y</option>
                                 <option value="0" th:selected="${item?.delNy == 0}">N</option>
                               </select>

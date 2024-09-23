@@ -610,9 +610,9 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">코드그룹번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <label for="exampleFormControlSelect1" class="form-label">코드그룹 이름<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="codeGroup_seq" aria-label="Default select example">
-                                <option value="" selected disabled>코드그룹번호</option>
+                                <option value="" selected disabled>코드그룹 이름</option>
                                 <option th:each="list:${listCodeGroup}" th:value="${list.seq}" th:text="${list.cgName}"></option>
                               </select>
                             </div>
@@ -629,9 +629,9 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cUseNy" aria-label="Default select example">
-                                <option value="" selected disabled>사용 여부</option>
+                                <option value="">사용 여부</option>
                                 <option value="0" th:selected="${list?.cUseNy == 0}">N</option>
-                                <option value="1" th:selected="${list?.cUseNy == 0}">Y</option>
+                                <option value="1" th:selected="${list?.cUseNy == 1}">Y</option>
                               </select>
                             </div>
                           </div>
@@ -639,7 +639,7 @@
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cOrder" aria-label="Default select example">
-                                <option value="" selected disabled>순서</option>
+                                <option value="">순서</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="2">3</option>

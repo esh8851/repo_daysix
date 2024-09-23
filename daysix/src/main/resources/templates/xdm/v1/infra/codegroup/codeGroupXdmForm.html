@@ -589,7 +589,7 @@
                       <li class="breadcrumb-item active">Dafault</li>
                     </ol>
                   </nav>
-                  <h2 class="mb-4">Code</h5>
+                  <h2 class="mb-4">CodeGroup</h5>
                 </div>
               </div>
               <div class="row">
@@ -603,42 +603,15 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">코드그룹<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                <option value="">선택하세요</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" placeholder="자동생성"
                                 readonly="">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 (ANOTHER)</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
-                              aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 이름</label>
+                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
                               <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" placeholder="John Doe"
-                                aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 이름 (영문)</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -648,8 +621,9 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
-                                <option value="1" th:selected="${item?.cgUseNy == 1}">사용</option>
-                                <option value="0" th:selected="${item?.cgUseNy == 0}">미사용</option>
+                                <option value="">사용 여부</option>
+                                <option value="1">Y</option>
+                                <option value="0">N</option>
                               </select>
                             </div>
                           </div>
@@ -671,11 +645,9 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                          	<a href="/v1/infra/codegroup/codeGroupXdmList">
-	                          	<button type="button" class="btn btn-icon btn-outline-primary">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-                          	</a>
+                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
                             <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
@@ -787,5 +759,19 @@
         );
       });
     </script>
+    
+    <!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function(){
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/codegroup/codeGroupXdmList";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
+    
   </body>
 </html>

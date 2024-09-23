@@ -12,7 +12,7 @@ public class CodeGroupDto {
 	private Integer delNy;
 	private Date cgDateTime;
 	private Date cgDateTimeSvr;
-//	count추가
+//	count 추가
 	private Integer seqCount;
 //	-------
 	public String getSeq() {
@@ -63,7 +63,7 @@ public class CodeGroupDto {
 	public void setCgDateTimeSvr(Date cgDateTimeSvr) {
 		this.cgDateTimeSvr = cgDateTimeSvr;
 	}
-//	count추가
+//	count 추가
 	public Integer getSeqCount() {
 		return seqCount;
 	}

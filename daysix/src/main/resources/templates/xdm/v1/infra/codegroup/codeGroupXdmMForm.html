@@ -589,7 +589,7 @@
                       <li class="breadcrumb-item active">Dafault</li>
                     </ol>
                   </nav>
-                  <h2 class="mb-4">Code</h5>
+                  <h2 class="mb-4">CodeGroup</h5>
                 </div>
               </div>
               <div class="row">
@@ -609,7 +609,7 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드 이름</label>
+                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
                               <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" th:value="${item?.cgName}" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
@@ -668,11 +668,17 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                          	<a href="/v1/infra/codegroup/codeGroupXdmList">
-	                          	<button type="button" class="btn btn-icon btn-outline-primary">
+                          	<div>
+	                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
 	                              <span class="tf-icons bx bx-list-ul"></span>
 	                            </button>
-                          	</a>
+	                          	<button type="button" class="btn btn-icon btn-danger" id=btnDelete>
+	                              <span class="tf-icons bx bx-x"></span>
+	                            </button>
+	                          	<button type="button" class="btn btn-icon btn-danger" id="btnUelete">
+	                              <span class="tf-icons bx bx-trash"></span>
+	                            </button>
+                          	</div>
                             <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
@@ -784,5 +790,47 @@
         );
       });
     </script>
+    
+    <!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function(){
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/codegroup/codeGroupXdmList";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
+    
+    <!-- uelete S -->
+    <script type="text/javascript">
+    	document.getElementById("btnUelete").onclick = function(){
+    		alert("UELETE 확인")
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/codegroup/codeGroupXdmUel";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- uelete E -->
+    
+    <!-- delete S -->
+    <script type="text/javascript">
+    	document.getElementById("btnDelete").onclick = function(){
+    		alert("DELETE 확인")
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/codegroup/codeGroupXdmDel";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- delete E -->
+    
   </body>
 </html>

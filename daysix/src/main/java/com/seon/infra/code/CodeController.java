@@ -14,13 +14,13 @@ public class CodeController {
 	CodeService codeService;
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmList")
-	public String codeXdmSignUp(Model model) {
+	public String codeXdmSignUp(CodeVo codeVo,Model model) {
 //		List<CodeDto> codeGroup = codeService.selectService();
 //		System.out.println(codeGroup.size());
 //		for(CodeDto groups: codeGroup) {
 //			System.out.println(groups.getSeq() + "|" + groups.getcName() + "|" + groups.getcUseNy() + "|" + groups.getcOrder() + "|" + groups.getDelNy() + "|" + groups.getcDateTime() + "|" + groups.getcDateTimeSvr() + "|" + groups.getCodeGroup_seq());
 //		}
-		model.addAttribute("list", codeService.selectService());
+		model.addAttribute("list", codeService.selectService(codeVo));
 		return "/xdm/v1/infra/code/codeXdmList";
 	}
 	

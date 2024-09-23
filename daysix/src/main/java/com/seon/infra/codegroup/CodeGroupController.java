@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -14,8 +15,13 @@ public class CodeGroupController {
 	CodeGroupService codeGroupService;
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmList")
-	public String codeGroupXdmList(CodeGroupVo codeGroupVo, Model model) {
+	public String codeGroupXdmList(@ModelAttribute("vo") CodeGroupVo codeGroupVo, Model model) {
 		
+//		paging
+		codeGroupVo.setParamsPaging(codeGroupService.selectOneCount(codeGroupVo));
+		if (codeGroupVo.getTotalRows() > 0) {
+			model.addAttribute("list", codeGroupService.selectService(codeGroupVo));
+		}
 		
 //		자바객체를 html으로 전달할 때는 Model객체 사용
 //		codeGroups 자바 객체를 "list" 라는 이름의 변수명으로 html에 전달
@@ -68,6 +74,20 @@ public class CodeGroupController {
 	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
 		codeGroupService.update(codeGroupDto);
 		System.out.println("update 실행했다~");
+		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
+	}
+	
+//	uelete
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmUel")
+	public String codeGroupXdmUel(CodeGroupDto codeGroupDto) {
+		codeGroupService.uelete(codeGroupDto);
+		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
+	}
+	
+//	delete
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmDel")
+	public String codeGroupXdmDel(CodeGroupDto codeGroupDto) {
+		codeGroupService.delete(codeGroupDto);
 		return "redirect:/v1/infra/codegroup/codeGroupXdmList";
 	}
 

@@ -16,6 +16,10 @@ public class CodeGroupService {
 //		return codeGroups;
 //	}
 	
+	public int selectOneCount(CodeGroupVo codeGroupVo) { 
+		return codeGroupDao.selectOneCount(codeGroupVo); 
+    }
+	
 	public List<CodeGroupDto> selectService(CodeGroupVo codeGroupVo){
 		return codeGroupDao.selectList(codeGroupVo);
 	}
@@ -43,6 +47,16 @@ public class CodeGroupService {
 	public int update(CodeGroupDto codeGroupDto) {
 		System.out.println(codeGroupDto.getSeq());
 		return codeGroupDao.update(codeGroupDto);
+	}
+	
+//	uelete
+	public int uelete(CodeGroupDto codeGroupDto) {
+		return codeGroupDao.uelete(codeGroupDto);
+	}
+	
+//	delete
+	public int delete(CodeGroupDto codeGroupDto) {
+		return codeGroupDao.delete(codeGroupDto);
 	}
 
 }
