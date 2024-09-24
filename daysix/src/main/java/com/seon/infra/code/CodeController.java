@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -14,13 +15,25 @@ public class CodeController {
 	CodeService codeService;
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmList")
-	public String codeXdmSignUp(CodeVo codeVo,Model model) {
+	public String codeXdmSignUp(@ModelAttribute("vo") CodeVo codeVo,Model model) {
 //		List<CodeDto> codeGroup = codeService.selectService();
 //		System.out.println(codeGroup.size());
 //		for(CodeDto groups: codeGroup) {
 //			System.out.println(groups.getSeq() + "|" + groups.getcName() + "|" + groups.getcUseNy() + "|" + groups.getcOrder() + "|" + groups.getDelNy() + "|" + groups.getcDateTime() + "|" + groups.getcDateTimeSvr() + "|" + groups.getCodeGroup_seq());
 //		}
 		model.addAttribute("list", codeService.selectService(codeVo));
+		
+//		날짜 필드에 시간 추가
+		  codeVo.setShDateStart(codeVo.getShDateStart()+" 00:00:00");
+		  codeVo.setShDateEnd(codeVo.getShDateEnd()+" 23:59:59");
+		 
+		
+//		paging
+		codeVo.setParamsPaging(codeService.selectOneCount(codeVo));
+		if(codeVo.getTotalRows() > 0) {
+			model.addAttribute("list", codeService.selectService(codeVo));
+		}
+		
 		return "/xdm/v1/infra/code/codeXdmList";
 	}
 	

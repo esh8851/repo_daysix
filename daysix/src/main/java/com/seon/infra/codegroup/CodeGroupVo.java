@@ -1,22 +1,24 @@
 package com.seon.infra.codegroup;
 
+import com.seon.common.constans.Constants;
+
 public class CodeGroupVo {
 	
 //	search
 	private Integer shDelNy;
-	private Integer shcgUseNy;
-	private Integer shcgOption;
-	private String shcgValue;
-	private String shcgDateStart;
-	private String shcgDateEnd;
-	private String shcgOptionDate;
+	private Integer shUseNy;
+	private Integer shOption;
+	private String shValue;
+	private String shDateStart;
+	private String shDateEnd;
+	private Integer shOptionDate;
 	
 //	paging
 	private int thisPage = 1;									// 현재 페이지
-	private int rowNumToShow = 5;								// 화면에 보여줄 데이터 줄 갯수 Constants.ROW_NUM_TO_SHOW;
-	private int pageNumToShow = 5;								// 화면에 보여줄 페이징 번호 갯수 Constants.PAGE_NUM_TO_SHOW;		
+	private int rowNumToShow = Constants.ROW_NUM_TO_SHOW;		// 화면에 보여줄 데이터 줄 개수
+	private int pageNumToShow = Constants.PAGE_NUM_TO_SHOW;		// 화면에 보여줄 페이징 번호 개수	
 
-	private int totalRows;										// 전체 데이터 갯수
+	private int totalRows;										// 전체 데이터 개수
 	private int totalPages;										// 전체 페이지 번호
 	private int startPage;										// 시작 페이지 번호
 	private int endPage;										// 마지막 페이지 번호
@@ -29,7 +31,7 @@ public class CodeGroupVo {
 	
 	public void setParamsPaging(int totalRows) {
 		
-//		setThisPage(1);
+//		setThisPage(3);
 		
 		setTotalRows(totalRows);
 
@@ -52,7 +54,7 @@ public class CodeGroupVo {
 		setEndPage(getStartPage() + getPageNumToShow() - 1);
 
 		if (getEndPage() > getTotalPages()) {
-			setEndPage(getTotalPages());
+			setEndPage(getTotalPages());  
 		}
 		
 		setEndRnumForOracle((getRowNumToShow() * getThisPage()));
@@ -84,55 +86,68 @@ public class CodeGroupVo {
 	public void setShDelNy(Integer shDelNy) {
 		this.shDelNy = shDelNy;
 	}
-
-	public Integer getShcgUseNy() {
-		return shcgUseNy;
+	
+	public Integer getShUseNy() {
+		return shUseNy;
 	}
 
-	public void setShcgUseNy(Integer shcgUseNy) {
-		this.shcgUseNy = shcgUseNy;
+
+	public void setShUseNy(Integer shUseNy) {
+		this.shUseNy = shUseNy;
 	}
 
-	public Integer getShcgOption() {
-		return shcgOption;
+
+	public Integer getShOption() {
+		return shOption;
 	}
 
-	public void setShcgOption(Integer shcgOption) {
-		this.shcgOption = shcgOption;
+
+	public void setShOption(Integer shOption) {
+		this.shOption = shOption;
 	}
 
-	public String getShcgValue() {
-		return shcgValue;
+
+	public String getShValue() {
+		return shValue;
 	}
 
-	public void setShcgValue(String shcgValue) {
-		this.shcgValue = shcgValue;
+
+	public void setShValue(String shValue) {
+		this.shValue = shValue;
 	}
 
-	public String getShcgDateStart() {
-		return shcgDateStart;
+
+	public String getShDateStart() {
+		return shDateStart;
 	}
 
-	public void setShcgDateStart(String shcgDateStart) {
-		this.shcgDateStart = shcgDateStart;
+
+	public void setShDateStart(String shDateStart) {
+		this.shDateStart = shDateStart;
 	}
 
-	public String getShcgDateEnd() {
-		return shcgDateEnd;
+
+	public String getShDateEnd() {
+		return shDateEnd;
 	}
 
-	public void setShcgDateEnd(String shcgDateEnd) {
-		this.shcgDateEnd = shcgDateEnd;
+
+	public void setShDateEnd(String shDateEnd) {
+		this.shDateEnd = shDateEnd;
 	}
 
-	public String getShcgOptionDate() {
-		return shcgOptionDate;
+
+	public Integer getShOptionDate() {
+		return shOptionDate;
 	}
 
-	public void setShcgOptionDate(String shcgOptionDate) {
-		this.shcgOptionDate = shcgOptionDate;
+
+	public void setShOptionDate(Integer shOptionDate) {
+		this.shOptionDate = shOptionDate;
 	}
-//	paging
+
+
+	//	paging
 	public int getThisPage() {
 		return thisPage;
 	}

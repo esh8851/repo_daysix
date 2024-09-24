@@ -12,14 +12,14 @@
 			codeGroup a
 		where 1 = 1
 			<if test="shDelNy != null and !shDelNy.equals('')">and delNy = #{shDelNy}</if>
-			<if test="shcgUseNy != null and !shcgUseNy.equals('')">and cgUseNy = #{shcgUseNy}</if>
+			<if test="shUseNy != null and !shUseNy.equals('')">and cgUseNy = #{shUseNy}</if>
 			<choose>
-				<when test="shcgOptionDate == 1">AND a.cgDateTime BETWEEN #{shcgDateStart} AND #{shcgDateEnd}</when>
-				<when test="shcgOptionDate == 2">AND a.cgDateTimeSvr BETWEEN #{shcgDateStart} AND #{shcgDateEnd}</when>
+				<when test="shOption == 1">AND seq = #{shValue}</when>
+				<when test="shOption == 2">AND cgName LIKE CONCAT('%', #{shValue}, '%')</when>
 			</choose>
 			<choose>
-				<when test="shcgOption == 1">and seq = #{shcgValue}</when>
-				<when test="shcgOption == 2">and cgName like concat('%', #{shcgValue}, '%')</when>
+				<when test="shOptionDate == 1">AND a.cgDateTime BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				<when test="shOptionDate == 2">AND a.cgDateTimeSvr BETWEEN #{shDateStart} AND #{shDateEnd}</when>
 			</choose>
 	</sql>
 	

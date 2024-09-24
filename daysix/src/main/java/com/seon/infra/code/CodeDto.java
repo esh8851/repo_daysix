@@ -13,9 +13,10 @@ public class CodeDto {
 	private Date cDateTime;
 	private Date cDateTimeSvr;
 	private String codeGroup_seq;
+	
 //	codegroup에서 가져올 데이터
 	private String cgName;
-
+	
 //	-------
 	public String getSeq() {
 		return seq;
@@ -71,6 +72,8 @@ public class CodeDto {
 	public void setCodeGroup_seq(String codeGroup_seq) {
 		this.codeGroup_seq = codeGroup_seq;
 	}
+	
+	
 //	-------
 	public String getCgName() {
 		return cgName;
@@ -78,5 +81,7 @@ public class CodeDto {
 	public void setCgName(String cgName) {
 		this.cgName = cgName;
 	}
+	
+	
 
 }

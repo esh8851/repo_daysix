@@ -604,59 +604,59 @@
 	                  <div class="row">
 	                    <div class="col">
 	                      <div class="mb-3">
-	                        <select class="form-select" id="exampleFormControlSelect1" name="shDelNy" aria-label="Default select example">
-	                          <option value="">삭제 여부</option>
-	                          <option value="1">Y</option>
-	                          <option value="0">N</option>
+	                        <select id="shDelNy" name="shDelNy" class="form-select" aria-label="Default select example">
+	                          <option value="" th:selected="${vo.shDelNy == null}">삭제 여부</option>
+	                          <option value="1" th:selected="${vo.shDelNy == 1}">Y</option>
+	                          <option value="0" th:selected="${vo.shDelNy == 0}">N</option>
 	                        </select>
 	                      </div>
 	                    </div>
 	                    <div class="col">
 	                      <div class="mb-3">
-	                        <select class="form-select" id="exampleFormControlSelect1" name="shcgUseNy" aria-label="Default select example">
-	                          <option value="">사용 여부</option>
-	                          <option value="1">Y</option>
-	                          <option value="0">N</option>
+	                        <select id="shUseNy" name="shUseNy" class="form-select" aria-label="Default select example">
+	                          <option value="" th:selected="${vo.shUseNy == null}">사용 여부</option>
+	                          <option value="1" th:selected="${vo.shUseNy == 1}">Y</option>
+	                          <option value="0" th:selected="${vo.shUseNy == 0}">N</option>
 	                        </select>
 	                      </div>
 	                    </div>
 	                    <div class="col">
 	                      <div class="mb-3">
-	                        <select class="form-select" id="exampleFormControlSelect1" name="shcgOptionDate" aria-label="Default select example">
-	                          <option value="">날짜선택</option>
-	                          <option value="1">등록날짜</option>
-	                          <option value="2">수정날짜</option>
+	                        <select id="shOptionDate" name="shOptionDate" class="form-select"  aria-label="Default select example">
+	                          <option value="" th:selected="${vo.shOptionDate == null}">날짜선택</option>
+	                          <option value="1" th:selected="${vo.shOptionDate == 1}">등록날짜</option>
+	                          <option value="2" th:selected="${vo.shOptionDate == 2}">수정날짜</option>
 	                        </select>
 	                      </div>
 	                    </div>
 	                    <div class="col">
-	                      <input type="text" class="form-control" id="shcgDateStart" name="shcgDateStart" placeholder="yyyy-MM-dd"
+	                      <input type="text" class="form-control" id="shDateStart" name="shDateStart" th:value="${#strings.substring(vo.shDateStart, 0, 10)}"
 	                          aria-describedby="defaultFormControlHelp" autocomplete="off">
 	                    </div>
 	                    <div class="col">
-	                      <input type="text" class="form-control" id="shcgDateEnd" name="shcgDateEnd" placeholder="yyyy-MM-dd"
+	                      <input type="text" class="form-control" id="shDateEnd" name="shDateEnd" th:value="${#strings.substring(vo.shDateEnd, 0, 10)}"
 	                          aria-describedby="defaultFormControlHelp" autocomplete="off">
 	                    </div>
 	                  </div>
 	                  <div class="row">
 	                    <div class="col">
 	                      <div class="mb-3">
-	                        <select class="form-select" id="exampleFormControlSelect1" name="shcgOption" aria-label="Default select example">
-	                          <option value="">검색구분</option>
-	                          <option value="1">코드그룹 번호</option>
-	                          <option value="2">코드그룹 이름</option>
+	                        <select id="shOption" name="shOption" class="form-select" aria-label="Default select example">
+	                          <option value="" th:selected="${vo.shOption == null}">검색구분</option>
+	                          <option value="1" th:selected="${vo.shOption == 1}">코드그룹 번호</option>
+	                          <option value="2" th:selected="${vo.shOption == 2}">코드그룹 이름</option>
 	                        </select>
 	                      </div>
 	                    </div>
 	                    <div class="col">
-	                      <input type="text" class="form-control" id="defaultFormControlInput" name="shcgValue" placeholder="검색어"
-	                        aria-describedby="defaultFormControlHelp">
+	                      <input type="text" id="shValue" name="shValue" class="form-control" placeholder="검색어"
+	                        aria-describedby="defaultFormControlHelp" th:value="${vo.shValue}">
 	                    </div>
 	                    <div class="col">
-	                      <button type="submit" class="btn btn-icon btn-outline-primary">
+	                      <button type="submit" id="btnSearch" class="btn btn-icon btn-outline-primary">
 	                        <span class="tf-icons bx bx-search"></span>
 	                      </button>
-	                      <button type="button" class="btn btn-icon btn-outline-primary">
+	                      <button type="button" id="btnReset" class="btn btn-icon btn-outline-primary">
 	                        <span class="tf-icons bx bx-refresh"></span>
 	                      </button>
 	                    </div>
@@ -668,13 +668,13 @@
 	                      <h5 class="mb-0"><span th:text="'Total: '+${vo.totalRows}"></span></h5>
 	                    </div>
 	                    <div class="col-2">
-	                      <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-	                        <option value="">Open this select menu</option>
-	                        <option value="1">One</option>
-	                        <option value="2">Two</option>
-	                        <option value="3">Three</option>
-	                        <option value="4">four</option>
-	                        <option value="5">5</option>
+	                      <select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example">
+	                        <option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
+	                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
+	                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
+	                        <option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
+	                        <option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
+	                        <option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
 	                      </select>
 	                    </div>
 	                  </div>
@@ -880,23 +880,34 @@
 
     <!-- Page JS -->
     
+    <!-- datetimepicker -->
     <script type="text/javascript">
 	    window.addEventListener('load', function(){ // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
 			
 	    	$.datetimepicker.setLocale('ko'); // datetimepicker의 로케일을 한국어를 쓰겠다는 뜻이다.
 	    	
-	    	$("#shcgDateStart, #shcgDateEnd").datetimepicker({ // jquery의 datetimepicker 플러그인을 사용하여 id가 shDateStart, shDateEnd인 두 개의 날짜 입력 필드 요소 대해 datetimepicker를 활성화
+	    	$("#shDateStart, #shDateEnd").datetimepicker({ // jquery의 datetimepicker 플러그인을 사용하여 id가 shDateStart, shDateEnd인 두 개의 날짜 입력 필드 요소 대해 datetimepicker를 활성화
 	    		timepicker:false, // 시간 선택을 비활성화
 	    		format:'Y-m-d'   // 날짜 형식을 'Y-m-d'로 설정
 	    	});
 	    });
     </script>
     
+    <!-- paging -->
     <script type="text/javascript">
 	    goList = function (thisPage) {
 		    document.querySelector("input[name=thisPage]").value = thisPage;
 		    document.querySelector("form[name=form]").action = "/v1/infra/codegroup/codeGroupXdmList";
 		    document.querySelector("form[name=form]").submit();
+		}
+    </script>
+    
+    <!-- 화면에 보여줄 데이터 수 -->
+    <script type="text/javascript">
+	    document.getElementById("changeRowNum").onchange = function () {
+		    document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
+		    form.action = goUrlXdmList;
+		    form.submit();
 		}
     </script>
     

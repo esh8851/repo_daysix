@@ -7,24 +7,47 @@
 
 	<resultMap type="com.seon.infra.code.CodeDto" id="resultMapObj"></resultMap>
 	
-	<select id="selectList" resultMap="resultMapObj">
-		select
-			a.seq
-		    ,a.cName
-		    ,a.cUseNy
-		    ,a.cOrder
-		    ,a.cDesc
-		    ,a.delNy
-		    ,a.cDateTime
-		    ,a.cDateTimeSvr
-		    ,a.codeGroup_seq
-		    ,b.cgName
+	<sql id="selectCommon">
 		from
 			code a
 			join codeGroup as b
 				on b.seq = a.codeGroup_seq
-		order by
-			a.seq desc
+		WHERE 1 = 1
+			<if test="shDelNy != null and !shDelNy.equals('')">AND a.delNy = #{shDelNy}</if>
+			<if test="shUseNy != null and !shUseNy.equals('')">AND cUseNy = #{shUseNy}</if>
+			<choose>
+				<when test="shOption == 1">AND a.seq = #{shValue}</when>
+				<when test="shOption == 2">AND cName LIKE CONCAT('%',#{shValue},'%')</when>
+			</choose>
+			<choose>
+				<when test="shOptionDate == 1">AND a.cDateTime BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				<when test="shOptionDate == 2">AND a.cDateTimeSvr BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			</choose>
+	</sql>
+	
+	<select id="selectOneCount" resultType="Integer">
+		SELECT COUNT(*)
+		<include refid="selectCommon"></include>
+	</select>
+	
+	<select id="selectList" resultMap="resultMapObj">
+		select aa.* from (
+			select
+				a.seq
+			    ,a.cName
+			    ,a.cUseNy
+			    ,a.cOrder
+			    ,a.cDesc
+			    ,a.delNy
+			    ,a.cDateTime
+			    ,a.cDateTimeSvr
+			    ,a.codeGroup_seq
+			    ,b.cgName
+			<include refid="selectCommon"></include>
+			order by
+				a.seq desc
+		) aa
+		limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	
 	<select id="selectListCodeGroup" resultMap="resultMapObj">
@@ -68,6 +91,7 @@
 		    ,a.cName
 		    ,a.cUseNy
 		    ,a.cOrder
+		    ,a.cDesc
 		    ,a.delNy
 		    ,a.cDateTime
 		    ,a.cDateTimeSvr

@@ -645,12 +645,7 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cOrder" aria-label="Default select example">
-                                <option value="" selected disabled>순서</option>
-                                <option value="1" th:selected="${item?.cOrder == 1}">1</option>
-                                <option value="2" th:selected="${item?.cOrder == 2}">2</option>
-                                <option value="3" th:selected="${item?.cOrder == 3}">3</option>
-                              </select>
+                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="cOrder" th:value="${item?.cOrder}" placeholder="자동생성">
                             </div>
                           </div>
                         </div>
@@ -658,7 +653,7 @@
                           <div class="col-6">
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cDesc" rows="3"></textarea>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cDesc" th:text="${item?.cDesc}" rows="3"></textarea>
                             </div>
                           </div>
                         </div>
@@ -780,6 +775,8 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- uelete & delete -->
     <script>
     	document.getElementById("btnUel").onclick = function(){
     		alert("UELETE 확인");
@@ -796,6 +793,7 @@
     		form.submit();
     	}
     </script>
+    
     <script>
       // Flat pickr
       const flatPickrEL = $(".flatpickr-validation");
