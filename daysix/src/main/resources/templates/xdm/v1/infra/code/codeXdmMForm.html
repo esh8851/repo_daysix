@@ -684,11 +684,9 @@
                         <div class="row">
                           <div class="col d-flex justify-content-between">
                           	<div>
-                          	<a href="/v1/infra/code/codeXdmList">
-	                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-                          	</a>
+                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
                           	<button type="button" class="btn btn-icon btn-danger" id="btnUel">
                               <span class="tf-icons bx bx-x"></span>
                             </button>
@@ -775,6 +773,19 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function(){
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/codegroup/codeGroupXdmList";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
     
     <!-- uelete & delete -->
     <script>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.seon.infra.member.MemberDao">
+<!-- namespace :  mapper와 연결될 dao -->
+<!-- xml에서 주석 단축키 : Ctrl + Shift + C -->
+
+	<resultMap type="com.seon.infra.member.MemberDto" id="resultMapObj"></resultMap>
+	
+	<!-- selectList S -->
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			a.mmSeq
+			,a.mmName
+			,a.mmGender
+			,a.mmId
+			,a.mmEmail
+			,a.mmPw
+			,a.mmBirth
+			,a.mmPhone
+			,a.mmDateTimeReg
+			,a.mmDateTimeEdit
+			,a.mmUseNy
+			,a.mmDelNy
+		FROM
+			member AS a
+		ORDER BY
+			a.mmSeq desc
+	</select>
+	<!-- selectList E -->
+	
+	<!-- insert S -->
+	<insert id="insert">
+		INSERT INTO member(
+			mmName
+			,mmGender
+			,mmId
+			,mmEmail
+			,mmPw
+			,mmBirth
+			,mmPhone
+			,mmDateTimeReg
+			,mmDateTimeEdit
+			,mmUseNy
+			,mmDelNy
+		)
+		VALUE(
+			#{mmName}
+		    ,#{mmGender}
+		    ,#{mmId}
+		    ,#{mmEmail}
+		    ,#{mmPw}
+		    ,#{mmBirth}
+		    ,#{mmPhone}
+		    ,now()
+		    ,now()
+		    ,#{mmUseNy}
+		    ,0
+		)
+	</insert>
+	<!-- insert E -->
+	
+	<!-- selectOne S -->
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			a.mmSeq
+			,a.mmName
+			,a.mmGender
+			,a.mmId
+			,a.mmEmail
+			,a.mmPw
+			,a.mmBirth
+			,a.mmPhone
+			,a.mmDateTimeReg
+			,a.mmDateTimeEdit
+			,a.mmUseNy
+			,a.mmDelNy
+		FROM
+			member AS a
+		WHERE 1 = 1
+			AND a.mmSeq = #{mmSeq}
+	</select>
+	<!-- selectOne E -->
+	
+	<!-- update S -->
+	<update id="update">
+		UPDATE member
+			SET
+				mmName = #{mmName}
+				,mmGender = #{mmGender}
+				,mmId = #{mmId}
+				,mmEmail = #{mmEmail}
+				,mmPw = #{mmPw}
+				,mmBirth = #{mmBirth}
+				,mmPhone = #{mmPhone}
+				,mmDateTimeReg = now()
+				,mmDateTimeEdit = now()
+				,mmUseNy = #{mmUseNy}
+				,mmDelNy = #{mmDelNy}
+			WHERE 1 = 1
+				AND mmSeq = #{mmSeq}
+	</update>
+	<!-- update E -->
+	
+	  
+</mapper>

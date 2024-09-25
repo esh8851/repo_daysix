@@ -7,6 +7,19 @@
 
 	<resultMap type="com.seon.infra.code.CodeDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectListCachedCodeArrayList" resultMap="resultMapObj">
+		SELECT 
+			a.seq
+			,cName
+			,b.seq
+		FROM
+			code a
+			,codeGroup b
+		WHERE 1=1
+			AND a.delNy = 0
+		    AND cUseNy = 1
+   </select>
+	
 	<sql id="selectCommon">
 		from
 			code a

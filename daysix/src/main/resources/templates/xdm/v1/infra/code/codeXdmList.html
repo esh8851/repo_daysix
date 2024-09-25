@@ -601,8 +601,8 @@
 	                  <div class="row">
 	                    <div class="col">
 	                      <div class="mb-3">
-	                        <select class="form-select" id="exampleFormControlSelect1" name="shDelNy" aria-label="Default select example">
-	                          <option value="">삭제 여부</option>
+	                        <select class="form-select" id="shDelNy" name="shDelNy" aria-label="Default select example">
+	                          <option value="" th:selected="${vo.shDelNy == null}">삭제 여부</option>
 	                          <option value="1">Y</option>
 	                          <option value="0">N</option>
 	                        </select>

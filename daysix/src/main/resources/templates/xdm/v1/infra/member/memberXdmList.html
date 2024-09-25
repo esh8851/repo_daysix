@@ -12,6 +12,9 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
+
+<!-- thymeleaf 사용 -->
+<!-- xmlns:th="http://www.thymeleaf.org" -->
 <html
   xmlns:th="http://www.thymeleaf.org"
   lang="en"
@@ -28,7 +31,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Input groups - Forms | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
 
@@ -394,7 +397,7 @@
             <!-- Forms & Tables -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
             <!-- Forms -->
-            <li class="menu-item active open">
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Form Elements">Form Elements</div>
@@ -405,7 +408,7 @@
                     <div data-i18n="Basic Inputs">Basic Inputs</div>
                   </a>
                 </li>
-                <li class="menu-item active">
+                <li class="menu-item">
                   <a href="forms-input-groups.html" class="menu-link">
                     <div data-i18n="Input groups">Input groups</div>
                   </a>
@@ -431,7 +434,7 @@
               </ul>
             </li>
             <!-- Tables -->
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="tables-basic.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
                 <div data-i18n="Tables">Tables</div>
@@ -576,120 +579,222 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-                <div class="col">
-                  <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-style1">
-                      <li class="breadcrumb-item">
-                        <a href="javascript:void(0);">Page&nbsp;1</a>
-                      </li>
-                      <li class="breadcrumb-item">
-                        <a href="javascript:void(0);">Page&nbsp;2</a>
-                      </li>
-                      <li class="breadcrumb-item active">Dafault</li>
-                    </ol>
-                  </nav>
-                  <h2 class="mb-4">CodeGroup</h5>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <div class="card">
-                    <div class="card-header">
-                      <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
-                    </div>
-                    <div class="card-body">
-                      <form id="form" name="form" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmUpdt">
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly="">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" th:value="${item?.cgName}" placeholder="John Doe"
-                                aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
-                                <option value="1" th:selected="${item?.cgUseNy == 1}">Y</option>
-                                <option value="0" th:selected="${item?.cgUseNy == 0}">N</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="number" class="form-control" id="defaultFormControlInput" name="cgOrder" th:value="${item?.cgOrder}" placeholder="John Doe"
-                                aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cgDesc" th:text="${item?.cgDesc}" rows="3"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="delNy" aria-label="Default select example" disabled>
-                                <option value="1" th:selected="${item?.delNy == 1}">Y</option>
-                                <option value="0" th:selected="${item?.delNy == 0}">N</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTime" th:value="${#dates.format(item.cgDateTime, 'yyyy-MM-dd HH:mm:ss')}"
-                                aria-describedby="defaultFormControlHelp" disabled>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">수정일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTimeSvr" th:value="${#dates.format(item.cgDateTimeSvr, 'yyyy-MM-dd HH:mm:ss')}"
-                                aria-describedby="defaultFormControlHelp" disabled>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col d-flex justify-content-between">
-                          	<div>
-	                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-	                          	<button type="button" class="btn btn-icon btn-danger" id=btnDel>
-	                              <span class="tf-icons bx bx-x"></span>
-	                            </button>
-	                          	<button type="button" class="btn btn-icon btn-danger" id="btnUel">
-	                              <span class="tf-icons bx bx-trash"></span>
-	                            </button>
-                          	</div>
-                            <button type="submit" class="btn btn-icon btn-primary">
-                              <span class="tf-icons bx bxs-data"></span>
-                            </button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+              <div class="card">
+                <div class="card-body">
+                  <form name="form" method="post" action="/v1/infra/member/memberXdmList">
+                  <!-- Custom style1 Breadcrumb -->
+	                  <nav aria-label="breadcrumb">
+	                    <ol class="breadcrumb breadcrumb-style1">
+	                      <li class="breadcrumb-item">
+	                        <a href="javascript:void(0);">Page&nbsp;1</a>
+	                      </li>
+	                      <li class="breadcrumb-item">
+	                        <a href="javascript:void(0);">Page&nbsp;2</a>
+	                      </li>
+	                      <li class="breadcrumb-item active">Default</li>
+	                    </ol>
+	                  </nav>
+	                  <!--/ Custom style1 Breadcrumb -->
+	                  <h2 class="mb-4">Member</h5>
+	                  <div class="row">
+	                    <div class="col">
+	                      <div class="mb-3">
+	                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+	                          <option>Open this select menu</option>
+	                          <option value="1">N</option>
+	                          <option value="2">Y</option>
+	                          <option value="3">Three</option>
+	                        </select>
+	                      </div>
+	                    </div>
+	                    <div class="col">
+	                      <div class="mb-3">
+	                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+	                          <option>Open this select menu</option>
+	                          <option value="1">N</option>
+	                          <option value="2">Y</option>
+	                          <option value="3">Three</option>
+	                        </select>
+	                      </div>
+	                    </div>
+	                    <div class="col">
+	                      <div class="mb-3">
+	                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+	                          <option>Open this select menu</option>
+	                          <option value="1">수정일</option>
+	                          <option value="2">Two</option>
+	                          <option value="3">Three</option>
+	                        </select>
+	                      </div>
+	                    </div>
+	                    <div class="col">
+	                      <input type="text" class="form-control" id="defaultFormControlInput" placeholder="2024-06-05"
+	                          aria-describedby="defaultFormControlHelp">
+	                    </div>
+	                    <div class="col">
+	                      <input type="text" class="form-control" id="defaultFormControlInput" placeholder="2024-07-05"
+	                          aria-describedby="defaultFormControlHelp">
+	                    </div>
+	                  </div>
+	                  <div class="row">
+	                    <div class="col">
+	                      <div class="mb-3">
+	                        <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+	                          <option>Open this select menu</option>
+	                          <option value="1">검색구분</option>
+	                          <option value="2">Two</option>
+	                          <option value="3">Three</option>
+	                        </select>
+	                      </div>
+	                    </div>
+	                    <div class="col">
+	                      <input type="text" class="form-control" id="defaultFormControlInput" placeholder="검색어"
+	                        aria-describedby="defaultFormControlHelp">
+	                    </div>
+	                    <div class="col">
+	                      <button type="button" class="btn btn-icon btn-outline-primary">
+	                        <span class="tf-icons bx bx-search"></span>
+	                      </button>
+	                      <button type="button" class="btn btn-icon btn-outline-primary">
+	                        <span class="tf-icons bx bx-refresh"></span>
+	                      </button>
+	                    </div>
+	                    <div class="col"></div>
+	                    <div class="col"></div>
+	                  </div>
+	                  <div class="row align-items-center mb-3">
+	                    <div class="col">
+	                      <h5 class="mb-0">Total: <span>171</span></h5>
+	                    </div>
+	                    <div class="col-2">
+	                      <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
+	                        <option>Open this select menu</option>
+	                        <option value="1">One</option>
+	                        <option value="2">Two</option>
+	                        <option value="3">Three</option>
+	                        <option value="4">four</option>
+	                        <option value="5">5</option>
+	                      </select>
+	                    </div>
+	                  </div>
+	                  <!-- table S -->
+	                  <div class="row">
+	                    <div class="col">
+	                      <div class="table-responsive text-nowrap">
+	                        <table class="table">
+	                          <thead>
+	                            <tr class="text-nowrap text-center">
+	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+	                              <th>코드</th>
+	                              <th>이름</th>
+	                              <th>성별</th>
+	                              <th>아이디</th>
+	                              <th>이메일</th>
+	                              <th>비밀번호</th>
+	                              <th>생일</th>
+	                              <th>핸드폰</th>
+	                              <th>등록일</th>
+	                              <th>수정일</th>
+	                              <th>사용</th>
+	                              <th>삭제</th>
+	                              <th></th>
+	                            </tr>
+	                          </thead>
+	                          <tbody>
+	                          	<tr th:if="${#lists.isEmpty(list)}">
+	                          		<td colspan="14">
+	                          			<p class="fw-bold text-center mt-3">데이터 없음</p>
+	                          		</td>
+	                          	</tr>
+	                            <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
+	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+	                              <td scope="row" th:text="${list.mmSeq}"></td>
+	                              <td>
+	                              	<a th:href="@{/v1/infra/member/memberXdmMForm(mmSeq=${list?.mmSeq})}" th:text="${list.mmName}"></a>
+	                              </td>
+	                              <td th:if="${list.mmGender eq 0}">남자</td>
+	                              <td th:unless="${list.mmGender eq 0}">여자</td>
+	                              <td th:text="${list.mmId}"></td>
+	                              <td th:text="${list.mmEmail}"></td>
+	                              <td th:text="${list.mmPw}"></td>
+	                              <td th:text="${list.mmBirth}"></td>
+	                              <td th:text="${list.mmPhone}"></td>
+	                              <td th:text="${#dates.format(list.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"></td>
+	                              <td th:text="${#dates.format(list.mmDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"></td>
+	                              <td th:if="${list.mmUseNy eq 0}">N</td>
+	                              <td th:unless="${list.mmUseNy eq 0}">Y</td>
+	                              <td th:if="${list.mmDelNy eq 0}">N</td>
+	                              <td th:unless="${list.mmDelNy eq 0}">Y</td>
+	                              <td><h3>&nbsp;</h3></td>
+	                            </tr>
+	                          </tbody>
+	                        </table>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <!-- table E -->
+	                  <div class="row">
+	                    <div class="col">
+	                      <div class="demo-inline-spacing d-flex justify-content-center">
+	                        <!-- Basic Pagination -->
+	                        <nav aria-label="Page navigation">
+	                          <ul class="pagination">
+	                            <li class="page-item first">
+	                              <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-left"></i></a>
+	                            </li>
+	                            <li class="page-item prev">
+	                              <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-left"></i></a>
+	                            </li>
+	                            <li class="page-item active">
+	                              <a class="page-link" href="javascript:void(0);">1</a>
+	                            </li>
+	                            <li class="page-item">
+	                              <a class="page-link" href="javascript:void(0);">2</a>
+	                            </li>
+	                            <li class="page-item">
+	                              <a class="page-link" href="javascript:void(0);">3</a>
+	                            </li>
+	                            <li class="page-item">
+	                              <a class="page-link" href="javascript:void(0);">4</a>
+	                            </li>
+	                            <li class="page-item">
+	                              <a class="page-link" href="javascript:void(0);">5</a>
+	                            </li>
+	                            <li class="page-item next">
+	                              <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevron-right"></i></a>
+	                            </li>
+	                            <li class="page-item last">
+	                              <a class="page-link" href="javascript:void(0);"><i class="tf-icon bx bx-chevrons-right"></i></a>
+	                            </li>
+	                          </ul>
+	                        </nav>
+	                        <!--/ Basic Pagination -->
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="row">
+	                    <div class="col">
+	                      <button type="button" class="btn btn-icon btn-danger">
+	                        <span class="tf-icons bx bx-x"></span>
+	                      </button>
+	                      <button type="button" class="btn btn-icon btn-danger">
+	                        <span class="tf-icons bx bx-trash"></span>
+	                      </button>
+	                    </div>
+	                    <div class="col d-flex justify-content-end">
+	                      <button type="button" class="btn btn-icon btn-success">
+	                        <span class="tf-icons bx bx-file"></span>
+	                      </button>
+	                      <button type="button" class="btn btn-icon btn-primary ms-1">
+	                        <span class="tf-icons bx bx-plus"></span>
+	                      </button>
+	                    </div>
+	                  </div>
+                  </form>
                 </div>
               </div>
             </div>
+            
             <!-- / Content -->
 
             <!-- Footer -->
@@ -737,8 +842,6 @@
     </div>
     <!-- / Layout wrapper -->
 
-    
-
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/jquery/jquery.js"></script>
@@ -758,79 +861,5 @@
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script>
-      // Flat pickr
-      const flatPickrEL = $(".flatpickr-validation");
-      if (flatPickrEL.length) {
-        flatPickrEL.flatpickr({
-          allowInput: true,
-          monthSelectorType: "static"
-        });
-      }
-
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var bsValidationForms = document.querySelectorAll(".needs-validation");
-
-      // Loop over them and prevent submission
-      Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
-        form.addEventListener(
-          "submit",
-          function(event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            } else {
-              // Submit your form
-              alert("Submitted!!!");
-            }
-
-            form.classList.add("was-validated");
-          },
-          false
-        );
-      });
-    </script>
-    
-    <!-- btnList S -->
-    <script type="text/javascript">
-    	document.getElementById("btnList").onclick = function(){
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmList";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- btnList E -->
-    
-    <!-- uelete S -->
-    <script type="text/javascript">
-    	document.getElementById("btnUel").onclick = function(){
-    		alert("UELETE 확인")
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmUel";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- uelete E -->
-    
-    <!-- delete S -->
-    <script type="text/javascript">
-    	document.getElementById("btnDel").onclick = function(){
-    		alert("DELETE 확인")
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmDel";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- delete E -->
-    
   </body>
 </html>

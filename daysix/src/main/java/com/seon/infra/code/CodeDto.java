@@ -1,9 +1,13 @@
 package com.seon.infra.code;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class CodeDto {
-	
+
+//	----------------------------- field S -----------------------------
+//	table
 	private String seq;
 	private String cName;
 	private Integer cUseNy;
@@ -14,10 +18,15 @@ public class CodeDto {
 	private Date cDateTimeSvr;
 	private String codeGroup_seq;
 	
-//	codegroup에서 가져올 데이터
+//	codeGroup에서 가져올 데이터
 	private String cgName;
 	
-//	-------
+//	for cache
+	public static List<CodeDto> cachedCodeArrayList = new ArrayList<CodeDto>();
+//	----------------------------- field E -----------------------------
+	
+	
+//	----------------------------- getter & setter S -----------------------------
 	public String getSeq() {
 		return seq;
 	}
@@ -73,8 +82,7 @@ public class CodeDto {
 		this.codeGroup_seq = codeGroup_seq;
 	}
 	
-	
-//	-------
+//	codeGroup에서 가져올 데이터
 	public String getCgName() {
 		return cgName;
 	}
@@ -82,6 +90,14 @@ public class CodeDto {
 		this.cgName = cgName;
 	}
 	
+//	for cache
+	public static List<CodeDto> getCachedCodeArrayList() {
+		return cachedCodeArrayList;
+	}
+	public static void setCachedCodeArrayList(List<CodeDto> cachedCodeArrayList) {
+		CodeDto.cachedCodeArrayList = cachedCodeArrayList;
+	}
+//	----------------------------- getter & setter E -----------------------------
 	
 
 }

@@ -589,7 +589,7 @@
                       <li class="breadcrumb-item active">Dafault</li>
                     </ol>
                   </nav>
-                  <h2 class="mb-4">CodeGroup</h5>
+                  <h2 class="mb-4">Member</h5>
                 </div>
               </div>
               <div class="row">
@@ -599,18 +599,36 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmUpdt">
+                      <form id="form" name="form" method="post" action="/v1/infra/member/memberXdmUpdt">
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly="">
+                              <label for="defaultFormControlInput" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmSeq" name="mmSeq" th:value="${item?.mmSeq}" placeholder="자동 생성"
+                                aria-describedby="defaultFormControlHelp" readonly>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" th:value="${item?.cgName}" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">이름<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmName" name="mmName" th:value="${item?.mmName}" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlSelect1" class="form-label">성별<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="mmGender" name="mmGender" aria-label="Default select example">
+                                <option value="">성별</option>
+                                <option value="0" th:selected="${item?.mmGender == 0}">남자</option>
+                                <option value="1" th:selected="${item?.mmGender == 1}">여자</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">아이디<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmId" name="mmId" th:value="${item?.mmId}" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -618,67 +636,74 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
-                                <option value="1" th:selected="${item?.cgUseNy == 1}">Y</option>
-                                <option value="0" th:selected="${item?.cgUseNy == 0}">N</option>
-                              </select>
+                              <label for="defaultFormControlInput" class="form-label">이메일<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmEmail" name="mmEmail" th:value="${item?.mmEmail}" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="number" class="form-control" id="defaultFormControlInput" name="cgOrder" th:value="${item?.cgOrder}" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">비밀번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmPw" name="mmPw" th:value="${item?.mmPw}" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">생일<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmBirth" name="mmBirth" th:value="${item?.mmBirth}" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">핸드폰<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmPhone" name="mmPhone" th:value="${item?.mmPhone}" placeholder="John Doe"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-6">
-                            <div class="mb-3">
-                              <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cgDesc" th:text="${item?.cgDesc}" rows="3"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="delNy" aria-label="Default select example" disabled>
-                                <option value="1" th:selected="${item?.delNy == 1}">Y</option>
-                                <option value="0" th:selected="${item?.delNy == 0}">N</option>
-                              </select>
-                            </div>
-                          </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTime" th:value="${#dates.format(item.cgDateTime, 'yyyy-MM-dd HH:mm:ss')}"
+                              <input type="text" class="form-control" id="mmDateTimeReg" name="mmDateTimeReg" th:value="${#dates.format(item?.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성"
                                 aria-describedby="defaultFormControlHelp" disabled>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">수정일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgDateTimeSvr" th:value="${#dates.format(item.cgDateTimeSvr, 'yyyy-MM-dd HH:mm:ss')}"
+                              <input type="text" class="form-control" id="mmDateTimeEdit" name="mmDateTimeEdit" th:value="${#dates.format(item?.mmDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성"
                                 aria-describedby="defaultFormControlHelp" disabled>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="mmUseNy" name="mmUseNy" aria-label="Default select example">
+                                <option value="">사용 여부</option>
+                                <option value="0" th:selected="${item?.mmUseNy == 0}">N</option>
+                                <option value="1" th:selected="${item?.mmUseNy == 1}">Y</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="mmDelNy" name="mmDelNy" aria-label="Default select example" disabled>
+                                <option value="">삭제 여부</option>
+                                <option value="0" th:selected="${item?.mmDelNy == 0}">N</option>
+                                <option value="1" th:selected="${item?.mmDelNy == 1}">Y</option>
+                              </select>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                          	<div>
-	                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-	                          	<button type="button" class="btn btn-icon btn-danger" id=btnDel>
-	                              <span class="tf-icons bx bx-x"></span>
-	                            </button>
-	                          	<button type="button" class="btn btn-icon btn-danger" id="btnUel">
-	                              <span class="tf-icons bx bx-trash"></span>
-	                            </button>
-                          	</div>
+                            <button type="button" class="btn btn-icon btn-outline-primary">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
                             <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
@@ -790,47 +815,5 @@
         );
       });
     </script>
-    
-    <!-- btnList S -->
-    <script type="text/javascript">
-    	document.getElementById("btnList").onclick = function(){
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmList";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- btnList E -->
-    
-    <!-- uelete S -->
-    <script type="text/javascript">
-    	document.getElementById("btnUel").onclick = function(){
-    		alert("UELETE 확인")
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmUel";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- uelete E -->
-    
-    <!-- delete S -->
-    <script type="text/javascript">
-    	document.getElementById("btnDel").onclick = function(){
-    		alert("DELETE 확인")
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/codegroup/codeGroupXdmDel";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- delete E -->
-    
   </body>
 </html>
