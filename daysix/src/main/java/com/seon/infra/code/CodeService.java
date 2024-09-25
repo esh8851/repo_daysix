@@ -29,10 +29,10 @@ public class CodeService {
 	}
 	
 	// codeGroup의 정보를 주면 해당 리스트를 리턴
-	public static List<CodeDto> selectListCachedCode(String seq) throws Exception {
+	public static List<CodeDto> selectListCachedCode(String codeGroup_seq) throws Exception {
 		List<CodeDto> rt = new ArrayList<CodeDto>();
 		for(CodeDto codeRow : CodeDto.cachedCodeArrayList) {
-			if (codeRow.getSeq().equals(seq)) {
+			if (codeRow.getSeq().equals(codeGroup_seq)) {
 				rt.add(codeRow);
 			} else {
 				// by pass
