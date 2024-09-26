@@ -686,7 +686,7 @@
 	                          <thead>
 	                            <tr class="text-nowrap text-center">
 	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <th>No.</th>
+	                              <th>#</th>
 	                              <th>코드그룹 번호</th>
 	                              <th>코드그룹 이름</th>
 	                              <th>사용</th>
@@ -706,7 +706,7 @@
 	                          	</tr>
 	                            <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
 	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <td></td>
+	                              <td th:text="${vo.totalRows - ((vo.thisPage - 1) * vo.rowNumToShow + listStat.index)}"></td>
 	                              <td scope="row" th:text="${list.seq}"></td>
 	                              <td>
 	                              	<a th:href="@{/v1/infra/codegroup/codeGroupXdmMForm(seq=${list.seq})}" th:text="${list.cgName}"></a>
@@ -906,7 +906,7 @@
     <script type="text/javascript">
 	    document.getElementById("changeRowNum").onchange = function () {
 		    document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
-		    form.action = goUrlXdmList;
+		    form.action = "/v1/infra/codegroup/codeGroupXdmList";
 		    form.submit();
 		}
     </script>

@@ -611,7 +611,7 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">이름<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmName" name="mmName" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmName" name="mmName" placeholder="이름"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -619,15 +619,15 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">성별<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="mmGender" name="mmGender" aria-label="Default select example">
-                                <option value="0">남자</option>
-                                <option value="1">여자</option>
+                                <option th:each="list : ${@codeService.selectListCachedCode(2)}" th:value="${list.codeGroup_seq}" th:text="${list.cName}" th:selected="${list.codeGroup_seq} == ${item?.mmGender}"></option>
+                                <option th:each="list : ${@codeService.selectListCachedCode(3)}" th:value="${list.codeGroup_seq}" th:text="${list.cName}" th:selected="${list.codeGroup_seq} == ${item?.mmGender}"></option>
                               </select>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">아이디<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmId" name="mmId" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmId" name="mmId" placeholder="아이디"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -636,28 +636,28 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">이메일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmEmail" name="mmEmail" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmEmail" name="mmEmail" placeholder="이메일"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">비밀번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmPw" name="mmPw" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmPw" name="mmPw" placeholder="비밀번호"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">생일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmBirth" name="mmBirth" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmBirth" name="mmBirth" placeholder="생일"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">핸드폰<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmPhone" name="mmPhone" placeholder="John Doe"
+                              <input type="text" class="form-control" id="mmPhone" name="mmPhone" placeholder="핸드폰"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -690,7 +690,7 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-primary">
+                            <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
                               <span class="tf-icons bx bx-list-ul"></span>
                             </button>
                             <button type="submit" class="btn btn-icon btn-primary">
@@ -769,6 +769,19 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
+    
+    <!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function(){
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/member/memberXdmList";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

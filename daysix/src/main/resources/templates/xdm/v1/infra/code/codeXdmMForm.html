@@ -663,7 +663,7 @@
                               <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="exampleFormControlSelect1" name="delNy" aria-label="Default select example" disabled>
                                 <option value="">삭제 여부</option>
-                                <option value="1" th:selected="${item?.delNy == 0}">Y</option>
+                                <option value="1" th:selected="${item?.delNy == 1}">Y</option>
                                 <option value="0" th:selected="${item?.delNy == 0}">N</option>
                               </select>
                             </div>

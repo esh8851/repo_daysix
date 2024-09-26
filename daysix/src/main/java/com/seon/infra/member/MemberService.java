@@ -1,12 +1,8 @@
 package com.seon.infra.member;
 
-import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import jakarta.annotation.PostConstruct;
 
 
 @Service
@@ -17,8 +13,8 @@ public class MemberService {
 	
 	
 //	selectList
-	public List<MemberDto> selectList() {
-		return memberDao.selectList();
+	public List<MemberDto> selectList(MemberVo memberVo) {
+		return memberDao.selectList(memberVo);
 	}
 	
 //	insert
@@ -34,6 +30,21 @@ public class MemberService {
 //	update - update
 	public int update(MemberDto memberDto) {
 		return memberDao.update(memberDto);
+	}
+	
+//	uelete
+	public int uelete(MemberDto memberDto) {
+		return memberDao.uelete(memberDto);
+	}
+	
+//	delete
+	public int delete(MemberDto memberDto) {
+		return memberDao.delete(memberDto);
+	}
+	
+//	paging
+	public int selectOneCount(MemberVo memberVo) {
+		return memberDao.selectOneCount(memberVo);
 	}
 	
 	

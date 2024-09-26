@@ -652,11 +652,9 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                          	<a href="/v1/infra/code/codeXdmList">
-	                          	<button type="button" class="btn btn-icon btn-outline-primary">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-                          	</a>
+                          	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
                             <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
@@ -733,6 +731,16 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
+    
+    <!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function() {
+    		let form = document.querySelector("[name=form]")
+    		form.action = "/v1/infra/code/codeXdmList";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

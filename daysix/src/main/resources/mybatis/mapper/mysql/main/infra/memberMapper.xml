@@ -7,25 +7,52 @@
 
 	<resultMap type="com.seon.infra.member.MemberDto" id="resultMapObj"></resultMap>
 	
-	<!-- selectList S -->
-	<select id="selectList" resultMap="resultMapObj">
-		SELECT
-			a.mmSeq
-			,a.mmName
-			,a.mmGender
-			,a.mmId
-			,a.mmEmail
-			,a.mmPw
-			,a.mmBirth
-			,a.mmPhone
-			,a.mmDateTimeReg
-			,a.mmDateTimeEdit
-			,a.mmUseNy
-			,a.mmDelNy
+	<!-- include S -->
+	<sql id="selectCommon">
 		FROM
 			member AS a
-		ORDER BY
-			a.mmSeq desc
+		WHERE 1 = 1
+			<if test="shDelNy != null and !shDelNy.equals('')">AND mmDelNy = #{shDelNy}</if>
+			<if test="shUseNy != null and !shUseNy.equals('')">AND mmUseNy = #{shUseNy}</if>
+			<choose>
+				<when test="shOption == 1">AND mmSeq = #{shValue}</when>
+				<when test="shOption == 2">AND mmName LIKE CONCAT('%', #{shValue}, '%')</when>
+			</choose>
+			<choose>
+				<when test="shOptionDate == 1">AND mmDateTimeReg BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				<when test="shOptionDate == 2">AND mmDateTimeEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+			</choose>
+	</sql>
+	<!-- include E -->
+	
+	<!-- count S -->
+	<select id="selectOneCount">
+		SELECT COUNT(*)
+		<include refid="selectCommon" />
+	</select>
+	<!-- count E -->
+	
+	<!-- selectList S -->
+	<select id="selectList" resultMap="resultMapObj">
+	SELECT aa.* FROM(
+			SELECT
+				a.mmSeq
+				,a.mmName
+				,a.mmGender
+				,a.mmId
+				,a.mmEmail
+				,a.mmPw
+				,a.mmBirth
+				,a.mmPhone
+				,a.mmDateTimeReg
+				,a.mmDateTimeEdit
+				,a.mmUseNy
+				,a.mmDelNy
+			<include refid="selectCommon" />
+			ORDER BY
+				a.mmSeq desc
+			) aa
+			limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	<!-- selectList E -->
 	
@@ -57,6 +84,9 @@
 		    ,#{mmUseNy}
 		    ,0
 		)
+		<selectKey resultType="String" keyProperty="mmSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
 	</insert>
 	<!-- insert E -->
 	
@@ -101,6 +131,24 @@
 				AND mmSeq = #{mmSeq}
 	</update>
 	<!-- update E -->
+	
+	<!-- uelete S -->
+	<update id="uelete">
+		UPDATE member
+			SET
+				mmDelNy = 1
+			WHERE 1 = 1
+				AND mmSeq = #{mmSeq}
+	</update>
+	<!-- uelete E -->
+	
+	<!-- delete S -->
+	<delete id="delete">
+		DELETE FROM member
+			WHERE 1 = 1
+			AND mmSeq = #{mmSeq}
+	</delete>
+	<!-- delete E -->
 	
 	  
 </mapper>

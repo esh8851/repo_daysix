@@ -662,16 +662,16 @@
 	                  </div>
 	                  <div class="row align-items-center mb-3">
 	                    <div class="col">
-	                      <h5 class="mb-0"><span th:text="'Total : '+ ${vo.totalRows}"></span></h5>
+	                      <h5 class="mb-0"><span th:text="'Total: ' + ${vo.totalRows}"></span></h5>
 	                    </div>
 	                    <div class="col-2">
-	                      <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-	                        <option value="">Open this select menu</option>
-	                        <option value="1">One</option>
-	                        <option value="2">Two</option>
-	                        <option value="3">Three</option>
-	                        <option value="4">four</option>
-	                        <option value="5">5</option>
+	                      <select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example">
+	                        <option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
+	                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
+	                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
+	                        <option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
+	                        <option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
+	                        <option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
 	                      </select>
 	                    </div>
 	                  </div>
@@ -683,7 +683,7 @@
 	                          <thead>
 	                            <tr class="text-nowrap text-center">
 	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <th>No.</th>
+	                              <th>#</th>
 	                              <th>코드 번호</th>
 	                              <th>코드 이름</th>
 	                              <th>코드그룹 번호</th>
@@ -704,7 +704,7 @@
 	                            </tr>
 	                            <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
 	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <td></td>
+	                              <td th:text="${vo.totalRows - ((vo.thisPage - 1) * vo.rowNumToShow + listStat.index)}"></td>
 	                              <td scope="row" th:text="${list.seq}"></td>
 	                              <td><a th:href="@{/v1/infra/code/codeXdmMForm(seq=${list.seq})}"><span class="text-primary"><b th:text="${list.cName}"></b></span></a></td>
 	                              <td th:text="${list.codeGroup_seq}"></td>
@@ -762,11 +762,9 @@
 	                      <button type="button" class="btn btn-icon btn-success">
 	                        <span class="tf-icons bx bx-file"></span>
 	                      </button>
-	                      <a href="/v1/infra/code/codeXdmForm">
-		                      <button type="button" class="btn btn-icon btn-primary ms-1">
-		                        <span class="tf-icons bx bx-plus"></span>
-		                      </button>
-	                      </a>
+	                      <button type="button" class="btn btn-icon btn-primary ms-1" id="btnForm">
+	                        <span class="tf-icons bx bx-plus"></span>
+	                      </button>
 	                    </div>
 	                  </div>
                   </form>
@@ -841,7 +839,7 @@
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     
-    <!-- datetimepicker -->
+    <!-- datetimepicker S -->
     <script type="text/javascript">
 	    window.addEventListener('load', function(){ // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
 			
@@ -853,6 +851,17 @@
 	    	});
 	    });
     </script>
+    <!-- datetimepicker E -->
+    
+    <!-- btnForm S -->
+    <script type="text/javascript">
+    	document.getElementById("btnForm").onclick = function() {
+    		let form = document.querySelector("[name=form]")
+    		form.action = "/v1/infra/code/codeXdmForm";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnForm E -->
     
     <!-- paging -->
     <script type="text/javascript">
@@ -862,6 +871,16 @@
 		    document.querySelector("form[name=form]").submit();
 		}
     </script>
+    
+    <!-- total S -->
+    <script type="text/javascript">
+	    document.getElementById("changeRowNum").onchange = function () {
+	        document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
+	        form.action = "/v1/infra/code/codeXdmList";
+	        form.submit();
+	    }
+    </script>
+    <!-- total E -->
     
     <!-- by developer -->	
 	<script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface MemberDao {
 	
 //	selectList
-	List<MemberDto> selectList();
+	List<MemberDto> selectList(MemberVo memberVo);
 	
 //	insert
 	public int insert(MemberDto memberDto);
@@ -19,5 +19,13 @@ public interface MemberDao {
 //	update - update
 	public int update(MemberDto memberDto);
 	
+//	uelete
+	public int uelete(MemberDto memberDto);
+	
+//	delete
+	public int delete(MemberDto memberDto);
+	
+//	paging
+	public int selectOneCount(MemberVo memberVo);
 	
 }

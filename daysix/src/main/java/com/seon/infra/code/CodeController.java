@@ -8,6 +8,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.seon.common.util.UtilDateTime;
+
 @Controller
 public class CodeController {
 	
@@ -15,17 +17,21 @@ public class CodeController {
 	CodeService codeService;
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmList")
-	public String codeXdmSignUp(@ModelAttribute("vo") CodeVo codeVo,Model model) {
+	public String codeXdmSignUp(@ModelAttribute("vo") CodeVo codeVo, Model model) {
 //		List<CodeDto> codeGroup = codeService.selectService();
 //		System.out.println(codeGroup.size());
 //		for(CodeDto groups: codeGroup) {
 //			System.out.println(groups.getSeq() + "|" + groups.getcName() + "|" + groups.getcUseNy() + "|" + groups.getcOrder() + "|" + groups.getDelNy() + "|" + groups.getcDateTime() + "|" + groups.getcDateTimeSvr() + "|" + groups.getCodeGroup_seq());
 //		}
-		model.addAttribute("list", codeService.selectService(codeVo));
+//		model.addAttribute("list", codeService.selectService(codeVo));
 		
 //		날짜 필드에 시간 추가
-		  codeVo.setShDateStart(codeVo.getShDateStart()+" 00:00:00");
-		  codeVo.setShDateEnd(codeVo.getShDateEnd()+" 23:59:59");
+//		  codeVo.setShDateStart(codeVo.getShDateStart()+" 00:00:00");
+//		  codeVo.setShDateEnd(codeVo.getShDateEnd()+" 23:59:59");
+		  
+	  /* 초기값 세팅이 없는 경우 사용 */
+		  codeVo.setShDateStart(codeVo.getShDateStart() == null || codeVo.getShDateStart() == "" ? null : UtilDateTime.add00TimeString(codeVo.getShDateStart()));
+		  codeVo.setShDateEnd(codeVo.getShDateEnd() == null || codeVo.getShDateEnd() == "" ? null : UtilDateTime.add59TimeString(codeVo.getShDateEnd()));
 		 
 		
 //		paging
@@ -39,7 +45,7 @@ public class CodeController {
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmForm")
 	public String codeXdmForm(Model model) {
-		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
+//		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
 		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
 		return "/xdm/v1/infra/code/codeXdmForm";
 	}
@@ -53,7 +59,7 @@ public class CodeController {
 	@RequestMapping(value="/v1/infra/code/codeXdmMForm")
 	public String codeXdmMForm(CodeDto codeDto, Model model) {
 		model.addAttribute("item", codeService.selectOne(codeDto));
-		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
+//		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
 		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
 		return "/xdm/v1/infra/code/codeXdmMForm";
 	}
