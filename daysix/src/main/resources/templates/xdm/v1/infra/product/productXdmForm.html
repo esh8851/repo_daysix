@@ -13,7 +13,7 @@
  -->
 <!-- beautify ignore:start -->
 <html
-  xmlns:th="http://www.thymeleaf.org"
+  xmlns:th="https://www.thymeleaf.org"
   lang="en"
   class="light-style layout-menu-fixed"
   dir="ltr"
@@ -589,7 +589,7 @@
                       <li class="breadcrumb-item active">Dafault</li>
                     </ol>
                   </nav>
-                  <h2 class="mb-4">Member</h5>
+                  <h2 class="mb-4">Code</h5>
                 </div>
               </div>
               <div class="row">
@@ -599,120 +599,249 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/v1/infra/member/memberXdmUpdt">
+                      <form class="needs-validation" novalidate>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmSeq" name="mmSeq" th:value="${item?.mmSeq}" placeholder="자동 생성"
-                                aria-describedby="defaultFormControlHelp" readonly>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">이름<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmName" name="mmName" th:value="${item?.mmName}" placeholder="이름"
-                                aria-describedby="defaultFormControlHelp">
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">성별<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="mmGender" name="mmGender" aria-label="Default select example">
-                                <option value="">성별</option>
-                                <option value="2" th:selected="${item?.mmGender == 2}">남자</option>
-                                <option value="3" th:selected="${item?.mmGender == 3}">여자</option>
+                              <label for="exampleFormControlSelect1" class="form-label">코드그룹<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example" required>
+                                <option value="">선택하세요</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
                               </select>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">아이디<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmId" name="mmId" th:value="${item?.mmId}" placeholder="아이디"
-                                aria-describedby="defaultFormControlHelp">
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">이메일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmEmail" name="mmEmail" th:value="${item?.mmEmail}" placeholder="이메일"
-                                aria-describedby="defaultFormControlHelp">
+                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" placeholder="자동생성"
+                                readonly="">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">비밀번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmPw" name="mmPw" th:value="${item?.mmPw}" placeholder="비밀번호"
-                                aria-describedby="defaultFormControlHelp">
+                              <label for="defaultFormControlInput" class="form-label">코드 (ANOTHER)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                              aria-describedby="defaultFormControlHelp" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">생일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmBirth" name="mmBirth" th:value="${item?.mmBirth}" placeholder="생일"
-                                aria-describedby="defaultFormControlHelp">
+                              <label for="defaultFormControlInput" class="form-label">코드 이름</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">핸드폰<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmPhone" name="mmPhone" th:value="${item?.mmPhone}" placeholder="핸드폰"
-                                aria-describedby="defaultFormControlHelp">
+                              <label for="defaultFormControlInput" class="form-label">코드 이름 (영문)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                         </div>
                         <div class="row">
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmDateTimeReg" name="mmDateTimeReg" th:value="${#dates.format(item?.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성"
-                                aria-describedby="defaultFormControlHelp" disabled>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">수정일<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="text" class="form-control" id="mmDateTimeEdit" name="mmDateTimeEdit" th:value="${#dates.format(item?.mmDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성"
-                                aria-describedby="defaultFormControlHelp" disabled>
-                            </div>
-                          </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="mmUseNy" name="mmUseNy" aria-label="Default select example">
-                                <option value="">사용 여부</option>
-                                <option value="0" th:selected="${item?.mmUseNy == 0}">N</option>
-                                <option value="1" th:selected="${item?.mmUseNy == 1}">Y</option>
+                              <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example" required>
+                                <option value="">선택하세요</option>
+                                <option value="1">사용</option>
+                                <option value="2">미사용</option>
                               </select>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">삭제 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="mmDelNy" name="mmDelNy" aria-label="Default select example" disabled>
-                                <option value="">삭제 여부</option>
-                                <option value="0" th:selected="${item?.mmDelNy == 0}">N</option>
-                                <option value="1" th:selected="${item?.mmDelNy == 1}">Y</option>
-                              </select>
+                              <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">설명</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어1</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어2</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어3</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어4</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어5</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어6</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어7</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">다국어8</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비1 (VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비2 (VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비3 (VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비4 (VARCHAR TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비1 (INT TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비2 (INT TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비3 (INT TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">예비4 (INT TYPE)</label>
+                              <input type="text" class="form-control" id="defaultFormControlInput" placeholder="John Doe"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback"> Looks good! </div>
+                                <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                          	<div>
-	                            <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
-	                              <span class="tf-icons bx bx-list-ul"></span>
-	                            </button>
-	                            <button type="button" class="btn btn-icon btn-danger" id="btnUel">
-	                              <span class="tf-icons bx bx-x"></span>
-	                            </button>
-	                            <button type="button" class="btn btn-icon btn-danger" id="btnDel">
-	                              <span class="tf-icons bx bx-trash"></span>
-	                            </button>
-                          	</div>
-                            <button type="button" class="btn btn-icon btn-primary" id="btnUpdt">
+                            <button type="button" class="btn btn-icon btn-outline-primary">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
+                            <button type="submit" class="btn btn-icon btn-primary">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -788,132 +917,6 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    
-    <!-- btnUpdt S -->
-    <script type="text/javascript">
-    	document.getElementById("btnUpdt").onclick = function() {
-    		var mmName = document.getElementById("mmName");
-    		var mmNameValue = document.getElementById("mmName").value.trim();
-    		if(mmNameValue == "" || mmNameValue == null) {
-    			alert("이름을 입력해 주세요")
-    			mmName.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmGender = document.getElementById("mmGender");
-    		var mmGenderValue = document.getElementById("mmGender").value.trim();
-    		if(mmGenderValue == "" || mmGenderValue == null) {
-    			alert("성별을 선택해 주세요")
-    			mmGender.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmId = document.getElementById("mmId");
-    		var mmIdValue = document.getElementById("mmId").value.trim();
-    		if(mmIdValue == "" || mmIdValue == null) {
-    			alert("아이디를 입력해 주세요")
-    			mmId.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmEmail = document.getElementById("mmEmail");
-    		var mmEmailValue = document.getElementById("mmEmail").value.trim();
-    		if(mmEmailValue == "" || mmEmailValue == null) {
-    			alert("이메일을 입력해 주세요")
-    			mmEmail.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmPw = document.getElementById("mmPw");
-    		var mmPwValue = document.getElementById("mmPw").value.trim();
-    		if(mmPwValue == "" || mmPwValue == null) {
-    			alert("비밀번호를 입력해 주세요")
-    			mmPw.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmBirth = document.getElementById("mmBirth");
-    		var mmBirthValue = document.getElementById("mmBirth").value.trim();
-    		if(mmBirthValue == "" || mmBirthValue == null) {
-    			alert("생일을 입력해 주세요")
-    			mmBirth.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmPhone = document.getElementById("mmPhone");
-    		var mmPhoneValue = document.getElementById("mmPhone").value.trim();
-    		if(mmPhoneValue == "" || mmPhoneValue == null) {
-    			alert("핸드폰 번호를 입력해 주세요")
-    			mmPhone.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		var mmUseNy = document.getElementById("mmUseNy");
-    		var mmUseNyValue = document.getElementById("mmUseNy").value.trim();
-    		if(mmUseNyValue == "" || mmUseNyValue == null) {
-    			alert("사용 여부를 선택해 주세요")
-    			mmUseNy.focus();
-    			return false;
-    		} else {
-//     			by pass
-    		}
-    		
-    		form.action = "/v1/infra/member/memberXdmUpdt";
-    		form.submit();
-    		
-    	}
-    </script>
-    <!-- btnUpdt E -->
-    
-    <!-- btnList S -->
-    <script type="text/javascript">
-    	document.getElementById("btnList").onclick = function() {
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/member/memberXdmList";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- btnList E -->
-    
-    <!-- btnUel S -->
-    <script type="text/javascript">
-    	document.getElementById("btnUel").onclick = function() {
-    		alert("UELETE 확인")
-    		let form = document.querySelector("[name=form]")
-    		form.action = "/v1/infra/member/memberXdmUel";
-    		form.submit();
-    	}
-    </script>
-    <!-- btnUel E -->
-    
-    <!-- btnDel S -->
-    <script type="text/javascript">
-    	document.getElementById("btnDel").onclick = function() {
-			alert("DELETE 확인")
-			let form = document.querySelector("[name=form]")
-			form.action = "/v1/infra/member/memberXdmDel";
-			form.submit();
-    	}
-    </script>
-    
-    <!-- btnDel E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

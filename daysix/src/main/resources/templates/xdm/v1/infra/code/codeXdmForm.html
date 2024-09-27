@@ -599,19 +599,19 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/v1/infra/code/codeXdmInst">
+                      <form id="form" name="form" method="post" action="/v1/infra/code/codeXdmInst" class="needs-validation">
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">코드번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" placeholder="자동생성"
+                              <input class="form-control" type="text" id="seq" name="seq" placeholder="자동생성"
                                 readonly="">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">코드그룹 이름<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="codeGroup_seq" aria-label="Default select example">
+                              <select class="form-select" id="codeGroup_seq" name="codeGroup_seq" aria-label="Default select example">
                                 <option value="" selected disabled>코드그룹 이름</option>
                                 <option th:each="list:${listCodeGroup}" th:value="${list.seq}" th:text="${list.cgName}"></option>
                               </select>
@@ -622,13 +622,13 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlReadOnlyInput1" class="form-label">코드이름<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="cName" placeholder="자동생성">
+                              <input class="form-control" type="text" id="cName" name="cName" placeholder="자동생성">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cUseNy" aria-label="Default select example">
+                              <select class="form-select" id="cUseNy" name="cUseNy" aria-label="Default select example">
                                 <option value="">사용 여부</option>
                                 <option value="0" th:selected="${list?.cUseNy == 0}">N</option>
                                 <option value="1" th:selected="${list?.cUseNy == 1}">Y</option>
@@ -638,7 +638,7 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="number" id="exampleFormControlReadOnlyInput1" name="cOrder" placeholder="순서">
+                              <input class="form-control" type="number" id="cOrder" name="cOrder" placeholder="순서">
                             </div>
                           </div>
                         </div>
@@ -646,7 +646,7 @@
                           <div class="col-6">
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cDesc" rows="3"></textarea>
+                              <textarea class="form-control" id="cDesc" name="cDesc" rows="3"></textarea>
                             </div>
                           </div>
                         </div>
@@ -655,7 +655,7 @@
                           	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
                               <span class="tf-icons bx bx-list-ul"></span>
                             </button>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                            <button type="button" class="btn btn-icon btn-primary" id="btnSubmit">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -741,6 +741,66 @@
     	}
     </script>
     <!-- btnList E -->
+    
+    <!-- btnSubmit S -->
+	<script type="text/javascript">
+		var abc = document.getElementById("cName");
+// 		alert(abc);
+// 		alert(abc.value);
+// 		alert(document.getElementById("cName").value);
+		
+		document.getElementById("btnSubmit").onclick = function (){
+// 			alert(document.getElementById("cName").value);	 
+			
+		    var codeGroup_seq = document.getElementById("codeGroup_seq");
+		    var codeGroup_seqValue = document.getElementById("codeGroup_seq").value.trim();
+			
+		    if (codeGroup_seqValue == "" || codeGroup_seqValue == null) {
+				alert("코드그룹 이름을 선택해 주세요");
+				codeGroup_seq.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var cName = document.getElementById("cName");
+		    var cNameValue = document.getElementById("cName").value.trim();
+			
+		    if (cNameValue == "" || cNameValue == null) {
+				alert("이름을 입력해 주세요");
+				cName.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var cUseNy = document.getElementById("cUseNy");
+		    var cUseNyValue = document.getElementById("cUseNy").value.trim();
+			
+		    if (cUseNyValue == "" || cUseNyValue == null) {
+				alert("사용 여부를 선택해 주세요");
+				cUseNy.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var cOrder = document.getElementById("cOrder");
+		    var cOrderValue = document.getElementById("cOrder").value.trim();
+			
+		    if (cOrderValue == "" || cOrderValue == null) {
+				alert("순서를 입력해 주세요");
+				cOrder.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    form.action = "/v1/infra/code/codeXdmInst";
+		    form.submit();
+		}
+	</script>
+	<!-- btnSubmit E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

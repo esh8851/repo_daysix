@@ -16,5 +16,10 @@ public class ProductController {
 		model.addAttribute("list", productService.selectList());
 		return "/xdm/v1/infra/product/productXdmList";
 	}
+	
+	@RequestMapping(value="/v1/infra/product/productXdmForm")
+	public String productXdmForm() {
+		return "/xdm/v1/infra/product/productXdmForm";
+	}
 
 }

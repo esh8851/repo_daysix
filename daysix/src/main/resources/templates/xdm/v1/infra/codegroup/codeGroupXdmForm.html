@@ -599,7 +599,7 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/v1/infra/codegroup/codeGroupXdmInst">
+                      <form id="form" name="form" method="post" action="/v1/infra/codegroup/codeGroupXdmInst" class="needs-validation" novalidate>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
@@ -610,9 +610,11 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" placeholder="John Doe"
-                                aria-describedby="defaultFormControlHelp">
+                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="cgName" name="cgName" placeholder="코드그룹 이름"
+                                aria-describedby="defaultFormControlHelp" required>
+                                <div class="valid-feedback">잘했어요!</div>
+                                <div class="invalid-feedback">이름을 입력해 주세요</div>
                             </div>
                           </div>
                         </div>
@@ -620,18 +622,22 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
+                              <select class="form-select" id="cgUseNy" name="cgUseNy" aria-label="Default select example"  required>
                                 <option value="">사용 여부</option>
                                 <option value="1">Y</option>
                                 <option value="0">N</option>
                               </select>
+                              <div class="valid-feedback">잘했어요!</div>
+                              <div class="invalid-feedback">사용 여부를 선택해 주세요</div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="number" class="form-control" id="defaultFormControlInput" name="cgOrder" placeholder="John Doe"
-                                aria-describedby="defaultFormControlHelp">
+                              <input type="number" class="form-control" id="cgOrder" name="cgOrder" placeholder="순서"
+                                aria-describedby="defaultFormControlHelp" required>
+	                          <div class="valid-feedback">잘했어요!</div>
+	                          <div class="invalid-feedback">순서를 입력해 주세요</div>
                             </div>
                           </div>
                         </div>
@@ -639,7 +645,8 @@
                           <div class="col-6">
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="exampleFormControlTextarea1" name="cgDesc" rows="3"></textarea>
+                              <textarea class="form-control" id="cgDesc" name="cgDesc" rows="3"></textarea>
+                              <div class="valid-feedback"> Looks good!</div>
                             </div>
                           </div>
                         </div>
@@ -750,7 +757,7 @@
               event.stopPropagation();
             } else {
               // Submit your form
-              alert("Submitted!!!");
+              // alert("Submitted!!!");
             }
 
             form.classList.add("was-validated");
@@ -772,6 +779,56 @@
     	}
     </script>
     <!-- btnList E -->
+    
+    <!-- btnSubmit S -->
+	<script type="text/javascript">
+// 		var abc = document.getElementById("cgName");
+// 		alert(abc);
+// 		alert(abc.value);
+// 		alert(document.getElementById("cgName").value);
+		
+		document.getElementById("btnSubmit").onclick = function (){
+// 			alert(document.getElementById("cgName").value);	 
+			
+		    var cgName = document.getElementById("cgName");
+		    var cgNameValue = document.getElementById("cgName").value.trim();
+			
+		    if (cgNameValue == "" || cgNameValue == null) {
+				alert("이름을 입력해 주세요");
+				cgName.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var cgUseNy = document.getElementById("cgUseNy");
+		    var cgUseNyValue = document.getElementById("cgUseNy").value.trim();
+			
+		    if (cgUseNyValue == "" || cgUseNyValue == null) {
+				alert("사용여부를 선택해 주세요");
+				cgUseNy.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var cgOrder = document.getElementById("cgOrder");
+		    var cgOrderValue = document.getElementById("cgOrder").value.trim();
+			
+		    if (cgOrderValue == "" || cgOrderValue == null) {
+				alert("순서를 선택해 주세요");
+				cgOrder.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    form.action = "/v1/infra/codegroup/codeGroupXdmInst";
+		    form.submit();
+		    
+		}
+	</script>
+	<!-- btnSubmit E -->
     
   </body>
 </html>

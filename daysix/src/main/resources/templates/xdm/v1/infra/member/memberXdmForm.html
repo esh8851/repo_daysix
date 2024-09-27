@@ -619,6 +619,7 @@
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">성별<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <select class="form-select" id="mmGender" name="mmGender" aria-label="Default select example">
+                              	<option value="">성별</option>
                                 <option th:each="list : ${@codeService.selectListCachedCode(2)}" th:value="${list.codeGroup_seq}" th:text="${list.cName}" th:selected="${list.codeGroup_seq} == ${item?.mmGender}"></option>
                                 <option th:each="list : ${@codeService.selectListCachedCode(3)}" th:value="${list.codeGroup_seq}" th:text="${list.cName}" th:selected="${list.codeGroup_seq} == ${item?.mmGender}"></option>
                               </select>
@@ -693,7 +694,7 @@
                             <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
                               <span class="tf-icons bx bx-list-ul"></span>
                             </button>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                            <button type="button" class="btn btn-icon btn-primary" id="btnSubmit">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -782,6 +783,111 @@
     	}
     </script>
     <!-- btnList E -->
+    
+    <!-- btnSubmit S -->
+	<script type="text/javascript">
+		var abc = document.getElementById("mmName");
+// 		alert(abc);
+// 		alert(abc.value);
+// 		alert(document.getElementById("mmName").value);
+		
+		document.getElementById("btnSubmit").onclick = function (){
+// 			alert(document.getElementById("mmName").value);	 
+			
+		    var mmName = document.getElementById("mmName");
+		    var mmNameValue = document.getElementById("mmName").value.trim();
+			
+		    if (mmNameValue == "" || mmNameValue == null) {
+				alert("이름을 입력해 주세요");
+				mmName.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmGender = document.getElementById("mmGender");
+		    var mmGenderValue = document.getElementById("mmGender").value.trim();
+			
+		    if (mmGenderValue == "" || mmGenderValue == null) {
+				alert("성별을 선택해 주세요");
+				mmGender.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmId = document.getElementById("mmId");
+		    var mmIdValue = document.getElementById("mmId").value.trim();
+			
+		    if (mmIdValue == "" || mmIdValue == null) {
+				alert("아이디를 입력해 주세요");
+				mmId.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmEmail = document.getElementById("mmEmail");
+		    var mmEmailValue = document.getElementById("mmEmail").value.trim();
+			
+		    if (mmEmailValue == "" || mmEmailValue == null) {
+				alert("이메일을 입력해 주세요");
+				mmEmail.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmPw = document.getElementById("mmPw");
+		    var mmPwValue = document.getElementById("mmPw").value.trim();
+			
+		    if (mmPwValue == "" || mmPwValue == null) {
+				alert("비밀번호를 입력해 주세요");
+				mmPw.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmBirth = document.getElementById("mmBirth");
+		    var mmBirthValue = document.getElementById("mmBirth").value.trim();
+			
+		    if (mmBirthValue == "" || mmBirthValue == null) {
+				alert("생일을 입력해 주세요");
+				mmBirth.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmPhone = document.getElementById("mmPhone");
+		    var mmPhoneValue = document.getElementById("mmPhone").value.trim();
+			
+		    if (mmPhoneValue == "" || mmPhoneValue == null) {
+				alert("핸드폰 번호를 입력해 주세요");
+				mmPhone.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    var mmUseNy = document.getElementById("mmUseNy");
+		    var mmUseNyValue = document.getElementById("mmUseNy").value.trim();
+			
+		    if (mmUseNyValue == "" || mmUseNyValue == null) {
+				alert("핸드폰 번호를 입력해 주세요");
+				mmUseNy.focus();
+				return false;
+		    } else {
+	// 			by pass
+		    }
+		    
+		    form.action = "/v1/infra/member/memberXdmInst";
+		    form.submit();
+		    
+		}
+	</script>
+	<!-- btnSubmit E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

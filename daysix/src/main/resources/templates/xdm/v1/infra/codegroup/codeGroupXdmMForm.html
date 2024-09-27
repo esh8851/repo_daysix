@@ -599,18 +599,18 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form id="form" name="form" method="post" action="/xdm/v1/infra/codegroup/codeGroupXdmUpdt">
+                      <form id="form" name="form" method="post" action="/v1/infra/codegroup/codeGroupXdmUpdt">
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlReadOnlyInput1" class="form-label">코드그룹 번호<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="exampleFormControlReadOnlyInput1" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly="">
+                              <input class="form-control" type="text" id="seq" name="seq" th:value="${item?.seq}" placeholder="자동생성" readonly="">
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름</label>
-                              <input type="text" class="form-control" id="defaultFormControlInput" name="cgName" th:value="${item?.cgName}" placeholder="John Doe"
+                              <label for="defaultFormControlInput" class="form-label">코드그룹 이름<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="cgName" name="cgName" th:value="${item?.cgName}" placeholder="코드그룹 이름"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -619,7 +619,8 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="exampleFormControlSelect1" name="cgUseNy" aria-label="Default select example">
+                              <select class="form-select" id="cgUseNy" name="cgUseNy" aria-label="Default select example">
+                                <option value="">사용 여부</option>
                                 <option value="1" th:selected="${item?.cgUseNy == 1}">Y</option>
                                 <option value="0" th:selected="${item?.cgUseNy == 0}">N</option>
                               </select>
@@ -628,7 +629,7 @@
                           <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">순서<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input type="number" class="form-control" id="defaultFormControlInput" name="cgOrder" th:value="${item?.cgOrder}" placeholder="John Doe"
+                              <input type="number" class="form-control" id="cgOrder" name="cgOrder" th:value="${item?.cgOrder}" placeholder="순서"
                                 aria-describedby="defaultFormControlHelp">
                             </div>
                           </div>
@@ -679,7 +680,7 @@
 	                              <span class="tf-icons bx bx-trash"></span>
 	                            </button>
                           	</div>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                            <button type="button" class="btn btn-icon btn-primary" id="btnUpdt">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -790,6 +791,46 @@
         );
       });
     </script>
+    
+    <!-- btnUpdt S -->
+    <script type="text/javascript">
+	    document.getElementById("btnUpdt").onclick = function() {
+	    	var cgName = document.getElementById("cgName");
+	    	var cgNameValue = document.getElementById("cgName").value.trim();
+	    	if(cgNameValue == "" || cgNameValue == null){
+	    		alert("이름을 입력해 주세요");
+	    		cgName.focus();
+	    		return false;
+	    	} else {
+// 	    		by pass
+	    	}
+	    	
+	    	var cgUseNy = document.getElementById("cgUseNy");
+	    	var cgUseNyValue = document.getElementById("cgUseNy").value.trim();
+	    	if(cgUseNyValue == "" || cgUseNyValue == null){
+	    		alert("사용 여부를 선택해 주세요");
+	    		cgUseNy.focus();
+	    		return false;
+	    	} else {
+// 	    		by pass
+	    	}
+	    	
+	    	var cgOrder = document.getElementById("cgOrder");
+	    	var cgOrderValue = document.getElementById("cgOrder").value.trim();
+	    	if(cgOrderValue == "" || cgOrderValue == null){
+	    		alert("순서를 입력해 주세요");
+	    		cgOrder.focus();
+	    		return false;
+	    	} else {
+// 	    		by pass
+	    	}
+	    	
+	    	form.action = "/v1/infra/codegroup/codeGroupXdmUpdt";
+	    	form.submit();
+	    	
+	    }
+    </script>
+    <!-- btnUpdt E -->
     
     <!-- btnList S -->
     <script type="text/javascript">

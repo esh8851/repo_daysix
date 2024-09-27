@@ -75,7 +75,7 @@ public class CodeGroupController {
 		return "/xdm/v1/infra/codegroup/codeGroupXdmMForm";
 	}
 	
-	@RequestMapping(value="/xdm/v1/infra/codegroup/codeGroupXdmUpdt")
+	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmUpdt")
 	public String codeGroupXdmUpdt(CodeGroupDto codeGroupDto) {
 		codeGroupService.update(codeGroupDto);
 		System.out.println("update 실행했다~");
