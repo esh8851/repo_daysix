@@ -1,12 +1,18 @@
 package com.seon.infra.member;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.seon.common.util.UtilDateTime;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class MemberController {
@@ -76,6 +82,58 @@ public class MemberController {
 	public String memberXdmDel(MemberDto memberDto) {
 		memberService.delete(memberDto);
 		return "redirect:/v1/infra/member/memberXdmList";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "signinXdmProc")
+	public Map<String, Object> signinXdmProc(MemberDto MemberDto, HttpSession httpSession) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+
+		MemberDto rtMember = memberService.selectOneId(MemberDto);
+
+		if (rtMember != null) {
+//			dto.setIfmmPassword(UtilSecurity.encryptSha256(dto.getIfmmPassword()));
+			MemberDto rtMember2 = memberService.selectOneLogin(MemberDto);
+
+			if (rtMember2 != null) {
+				
+				if(dto.getAutoLogin() == true) {
+					UtilCookie.createCookie(
+							Constants.COOKIE_SEQ_NAME_XDM, 
+							rtMember2.getIfmmSeq(), 
+							Constants.COOKIE_DOMAIN_XDM, 
+							Constants.COOKIE_PATH_XDM, 
+							Constants.COOKIE_MAXAGE_XDM);
+				} else {
+					// by pass
+				}
+
+				httpSession.setMaxInactiveInterval(60 * Constants.SESSION_MINUTE_XDM); // 60second * 30 = 30minute
+				httpSession.setAttribute("sessSeqXdm", rtMember2.getIfmmSeq());
+				httpSession.setAttribute("sessIdXdm", rtMember2.getIfmmId());
+				httpSession.setAttribute("sessNameXdm", rtMember2.getIfmmName());
+
+				rtMember2.setIfmmSocialLoginCd(103);
+				rtMember2.setIflgResultNy(1);
+				service.insertLogLogin(rtMember2);
+
+				returnMap.put("rt", "success");
+			} else {
+				dto.setIfmmSocialLoginCd(103);
+				dto.setIfmmSeq(rtMember.getIfmmSeq());
+				dto.setIflgResultNy(0);
+				service.insertLogLogin(dto);
+
+				returnMap.put("rt", "fail");
+			}
+		} else {
+			dto.setIfmmSocialLoginCd(103);
+			dto.setIflgResultNy(0);
+			service.insertLogLogin(dto);
+
+			returnMap.put("rt", "fail");
+		}
+		return returnMap;
 	}
 	
 

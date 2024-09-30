@@ -645,8 +645,9 @@
                           <div class="col-6">
                             <div class="mb-3">
                               <label for="exampleFormControlTextarea1" class="form-label">설명</label>
-                              <textarea class="form-control" id="cgDesc" name="cgDesc" rows="3"></textarea>
-                              <div class="valid-feedback"> Looks good!</div>
+                              <textarea class="form-control" id="cgDesc" name="cgDesc" rows="3" required></textarea>
+                              <div class="valid-feedback">잘했어요!</div>
+	                          <div class="invalid-feedback">설명을 입력해 주세요</div>
                             </div>
                           </div>
                         </div>
@@ -655,7 +656,7 @@
                           	<button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
                               <span class="tf-icons bx bx-list-ul"></span>
                             </button>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                            <button type="button" class="btn btn-icon btn-primary" id="btnSubmit">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -748,23 +749,40 @@
       var bsValidationForms = document.querySelectorAll(".needs-validation");
 
       // Loop over them and prevent submission
-      Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
-        form.addEventListener(
-          "submit",
-          function(event) {
-            if (!form.checkValidity()) {
-              event.preventDefault();
-              event.stopPropagation();
-            } else {
-              // Submit your form
-              // alert("Submitted!!!");
-            }
+//       Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
+//         form.addEventListener(
+//           "submit",
+//           function(event) {
+//             if (!form.checkValidity()) {
+//               event.preventDefault();
+//               event.stopPropagation();
+//             } else {
+//               // Submit your form
+//               // alert("Submitted!!!");
+//             }
 
-            form.classList.add("was-validated");
-          },
-          false
-        );
-      });
+//             form.classList.add("was-validated");
+//           },
+//           false
+//         );
+//       });
+
+		// Loop over them and prevent submission
+		Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
+			const submitButton = document.getElementById("btnSubmit");
+		
+		  	submitButton.addEventListener("click", function(event) {
+		    event.preventDefault(); // 기본 동작 방지
+		
+		    if (!form.checkValidity()) {
+		    	form.classList.add("was-validated");
+		    	} else {
+			      	// Submit your form
+			      	// alert("Submitted!!!");
+			   		form.submit(); // 폼 제출
+		    }
+		  });
+		});
     </script>
     
     <!-- btnList S -->

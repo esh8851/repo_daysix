@@ -139,35 +139,41 @@
               <h4 class="mb-2">Welcome to Sneat! 👋</h4>
               <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-              <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
+              <form id="form" class="mb-3 needs-validation" name="form" action="" method="post" novalidate>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="loginId" class="form-label">Id</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="email"
-                    name="email-username"
-                    placeholder="Enter your email or username"
+                    id="loginId"
+                    name="loginId"
+                    placeholder="Enter your id"
                     autofocus
+                    required
                   />
+                  <div class="valid-feedback">잘했어요!</div>
+                  <div class="invalid-feedback">이름을 입력해 주세요</div>
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
-                    <label class="form-label" for="password">Password</label>
+                    <label class="form-label" for="logInPw">Password</label>
                     <a href="auth-forgot-password-basic.html">
                       <small>Forgot Password?</small>
                     </a>
                   </div>
                   <div class="input-group input-group-merge">
                     <input
-                      type="password"
-                      id="password"
+                      type="text"
+                      id="logInPw"
                       class="form-control"
-                      name="password"
+                      name="logInPw"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
+                      required
                     />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
+<!--                     <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span> -->
+                    <div class="valid-feedback">잘했어요!</div>
+                  	<div class="invalid-feedback">비밀번호를 입력해 주세요</div>
                   </div>
                 </div>
                 <div class="mb-3">
@@ -177,7 +183,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                  <button class="btn btn-primary d-grid w-100" type="button" id="btnSignIn">Sign in</button>
                 </div>
               </form>
 
@@ -221,7 +227,92 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
+    
+    <script type="text/javascript">
+ 	// Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var bsValidationForms = document.querySelectorAll(".needs-validation");
 
+//  	// Loop over them
+//     Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
+//       // Find the button by ID
+//       var submitButton = document.getElementById("btnList");
+      
+//  	// Add event listener to the button instead of form
+//       submitButton.addEventListener("click", function(event) {
+//         if (!form.checkValidity()) {
+//           event.preventDefault();
+//           event.stopPropagation();
+//         } else {
+//           // Submit your form
+//           // alert("Submitted!!!");
+//           form.submit(); // 이 줄을 사용하여 폼을 제출할 수 있습니다.
+//         }
+
+//         form.classList.add("was-validated");
+//       }, false);
+//     });
+	// Loop over them and prevent submission
+		Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
+			const submitButton = document.getElementById("btnSignIn");
+		
+		  	submitButton.addEventListener("click", function(event) {
+		    event.preventDefault(); // 기본 동작 방지
+		
+		    if (!form.checkValidity() || Array.from(form.querySelectorAll('input[type="checkbox"]')).some(checkbox => !checkbox.checked)) {
+		    	form.classList.add("was-validated");
+		    	} else {
+			      	// Submit your form
+			      	// alert("Submitted!!!");
+			   		form.submit(); // 폼 제출
+		    }
+		  });
+		});
+    </script>
+    
+    <script type="text/javascript">
+	    var newElement = document.createElement('div');
+	    document.getElementById("btnSignIn").onclick = function() {
+	//     	아이디
+	    	var loginId = document.getElementById("loginId");
+	    	var loginIdValue = document.getElementById("loginId").value.trim();
+	    	if(loginIdValue == '' || loginIdValue == null) {
+	    		alert("아이디를 입력해 주세요")
+	    		loginId.focus();
+	    		return false;
+	    	} else {
+	//     		by pass
+	    	}
+	    	var loginId = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+		    if(!loginId.test(loginIdValue)){
+				alert("이름은 한글, 영대소문자, 숫자만 입력해 주세요");
+				loginId.focus();
+				return false;
+		    } else{
+	// 	    	by pass
+		    }
+	    	
+	// 	    비밀번호
+	    	var logInPw = document.getElementById("logInPw");
+	    	var logInPwValue = document.getElementById("logInPw").value.trim();
+	    	if(logInPwValue == '' || logInPwValue == null) {
+	    		alert("비밀번호를 입력해 주세요")
+	    		loginId.focus();
+	    		return false;
+	    	} else {
+	//     		by pass
+	    	}
+	    	var logInPw = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
+		    if(!logInPw.test(logInPwValue)){
+				alert("비밀번호는 숫자, 영어대소문자, 특수문자(!,@,#,$)만 입력해 주세요");
+				logInPw.focus();
+				return false;
+		    } else {
+	// 	    	by pass
+		    }
+	    }
+    </script>
+    
+    
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
