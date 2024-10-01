@@ -561,7 +561,7 @@
                     <li>
                       <a class="dropdown-item">
                         <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
+                        <span class="align-middle" id="btnLogOut" style="cursor:pointer;">Log Out</span>
                       </a>
                     </li>
                   </ul>
@@ -1184,6 +1184,33 @@
 
     <!-- Page JS -->
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/dashboards-analytics.js"></script>
+    
+    <!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
+				,success: function(response) {
+					if(response.rt == "success") {
+						alert("로그아웃 성공");
+						location.href = "/v1/infra/login/loginXdmSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
     
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

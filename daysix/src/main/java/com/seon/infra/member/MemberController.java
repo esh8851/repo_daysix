@@ -135,5 +135,14 @@ public class MemberController {
 		
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "/v1/infra/member/signoutXdmProc")
+	public Map<String, Object> signoutXdmProc(HttpSession httpSession) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+		httpSession.invalidate();
+		returnMap.put("rt", "success");
+		return returnMap;
+	}
+	
 	
 }
