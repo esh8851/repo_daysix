@@ -136,38 +136,39 @@
                 </a>
               </div>
               <!-- /Logo -->
-              <h4 class="mb-2">Welcome to Sneat! 👋</h4>
-              <p class="mb-4">Please sign-in to your account and start the adventure</p>
+              <h4 class="mb-2"><b>로그인 👋</b></h4>
+              <p class="mb-4">아이디와 비밀번호를 입력해 주세요.</p>
 
               <form id="form" class="mb-3" name="form" action="/v1/infra/login/loginXdmSignIn" method="post" novalidate>
                 <div class="mb-3">
-                  <label for="mmId" class="form-label">Id</label>
+                  <label for="mmId" class="form-label">아이디</label>
                   <input
                     type="text"
                     class="form-control"
                     id="mmId"
                     name="mmId"
-                    placeholder="Enter your id"
+                    placeholder="아이디를 입력해 주세요"
                     required
                   />
                   <div id="validId"></div>
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
-                    <label class="form-label" for="mmPw">Password</label>
+                    <label class="form-label" for="mmPw">비밀번호</label>
                     <a href="auth-forgot-password-basic.html">
-                      <small>Forgot Password?</small>
+                      <small>비밀번호를 잊으셨나요?</small>
                     </a>
                   </div>
                   <div class="input-group input-group-merge">
                     <input
-                      type="text"
+                      type="password"
                       id="mmPw"
                       class="form-control"
                       name="mmPw"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
                       required
+                      autocomplete="off"
                     />
                     <span class="input-group-text cursor-pointer" style="border-radius:0 0.375rem 0.375rem 0;"><i class="bx bx-hide"></i></span>
                   </div>
@@ -176,18 +177,18 @@
                 <div class="mb-3">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="remember-me"/>
-                    <label class="form-check-label" for="remember-me"> Remember Me </label>
+                    <label class="form-check-label" for="remember-me"> 로그인 정보 저장 </label>
                   </div>
                 </div>
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" type="button" id="btnSignIn">Sign in</button>
+                  <button class="btn btn-primary d-grid w-100" type="button" id="btnSignIn">로그인</button>
                 </div>
               </form>
 
               <p class="text-center">
-                <span>New on our platform?</span>
+                <span>처음이신가요?</span>
                 <a href="auth-register-basic.html">
-                  <span>Create an account</span>
+                  <span>계정 만들기</span>
                 </a>
               </p>
             </div>
@@ -198,15 +199,6 @@
     </div>
 
     <!-- / Content -->
-
-    <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div>
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
