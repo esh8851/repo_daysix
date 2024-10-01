@@ -139,14 +139,14 @@
               <h4 class="mb-2">Welcome to Sneat! 👋</h4>
               <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-              <form id="form" class="mb-3" name="form" action="" method="post" novalidate>
+              <form id="form" class="mb-3" name="form" action="/v1/infra/login/loginXdmSignIn" method="post" novalidate>
                 <div class="mb-3">
-                  <label for="loginId" class="form-label">Id</label>
+                  <label for="mmId" class="form-label">Id</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="loginId"
-                    name="loginId"
+                    id="mmId"
+                    name="mmId"
                     placeholder="Enter your id"
                     required
                   />
@@ -154,7 +154,7 @@
                 </div>
                 <div class="mb-3 form-password-toggle">
                   <div class="d-flex justify-content-between">
-                    <label class="form-label" for="logInPw">Password</label>
+                    <label class="form-label" for="mmPw">Password</label>
                     <a href="auth-forgot-password-basic.html">
                       <small>Forgot Password?</small>
                     </a>
@@ -162,9 +162,9 @@
                   <div class="input-group input-group-merge">
                     <input
                       type="text"
-                      id="logInPw"
+                      id="mmPw"
                       class="form-control"
-                      name="logInPw"
+                      name="mmPw"
                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                       aria-describedby="password"
                       required
@@ -224,80 +224,36 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    
-	<!-- validation S -->
-    <script type="text/javascript">
- 	// Fetch all the forms we want to apply custom Bootstrap validation styles to
-    	var bsValidationForms = document.querySelectorAll(".needs-validation");
-
- 	// Loop over them
-//     Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
-//       // Find the button by ID
-//       var submitButton = document.getElementById("btnList");
-      
-//  	// Add event listener to the button instead of form
-//       submitButton.addEventListener("click", function(event) {
-//         if (!form.checkValidity()) {
-//           event.preventDefault();
-//           event.stopPropagation();
-//         } else {
-//           // Submit your form
-//           // alert("Submitted!!!");
-//           form.submit(); // 이 줄을 사용하여 폼을 제출할 수 있습니다.
-//         }
-
-//         form.classList.add("was-validated");
-//       }, false);
-//     });
-	// Loop over them and prevent submission
-// 		Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
-// 			const submitButton = document.getElementById("btnSignIn");
-		
-// 		  	submitButton.addEventListener("click", function(event) {
-// 		    event.preventDefault(); // 기본 동작 방지
-		    
-// 		    const checkBox = document.getElementById("remember-me")
-		    
-// 		    if (!form.checkValidity() && !checkBox.checked) {
-// 		    	form.classList.add("was-validated");
-// 		    	} else {
-// 			      	// Submit your form
-// 			      	// alert("Submitted!!!");
-// 			   		form.submit(); // 폼 제출
-// 		    }
-// 		  });
-// 		});
-    </script>
-	<!-- validation E -->
-    
+	
+    <!-- validation S -->
     <script type="text/javascript">
 	    document.getElementById("btnSignIn").onclick = function() {
 // 	    	아이디
-	    	var loginId = document.getElementById("loginId");
-	    	var loginIdValue = document.getElementById("loginId").value.trim();
+	    	var mmId = document.getElementById("mmId");
+	    	var mmIdValue = document.getElementById("mmId").value.trim();
 	    	var validId = document.getElementById("validId");
 	    	
-	    	if(loginIdValue == '' || loginIdValue == null) {
-	    		const loginId = document.getElementById("loginId");
-	    		loginId.style.borderColor = '#ff3e1d';
-	    		loginId.focus();
+	    	if(mmIdValue == '' || mmIdValue == null) {
+	    		const mmId = document.getElementById("mmId");
+	    		mmId.style.borderColor = '#ff3e1d';
+	    		mmId.focus();
 	    		validId.className = 'invalid-feedback';
 	    		validId.style.display = 'block';
 	    		validId.textContent = "이름을 입력해 주세요";
 	    		return false;
 	    	} else {
-	    		const loginId = document.getElementById("loginId");
-	    		loginId.style.borderColor = '#71dd37';
+	    		const mmId = document.getElementById("mmId");
+	    		mmId.style.borderColor = '#71dd37';
 	    		validId.className = 'valid-feedback';
 	    		validId.style.display = 'block';
 	    		validId.textContent = "잘했어요";
 	    	}
 	    	
-	    	var loginIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+	    	var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
 	    	
-	    	if(!loginIdRegExp.test(loginIdValue)){
-	    		loginId.style.borderColor = '#ff3e1d';
-	    		loginId.focus();
+	    	if(!mmIdRegExp.test(mmIdValue)){
+	    		mmId.style.borderColor = '#ff3e1d';
+	    		mmId.focus();
 	    		validId.className = 'invalid-feedback';
 	    		validId.style.display = 'block';
 	    		validId.textContent = "이름은 한글, 영대소문자, 숫자로만 입력해 주세요";
@@ -307,35 +263,34 @@
 	    	}
 	    	
 // 		    비밀번호
-	    	var logInPw = document.getElementById("logInPw");
-	    	var logInPwValue = document.getElementById("logInPw").value.trim();
+	    	var mmPw = document.getElementById("mmPw");
+	    	var mmPwValue = document.getElementById("mmPw").value.trim();
 	    	var validPw = document.getElementById("validPw");
 	    	var viewPw = document.querySelector(".input-group-text");
 	    	
-	    	if(logInPwValue == '' || logInPwValue == null) {
-// 	    		alert("비밀번호를 입력해 주세요")
-				const logInPw = document.getElementById("logInPw");
-				logInPw.focus();
-				logInPw.style.borderColor = '#ff3e1d';
+	    	if(mmPwValue == '' || mmPwValue == null) {
+				const mmPw = document.getElementById("mmPw");
+				mmPw.focus();
+				mmPw.style.borderColor = '#ff3e1d';
 				validPw.className = 'invalid-feedback';
 				validPw.style.display = 'block';
 				viewPw.style.borderColor = '#ff3e1d';
 				validPw.textContent = "비밀번호를 입력해 주세요";
 	    		return false;
 	    	} else {
-	    		const logInPw = document.getElementById("logInPw");
-	    		logInPw.style.borderColor = '#71dd37';
+	    		const mmPw = document.getElementById("mmPw");
+	    		mmPw.style.borderColor = '#71dd37';
 	    		validPw.className = 'valid-feedback';
 				validPw.style.display = 'block';
 				viewPw.style.borderColor = '#71dd37';
 				validPw.textContent = "잘했어요";
 	    	}
 	    	
-	    	var logInPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
+	    	var mmPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
 	    	
-		    if(!logInPwRegExp.test(logInPwValue)){
-				logInPw.style.borderColor = '#ff3e1d';
-				logInPw.focus();
+		    if(!mmPwRegExp.test(mmPwValue)){
+				mmPw.style.borderColor = '#ff3e1d';
+				mmPw.focus();
 				validPw.className = 'invalid-feedback';
 				validPw.style.display = 'block';
 				viewPw.style.borderColor = '#ff3e1d';
@@ -344,9 +299,45 @@
 		    } else {
 	// 	    	by pass
 		    }
+		    
+		    $.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signinXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
+				,success: function(response) {
+					if(response.rt == "success") {
+						if(response.changePwd == "true") {
+							location.href = "/v1/infra/index/indexXdmView";
+						} else {
+							location.href = "/v1/infra/index/indexXdmView";
+						}
+					} else {
+// 				 		document.getElementById("modalAlertTitle").innerText = "확 인";
+// 				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
+// 				 		$("#modalAlert").modal("show");
+				 		
+// 				 		validation
+				 		mmId.style.borderColor = '#ff3e1d';
+				 		mmPw.style.borderColor = '#ff3e1d';
+				 		viewPw.style.borderColor = '#ff3e1d';
+				 		validId.className = 'invalid-feedback';
+				 		validId.innerText = "존재하지 않는 아이디 입니다";
+				 		validPw.className = 'invalid-feedback';
+				 		validPw.innerText = "존재하지 않는 비밀번호 입니다";
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+		    
 	    }
     </script>
-    
+    <!-- validation E -->
     
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>

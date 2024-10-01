@@ -85,56 +85,50 @@ public class MemberController {
 	}
 	
 	@ResponseBody
-	@RequestMapping(value = "signinXdmProc")
-	public Map<String, Object> signinXdmProc(MemberDto MemberDto, HttpSession httpSession) throws Exception {
+	@RequestMapping(value = "/v1/infra/member/signinXdmProc")
+	public Map<String, Object> signinXdmProc(MemberDto memberDto, HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
+		
+		MemberDto rtMember = memberService.selectOneId(memberDto);
 
-		MemberDto rtMember = memberService.selectOneId(MemberDto);
-
-		if (rtMember != null) {
-//			dto.setIfmmPassword(UtilSecurity.encryptSha256(dto.getIfmmPassword()));
-			MemberDto rtMember2 = memberService.selectOneLogin(MemberDto);
+		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
 
 			if (rtMember2 != null) {
 				
-				if(dto.getAutoLogin() == true) {
-					UtilCookie.createCookie(
-							Constants.COOKIE_SEQ_NAME_XDM, 
-							rtMember2.getIfmmSeq(), 
-							Constants.COOKIE_DOMAIN_XDM, 
-							Constants.COOKIE_PATH_XDM, 
-							Constants.COOKIE_MAXAGE_XDM);
-				} else {
-					// by pass
-				}
+//				if(dto.getAutoLogin() == true) {
+//					UtilCookie.createCookie(
+//							Constants.COOKIE_SEQ_NAME_XDM, 
+//							rtMember2.getIfmmSeq(), 
+//							Constants.COOKIE_DOMAIN_XDM, 
+//							Constants.COOKIE_PATH_XDM, 
+//							Constants.COOKIE_MAXAGE_XDM);
+//				} else {
+//					// by pass
+//				}
 
-				httpSession.setMaxInactiveInterval(60 * Constants.SESSION_MINUTE_XDM); // 60second * 30 = 30minute
-				httpSession.setAttribute("sessSeqXdm", rtMember2.getIfmmSeq());
-				httpSession.setAttribute("sessIdXdm", rtMember2.getIfmmId());
-				httpSession.setAttribute("sessNameXdm", rtMember2.getIfmmName());
+				httpSession.setMaxInactiveInterval(60 * 30); // 60second * 30 = 30minute
+				httpSession.setAttribute("sessSeqXdm", rtMember2.getSeq());
+				httpSession.setAttribute("sessIdXdm", rtMember2.getId());
+				httpSession.setAttribute("sessNameXdm", rtMember2.getName());
 
-				rtMember2.setIfmmSocialLoginCd(103);
-				rtMember2.setIflgResultNy(1);
-				service.insertLogLogin(rtMember2);
+//				rtMember2.setIfmmSocialLoginCd(103);
+//				rtMember2.setIflgResultNy(1);
+//				memberService.insertLogLogin(rtMember2);
 
 				returnMap.put("rt", "success");
 			} else {
-				dto.setIfmmSocialLoginCd(103);
-				dto.setIfmmSeq(rtMember.getIfmmSeq());
-				dto.setIflgResultNy(0);
-				service.insertLogLogin(dto);
-
+//				memberDto.setIfmmSocialLoginCd(103);
+//				memberDto.setIfmmSeq(rtMember.getIfmmSeq());
+//				memberDto.setIflgResultNy(0);
+//				memberService.insertLogLogin(memberDto);
 				returnMap.put("rt", "fail");
 			}
-		} else {
-			dto.setIfmmSocialLoginCd(103);
-			dto.setIflgResultNy(0);
-			service.insertLogLogin(dto);
+//			memberDto.setIfmmSocialLoginCd(103);
+//			memberDto.setIflgResultNy(0);
+//			memberService.insertLogLogin(memberDto);
 
-			returnMap.put("rt", "fail");
-		}
 		return returnMap;
 	}
 	
-
+	
 }

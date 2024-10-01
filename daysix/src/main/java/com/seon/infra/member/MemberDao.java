@@ -28,4 +28,10 @@ public interface MemberDao {
 //	paging
 	public int selectOneCount(MemberVo memberVo);
 	
+//	selectOneLogin
+	public MemberDto selectOneLogin(MemberDto memberDto);
+	
+//	selectOneId
+	public MemberDto selectOneId(MemberDto memberDto);
+	
 }

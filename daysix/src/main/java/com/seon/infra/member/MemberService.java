@@ -47,5 +47,15 @@ public class MemberService {
 		return memberDao.selectOneCount(memberVo);
 	}
 	
+//	selectOneLogin
+	public MemberDto selectOneLogin(MemberDto memberDto) {
+		return memberDao.selectOneLogin(memberDto);
+	}
+	
+//	selectOneId
+	public MemberDto selectOneId(MemberDto memberDto) {
+		return memberDao.selectOneId(memberDto);
+	}
+	
 	
 }

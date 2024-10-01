@@ -150,5 +150,35 @@
 	</delete>
 	<!-- delete E -->
 	
+	<!-- selectOneLogin S -->
+	<select id="selectOneLogin" resultMap="resultMapObj">
+		SELECT
+			a.mmSeq
+			,a.mmId
+			,a.mmPw
+		FROM
+			member AS a
+		WHERE 1 = 1
+			AND a.mmId = #{mmId}
+			AND a.mmPw = #{mmPw}
+	</select>
+	<!-- selectOneLogin E -->
+	
+	<!-- selectOneId  S -->
+		<select id="selectOneId">
+			SELECT
+			a.mmSeq
+			,a.mmName
+			,a.mmId
+			,a.mmPw
+		FROM
+			member AS a
+		WHERE 1 = 1
+			AND a.mmName = #{mmName}
+			AND a.mmId = #{mmId}
+			AND a.mmPw = #{mmPw}
+		</select>
+	<!-- selectOneId  E -->
+	
 	  
 </mapper>
