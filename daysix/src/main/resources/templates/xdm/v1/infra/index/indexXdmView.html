@@ -525,8 +525,8 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
+                            <span class="fw-semibold d-block" th:text="${session.sessIdXdm}"></span>
+                            <small class="text-muted" th:text="${session.sessNameXdm}"></small>
                           </div>
                         </div>
                       </a>
@@ -559,7 +559,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
@@ -1184,7 +1184,7 @@
 
     <!-- Page JS -->
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/dashboards-analytics.js"></script>
-
+    
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>

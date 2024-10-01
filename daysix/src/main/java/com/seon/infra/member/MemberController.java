@@ -89,7 +89,7 @@ public class MemberController {
 	public Map<String, Object> signinXdmProc(MemberDto memberDto, HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		
-		MemberDto rtMember = memberService.selectOneId(memberDto);
+//		MemberDto rtMember = memberService.selectOneId(memberDto);
 
 		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
 
@@ -107,10 +107,14 @@ public class MemberController {
 //				}
 
 				httpSession.setMaxInactiveInterval(60 * 30); // 60second * 30 = 30minute
-				httpSession.setAttribute("sessSeqXdm", rtMember2.getSeq());
-				httpSession.setAttribute("sessIdXdm", rtMember2.getId());
-				httpSession.setAttribute("sessNameXdm", rtMember2.getName());
-
+				httpSession.setAttribute("sessSeqXdm", rtMember2.getMmSeq());
+				httpSession.setAttribute("sessIdXdm", rtMember2.getMmId());
+				httpSession.setAttribute("sessNameXdm", rtMember2.getMmName());
+				
+				System.out.println("sessSeqXdm: " + httpSession.getAttribute("sessSeqXdm"));
+				System.out.println("sessIdXdm: " + httpSession.getAttribute("sessIdXdm"));
+				System.out.println("sessNameXdm: " + httpSession.getAttribute("sessNameXdm"));
+				
 //				rtMember2.setIfmmSocialLoginCd(103);
 //				rtMember2.setIflgResultNy(1);
 //				memberService.insertLogLogin(rtMember2);
@@ -126,8 +130,9 @@ public class MemberController {
 //			memberDto.setIfmmSocialLoginCd(103);
 //			memberDto.setIflgResultNy(0);
 //			memberService.insertLogLogin(memberDto);
-
+			
 		return returnMap;
+		
 	}
 	
 	

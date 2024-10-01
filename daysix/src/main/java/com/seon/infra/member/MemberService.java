@@ -52,10 +52,5 @@ public class MemberService {
 		return memberDao.selectOneLogin(memberDto);
 	}
 	
-//	selectOneId
-	public MemberDto selectOneId(MemberDto memberDto) {
-		return memberDao.selectOneId(memberDto);
-	}
-	
 	
 }

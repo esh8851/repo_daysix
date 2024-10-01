@@ -156,6 +156,7 @@
 			a.mmSeq
 			,a.mmId
 			,a.mmPw
+			,a.mmName
 		FROM
 			member AS a
 		WHERE 1 = 1
@@ -164,21 +165,4 @@
 	</select>
 	<!-- selectOneLogin E -->
 	
-	<!-- selectOneId  S -->
-		<select id="selectOneId">
-			SELECT
-			a.mmSeq
-			,a.mmName
-			,a.mmId
-			,a.mmPw
-		FROM
-			member AS a
-		WHERE 1 = 1
-			AND a.mmName = #{mmName}
-			AND a.mmId = #{mmId}
-			AND a.mmPw = #{mmPw}
-		</select>
-	<!-- selectOneId  E -->
-	
-	  
 </mapper>
