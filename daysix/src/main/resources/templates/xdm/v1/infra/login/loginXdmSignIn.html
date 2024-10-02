@@ -196,7 +196,38 @@
           <!-- /Register -->
         </div>
       </div>
+      
+      <!-- Modal S -->
+      <div class="modal fade" id="smallModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="smallModalTiTle">확 인</h5>
+		        <button
+		        type="button"
+		        class="btn-close"
+		        data-bs-dismiss="modal"
+		        aria-label="Close"
+		        ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col mb-3">
+                  <p class="modal-title" id="smallModalBody">일치하는 회원이 존재 하지 않습니다!</p>
+                  </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                Close
+            </div>
+          </div>
+        </div>
+      </div>
+   	  <!-- Modal E -->
+      
     </div>
+    
 
     <!-- / Content -->
 
@@ -308,10 +339,6 @@
 							location.href = "/v1/infra/index/indexXdmView";
 						}
 					} else {
-// 				 		document.getElementById("modalAlertTitle").innerText = "확 인";
-// 				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
-// 				 		$("#modalAlert").modal("show");
-				 		
 // 				 		validation
 				 		mmId.style.borderColor = '#ff3e1d';
 				 		mmPw.style.borderColor = '#ff3e1d';
@@ -320,6 +347,10 @@
 				 		validId.innerText = "존재하지 않는 아이디 입니다";
 				 		validPw.className = 'invalid-feedback';
 				 		validPw.innerText = "존재하지 않는 비밀번호 입니다";
+				 		
+// 				 		document.getElementById("modalAlertTitle").innerText = "확 인";
+// 				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
+				 		$("#smallModal").modal("show");
 					}
 				}
 				,error : function(jqXHR, textStatus, errorThrown){

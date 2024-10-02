@@ -1195,7 +1195,7 @@
 				/* ,dataType:"json" */
 				,url: "/v1/infra/member/signoutXdmProc"
 				/* ,data : $("#formLogin").serialize() */
-				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
 				,success: function(response) {
 					if(response.rt == "success") {
 						alert("로그아웃 성공");
