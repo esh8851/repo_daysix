@@ -7,7 +7,5 @@
 
 	<resultMap type="com.seon.infra.login.LoginDto" id="resultMapObj"></resultMap>
 	
-	
-	
 	  
 </mapper>

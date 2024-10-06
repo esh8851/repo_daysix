@@ -1,0 +1,856 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+    <title>AMovie</title>
+    <meta name="description" content="A Template by Gozha.net">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Gozha.net">
+
+    <!-- Mobile Specific Metas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection">
+
+    <!-- 0_style.css -->
+    <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+
+    <!-- Fonts -->
+    <!-- Font awesome - icon font -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
+    <!-- Open Sans -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800italic' rel='stylesheet' type='text/css'>
+
+    <!-- Stylesheets -->
+
+    <!-- Mobile menu -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
+    <!-- Select -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" />
+
+    <!-- Slider Revolution CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/usr/v1/template/themeforest-1.0.0/revolution/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="/usr/v1/template/themeforest-1.0.0/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/usr/v1/template/themeforest-1.0.0/revolution/css/navigation.csslo">
+
+    <!-- Custom -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+
+    <!-- Modernizr -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header section -->
+        <header class="header-wrapper header-wrapper--home">
+            <div class="container">
+                <!-- Logo link-->
+                <a href='0_index.html' class="logo">
+                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
+                </a>
+
+                <!-- Main website navigation-->
+                <nav id="navigation-box">
+                    <!-- Toggle for mobile menu mode -->
+                    <a href="#" id="navigation-toggle">
+                        <span class="menu-icon">
+                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+                                <span class="lines"></span>
+                            </span>
+                        </span>
+                    </a>
+
+                    <!-- Link navigation -->
+                    <ul id="navigation">
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="0_login.html">로그인</a>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="0_signUp.html">회원가입</a>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="0_concertList.html">콘서트</a>
+                        </li>
+                        <li>
+                            <span class="sub-nav-toggle plus"></span>
+                            <a href="0_book.html">콘서트티켓</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Additional header buttons / Auth and direct link to booking-->
+                <div class="control-panel">
+                    <div class="auth auth--home">
+                        <div class="auth__show">
+                            <span class="auth__image">
+                                <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/client-photo/auth.png">
+                            </span>
+                        </div>
+                        <a href="#" class="btn btn--sign btn--singin">
+                            나
+                        </a>
+                        <ul class="auth__function">
+                            <li><a href="0_ticketBuy.html" class="auth__function-item">예약 티켓</a></li>
+                        </ul>
+
+                    </div>
+                    <a href="#" class="btn btn-md btn--warning btn--book btn-control--home login-window">티켓 예매</a>
+                </div>
+
+            </div>
+        </header>
+
+        <!-- Slider -->
+        <div class="bannercontainer rev_slider_wrapper">
+
+            <!-- the ID here will be used in the JavaScript below to initialize the slider -->
+            <div id="rev_slider_1" class="banner rev_slider" style="display:none">
+
+                <!-- BEGIN SLIDES LIST -->
+                <ul>
+                    <!-- SLIDE 1 -->
+                    <li data-transition="fade" class="slide" data-title='Rush.'>
+
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img class="rev-slidebg" alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/slides/first-slide.jpg">
+                        <div class="tp-caption slide__name margin-slider" data-x="right" data-y="80" data-frames='[{
+                               "delay":300,
+                               "split":"chars",
+                               "splitdelay":0.1,
+                               "speed":700,
+                               "frame":"0",
+                               "from":"x:[-100%];opacity:0;",
+                               "mask":"x:0px;y:0px;s:inherit;e:inherit;",
+                               "to":"o:1;",
+                               "ease":"Power4.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            RUSH
+                        </div>
+                        <div class="tp-caption n slide__time margin-slider" data-x="right" data-hoffset='250'
+                            data-y="186" data-frames='[{
+                               "delay":1200,
+                               "speed":300,
+                               "frame":"0",
+                               "from":"x:[50%];opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            From
+                        </div>
+                        <div class="tp-caption  slide__date margin-slider" data-x="right" data-hoffset='149'
+                            data-y="186" data-frames='[{
+                               "delay":1700,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            October 18
+                        </div>
+                        <div class="tp-caption slide__time margin-slider" data-x="right" data-hoffset='120' data-y="186"
+                            data-frames='[{
+                               "delay":1200,
+                               "speed":300,
+                               "frame":"0",
+                               "from":"x:[50%];opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            till
+                        </div>
+                        <div class="tp-caption slide__date margin-slider" data-x="right" data-y="186" data-frames='[{
+                               "delay":1700,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            November 01
+                        </div>
+                        <div class="tp-caption slide__text margin-slider text-right" data-x="right" data-y="250"
+                            data-frames='[{
+                               "delay":2300,
+                               "speed":400,
+                               "frame":"0",
+                               "from":"y:100px;skX:50px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            Two-time Academy Award winner Ron Howard, teams once again with fellow two-time Academy<br>
+                            Award nominee, writer Peter Morgan , on Rush, a spectacular big-screen re-creation of the
+                            merciless<br> 1970s rivalry between James Hunt and Niki Lauda
+                        </div>
+                        <div class="tp-caption margin-slider" data-x="right" data-y="324" data-frames='[{
+                               "delay":2600,
+                               "speed":400,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            <a href="#" class="slide__link">check out cinemas &amp; time</a>
+                        </div>
+                    </li>
+
+                    <!-- SLIDE 2 -->
+                    <li data-transition="fade" class="slide" data-title='Travel worldwide. Create trip film.'>
+
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img class="rev-slidebg" alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/slides/second-slide.jpg">
+                        <!-- <div class="rs-background-video-layer" data-forcerewind="on" data-volume="mute"
+                            data-videowidth="100%" data-videoheight="100%" data-videomp4="video/TravelIs.mp4"
+                            data-videopreload="auto" data-videoloop="loop" data-forceCover="1" data-aspectratio="16:9"
+                            data-autoplay="true" data-autoplayonlyfirsttime="false">
+                        </div> -->
+                        <div class="tp-caption slide__name slide__name--smaller" data-x="center" data-y="160"
+                            data-splitin="chars" data-elementdelay="0.1" data-speed="700" data-start="1400"
+                            data-easing="easeOutBack" data-frames='[{
+                               "delay":1400,
+                               "speed":700,
+                               "split":"chars",
+                               "splitdelay":0.1,
+                               "frame":"0",
+                               "from":"opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            Travel, Admire, Remember.
+                        </div>
+                        <div class="tp-caption slide__time" data-x="center" data-hoffset='-115' data-y="242"
+                            data-frames='[{
+                               "delay":1800,
+                               "speed":300,
+                               "frame":"0",
+                               "from":"x:[50%];opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            From
+                        </div>
+                        <div class="tp-caption slide__date position-center postion-place--two lfb ltb" data-x="center"
+                            data-hoffset='-50' data-y="242" data-frames='[{
+                               "delay":2200,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            April 18
+                        </div>
+                        <div class="tp-caption slide__time" data-x="center" data-hoffset='5' data-y="242" data-frames='[{
+                               "delay":1800,
+                               "speed":300,
+                               "frame":"0",
+                               "from":"x:[50%];opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            - till
+                        </div>
+                        <div class="tp-caption slide__date" data-x="center" data-hoffset='60' data-y="242" data-frames='[{
+                               "delay":2200,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            May 01
+                        </div>
+                        <div class="tp-caption slider-wrap-btn" data-x="center" data-y="310" data-frames='[{
+                               "delay":2800,
+                               "speed":400,
+                               "frame":"0",
+                               "from":"y:100px;opacity:0;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            <a href="#" class="btn btn-md btn--danger btn--wide slider--btn">더 알아보기</a>
+                        </div>
+                    </li>
+
+                    <!-- SLIDE 3 -->
+                    <li data-transition="fade" class="slide" data-title='Stop wishing. Start doing.'>
+
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img class="rev-slidebg" alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/slides/third-slide.jpg">
+                        <div class="tp-caption slide__name slide__name--smaller slide__name--specific" data-x="center"
+                            data-y="160" data-frames='[{
+                               "delay":1400,
+                               "speed":700,
+                               "frame":"0",
+                               "from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;",
+                               "mask":"x:0px;y:[100%];s:inherit;e:inherit;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            Stop <span class="highlight">wishing.</span> Start <span class="highlight">doing.</span>
+                        </div>
+                        <div class="tp-caption slide__descript" data-x="center" data-y="240" data-frames='[{
+                               "delay":2000,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;",
+                               "mask":"x:0px;y:[100%];s:inherit;e:inherit;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            find your best match movie with A.MOVIE
+                        </div>
+                        <div class="tp-caption slider-wrap-btn" data-x="center" data-y="310" data-frames='[{
+                               "delay":2500,
+                               "speed":500,
+                               "frame":"0",
+                               "from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;",
+                               "mask":"x:0px;y:[100%];s:inherit;e:inherit;",
+                               "to":"o:1;",
+                               "ease":"Power3.easeInOut"
+                               },{
+                               "delay":"wait",
+                               "speed":300,
+                               "frame":"999",
+                               "to":"opacity:0;",
+                               "ease":"Power3.easeInOut"
+                             }]'>
+                            <a href="#" class="btn btn-md btn--danger slider--btn">체크아웃</a>
+                        </div>
+                    </li>
+
+                </ul><!-- END SLIDES LIST -->
+
+            </div><!-- END SLIDER CONTAINER -->
+
+        </div><!-- END SLIDER CONTAINER WRAPPER -->
+        <!--end slider -->
+
+
+        <!-- Main content -->
+        <section class="container">
+            <div class="movie-best">
+                <div class="col-sm-10 col-sm-offset-1 movie-best__rating">&nbsp;오늘의 콘서트</div>
+                <div class="col-sm-12 change--col">
+                    <div class="movie-beta__item ">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-sample1.png">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movie-beta__item second--item">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movie-beta__item third--item">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movie-beta__item hidden-xs">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movie-beta__item hidden-xs hidden-sm">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="movie-beta__item hidden-xs hidden-sm">
+                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+                        <span class="best-rate">5.0</span>
+
+                        <ul class="movie-beta__info">
+                            <li><span class="best-voted">71 투표</span></li>
+                            <li>
+                                <p class="movie__time">169 분</p>
+                                <p>발라드</p>
+                                <p>38 댓글</p>
+                            </li>
+                            <li class="last-block">
+                                <a href="0_concertSingle.html" class="slide__link">더 알아보기</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-sm-offset-1 movie-best__check">콘서트를 확인하세요</div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="mega-select-present mega-select-top mega-select--full">
+                    <div class="mega-select-marker">
+                        <div class="marker-indecator location">
+                            <p class="select-marker"><span>concert to watch now</span> <br>in your city</p>
+                        </div>
+
+                        <div class="marker-indecator cinema">
+                            <p class="select-marker"><span>find your </span> <br>concert</p>
+                        </div>
+
+                        <div class="marker-indecator film-category">
+                            <p class="select-marker"><span>find concert due to </span> <br> your mood</p>
+                        </div>
+
+                        <div class="marker-indecator actors">
+                            <p class="select-marker"><span> like particular stars</span> <br>find them</p>
+                        </div>
+
+                        <div class="marker-indecator director">
+                            <p class="select-marker"><span>admire personalities - find </span> <br>by director</p>
+                        </div>
+
+                        <div class="marker-indecator country">
+                            <p class="select-marker"><span>search for movie from certain </span> <br>country?</p>
+                        </div>
+                    </div>
+
+                    <div class="mega-select pull-right">
+                        <span class="mega-select__point">검색</span>
+                        <ul class="mega-select__sort">
+                            <li class="filter-wrap"><a href="#" class="mega-select__filter filter--active" data-filter='location'>위치</a></li>
+                            <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter='cinema'>콘서트</a></li>
+                            <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter='film-category'>장르</a></li>
+                            <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter='actors'>가수</a></li>
+                        </ul>
+
+                        <input name="search-input" type='text' class="select__field">
+
+                        <div class="select__btn">
+                            <a href="#" class="btn btn-md btn--danger location">위치 <span class="hidden-exrtasm">검색</span></a>
+                            <a href="#" class="btn btn-md btn--danger cinema">콘서트 <span class="hidden-exrtasm">검색</span></a>
+                            <a href="#" class="btn btn-md btn--danger film-category">장르 <span
+                                    class="hidden-exrtasm">검색</span></a>
+                            <a href="#" class="btn btn-md btn--danger actors">가수 <span class="hidden-exrtasm">검색</span></a>
+                        </div>
+
+                        <div class="select__dropdowns">
+                            <ul class="select__group location">
+                                <li class="select__variant" data-value='London'>서울</li>
+                                <li class="select__variant" data-value='New York'>경기</li>
+                                <li class="select__variant" data-value='Paris'>인천</li>
+                                <li class="select__variant" data-value='Berlin'>대전</li>
+                                <li class="select__variant" data-value='Moscow'>대구</li>
+                                <li class="select__variant" data-value='Minsk'>부산</li>
+                                <li class="select__variant" data-value='Warsawa'>울산</li>
+                            </ul>
+
+                            <ul class="select__group cinema">
+                                <li class="select__variant" data-value='Cineworld'>KBS부산홀</li>
+                                <li class="select__variant" data-value='Empire'>예술의 전당 음악당 콘서트홀</li>
+                                <li class="select__variant" data-value='Everyman'>BEXCO 컨벤션홀 그랜드볼룸</li>
+                                <li class="select__variant" data-value='Odeon'>예술의 전당 오페라하우스 오페라극장</li>
+                                <li class="select__variant" data-value='Picturehouse'>KBS아레나</li>
+                            </ul>
+
+                            <ul class="select__group film-category">
+                                <li class="select__variant" data-value="Children's">발라드</li>
+                                <li class="select__variant" data-value='Comedy'>락/메탈</li>
+                                <li class="select__variant" data-value='Drama'>랩/힙합</li>
+                                <li class="select__variant" data-value='Fantasy'>재즈/소울</li>
+                                <li class="select__variant" data-value='Horror'>포크/트로트</li>
+                                <li class="select__variant" data-value='Thriller'>인디</li>
+                            </ul>
+
+                            <ul class="select__group actors">
+                                <li class="select__variant" data-value='Leonardo DiCaprio'>임한별</li>
+                                <li class="select__variant" data-value='Johnny Depp'>아이유</li>
+                                <li class="select__variant" data-value='Jack Nicholson'>김범수</li>
+                                <li class="select__variant" data-value='Robert De Niro'>나얼</li>
+                                <li class="select__variant" data-value='Morgan Freeman'>박효신</li>
+                                <li class="select__variant" data-value='Jim Carrey'>엠씨더맥스</li>
+                                <li class="select__variant" data-value='Adam Sandler'>거미</li>
+                                <li class="select__variant" data-value='Ben Stiller'>소향</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <h2 id='target' class="page-heading heading--outcontainer">콘서트</h2>
+
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-8 col-md-12">
+                        <!-- Movie variant with time -->
+                        <div class="movie movie--test movie--test--dark movie--test--left">
+                            <div class="movie__images">
+                                <a href="0_concertSingle.html" class="movie-beta__link">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-time8.jpg">
+                                </a>
+                            </div>
+
+                            <div class="movie__info">
+                                <a href='0_concertSingle.html' class="movie__title">2024 임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르 in 서울</a>
+
+                                <p class="movie__time">91 분</p>
+
+                                <p class="movie__option"><a href="#">발라드</a></p>
+
+                                <div class="movie__rate">
+                                    <div class="score"></div>
+                                    <span class="movie__rating">4.1</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Movie variant with time -->
+
+                        <!-- Movie variant with time -->
+                        <div class="movie movie--test movie--test--light movie--test--left">
+                            <div class="movie__images">
+                                <a href="0_concertSingle.html" class="movie-beta__link">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-time1.jpg">
+                                </a>
+                            </div>
+
+                            <div class="movie__info">
+                                <a href='0_concertSingle.html' class="movie__title">베이빌론 콘서트 〈EGO 90’S CLASSIC〉</a>
+
+                                <p class="movie__time">169 분</p>
+
+                                <p class="movie__option"><a href="#">랩/힙합</p>
+
+                                <div class="movie__rate">
+                                    <div class="score"></div>
+                                    <span class="movie__rating">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Movie variant with time -->
+
+                        <!-- Movie variant with time -->
+                        <div class="movie movie--test movie--test--light movie--test--right">
+                            <div class="movie__images">
+                                <a href="0_concertSingle.html" class="movie-beta__link">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-time9.jpg">
+                                </a>
+                            </div>
+
+                            <div class="movie__info">
+                                <a href='0_concertSingle.html' class="movie__title">반석산피크닉: 디어재즈오케스트라 with 선우정아 - 화성</a>
+
+                                <p class="movie__time">146 분</p>
+
+                                <p class="movie__option"><a href="#">재즈/소울</a></p>
+
+                                <div class="movie__rate">
+                                    <div class="score"></div>
+                                    <span class="movie__rating">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Movie variant with time -->
+
+                        <!-- Movie variant with time -->
+                        <div class="movie movie--test movie--test--dark movie--test--right">
+                            <div class="movie__images">
+                                <a href="0_concertSingle.html" class="movie-beta__link">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-time10.jpg">
+                                </a>
+                            </div>
+
+                            <div class="movie__info">
+                                <a href='0_concertSingle.html' class="movie__title">2024 장윤정 라이브 콘서트 - 대구</a>
+
+                                <p class="movie__time">112 분</p>
+
+                                <p class="movie__option"><a href="#">포크/트로트</p>
+
+                                <div class="movie__rate">
+                                    <div class="score"></div>
+                                    <span class="movie__rating">5.0</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Movie variant with time -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="clearfix"></div>
+
+        <footer class="footer-wrapper">
+            <section class="container">
+                <div class="col-xs-4 col-md-3 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="0_index.html" class="nav-link__item">홈</a></li>
+                        <li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
+                        <li><a href="0_book.html" class="nav-link__item">티켓</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-3 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="0_login.html" class="nav-link__item">로그인</a></li>
+                        <li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="footer-info">
+                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social
+                                media</span></p>
+
+                        <div class="social">
+                            <a href='#' class="social__variant fa fa-facebook"></a>
+                            <a href='#' class="social__variant fa fa-twitter"></a>
+                            <a href='#' class="social__variant fa fa-vk"></a>
+                            <a href='#' class="social__variant fa fa-instagram"></a>
+                            <a href='#' class="social__variant fa fa-tumblr"></a>
+                            <a href='#' class="social__variant fa fa-pinterest"></a>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <p class="copy">&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all rights reserved.</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- open/close -->
+    <div class="overlay overlay-hugeinc">
+    
+        <section class="container">
+    
+            <div class="col-sm-4 col-sm-offset-4">
+                <button type="button" class="overlay-close">Close</button>
+                <form id="login-form" class="login" method='get' novalidate=''>
+                    <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
+    
+                    <div class="social social--colored">
+                        <a href='#' class="social__variant fa fa-facebook"></a>
+                        <a href='#' class="social__variant fa fa-twitter"></a>
+                        <a href='#' class="social__variant fa fa-tumblr"></a>
+                    </div>
+    
+                    <p class="login__tracker">or</p>
+    
+                    <div class="field-wrap">
+                        <input type='email' placeholder='이메일' name='user-email' class="login__input">
+                        <input type='password' placeholder='비밀번호' name='user-password' class="login__input">
+    
+                        <input type='checkbox' id='#informed' class='login__check styled'>
+                        <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+                    </div>
+    
+                    <div class="login__control">
+                        <button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
+                        <a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
+                    </div>
+                </form>
+            </div>
+    
+        </section>
+    </div>
+
+    <!-- JavaScript-->
+    <!-- jQuery 3.1.1-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')</script>
+    <!-- Migrate -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+    <!-- Bootstrap 3-->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+    <!-- Slider Revolution core JavaScript files -->
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!-- Slider Revolution extension scripts. -->
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="/usr/v1/template/themeforest-1.0.0/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- Mobile menu -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
+    <!-- Select -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
+    <!-- Stars rate -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
+
+    <!-- Form element -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
+    <!-- Form validation -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
+
+    <!-- Twitter feed -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/twitterfeed.js"></script>
+
+    <!-- Custom -->
+    <script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            init_Home();
+        });
+    </script>
+
+</body>
+
+</html>
