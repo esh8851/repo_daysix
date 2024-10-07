@@ -107,7 +107,7 @@
         </div>
         
         <!-- Main content -->
-                <form id="login-form" class="login" method='post' novalidate='' action="/v1/infra/login/loginUsrSignIn">
+                <form id="form" class="login" method='post' novalidate='' action="/v1/infra/login/loginUsrSignIn">
                     <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
 
                     <div class="social social--colored">
@@ -198,6 +198,28 @@
             </div>
         </section>
     </footer>
+    
+    <!-- Modal S -->
+   	<div class="overlay overlay-hugeinc">
+    
+        <section class="container">
+    
+            <div class="col-sm-4 col-sm-offset-4">
+                <button type="button" class="overlay-close">Close</button>
+                <form id="login-form" class="login" method='get' novalidate=''>
+                    <p class="login__title">확인</p>
+    
+                    <p class="login__tracker">일치하는 회원이 존재 하지 않습니다!</p>
+    
+                    <div class="login__control">
+                        <button type='button' class="btn btn-md btn--danger btn--wider">확인</button>
+                    </div>
+                </form>
+            </div>
+    
+        </section>
+    </div>	
+   	<!-- Modal E -->
 
 	<!-- JavaScript-->
         <!-- jQuery 3.1.1--> 
@@ -287,6 +309,44 @@
         			invalidPw.style.display = 'none';
         			validPw.style.display = 'block';
         		}
+        		
+        		$.ajax({
+    				async: true 
+    				,cache: false
+    				,type: "post"
+    				/* ,dataType:"json" */
+    				,url: "/v1/infra/member/signinXdmProc"
+    				/* ,data : $("#formLogin").serialize() */
+    				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
+    				,success: function(response) {
+    					if(response.rt == "success") {
+    						if(response.changePwd == "true") {
+    							location.href = "/v1/infra/index/indexUsrView";
+    						} else {
+    							location.href = "/v1/infra/index/indexUsrView";
+    						}
+    					} else {
+//     				 		validation
+    				 		mmId.style.borderColor = '#ff3e1d';
+    				 		mmPw.style.borderColor = '#ff3e1d';
+    				 		invalidId.style.display = 'block';
+    				 		invalidPw.style.display = 'block';
+    				 		validId.style.display = 'none';
+    				 		validPw.style.display = 'none';
+    				 		const messageElementId = document.querySelector('.invalidId .inv-em');
+    				 		messageElementId.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
+    				 		const messageElementPw = document.querySelector('.invalidPw .inv-em');
+    				 		messageElementPw.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
+    				 		
+//     				 		document.getElementById("modalAlertTitle").innerText = "확 인";
+//     				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
+							
+    					}
+    				}
+    				,error : function(jqXHR, textStatus, errorThrown){
+    					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+    				}
+    			});
         		
         	}
         </script>

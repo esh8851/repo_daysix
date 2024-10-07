@@ -1,21 +1,25 @@
 .radio {width:13px;height:13px;border:1px solid #e0e4e6;display:block;clear:left;float:left;border-radius:3px;-moz-box-shadow:inset 0px 1px 1px rgba(0, 0, 0, 0.1);-webkit-box-shadow:inset 0px 1px 1px rgba(0, 0, 0, 0.1);box-shadow:inset 0px 1px 1px rgba(0, 0, 0, 0.1);background-image:url('../images/components/checked.png');background-position:0 0;margin-right:10px;margin-top:3px;}
-.copy{padding-bottom:0;}
+.copy{padding-bottom:0 ! important;margin-bottom:24px;}
 .d-flex {display:flex;}
-.nav-link{margin-top:31px;}
+.nav-link{margin-top:37px ! important;}
 .footer-wrapper{margin-top:134px;}
-.footer-info{padding-top:31px;}
+.footer-info{padding-top:31px ! important;}
 .page-heading, .movie__time{font-weight:bold;}
 .btn--book, .btn--sign, .login .login__title{font-weight:bold;}
 .login__control .btn{font-weight: bold;}
+
 .invalidId, .validId, .invalidPw, .validPw, .validName, .invalidName, .validEmail, .invalidEmail, .invalidPhone, .validPhone, .invalidBirth, .validBirth, .invalidPwCheck, .validPwCheck, .invalidGender, .validGender{display:none;}
-#login-form > .field-wrap > label:not(.login__check-info){display:block;margin-top:13px;}
+#form > .field-wrap > label:not(.login__check-info){display:block;margin-top:13px;}
 .login .login__check-info{margin-top:5px;}
+.auth__function > li > a{cursor:pointer;}
+.control-panel > a{font-weight:bold;}
+.page-heading{font-weight:bold ! important;}
 
 /******************************* index S *******************************/
 .movie-best .movie-best__rating, .movie-best .movie-best__check, .select__btn .btn-md, .slider--btn{font-weight:bold;;}
 .mega-select .mega-select__filter:after{bottom:-7px !important;}
 .select__btn a:visited{color:#fff;}
-.btn--sign:before{left:7px;}
+.btn--sign:before{left:7px ! important;}
 .mega-select .select__btn a{min-width:100px;}
 /******************************* index E *******************************/
 
@@ -26,7 +30,7 @@
 
 /******************************* index S *******************************/
 .search .search__button{min-width:100px;height:37px;font-weight:bold;padding-top:9px;}
-.search .sbHolder .sbToggle:before{left:40px;}
+.search .sbHolder .sbToggle:before{left:40px ! important;}
 .movie-best + .col-sm-12{margin-top:100px;}
 /******************************* index E *******************************/
 

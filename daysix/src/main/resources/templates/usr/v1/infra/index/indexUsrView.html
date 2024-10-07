@@ -98,11 +98,12 @@
                                 <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/client-photo/auth.png">
                             </span>
                         </div>
-                        <a href="#" class="btn btn--sign btn--singin">
-                            나
+                        <a href="#" class="btn btn--sign btn--singin" th:text="${session.sessNameXdm}">
+                            
                         </a>
                         <ul class="auth__function">
-                            <li><a href="0_ticketBuy.html" class="auth__function-item">예약 티켓</a></li>
+                            <li><a href="0_ticketBuy.html" class="auth__function-item">예약티켓</a></li>
+                            <li><a class="auth__function-item" id="btnLogOut">로그아웃</a></li>
                         </ul>
 
                     </div>
@@ -850,6 +851,33 @@
             init_Home();
         });
     </script>
+    
+    <!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,success: function(response) {
+					if(response.rt == "success") {
+						alert("로그아웃 성공");
+						location.href = "/v1/infra/login/loginUsrSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
 
 </body>
 

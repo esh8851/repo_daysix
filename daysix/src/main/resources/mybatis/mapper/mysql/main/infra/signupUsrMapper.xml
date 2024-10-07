@@ -7,4 +7,5 @@
 
 	<resultMap type="com.seon.infra.signUpUsr.SignUpUsrDto" id="resultMapObj"></resultMap>
 	
+	
 </mapper>

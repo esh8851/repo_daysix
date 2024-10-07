@@ -27,20 +27,5 @@
 			a.mmSeq DESC
 	</select>
 	
-	<select id="selectOneLogin" resultMap="resultMapObj">
-		SELECT
-			a.mmSeq
-			,a.mmId
-			,a.mmPw
-			,a.mmName
-			,a.mmEmail
-		FROM
-			member AS a
-		WHERE 1 = 1
-			AND a.mmId = #{mmId}
-			AND a.mmName = #{mmName}
-			AND a.mmPw = #{mmPw}
-	</select>
-	
 	  
 </mapper>

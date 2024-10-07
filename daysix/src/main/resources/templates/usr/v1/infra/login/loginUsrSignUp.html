@@ -4,7 +4,7 @@
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
-    <title>AMovie - Login</title>
+    <title>loginUsrSignUp</title>
     <meta name="description" content="A Template by Gozha.net">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Gozha.net">
@@ -106,7 +106,7 @@
         </div>
 
         <!-- Main content -->
-        <form id="login-form" class="login" method='get' novalidate=''>
+        <form id="form" name="form" class="login" method='post' action="/v1/infra/member/memberXdmInst">
             <p class="login__title">회원가입 <br><span class="login-edition">welcome to A.Movie</span></p>
 
             <div class="social social--colored">
@@ -119,7 +119,7 @@
 
             <div class="field-wrap">
             	<label for="mmName"><span>이름</span></label>
-                <input type="text" placeholder='이름' name='user-name' class="login__input" id="mmName">
+                <input type="text" placeholder='이름' name='mmName' class="login__input" id="mmName">
                 <div class="invalidName">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -137,11 +137,11 @@
                 <label>성별</label>
                 <div class="d-flex radiobox-leesh">
                     <label for="radio01" class='login__check-info'>
-                        <input type="radio" id="radio01" class="login__check styled" name="mmGender">
+                        <input type="radio" id="radio01" class="login__check styled" name="mmGender" value="2">
                         <span>남자</span>
                     </label>
                     <label for="radio02" class='login__check-info'>
-                        <input type="radio" id="radio02" class="login__check styled" name="mmGender">
+                        <input type="radio" id="radio02" class="login__check styled" name="mmGender" value="3">
                         <span>여자</span>
                     </label>
                 </div>
@@ -160,7 +160,7 @@
                    	</p>
                	</div>
                	<label for="mmId">아이디</label>
-                <input type="text" placeholder='아이디' name='user-id' class="login__input" id="mmId">
+                <input type="text" placeholder='아이디' name='mmId' class="login__input" id="mmId">
 	            <div class="invalidId">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -176,7 +176,7 @@
                     </p>
                 </div>
                 <label for="mmEmail">이메일</label>      
-                <input type='email' placeholder='이메일' name='user-email' class="login__input" id="mmEmail">
+                <input type='email' placeholder='이메일' name='mmEmail' class="login__input" id="mmEmail">
                 <div class="invalidEmail">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -192,7 +192,7 @@
                     </p>
                 </div>
                 <label for="mmPw">비밀번호</label>
-                <input type='password' placeholder='비밀번호' name='user-password' class="login__input" id="mmPw">
+                <input type='password' placeholder='비밀번호' name='mmPw' class="login__input" id="mmPw">
                 <div class="invalidPw">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -208,7 +208,7 @@
                     </p>
                 </div>
                 <label for="mmPwCheck">비밀번호 확인</label>
-                <input type='password' placeholder='비밀번호 확인' name='user-password-check' class="login__input" id="mmPwCheck">
+                <input type='password' placeholder='비밀번호 확인' name='mmPwCheck' class="login__input" id="mmPwCheck">
                 <div class="invalidPwCheck">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -224,7 +224,7 @@
                     </p>
                 </div>
                 <label for="mmPhone">휴대폰 번호</label>
-                <input type="text" placeholder="핸드폰" class="login__input" id="mmPhone">
+                <input type="text" placeholder="핸드폰" class="login__input" name="mmPhone" id="mmPhone">
                 <div class="invalidPhone">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -240,7 +240,7 @@
                     </p>
                 </div>
                 <label for="mmPhone">생년월일</label>
-                <input type="text" placeholder="생년월일" class="login__input" id="mmBirth">
+                <input type="text" placeholder="생년월일" class="login__input" name="mmBirth" id="mmBirth">
                 <div class="invalidBirth">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -424,7 +424,7 @@
     			validEmail.style.display = 'block';
     		}
     		
-    		var mmEmailRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+    		var mmEmailRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
     		if(!mmEmailRegExp.test(mmEmailValue)) {
     			mmEmail.style.borderColor = '#fe505a';
     			invalidEmail.style.display = 'block';
@@ -506,7 +506,7 @@
     			validPhone.style.display = 'block';
     		}
     		
-    		var mmPhoneRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+    		var mmPhoneRegExp = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
     		if(!mmPhoneRegExp.test(mmPhoneValue)) {
     			mmPhone.style.borderColor = '#fe505a';
     			invalidPhone.style.display = 'block';
@@ -538,7 +538,7 @@
     			validBirth.style.display = 'block';
     		}
     		
-    		var mmBirthRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+    		var mmBirthRegExp = /^(19[0-9][0-9]|20\d{2})-(0[0-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
     		if(!mmBirthRegExp.test(mmBirthValue)) {
     			mmBirth.style.borderColor = '#fe505a';
     			invalidBirth.style.display = 'block';
@@ -551,6 +551,9 @@
     			invalidBirth.style.display = 'none';
     			validBirth.style.display = 'block';
     		}
+    		
+    		form.action="/v1/infra/member/memberXdmInst";
+    		form.submit();
     		
     		
     	}
