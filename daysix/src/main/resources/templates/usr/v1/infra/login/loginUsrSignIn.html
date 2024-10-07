@@ -2,40 +2,40 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
 	<!-- Basic Page Needs -->
-        <meta charset="utf-8">
-        <title>AMovie - Login</title>
-        <meta name="description" content="A Template by Gozha.net">
-        <meta name="keywords" content="HTML, CSS, JavaScript">
-        <meta name="author" content="Gozha.net">
+    <meta charset="utf-8">
+    <title>loginUsrSignIn</title>
+    <meta name="description" content="A Template by Gozha.net">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Gozha.net">
     
     <!-- Mobile Specific Metas-->
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="telephone=no" name="format-detection">
     
     <!-- Fonts -->
-        <!-- Font awesome - icon font -->
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <!-- Roboto -->
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <!-- Font awesome - icon font -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Roboto -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     
     <!-- Stylesheets -->
-
-        <!-- Mobile menu -->
-        <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
-        <!-- Select -->
-        <link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" />
     
-        <!-- Custom -->
-        <link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+   	<!-- 0_style.css -->
+    <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
 
-        <!-- Modernizr --> 
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+    <!-- Mobile menu -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
+    <!-- Select -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" />
 
-        <!-- 0_style.css -->
-        <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
-        
-        <!-- Favicon -->
-        <link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/img-cat.jpg">
+    <!-- Custom -->
+    <link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+
+    <!-- Modernizr --> 
+    <script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
     
     
 </head>
@@ -119,13 +119,40 @@
                     <p class="login__tracker">or</p>
                     
                     <div class="field-wrap">
-                        <input type="text" placeholder='아이디' name='mmId' class="login__input" id="mmId">
-                    <input type='email' placeholder='이메일' name='mmEmail' class="login__input" id="mmEmail">
-                    <input type='password' placeholder='비밀번호' name='mmPw' class="login__input" id=mmPw>
-
-                    <input type='checkbox' id='#informed' class='login__check styled'>
-                    <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-                     </div>
+	                    <input type="text" placeholder='아이디' name='mmId' class="login__input" id="mmId">
+	                    <div class="invalidId">
+		                    <p class="inv-em alert alert-danger">
+		                    	<span class="icon-warning"></span>
+		                    	아이디를 입력해 주세요!
+		                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		                    </p>
+	                    </div>
+	                    <div class="validId">
+		                    <p class="inv-em alert alert-success">
+		                    	<span class="icon-bell"></span>
+		                    	참 잘했어요!
+		                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		                    </p>
+	                    </div>
+	                    <input type='password' placeholder='비밀번호' name='mmPw' class="login__input" id="mmPw">
+	                    <div class="invalidPw">
+		                    <p class="inv-em alert alert-danger">
+		                    	<span class="icon-warning"></span>
+		                    	비밀번호를 입력해 주세요!
+		                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		                    </p>
+	                    </div>
+	                    <div class="validPw">
+		                    <p class="inv-em alert alert-success">
+		                    	<span class="icon-bell"></span>
+		                    	참 잘했어요!
+		                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		                    </p>
+	                    </div>
+	
+	                    <input type='checkbox' id='#informed' class='login__check styled'>
+	                    <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+                    </div>
                     
                     <div class="login__control">
                         <button type='button' class="btn btn-md btn--warning btn--wider" id="btnSignIn">로그인</button>
@@ -196,35 +223,70 @@
         <!-- btnSignIn S -->
         <script type="text/javascript">
         	document.getElementById("btnSignIn").onclick = function() {
-        		$.ajax({
-    				async: true 
-    				,cache: false
-    				,type: "post"
-    				/* ,dataType:"json" */
-    				,url: "/v1/infra/loginUsr/signinUsrProc"
-    				/* ,data : $("#formLogin").serialize() */
-    				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val(), "mmEmail" : $("#mmEmail").val()}
-    				,success: function(response) {
-    					if(response.rt == "success") {
-    						if(response.changePwd == "true") {
-    							location.href = "/v1/infra/index/indexUsrView";
-    						} else {
-    							location.href = "/v1/infra/index/indexUsrView";
-    						}
-    					} else {
-//     				 		document.getElementById("modalAlertTitle").innerText = "확 인";
-//     				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
-//     				 		$("#smallModal").modal("show");
-    					}
-    				}
-    				,error : function(jqXHR, textStatus, errorThrown){
-    					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
-    				}
-    			});
+//         		validation
+//         		아이디
+        		var mmId = document.getElementById("mmId");
+        		var mmIdValue = document.getElementById("mmId").value.trim();
+        		var invalidId = document.querySelector('.invalidId');
+        		var validId = document.querySelector('.validId');
+        		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+        		
+        		if(mmIdValue == '' || mmIdValue == null) {
+        			mmId.style.borderColor = '#fe505a';
+        			invalidId.style.display = 'block';
+        			mmId.focus();
+        			return false;
+        		} else {
+        			mmId.style.borderColor = '#92DA7F';
+        			invalidId.style.display = 'none';
+        			validId.style.display = 'block';
+        		}
+        		
+        		if(!mmIdRegExp.test(mmIdValue)) {
+        			mmId.style.borderColor = '#fe505a';
+        			invalidId.style.display = 'block';
+        			validId.style.display = 'none';
+        			const messageElement = document.querySelector('.invalidId .inv-em');
+        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+        			mmId.focus();
+        			return false;
+        		} else {
+// 					by pass
+        		}
+        		
+//         		비밀번호
+        		var mmPw = document.getElementById("mmPw");
+        		var mmPwValue = document.getElementById("mmPw").value.trim();
+        		var invalidPw = document.querySelector('.invalidPw');
+        		var validPw = document.querySelector('.validPw');
+        		var mmPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
+        		
+        		if(mmPwValue == '' || mmPwValue == null) {
+        			mmPw.style.borderColor = '#fe505a';
+        			invalidPw.style.display = 'block';
+        			mmPw.focus();
+        			return false;
+        		} else {
+        			mmPw.style.borderColor = '#92DA7F';
+        			invalidPw.style.display = 'none';
+        			validPw.style.display = 'block';
+        		}
+        		
+        		if(!mmPwRegExp.test(mmPwValue)) {
+        			mmPw.style.borderColor = '#fe505a';
+        			invalidPw.style.display = 'block';
+        			validPw.style.display = 'none';
+        			const messageElement = document.querySelector('.invalidPw .inv-em');
+        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 특수문자(!@#$)만 입력해주세요!';
+        			mmPw.focus();
+        			return false;
+        		} else {
+//         			by pass
+        		}
+        		
         	}
         </script>
         <!-- btnSignIn E -->
         
-
 </body>
 </html>

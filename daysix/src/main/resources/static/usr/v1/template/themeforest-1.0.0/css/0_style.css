@@ -7,7 +7,9 @@
 .page-heading, .movie__time{font-weight:bold;}
 .btn--book, .btn--sign, .login .login__title{font-weight:bold;}
 .login__control .btn{font-weight: bold;}
-
+.invalidId, .validId, .invalidPw, .validPw, .validName, .invalidName, .validEmail, .invalidEmail, .invalidPhone, .validPhone, .invalidBirth, .validBirth, .invalidPwCheck, .validPwCheck, .invalidGender, .validGender{display:none;}
+#login-form > .field-wrap > label:not(.login__check-info){display:block;margin-top:13px;}
+.login .login__check-info{margin-top:5px;}
 
 /******************************* index S *******************************/
 .movie-best .movie-best__rating, .movie-best .movie-best__check, .select__btn .btn-md, .slider--btn{font-weight:bold;;}

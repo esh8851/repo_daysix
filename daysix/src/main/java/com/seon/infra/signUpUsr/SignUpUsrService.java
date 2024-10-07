@@ -1,14 +1,12 @@
-package com.seon.infra.loginUsr;
-
-import java.util.List;
+package com.seon.infra.signUpUsr;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class LoginUsrService {
+public class SignUpUsrService {
 	
 	@Autowired
-	LoginUsrDao loginUsrDao;
-	
+	SignUpUsrDao signUpUsrDao;
+
 }
