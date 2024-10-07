@@ -234,6 +234,7 @@
         		if(mmIdValue == '' || mmIdValue == null) {
         			mmId.style.borderColor = '#fe505a';
         			invalidId.style.display = 'block';
+        			validId.style.display = 'none';
         			mmId.focus();
         			return false;
         		} else {
@@ -251,7 +252,8 @@
         			mmId.focus();
         			return false;
         		} else {
-// 					by pass
+        			invalidId.style.display = 'none';
+        			validId.style.display = 'block';
         		}
         		
 //         		비밀번호
@@ -264,6 +266,7 @@
         		if(mmPwValue == '' || mmPwValue == null) {
         			mmPw.style.borderColor = '#fe505a';
         			invalidPw.style.display = 'block';
+        			validPw.style.display = 'none';
         			mmPw.focus();
         			return false;
         		} else {
@@ -281,7 +284,8 @@
         			mmPw.focus();
         			return false;
         		} else {
-//         			by pass
+        			invalidPw.style.display = 'none';
+        			validPw.style.display = 'block';
         		}
         		
         	}
