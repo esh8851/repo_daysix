@@ -46,41 +46,12 @@
         <header class="header-wrapper">
             <div class="container">
                 <!-- Logo link-->
-                <a href='0_index.html' class="logo">
+                <a href='/v1/infra/index/indexUsrView' class="logo">
                     <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
                 </a>
                 
                 <!-- Main website navigation-->
-                <nav id="navigation-box">
-                    <!-- Toggle for mobile menu mode -->
-                    <a href="#" id="navigation-toggle">
-                        <span class="menu-icon">
-                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-                              <span class="lines"></span>
-                            </span>
-                        </span>
-                    </a>
-                    
-                    <!-- Link navigation -->
-                    <ul id="navigation">
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_login.html">로그인</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_signUp.html">회원가입</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_concertList.html">콘서트</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_book.html">콘서트티켓</a>
-                        </li>
-                    </ul>
-                </nav>
+                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
                 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">
@@ -119,7 +90,8 @@
                     <p class="login__tracker">or</p>
                     
                     <div class="field-wrap">
-	                    <input type="text" placeholder='아이디' name='mmId' class="login__input" id="mmId">
+                    	<label for="mmId">아이디</label>
+	                    <input type="text" placeholder='한글, 영대소문자, 숫자, 4~10자리' name='mmId' class="login__input" id="mmId">
 	                    <div class="invalidId">
 		                    <p class="inv-em alert alert-danger">
 		                    	<span class="icon-warning"></span>
@@ -134,7 +106,8 @@
 		                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
 		                    </p>
 	                    </div>
-	                    <input type='password' placeholder='비밀번호' name='mmPw' class="login__input" id="mmPw">
+	                    <label for="mmPw">비밀번호</label>
+	                    <input type='password' placeholder='영대소문자, 숫자, 특수문자 8~15자리' name='mmPw' class="login__input" id="mmPw">
 	                    <div class="invalidPw">
 		                    <p class="inv-em alert alert-danger">
 		                    	<span class="icon-warning"></span>
@@ -251,7 +224,7 @@
         		var mmIdValue = document.getElementById("mmId").value.trim();
         		var invalidId = document.querySelector('.invalidId');
         		var validId = document.querySelector('.validId');
-        		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+        		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{4,10}$/;
         		
         		if(mmIdValue == '' || mmIdValue == null) {
         			mmId.style.borderColor = '#fe505a';
@@ -270,7 +243,7 @@
         			invalidId.style.display = 'block';
         			validId.style.display = 'none';
         			const messageElement = document.querySelector('.invalidId .inv-em');
-        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 4~10자리';
         			mmId.focus();
         			return false;
         		} else {
@@ -283,7 +256,7 @@
         		var mmPwValue = document.getElementById("mmPw").value.trim();
         		var invalidPw = document.querySelector('.invalidPw');
         		var validPw = document.querySelector('.validPw');
-        		var mmPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
+        		var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
         		
         		if(mmPwValue == '' || mmPwValue == null) {
         			mmPw.style.borderColor = '#fe505a';
@@ -302,7 +275,7 @@
         			invalidPw.style.display = 'block';
         			validPw.style.display = 'none';
         			const messageElement = document.querySelector('.invalidPw .inv-em');
-        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 특수문자(!@#$)만 입력해주세요!';
+        			messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 8~15자리';
         			mmPw.focus();
         			return false;
         		} else {

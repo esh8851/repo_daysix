@@ -54,6 +54,13 @@ public class MemberController {
 		return "redirect:/v1/infra/member/memberXdmList";
 	}
 	
+//	memberXdmInstUsr
+	@RequestMapping(value="/v1/infra/member/memberXdmInstUsr")
+	public String memberXdmInstUsr(MemberDto memberDto) {
+		memberService.insertUsr(memberDto);
+		return "redirect:/v1/infra/login/loginUsrSignIn";
+	}
+	
 //	memberXdmMForm
 //	update - selectOne
 	@RequestMapping(value="/v1/infra/member/memberXdmMForm")

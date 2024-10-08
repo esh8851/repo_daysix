@@ -665,6 +665,29 @@
                         </div>
                         <div class="row">
                           <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">우편번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmZipNum" name="mmZipNum" th:value="${item?.mmZipNum}" placeholder="우편번호"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                          <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">주소<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmAdr" name="mmAdr" th:value="${item?.mmAdr}" placeholder="주소"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                          <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">상세주소<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmAdr" name="mmAdrDt" th:value="${item?.mmAdrDt}" placeholder="상세주소"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <input type="text" class="form-control" id="mmDateTimeReg" name="mmDateTimeReg" th:value="${#dates.format(item?.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}" placeholder="자동생성"

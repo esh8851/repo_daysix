@@ -7,13 +7,36 @@
 .page-heading, .movie__time{font-weight:bold;}
 .btn--book, .btn--sign, .login .login__title{font-weight:bold;}
 .login__control .btn{font-weight: bold;}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline:none ! important;
+}
 
+/******************************* indexUsrView S *******************************/
+.auth__function > li > a{cursor:pointer;}
+.page-heading{font-weight:bold ! important;}
+/******************************* indexUsrView E *******************************/
+
+
+/******************************* loginUsrSignUp S *******************************/
 .invalidId, .validId, .invalidPw, .validPw, .validName, .invalidName, .validEmail, .invalidEmail, .invalidPhone, .validPhone, .invalidBirth, .validBirth, .invalidPwCheck, .validPwCheck, .invalidGender, .validGender{display:none;}
 #form > .field-wrap > label:not(.login__check-info){display:block;margin-top:13px;}
 .login .login__check-info{margin-top:5px;}
-.auth__function > li > a{cursor:pointer;}
+/******************************* loginUsrSignUp E *******************************/
+
+
+/******************************* loginUsrSignIn S *******************************/
+.close{display:none;}
 .control-panel > a{font-weight:bold;}
-.page-heading{font-weight:bold ! important;}
+/******************************* loginUsrSignIn E *******************************/
+
+
+/**************************************************************************************************************************************/
+
 
 /******************************* index S *******************************/
 .movie-best .movie-best__rating, .movie-best .movie-best__check, .select__btn .btn-md, .slider--btn{font-weight:bold;;}
@@ -22,10 +45,6 @@
 .btn--sign:before{left:7px ! important;}
 .mega-select .select__btn a{min-width:100px;}
 /******************************* index E *******************************/
-
-/******************************* login S *******************************/
-
-/******************************* login E *******************************/
 
 
 /******************************* index S *******************************/
@@ -36,7 +55,8 @@
 
 
 /******************************* concertList S *******************************/
-.radiobox-leesh{margin:5px 0;}
+.radiobox-leesh{margin:5px 0 18px;}
+.radiobox-leesh + .invalidGender, .validGender > p{margin-top:23px;}
 .radiobox-leesh .login__check-info{margin-right:13px;margin-bottom:0;}
 .radiobox-leesh .login__check-info > span{margin-top:2px;}
 .movie--preview .movie__feature .movie__feature--photo:before{right:7px;}

@@ -18,6 +18,9 @@ public class MemberDto {
 	private Date mmDateTimeEdit;
 	private Integer mmUseNy;
 	private Integer mmDelNy;
+	private String mmZipNum;
+	private String mmAdr;
+	private String mmAdrDt;
 //	----------------------------- field E -----------------------------
 	
 //	----------------------------- getter & setter S -----------------------------
@@ -94,7 +97,24 @@ public class MemberDto {
 	public void setMmDelNy(Integer mmDelNy) {
 		this.mmDelNy = mmDelNy;
 	}
+	public String getMmZipNum() {
+		return mmZipNum;
+	}
+	public void setMmZipNum(String mmZipNum) {
+		this.mmZipNum = mmZipNum;
+	}
+	public String getMmAdr() {
+		return mmAdr;
+	}
+	public void setMmAdr(String mmAdr) {
+		this.mmAdr = mmAdr;
+	}
+	public String getMmAdrDt() {
+		return mmAdrDt;
+	}
+	public void setMmAdrDt(String mmAdrDt) {
+		this.mmAdrDt = mmAdrDt;
+	}
 //	----------------------------- getter & setter E -----------------------------
-	
 	
 }

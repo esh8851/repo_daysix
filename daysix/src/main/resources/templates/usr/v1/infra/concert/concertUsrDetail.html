@@ -1,0 +1,513 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org"> 
+<head>
+	<!-- Basic Page Needs -->
+        <meta charset="utf-8">
+        <title>AMovie - Movie page</title>
+        <meta name="description" content="A Template by Gozha.net">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Gozha.net">
+    
+    <!-- Mobile Specific Metas-->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="telephone=no" name="format-detection">
+    
+    <!-- Fonts -->
+        <!-- Font awesome - icon font -->
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Roboto -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    
+    <!-- Stylesheets -->
+        <!-- jQuery UI --> 
+        <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+        <!-- Mobile menu -->
+        <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
+        <!-- Select -->
+        <link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" /> 
+        <!-- Swiper slider -->
+        <link href="/usr/v1/template/themeforest-1.0.0/css/external/idangerous.swiper.css" rel="stylesheet" />
+        <!-- Magnific-popup -->
+        <link href="/usr/v1/template/themeforest-1.0.0/css/external/magnific-popup.css" rel="stylesheet" />
+
+    
+        <!-- Custom -->
+        <link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+
+        <!-- Modernizr --> 
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+
+        <!-- 0_style.css -->
+        <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
+    
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header section -->
+        <header class="header-wrapper">
+            <div class="container">
+                <!-- Logo link-->
+                <a href='/v1/infra/index/indexUsrView' class="logo">
+                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
+                </a>
+                
+                <!-- Main website navigation-->
+                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
+                
+                <!-- Additional header buttons / Auth and direct link to booking-->
+                <div class="control-panel">
+                    <a href="#" class="btn btn--sign login-window">로그인</a>
+                    <a href="#" class="btn btn-md btn--warning btn--book login-window">티켓 예매</a>
+                </div>
+
+            </div>
+        </header>
+        
+        <!-- Search bar -->
+        <div class="search-wrapper">
+            <div class="container container--add">
+                <form id='search-form' method='get' class="search">
+                    <input type="text" class="search__field" placeholder="찾기">
+                    <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
+                        <option value="1" selected='selected'>콘서트</option>
+                        <option value="2">가수</option>
+                        <option value="3">장르</option>
+                    </select>
+                    <button type='submit' class="btn btn-md btn--danger search__button">콘서트 검색</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <section class="container">
+            <div class="col-sm-12">
+                <div class="movie">
+                    <h2 class="page-heading"><b>2024 임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르 in 서울</b></h2>
+                    
+                    <div class="movie__info">
+                        <div class="col-sm-4 col-md-3 movie-mobile">
+                            <div class="movie__images">
+                                <span class="movie__rating">5.0</span>
+                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-single.png">
+                            </div>
+                            <div class="movie__rate"><b>당신의 평점:</b> <div id='score' class="score"></div></div>
+                        </div>
+
+                        <div class="col-sm-8 col-md-9">
+                            <p class="movie__time">169 분</p>
+
+                            <p class="movie__option"><strong>장르: </strong><a href="#">발라드</a></p>
+                            <p class="movie__option"><strong>공연일: </strong>11/1, 2024</p>
+                            <p class="movie__option"><strong>공연장: </strong>KBS 부산홀</p>
+                            <p class="movie__option"><strong>가수: </strong><a href="#">임한별</a></p>
+                            <p class="movie__option"><strong>연령: </strong><a href="#">13</a></p>
+                            <p class="movie__option"><strong>가격: </strong><a href="#">120,000원</a> &nbsp;<a href="#">240,000원</a> &nbsp;<a href="#">360,000원</a></p>
+
+                            <a href="#" class="comment-link">댓글:&nbsp;&nbsp;&nbsp;15</a>
+
+                            <div class="movie__btns movie__btns--full">
+                                <a href="#" class="btn btn-md btn--warning"><b>콘서트 예매하기</b></a>
+                            </div>
+
+                            <div class="share">
+                                <span class="share__marker">공유하기: </span>
+                                <div class="addthis_toolbox addthis_default_style">
+                                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+                                    <a class="addthis_button_tweet"></a>
+                                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="clearfix"></div>
+                    
+                    <h2 class="page-heading">공연정보</h2>
+
+                    <p class="movie__describe">
+                        [무통장 입금 시간 안내]
+                        ※ 본 공연의 결제수단 중 '무통장 입금'으로 예매하신 분은 예매 당일 23:59시까지 입금하셔야 예매 취소가 되지 않습니다. 이 점 유의하시기 바랍니다. (예매 당일 23:59시까지 입금 / 미입금시 취소)
+                        [휠체어석 예매 안내]
+                        ※ 휠체어석은 티켓오픈 익일부터 coex신한카드artium고객센터를 통해서 예매 가능합니다.
+                        (문의: ☎1661-5628/ 운영시간: 09:00~18:00)
+                        ※ 휠체어석은 의자가 없는 공간으로 휠체어를 이용하는 관객만 구매 가능한 좌석입니다. 휠체어석 동반인도 티켓을 구매하셔야 입장이 가능합니다.
+                        ※ 장애인 및 국가유공자 할인받은 티켓은 현장수령만 가능하며, 할인증빙서류(복지카드, 유공자증 등) 미지참시 할인받은 금액 지불 후 티켓수령 가능합니다.
+                        ※ 할인된 금액으로 예매를 하셔야하며 정가로 예매된 티켓은 현장에서 할인 받으실 수 없으니 예매시 유의바랍니다.
+                        ※ 모든 할인은 타 할인과 중복적용 불가합니다.
+                    </p>
+
+                    <h2 class="page-heading">사진 &amp; 비디오</h2>
+                    
+                    <div class="movie__media">
+                        <div class="movie__media-switch">
+                            <a href="#" class="watchlist list--photo" data-filter='media-photo'>234 사진</a>
+                            <a href="#" class="watchlist list--video" data-filter='media-video'>10 비디오</a>
+                        </div>
+
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper">
+                              <!--First Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item ">
+                                     <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-video1.jpg">
+                                </a>
+                              </div>
+                              
+                              <!--Second Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-video2.jpg">
+                                </a>
+                              </div>
+                              
+                              <!--Third Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/movie/movie-img1-lg.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img1.jpg">
+                                     </a>
+                              </div>
+
+                              <!--Four Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/movie/movie-img2-lg.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img2.jpg">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/gallery/large/item-7.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img3.jpg">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/gallery/large/item-11.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img4.jpg">
+                                     </a>
+                              </div>
+
+                              <!--First Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Y5AehBA3IsE' class="movie__media-item ">
+                                     <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-video1.jpg">
+                                </a>
+                              </div>
+                              
+                              <!--Second Slide-->
+                              <div class="swiper-slide media-video">
+                                <a href='https://www.youtube.com/watch?v=Kb3ykVYvT4U' class="movie__media-item">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-video2.jpg">
+                                </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/gallery/large/item-15.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img5.jpg">
+                                     </a>
+                              </div>
+
+                              <!--Slide-->
+                              <div class="swiper-slide media-photo"> 
+                                    <a href='images/gallery/large/item-16.jpg' class="movie__media-item">
+                                        <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-img6.jpg">
+                                     </a>
+                              </div>
+                        
+                          </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <h2 class="page-heading">시간 &amp; 티켓</h2>
+                <div class="choose-container">
+                    <form id='select' class="select" method='get'>
+                          <select name="select_item" id="select-sort" class="select__sort" tabindex="0">
+                            <option value="1" selected='selected'>서울</option>
+                            <option value="2">대구</option>
+                            <option value="3">부산</option>
+                            <option value="4">울산</option>
+                            <option value="5">경기</option>
+                            <option value="3">인천</option>
+                            <option value="4">당진</option>
+                            <option value="5">안성</option>
+                        </select>
+                    </form>
+
+                    <div class="datepicker">
+                      <span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
+                      <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
+                    </div>
+
+                    <a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"><span class="show-map">공연장 위치</span><span  class="show-time">공연장 위치</span></a>
+                    
+                    <div class="clearfix"></div>
+
+                    <div class="time-select">
+                        <div class="time-select__group group--first">
+                            <div class="col-sm-4">
+                                <p class="time-select__place">KBS 부산홀</p>
+                            </div>
+                            <ul class="col-sm-8 items-wrap">
+                                <li class="time-select__item" data-time='09:40'>09:40</li>
+                                <li class="time-select__item" data-time='13:45'>13:45</li>
+                                <li class="time-select__item active" data-time='15:45'>15:45</li>
+                                <li class="time-select__item" data-time='19:50'>19:50</li>
+                                <li class="time-select__item" data-time='21:50'>21:50</li>
+                            </ul>
+                        </div>
+                        <div class="time-select__group">
+                            <div class="col-sm-4">
+                                <p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
+                            </div>
+                            <ul class="col-sm-8 items-wrap">
+                                <li class="time-select__item active" data-time='10:45'>10:45</li>
+                                <li class="time-select__item" data-time='16:00'>16:00</li>
+                                <li class="time-select__item" data-time='19:00'>19:00</li>
+                                <li class="time-select__item" data-time='21:15'>21:15</li>
+                                <li class="time-select__item" data-time='23:00'>23:00</li>
+                            </ul>
+                        </div>
+                        <div class="time-select__group group--last">
+                            <div class="col-sm-4">
+                                <p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
+                            </div>
+                            <ul class="col-sm-8 items-wrap">
+                                <li class="time-select__item" data-time='10:45'>10:45</li>
+                                <li class="time-select__item" data-time='16:00'>16:00</li>
+                                <li class="time-select__item" data-time='19:00'>19:00</li>
+                                <li class="time-select__item" data-time='21:15'>21:15</li>
+                                <li class="time-select__item active" data-time='23:00'>23:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- hiden maps with multiple locator-->
+                    <div  class="map">
+                        <div id='cimenas-map' style="font-size:100px;">지도</div> 
+                    </div>
+
+                    <h2 class="page-heading">댓글 <span>(15)</span></h2>
+
+                    <div class="comment-wrapper">
+                        <form id="comment-form" class="comment-form" method='post'>
+                            <textarea class="comment-form__text" placeholder='댓글을 여기에 작성해주세요.'></textarea>
+                            <label class="comment-form__info">250자 내외</label>
+                            <button type='submit' class="btn btn-md btn--danger comment-form__btn">댓글 달기</button>
+                        </form>
+
+                        <div class="comment-sets">
+
+                        <div class="comment">
+                            <div class="comment__images">
+                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
+                            <p class="comment__date">today | 03:04</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">댓글</a>
+                        </div>
+
+                        <div class="comment">
+                            <div class="comment__images">
+                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
+                            <p class="comment__date">22.10.2013 | 14:40</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">댓글</a>
+                        </div>
+
+                        <div class="comment comment--answer">
+                            <div class="comment__images">
+                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-dmitriy.jpg">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Dmitriy Pustovalov</a>
+                            <p class="comment__date">today | 10:19</p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">댓글</a>
+                        </div>
+
+                        <div class="comment comment--last">
+                            <div class="comment__images">
+                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-sia.jpg">
+                            </div>
+
+                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Sia Andrews</a>
+                            <p class="comment__date"> 22.10.2013 | 12:31 </p>
+                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                            <a href='#' class="comment__reply">댓글</a>
+                        </div>
+
+                        <div id='hide-comments' class="hide-comments">
+                            <div class="comment">
+                                <div class="comment__images">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
+                                </div>
+
+                                <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
+                                <p class="comment__date">today | 03:04</p>
+                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                                <a href='#' class="comment__reply">댓글</a>
+                            </div>
+
+                            <div class="comment">
+                                <div class="comment__images">
+                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
+                                </div>
+
+                                <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
+                                <p class="comment__date">22.10.2013 | 14:40</p>
+                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+                                <a href='#' class="comment__reply">댓글</a>
+                            </div>
+                        </div>
+
+                        <div class="comment-more">
+                            <a href="#" class="watchlist">댓글 더보기</a>
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+        <div class="clearfix"></div>
+
+        <footer class="footer-wrapper">
+            <section class="container">
+                <div class="col-xs-4 col-md-3 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="0_index.html" class="nav-link__item">홈</a></li>
+                        <li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
+                        <li><a href="0_book.html" class="nav-link__item">티켓</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-4 col-md-3 footer-nav">
+                    <ul class="nav-link">
+                        <li><a href="0_login.html" class="nav-link__item">로그인</a></li>
+                        <li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <div class="footer-info">
+                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social
+                                media</span></p>
+        
+                        <div class="social">
+                            <a href='#' class="social__variant fa fa-facebook"></a>
+                            <a href='#' class="social__variant fa fa-twitter"></a>
+                            <a href='#' class="social__variant fa fa-vk"></a>
+                            <a href='#' class="social__variant fa fa-instagram"></a>
+                            <a href='#' class="social__variant fa fa-tumblr"></a>
+                            <a href='#' class="social__variant fa fa-pinterest"></a>
+                        </div>
+        
+                        <div class="clearfix"></div>
+                        <p class="copy">&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all rights reserved.</p>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- open/close -->
+        <div class="overlay overlay-hugeinc">
+        
+            <section class="container">
+        
+                <div class="col-sm-4 col-sm-offset-4">
+                    <button type="button" class="overlay-close">Close</button>
+                    <form id="login-form" class="login" method='get' novalidate=''>
+                        <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
+        
+                        <div class="social social--colored">
+                            <a href='#' class="social__variant fa fa-facebook"></a>
+                            <a href='#' class="social__variant fa fa-twitter"></a>
+                            <a href='#' class="social__variant fa fa-tumblr"></a>
+                        </div>
+        
+                        <p class="login__tracker">or</p>
+        
+                        <div class="field-wrap">
+                            <input type='email' placeholder='이메일' name='user-email' class="login__input">
+                            <input type='password' placeholder='비밀번호' name='user-password' class="login__input">
+        
+                            <input type='checkbox' id='#informed' class='login__check styled'>
+                            <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+                        </div>
+        
+                        <div class="login__control">
+                            <button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
+                            <a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
+                        </div>
+                    </form>
+                </div>
+        
+            </section>
+        </div>
+
+	<!-- JavaScript-->
+        <!-- jQuery 3.1.1--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')</script>
+        <!-- Migrate --> 
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+        <!-- jQuery UI -->
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <!-- Bootstrap 3--> 
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+        <!-- Mobile menu -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
+         <!-- Select -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
+
+        <!-- Stars rate -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
+        <!-- Swiper slider -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/idangerous.swiper.min.js"></script>
+        <!-- Magnific-popup -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.magnific-popup.min.js"></script> 
+
+        <!--*** Google map  ***-->
+        <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
+        <!--*** Google map infobox  ***-->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/infobox.js"></script> 
+
+        <!-- Share buttons -->
+        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
+
+        <!-- Form element -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
+        <!-- Form validation -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
+
+        <!-- Custom -->
+        <script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
+		
+		<script type="text/javascript">
+            $(document).ready(function() {
+                init_MoviePage();
+                 init_MoviePageFull();
+            });
+		</script>
+
+</body>
+</html>

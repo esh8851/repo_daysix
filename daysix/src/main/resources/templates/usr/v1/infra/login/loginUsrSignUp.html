@@ -45,41 +45,12 @@
         <header class="header-wrapper">
             <div class="container">
                 <!-- Logo link-->
-                <a href='0_index.html' class="logo">
+                <a href='/v1/infra/index/indexUsrView' class="logo">
                     <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
                 </a>
 
                 <!-- Main website navigation-->
-                <nav id="navigation-box">
-                    <!-- Toggle for mobile menu mode -->
-                    <a href="#" id="navigation-toggle">
-                        <span class="menu-icon">
-                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-                                <span class="lines"></span>
-                            </span>
-                        </span>
-                    </a>
-
-                    <!-- Link navigation -->
-                    <ul id="navigation">
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_login.html">로그인</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_signUp.html">회원가입</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_concertList.html">콘서트</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_book.html">콘서트티켓</a>
-                        </li>
-                    </ul>
-                </nav>
+                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">
@@ -116,24 +87,8 @@
             </div>
 
             <p class="login__tracker">or</p>
-
+			
             <div class="field-wrap">
-            	<label for="mmName"><span>이름</span></label>
-                <input type="text" placeholder='이름' name='mmName' class="login__input" id="mmName">
-                <div class="invalidName">
-		        	<p class="inv-em alert alert-danger">
-		        		<span class="icon-warning"></span>
-		                아이디를 입력해 주세요!
-		                <a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
-		            </p>
-	            </div>
-	            <div class="validName">
-                    <p class="inv-em alert alert-success">
-                    	<span class="icon-bell"></span>
-                    	참 잘했어요!
-                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
-                    </p>
-                </div>
                 <label>성별</label>
                 <div class="d-flex radiobox-leesh">
                     <label for="radio01" class='login__check-info'>
@@ -159,8 +114,24 @@
                    		<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
                    	</p>
                	</div>
+            	<label for="mmName"><span>이름</span></label>
+                <input type="text" placeholder='한글, 영문' name='mmName' class="login__input" id="mmName">
+                <div class="invalidName">
+		        	<p class="inv-em alert alert-danger">
+		        		<span class="icon-warning"></span>
+		                이름을 입력해 주세요!
+		                <a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		            </p>
+	            </div>
+	            <div class="validName">
+                    <p class="inv-em alert alert-success">
+                    	<span class="icon-bell"></span>
+                    	참 잘했어요!
+                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+                    </p>
+                </div>
                	<label for="mmId">아이디</label>
-                <input type="text" placeholder='아이디' name='mmId' class="login__input" id="mmId">
+                <input type="text" placeholder='한글, 영대소문자, 숫자, 4~10자리' name='mmId' class="login__input" id="mmId">
 	            <div class="invalidId">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -176,7 +147,7 @@
                     </p>
                 </div>
                 <label for="mmEmail">이메일</label>      
-                <input type='email' placeholder='이메일' name='mmEmail' class="login__input" id="mmEmail">
+                <input type='email' placeholder='예) esh8851@gmail.com' name='mmEmail' class="login__input" id="mmEmail">
                 <div class="invalidEmail">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -192,7 +163,7 @@
                     </p>
                 </div>
                 <label for="mmPw">비밀번호</label>
-                <input type='password' placeholder='비밀번호' name='mmPw' class="login__input" id="mmPw">
+                <input type='password' placeholder='영대소문자, 숫자, 특수문자 8~15자리' name='mmPw' class="login__input" id="mmPw">
                 <div class="invalidPw">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -224,7 +195,7 @@
                     </p>
                 </div>
                 <label for="mmPhone">휴대폰 번호</label>
-                <input type="text" placeholder="핸드폰" class="login__input" name="mmPhone" id="mmPhone">
+                <input type="text" placeholder="예) 010-0000-0000" class="login__input" name="mmPhone" id="mmPhone">
                 <div class="invalidPhone">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -240,7 +211,7 @@
                     </p>
                 </div>
                 <label for="mmPhone">생년월일</label>
-                <input type="text" placeholder="생년월일" class="login__input" name="mmBirth" id="mmBirth">
+                <input type="text" placeholder="YYYY-MM-DD" class="login__input" name="mmBirth" id="mmBirth">
                 <div class="invalidBirth">
 		        	<p class="inv-em alert alert-danger">
 		        		<span class="icon-warning"></span>
@@ -255,7 +226,13 @@
                     	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
                     </p>
                 </div>
-                <input type='checkbox' id='#informed' class='login__check styled'>
+               	<label for="">개인정보 입력</label>
+			    <input type="text" class="login__input"  id="sample6_postcode" name="mmZipNum" placeholder="우편번호">
+			    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+			    <input type="text" class="login__input"  id="sample6_address" name="mmAdr" placeholder="주소"><br>
+			    <input type="text" class="login__input"  id="sample6_detailAddress" name="" placeholder="상세주소">
+			    <input type="text" class="login__input" id="sample6_extraAddress" placeholder="참고항목">
+               <input type='checkbox' id='#informed' class='login__check styled'>
                 <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
             </div>
 
@@ -347,13 +324,13 @@
     			validName.style.display = 'block';
     		}
     		
-    		var mmNameRegExp = /^[ㄱ-ㅎ가-힣A-Za-z]+$/;
+    		var mmNameRegExp = /^[가-힣a-zA-Z]+$/;
     		if(!mmNameRegExp.test(mmNameValue)) {
     			mmName.style.borderColor = '#fe505a';
     			invalidName.style.display = 'block';
     			validName.style.display = 'none';
     			const messageElement = document.querySelector('.invalidName .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = '한글, 영문';
     			mmName.focus();
     			return false;
     		} else {
@@ -393,14 +370,15 @@
     			validId.style.display = 'block';
     		}
     		
-    		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+    		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{4,10}$/;
     		if(!mmIdRegExp.test(mmIdValue)) {
     			mmId.style.borderColor = '#fe505a';
     			invalidId.style.display = 'block';
     			validId.style.display = 'none';
     			const messageElement = document.querySelector('.invalidId .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 4~10자리';
     			mmId.focus();
+    			return false;
     		} else {
     			invalidId.style.display = 'none';
     			validId.style.display = 'block';
@@ -424,13 +402,13 @@
     			validEmail.style.display = 'block';
     		}
     		
-    		var mmEmailRegExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    		var mmEmailRegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     		if(!mmEmailRegExp.test(mmEmailValue)) {
     			mmEmail.style.borderColor = '#fe505a';
     			invalidEmail.style.display = 'block';
     			validEmail.style.display = 'none';
     			const messageElement = document.querySelector('.invalidEmail .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = '이메일 형식에 맞지 않습니다';
     			mmEmail.focus();
     			return false;
     		} else {
@@ -456,13 +434,13 @@
     			validPw.style.display = 'block';
     		}
     		
-    		var mmPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+    		var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
     		if(!mmPwRegExp.test(mmPwValue)) {
     			mmEmail.style.borderColor = '#fe505a';
     			invalidPw.style.display = 'block';
     			validPw.style.display = 'none';
     			const messageElement = document.querySelector('.invalidPw .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 8~15자리';
     			mmPw.focus();
     			return false;
     		} else {
@@ -506,13 +484,13 @@
     			validPhone.style.display = 'block';
     		}
     		
-    		var mmPhoneRegExp = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+    		var mmPhoneRegExp = /^01[016789]-?\d{3,4}-?\d{4}$/;
     		if(!mmPhoneRegExp.test(mmPhoneValue)) {
     			mmPhone.style.borderColor = '#fe505a';
     			invalidPhone.style.display = 'block';
     			validPhone.style.display = 'none';
     			const messageElement = document.querySelector('.invalidPhone .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = '휴대폰번호 형식에 맞지 않습니다';
     			mmPhone.focus();
     			return false;
     		} else {
@@ -544,7 +522,7 @@
     			invalidBirth.style.display = 'block';
     			validBirth.style.display = 'none';
     			const messageElement = document.querySelector('.invalidBirth .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자만 입력해주세요!';
+    			messageElement.childNodes[2].textContent = 'YYYY-MM-DD 형식';
     			mmBirth.focus();
     			return false;
     		} else {
@@ -552,13 +530,66 @@
     			validBirth.style.display = 'block';
     		}
     		
-    		form.action="/v1/infra/member/memberXdmInst";
+    		form.action="/v1/infra/member/memberXdmInstUsr";
     		form.submit();
     		
     		
     	}
     </script>
     <!-- btnSignUp E -->
+    
+    <!-- 카카오 우편번호 S -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script type="text/javascript">
+	    function sample6_execDaumPostcode() {
+	        new daum.Postcode({
+	            oncomplete: function(data) {
+	                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+	
+	                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+	                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+	                var addr = ''; // 주소 변수
+	                var extraAddr = ''; // 참고항목 변수
+	
+	                //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+	                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+	                    addr = data.roadAddress;
+	                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+	                    addr = data.jibunAddress;
+	                }
+	
+	                // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+	                if(data.userSelectedType === 'R'){
+	                    // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+	                    // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+	                    if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+	                        extraAddr += data.bname;
+	                    }
+	                    // 건물명이 있고, 공동주택일 경우 추가한다.
+	                    if(data.buildingName !== '' && data.apartment === 'Y'){
+	                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+	                    }
+	                    // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+	                    if(extraAddr !== ''){
+	                        extraAddr = ' (' + extraAddr + ')';
+	                    }
+	                    // 조합된 참고항목을 해당 필드에 넣는다.
+	                    document.getElementById("sample6_extraAddress").value = extraAddr;
+	                
+	                } else {
+	                    document.getElementById("sample6_extraAddress").value = '';
+	                }
+	
+	                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+	                document.getElementById('sample6_postcode').value = data.zonecode;
+	                document.getElementById("sample6_address").value = addr;
+	                // 커서를 상세주소 필드로 이동한다.
+	                document.getElementById("sample6_detailAddress").focus();
+	            }
+	        }).open();
+	    }
+    </script>
+    <!-- 카카오 우편번호 E -->
 
 
 </body>

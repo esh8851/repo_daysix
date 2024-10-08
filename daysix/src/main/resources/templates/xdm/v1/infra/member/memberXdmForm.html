@@ -665,6 +665,29 @@
                         </div>
                         <div class="row">
                           <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">우편번호<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmZipNum" name="mmZipNum" placeholder="우편번호"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                          <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">주소<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmAdr" name="mmAdr" placeholder="주소"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                          <div class="col-3">
+                          	<div class="mb-3">
+                          	  <label for="defaultFormControlInput" class="form-label">상세주소<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input type="text" class="form-control" id="mmAdr" name="mmAdrDt" placeholder="상세주소"
+                                aria-describedby="defaultFormControlHelp">
+                          	</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">등록일<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <input type="text" class="form-control" id="mmDateTimeReg" name="mmDateTimeReg" placeholder="자동생성"
@@ -676,16 +699,6 @@
                               <label for="defaultFormControlInput" class="form-label">수정일<span class="text-danger"><b>&nbsp;*</b></span></label>
                               <input type="text" class="form-control" id="mmDateTimeEdit" name="mmDateTimeEdit" placeholder="자동생성"
                                 aria-describedby="defaultFormControlHelp" disabled>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="exampleFormControlSelect1" class="form-label">사용 여부<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <select class="form-select" id="mmUseNy" name="mmUseNy" aria-label="Default select example">
-                                <option value="">사용 여부</option>
-                                <option value="0">N</option>
-                                <option value="1">Y</option>
-                              </select>
                             </div>
                           </div>
                         </div>
@@ -866,17 +879,6 @@
 		    if (mmPhoneValue == "" || mmPhoneValue == null) {
 				alert("핸드폰 번호를 입력해 주세요");
 				mmPhone.focus();
-				return false;
-		    } else {
-	// 			by pass
-		    }
-		    
-		    var mmUseNy = document.getElementById("mmUseNy");
-		    var mmUseNyValue = document.getElementById("mmUseNy").value.trim();
-			
-		    if (mmUseNyValue == "" || mmUseNyValue == null) {
-				alert("핸드폰 번호를 입력해 주세요");
-				mmUseNy.focus();
 				return false;
 		    } else {
 	// 			by pass

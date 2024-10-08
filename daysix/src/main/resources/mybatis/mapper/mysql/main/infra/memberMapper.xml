@@ -48,6 +48,9 @@
 				,a.mmDateTimeEdit
 				,a.mmUseNy
 				,a.mmDelNy
+				,a.mmZipNum
+				,a.mmAdr
+				,a.mmAdrDt
 			<include refid="selectCommon" />
 			ORDER BY
 				a.mmSeq desc
@@ -70,6 +73,9 @@
 			,mmDateTimeEdit
 			,mmUseNy
 			,mmDelNy
+			,mmZipNum
+			,mmAdr
+			,mmAdrDt
 		)
 		VALUE(
 			#{mmName}
@@ -81,8 +87,11 @@
 		    ,#{mmPhone}
 		    ,now()
 		    ,now()
-		    ,#{mmUseNy}
+		    ,1
 		    ,0
+		    ,#{mmZipNum}
+			,#{mmAdr}
+			,#{mmAdrDt}
 		)
 		<selectKey resultType="String" keyProperty="mmSeq" order="AFTER">
 			SELECT last_insert_id()
@@ -105,6 +114,9 @@
 			,a.mmDateTimeEdit
 			,a.mmUseNy
 			,a.mmDelNy
+			,a.mmZipNum
+			,a.mmAdr
+			,a.mmAdrDt
 		FROM
 			member AS a
 		WHERE 1 = 1
@@ -125,8 +137,11 @@
 				,mmPhone = #{mmPhone}
 				,mmDateTimeReg = now()
 				,mmDateTimeEdit = now()
-				,mmUseNy = #{mmUseNy}
-				,mmDelNy = #{mmDelNy}
+				,mmUseNy = 1
+				,mmDelNy = 0
+				,mmZipNum = #{mmZipNum}
+				,mmAdr = #{mmAdr}
+				,mmAdrDt = #{mmAdrDt}
 			WHERE 1 = 1
 				AND mmSeq = #{mmSeq}
 	</update>

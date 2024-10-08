@@ -147,7 +147,7 @@
                     class="form-control"
                     id="mmId"
                     name="mmId"
-                    placeholder="아이디를 입력해 주세요"
+                    placeholder="한글, 영대소문자, 숫자, 4~10자리"
                     required
                   />
                   <div id="validId"></div>
@@ -165,7 +165,7 @@
                       id="mmPw"
                       class="form-control"
                       name="mmPw"
-                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                      placeholder="영대소문자, 숫자, 특수문자 8~15자리"
                       aria-describedby="password"
                       required
                       autocomplete="off"
@@ -247,14 +247,14 @@
 	    		validId.textContent = "잘했어요";
 	    	}
 	    	
-	    	var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]+$/;
+	    	var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{4,10}$/;
 	    	
 	    	if(!mmIdRegExp.test(mmIdValue)){
 	    		mmId.style.borderColor = '#ff3e1d';
 	    		mmId.focus();
 	    		validId.className = 'invalid-feedback';
 	    		validId.style.display = 'block';
-	    		validId.textContent = "이름은 한글, 영대소문자, 숫자로만 입력해 주세요";
+	    		validId.textContent = '한글, 영대소문자, 숫자, 4~10자리';
 	    		return false;
 	    	} else {
 // 	    		by pass
@@ -284,7 +284,7 @@
 				validPw.textContent = "잘했어요";
 	    	}
 	    	
-	    	var mmPwRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9!@#$]+$/;
+	    	var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
 	    	
 		    if(!mmPwRegExp.test(mmPwValue)){
 				mmPw.style.borderColor = '#ff3e1d';
@@ -292,7 +292,7 @@
 				validPw.className = 'invalid-feedback';
 				validPw.style.display = 'block';
 				viewPw.style.borderColor = '#ff3e1d';
-				validPw.textContent = "비밀번호는 숫자, 영어대소문자, 특수문자(!,@,#,$)만 입력해 주세요";
+				validPw.textContent = '영대소문자, 숫자, 특수문자 8~15자리';
 				return false;
 		    } else {
 	// 	    	by pass

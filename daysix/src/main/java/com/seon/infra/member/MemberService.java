@@ -22,6 +22,11 @@ public class MemberService {
 		return memberDao.insert(memberDto);
 	}
 	
+//	insertUsr
+	public int insertUsr(MemberDto memberDto) {
+		return memberDao.insert(memberDto);
+	}
+	
 //	update - selectOne
 	public MemberDto selectOne(MemberDto memberDto) {
 		return memberDao.selectOne(memberDto);

@@ -54,41 +54,12 @@
         <header class="header-wrapper header-wrapper--home">
             <div class="container">
                 <!-- Logo link-->
-                <a href='0_index.html' class="logo">
+                <a href='/v1/infra/index/indexUsrView' class="logo">
                     <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
                 </a>
 
                 <!-- Main website navigation-->
-                <nav id="navigation-box">
-                    <!-- Toggle for mobile menu mode -->
-                    <a href="#" id="navigation-toggle">
-                        <span class="menu-icon">
-                            <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-                                <span class="lines"></span>
-                            </span>
-                        </span>
-                    </a>
-
-                    <!-- Link navigation -->
-                    <ul id="navigation">
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_login.html">로그인</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_signUp.html">회원가입</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_concertList.html">콘서트</a>
-                        </li>
-                        <li>
-                            <span class="sub-nav-toggle plus"></span>
-                            <a href="0_book.html">콘서트티켓</a>
-                        </li>
-                    </ul>
-                </nav>
+                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">
@@ -878,7 +849,7 @@
     	}
     </script>
     <!-- btnLogOut E -->
-
+    
 </body>
 
 </html>

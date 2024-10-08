@@ -695,6 +695,9 @@
 	                              <th>비밀번호</th>
 	                              <th>생일</th>
 	                              <th>핸드폰</th>
+	                              <th>우편번호</th>
+	                              <th>주소</th>
+	                              <th>상세주소</th>
 	                              <th>등록일</th>
 	                              <th>수정일</th>
 	                              <th>사용</th>
@@ -722,6 +725,9 @@
 	                              <td th:text="${list.mmPw}"></td>
 	                              <td th:text="${list.mmBirth}"></td>
 	                              <td th:text="${list.mmPhone}"></td>
+	                              <td th:text="${list.mmZipNum}"></td>
+	                              <td th:text="${list.mmAdr}"></td>
+	                              <td th:text="${list.mmAdrDt}"></td>
 	                              <td th:text="${#dates.format(list.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"></td>
 	                              <td th:text="${#dates.format(list.mmDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"></td>
 	                              <td th:if="${list.mmUseNy eq 0}">N</td>
