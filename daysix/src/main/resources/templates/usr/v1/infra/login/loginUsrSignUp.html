@@ -50,7 +50,36 @@
                 </a>
 
                 <!-- Main website navigation-->
-                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
+                <nav id="navigation-box">
+				<!-- Toggle for mobile menu mode -->
+					<a href="#" id="navigation-toggle">
+				    	<span class="menu-icon">
+				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+				            <span class="lines"></span>
+				        </span>
+				    	</span>
+					</a>
+			
+				<!-- Link navigation -->
+				    <ul id="navigation">
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="#">콘서트티켓</a>
+				        </li>
+				    </ul>
+				</nav>
 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">
@@ -92,12 +121,16 @@
                 <label>성별</label>
                 <div class="d-flex radiobox-leesh">
                     <label for="radio01" class='login__check-info'>
-                        <input type="radio" id="radio01" class="login__check styled" name="mmGender" value="2">
-                        <span>남자</span>
+                        <input type="radio" id="radio01" class="login__check styled" name="mmGender"
+                        th:each="list : ${@codeService.selectListCachedCode(2)}"
+                        th:text="${list.cName}"
+                        th:value="${list.codeGroup_seq}">
                     </label>
                     <label for="radio02" class='login__check-info'>
-                        <input type="radio" id="radio02" class="login__check styled" name="mmGender" value="3">
-                        <span>여자</span>
+                        <input type="radio" id="radio02" class="login__check styled" name="mmGender"
+                        th:each="list : ${@codeService.selectListCachedCode(3)}"
+                        th:text="${list.cName}"
+                        th:value="${list.codeGroup_seq}">
                     </label>
                 </div>
                 <div class="invalidGender">
@@ -226,13 +259,27 @@
                     	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
                     </p>
                 </div>
-               	<label for="">개인정보 입력</label>
-			    <input type="text" class="login__input"  id="sample6_postcode" name="mmZipNum" placeholder="우편번호">
-			    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+               	<label for="">주소 입력</label>
+			    <input type="text" class="login__input"  id="sample6_postcode" name="mmZipNum" placeholder="우편번호" readonly>
+			    <input type="button" onclick="sample6_execDaumPostcode()" id="zipNumSearch" value="우편번호 찾기"><br>
 			    <input type="text" class="login__input"  id="sample6_address" name="mmAdr" placeholder="주소"><br>
-			    <input type="text" class="login__input"  id="sample6_detailAddress" name="" placeholder="상세주소">
+			    <input type="text" class="login__input"  id="sample6_detailAddress" name="mmAdrDt" placeholder="상세주소">
 			    <input type="text" class="login__input" id="sample6_extraAddress" placeholder="참고항목">
-               <input type='checkbox' id='#informed' class='login__check styled'>
+			    <div class="invalidAdr">
+		        	<p class="inv-em alert alert-danger">
+		        		<span class="icon-warning"></span>
+		                주소를 입력해 주세요!
+		                <a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+		            </p>
+	            </div>
+	            <div class="validAdr">
+                    <p class="inv-em alert alert-success">
+                    	<span class="icon-bell"></span>
+                    	참 잘했어요!
+                    	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
+                    </p>
+                </div>
+                <input type='checkbox' id='#informed' class='login__check styled'>
                 <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
             </div>
 
@@ -306,6 +353,26 @@
     <script type="text/javascript">
     	document.getElementById("btnSignUp").onclick = function() {
 //     		validation
+//     		성별
+			var mmGender = document.querySelector('input[name="mmGender"]:checked');
+    		var invalidGender = document.querySelector('.invalidGender');
+    		var validGender = document.querySelector('.validGender');
+    		if(mmGender == null) {
+    			invalidGender.style.display = 'block';
+    			validGender.style.display = 'none';
+    			
+    			var radioSpan = document.querySelector('.radio')
+    			if(radioSpan) {
+    				radioSpan.setAttribute('tabindex', '0');
+    				radioSpan.focus();
+    			}
+    			
+    			return false;
+    		} else {
+    			invalidGender.style.display = 'none';
+    			validGender.style.display = 'block';
+    		}
+    		
 // 			이름
 			var mmName = document.getElementById("mmName");
     		var mmNameValue = document.getElementById("mmName").value.trim();
@@ -330,7 +397,7 @@
     			invalidName.style.display = 'block';
     			validName.style.display = 'none';
     			const messageElement = document.querySelector('.invalidName .inv-em');
-    			messageElement.childNodes[2].textContent = '한글, 영문';
+    			messageElement.childNodes[2].textContent = '한글, 영문만 입력';
     			mmName.focus();
     			return false;
     		} else {
@@ -338,20 +405,6 @@
     			validName.style.display = 'block';
     		}
     		
-//     		성별
-			var mmGender = document.querySelector('input[name="mmGender"]:checked');
-    		var invalidGender = document.querySelector('.invalidGender');
-    		var validGender = document.querySelector('.validGender');
-    		if(mmGender == null) {
-    			invalidGender.style.display = 'block';
-    			validGender.style.display = 'none';
-    			mmGender.focus();
-    			return false;
-    		} else {
-    			invalidGender.style.display = 'none';
-    			validGender.style.display = 'block';
-    		}
-
 //     		아이디
     		var mmId = document.getElementById("mmId");
     		var mmIdValue = document.getElementById("mmId").value.trim();
@@ -530,6 +583,45 @@
     			validBirth.style.display = 'block';
     		}
     		
+//     		주소
+    		var mmZipNum = document.getElementById("sample6_postcode");
+    		var mmZipNumValue = document.getElementById("sample6_postcode").value.trim();
+    		var invalidAdr = document.querySelector('.invalidAdr');
+    		var validAdr = document.querySelector('.validAdr');
+    		
+    		if(mmZipNumValue == '' || mmZipNumValue == null) {
+    			mmZipNum.style.borderColor = '#fe505a';
+    			const zipNumSearch = document.getElementById('zipNumSearch');
+    			zipNumSearch.style.borderColor = '#fe505a';
+    			invalidAdr.style.display = 'block';
+    			validAdr.style.display = 'none';
+    			mmZipNum.focus();
+    			return false;
+    		} else {
+    			mmZipNum.style.borderColor = '#92DA7F';
+    			zipNumSearch.style.borderColor = '#92DA7F';
+    			invalidAdr.style.display = 'none';
+    			validAdr.style.display = 'block';
+    		}
+    		
+//     		상세주소
+    		var mmAdrDt = document.getElementById("sample6_detailAddress");
+    		var mmAdrDtValue = document.getElementById("sample6_detailAddress").value.trim();
+    		var invalidAdr = document.querySelector('.invalidAdr');
+    		var validAdr = document.querySelector('.validAdr');
+    		
+    		if(mmAdrDtValue == '' || mmAdrDtValue == null) {
+    			mmAdrDt.style.borderColor = '#fe505a';
+    			invalidAdr.style.display = 'block';
+    			validAdr.style.display = 'none';
+    			mmAdrDt.focus();
+    			return false;
+    		} else {
+    			mmAdrDt.style.borderColor = '#92DA7F';
+    			invalidAdr.style.display = 'none';
+    			validAdr.style.display = 'block';
+    		}
+    		
     		form.action="/v1/infra/member/memberXdmInstUsr";
     		form.submit();
     		
@@ -537,6 +629,14 @@
     	}
     </script>
     <!-- btnSignUp E -->
+    
+    <script type="text/javascript">
+	    document.addEventListener("keypress", function(event) {
+	        if (event.key === "Enter") {
+	            document.getElementById("btnSignUp").click();
+	        }
+	    });
+    </script>
     
     <!-- 카카오 우편번호 S -->
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

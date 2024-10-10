@@ -58,7 +58,36 @@
                 </a>
                 
                 <!-- Main website navigation-->
-                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
+                <nav id="navigation-box">
+				<!-- Toggle for mobile menu mode -->
+					<a href="#" id="navigation-toggle">
+				    	<span class="menu-icon">
+				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+				            <span class="lines"></span>
+				        </span>
+				    	</span>
+					</a>
+			
+				<!-- Link navigation -->
+				    <ul id="navigation">
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="#">콘서트티켓</a>
+				        </li>
+				    </ul>
+				</nav>
                 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">

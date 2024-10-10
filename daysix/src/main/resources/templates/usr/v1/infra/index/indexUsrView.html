@@ -52,36 +52,7 @@
     <div class="wrapper">
         <!-- Header section -->
         <header class="header-wrapper header-wrapper--home">
-            <div class="container">
-                <!-- Logo link-->
-                <a href='/v1/infra/index/indexUsrView' class="logo">
-                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
-                </a>
-
-                <!-- Main website navigation-->
-                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
-
-                <!-- Additional header buttons / Auth and direct link to booking-->
-                <div class="control-panel">
-                    <div class="auth auth--home">
-                        <div class="auth__show">
-                            <span class="auth__image">
-                                <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/client-photo/auth.png">
-                            </span>
-                        </div>
-                        <a href="#" class="btn btn--sign btn--singin" th:text="${session.sessNameXdm}">
-                            
-                        </a>
-                        <ul class="auth__function">
-                            <li><a href="0_ticketBuy.html" class="auth__function-item">예약티켓</a></li>
-                            <li><a class="auth__function-item" id="btnLogOut">로그아웃</a></li>
-                        </ul>
-
-                    </div>
-                    <a href="#" class="btn btn-md btn--warning btn--book btn-control--home login-window">티켓 예매</a>
-                </div>
-
-            </div>
+        	<th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
         </header>
 
         <!-- Slider -->
@@ -836,7 +807,6 @@
 				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
 				,success: function(response) {
 					if(response.rt == "success") {
-						alert("로그아웃 성공");
 						location.href = "/v1/infra/login/loginUsrSignIn";
 					} else {
 						alert("로그아웃 실패");

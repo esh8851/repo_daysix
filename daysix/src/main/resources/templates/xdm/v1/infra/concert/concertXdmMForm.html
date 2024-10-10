@@ -12,11 +12,8 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-
-<!-- thymeleaf 사용 -->
-<!-- xmlns:th="http://www.thymeleaf.org" -->
 <html
-  xmlns:th="http://www.thymeleaf.org"
+  xmlns:th="https://www.thymeleaf.org"
   lang="en"
   class="light-style layout-menu-fixed"
   dir="ltr"
@@ -31,7 +28,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+    <title>Input groups - Forms | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
 
@@ -58,10 +55,7 @@
     <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <!-- Page CSS -->
-    
-    <!-- paging -->
-    <link rel="stylesheet" href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
-    
+
     <!-- Helpers -->
     <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/js/helpers.js"></script>
 
@@ -400,7 +394,7 @@
             <!-- Forms & Tables -->
             <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
             <!-- Forms -->
-            <li class="menu-item">
+            <li class="menu-item active open">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-detail"></i>
                 <div data-i18n="Form Elements">Form Elements</div>
@@ -411,7 +405,7 @@
                     <div data-i18n="Basic Inputs">Basic Inputs</div>
                   </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item active">
                   <a href="forms-input-groups.html" class="menu-link">
                     <div data-i18n="Input groups">Input groups</div>
                   </a>
@@ -437,7 +431,7 @@
               </ul>
             </li>
             <!-- Tables -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="tables-basic.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
                 <div data-i18n="Tables">Tables</div>
@@ -582,210 +576,163 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="card">
-                <div class="card-body">
-                  <form name="form" method="post" action="/v1/infra/member/memberXdmList">
-                  <input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1"/>
-				  <input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}"/>
-                  <!-- Custom style1 Breadcrumb -->
-	                  <nav aria-label="breadcrumb">
-	                    <ol class="breadcrumb breadcrumb-style1">
-	                      <li class="breadcrumb-item">
-	                        <a href="javascript:void(0);">Page&nbsp;1</a>
-	                      </li>
-	                      <li class="breadcrumb-item">
-	                        <a href="javascript:void(0);">Page&nbsp;2</a>
-	                      </li>
-	                      <li class="breadcrumb-item active">Default</li>
-	                    </ol>
-	                  </nav>
-	                  <!--/ Custom style1 Breadcrumb -->
-	                  <h2 class="mb-4">Member</h5>
-	                  <div class="row">
-	                    <div class="col">
-	                      <div class="mb-3">
-	                        <select class="form-select" id="shDelNy" name="shDelNy" aria-label="Default select example">
-	                          <option value="" th:selected="${vo.shDelNy} == null">삭제 여부</option>
-	                          <option value="1" th:selected="${vo.shDelNy} == 1">Y</option>
-	                          <option value="0" th:selected="${vo.shDelNy} == 0">N</option>
-	                        </select>
-	                      </div>
-	                    </div>
-	                    <div class="col">
-	                      <div class="mb-3">
-	                        <select class="form-select" id="shUseNy" name="shUseNy" aria-label="Default select example">
-	                          <option value="" th:selected="${vo.shUseNy} == null">사용 여부</option>
-	                          <option value="1" th:selected="${vo.shUseNy} == 1">Y</option>
-	                          <option value="0" th:selected="${vo.shUseNy} == 0">N</option>
-	                        </select>
-	                      </div>
-	                    </div>
-	                    <div class="col">
-	                      <div class="mb-3">
-	                        <select class="form-select" id="shDateOption" name="shOptionDate" aria-label="Default select example">
-	                          <option value="" th:selected="${vo.shOptionDate} == null">검색구분</option>
-	                          <option value="1" th:selected="${vo.shOptionDate} == 1">등록일</option>
-	                          <option value="2" th:selected="${vo.shOptionDate} == 2">수정일</option>
-	                        </select>
-	                      </div>
-	                    </div>
-	                    <div class="col">
-	                      <input type="text" class="form-control" id="shDateStart" name="shDateStart" autocomplete="off"
-	                          aria-describedby="defaultFormControlHelp" th:value="${#strings.substring(vo.shDateStart, 0, 10)}">
-	                    </div>
-	                    <div class="col">
-	                      <input type="text" class="form-control" id="shDateEnd" name="shDateEnd" autocomplete="off"
-	                          aria-describedby="defaultFormControlHelp" th:value="${#strings.substring(vo.shDateEnd, 0, 10)}">
-	                    </div>
-	                  </div>
-	                  <div class="row">
-	                    <div class="col">
-	                      <div class="mb-3">
-	                        <select class="form-select" id="shOption" name="shOption" aria-label="Default select example">
-	                          <option value="0">검색구분</option>
-	                          <option value="1">코드</option>
-	                          <option value="2">이름</option>
-	                        </select>
-	                      </div>
-	                    </div>
-	                    <div class="col">
-	                      <input type="text" class="form-control" id="shValue" name="shValue" placeholder="검색어"
-	                        aria-describedby="defaultFormControlHelp">
-	                    </div>
-	                    <div class="col">
-	                      <button type="submit" class="btn btn-icon btn-outline-primary">
-	                        <span class="tf-icons bx bx-search"></span>
-	                      </button>
-	                      <button type="button" class="btn btn-icon btn-outline-primary">
-	                        <span class="tf-icons bx bx-refresh"></span>
-	                      </button>
-	                    </div>
-	                    <div class="col"></div>
-	                    <div class="col"></div>
-	                  </div>
-	                  <div class="row align-items-center mb-3">
-	                    <div class="col">
-	                      <h5 class="mb-0"><span th:text="'Total: ' + ${vo.totalRows}"></span></h5>
-	                    </div>
-	                    <div class="col-2">
-	                      <select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example">
-	                        <option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
-	                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
-	                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
-	                        <option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
-	                        <option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
-	                        <option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
-	                      </select>
-	                    </div>
-	                  </div>
-	                  <!-- table S -->
-	                  <div class="row">
-	                    <div class="col">
-	                      <div class="table-responsive text-nowrap">
-	                        <table class="table">
-	                          <thead>
-	                            <tr class="text-nowrap text-center">
-	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <th>#</th>
-	                              <th>코드</th>
-	                              <th>이름</th>
-	                              <th>성별</th>
-	                              <th>아이디</th>
-	                              <th>이메일</th>
-	                              <th>비밀번호</th>
-	                              <th>생일</th>
-	                              <th>핸드폰</th>
-	                              <th>우편번호</th>
-	                              <th>주소</th>
-	                              <th>상세주소</th>
-	                              <th>등록일</th>
-	                              <th>수정일</th>
-	                              <th>사용</th>
-	                              <th>삭제</th>
-	                              <th></th>
-	                            </tr>
-	                          </thead>
-	                          <tbody>
-	                          	<tr th:if="${#lists.isEmpty(list)}">
-	                          		<td colspan="14">
-	                          			<p class="fw-bold text-center mt-3">데이터 없음</p>
-	                          		</td>
-	                          	</tr>
-	                            <tr class="text-center" th:if="${!#lists.isEmpty(list)}" th:each="list:${list}">
-	                              <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
-	                              <td th:text="${vo.totalRows - ((vo.thisPage - 1) * vo.rowNumToShow + listStat.index)}"></td>
-	                              <td scope="row" th:text="${list.mmSeq}"></td>
-	                              <td>
-	                              	<a th:href="@{/v1/infra/member/memberXdmMForm(mmSeq=${list?.mmSeq})}" th:text="${list.mmName}"></a>
-	                              </td>
-	                              <td th:if="${list.mmGender != null}" th:text="${@codeService.selectOneCachedCode(list.mmGender)}"></td>
-	                              <td th:unless="${list.mmGender != null}"></td>
-	                              <td th:text="${list.mmId}"></td>
-	                              <td th:text="${list.mmEmail}"></td>
-	                              <td th:text="${list.mmPw}"></td>
-	                              <td th:text="${list.mmBirth}"></td>
-	                              <td th:text="${list.mmPhone}"></td>
-	                              <td th:text="${list.mmZipNum}"></td>
-	                              <td th:text="${list.mmAdr}"></td>
-	                              <td th:text="${list.mmAdrDt}"></td>
-	                              <td th:text="${#dates.format(list.mmDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"></td>
-	                              <td th:text="${#dates.format(list.mmDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"></td>
-	                              <td th:if="${list.mmUseNy eq 0}">N</td>
-	                              <td th:unless="${list.mmUseNy eq 0}">Y</td>
-	                              <td th:if="${list.mmDelNy eq 0}">N</td>
-	                              <td th:unless="${list.mmDelNy eq 0}">Y</td>
-	                              <td><h3>&nbsp;</h3></td>
-	                            </tr>
-	                          </tbody>
-	                        </table>
-	                      </div>
-	                    </div>
-	                  </div>
-	                  <!-- table E -->
-	                  <div class="row">
-	                    <div class="col">
-	                      <div class="demo-inline-spacing d-flex justify-content-center">
-	                        <!-- Basic Pagination -->
-	                        <nav aria-label="Page navigation">
-	                          <ul class="pagination">
-	                            <li class="page-item prev" th:if="${vo.startPage gt vo.pageNumToShow}" style="cursor:pointer;">
-	                              <a class="page-link" href="javascript:goList(${vo.startPage - 1})" th:attr="onclick=|goList('${vo.startPage - 1}')|"><i class="tf-icon bx bx-chevron-left"></i></a>
-	                            </li>
-	                            <li class="page-item" th:each="num: ${#numbers.sequence(vo.startPage, vo.endPage)}" th:classappend="${num eq vo.thisPage} ? active : ''"  style="cursor:pointer;">
-	                              <a class="page-link" th:attr="onclick=|goList('${num}')|" th:text="${num}"><!-- ${i.index} -->></a>
-	                            </li>
-	                            <li class="page-item next" th:if="${vo.endPage ne vo.totalPages}"  style="cursor:pointer;">
-	                              <a class="page-link" th:attr="onclick=|goList('${vo.endPage + 1}')|"><i class="tf-icon bx bx-chevron-right"></i></a>
-	                            </li>
-	                          </ul>
-	                        </nav>
-	                        <!--/ Basic Pagination -->
-	                      </div>
-	                    </div>
-	                  </div>
-	                  <div class="row">
-	                    <div class="col">
-	                      <button type="button" class="btn btn-icon btn-danger">
-	                        <span class="tf-icons bx bx-x"></span>
-	                      </button>
-	                      <button type="button" class="btn btn-icon btn-danger">
-	                        <span class="tf-icons bx bx-trash"></span>
-	                      </button>
-	                    </div>
-	                    <div class="col d-flex justify-content-end">
-	                      <button type="button" class="btn btn-icon btn-success">
-	                        <span class="tf-icons bx bx-file"></span>
-	                      </button>
-	                      <button type="button" class="btn btn-icon btn-primary ms-1" id="btnForm">
-	                        <span class="tf-icons bx bx-plus"></span>
-	                      </button>
-	                    </div>
-	                  </div>
-                  </form>
+              <div class="row">
+                <div class="col">
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb breadcrumb-style1">
+                      <li class="breadcrumb-item">
+                        <a href="javascript:void(0);">Page&nbsp;1</a>
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a href="javascript:void(0);">Page&nbsp;2</a>
+                      </li>
+                      <li class="breadcrumb-item active">Dafault</li>
+                    </ol>
+                  </nav>
+                  <h2 class="mb-4">Concert</h5>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
+                    </div>
+                    <div class="card-body">
+                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmInst" novalidate>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input class="form-control" type="text" id="concertSeq" name="concertSeq" placeholder="자동생성"
+                                readonly="" th:value="${item?.concertSeq}">
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">콘서트</label>
+                              <input type="text" class="form-control" id="concertName" name="concertName" placeholder="콘서트"
+                                aria-describedby="defaultFormControlHelp" th:value="${item?.concertName}" required>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">공연 시간</label>
+                              <input type="text" class="form-control" id="concertPlayTime" name="concertPlayTime" placeholder="공연 시간"
+                                aria-describedby="defaultFormControlHelp" th:value="${item?.concertPlayTime}" required>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">날짜</label>
+                              <input type="text" class="form-control" id="concertDate" name="concertDate" placeholder="날짜"
+                                aria-describedby="defaultFormControlHelp"
+                                th:value="${item?.concertDate}"
+                                required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">가수</label>
+                              <input type="text" class="form-control" id="concertSinger" name="concertSinger" placeholder="가수"
+                                aria-describedby="defaultFormControlHelp" th:value="${item?.concertSinger}" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">연령</label>
+                              <input type="text" class="form-control" id="concertAge" name="concertAge" placeholder="연령"
+                                aria-describedby="defaultFormControlHelp" th:value="${item?.concertAge}" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">장르</label>
+                              <input type="text" class="form-control" id="concertGenre" name="concertGenre" placeholder="장르"
+                                aria-describedby="defaultFormControlHelp" th:value="${item?.concertGenre}" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">설명</label>
+                              <textarea class="form-control" id="concertDesc" name="concertDesc" rows="3" th:text="${item?.concertDesc}" required></textarea>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">등록일</label>
+                              <input type="text" class="form-control" id="concertDateTimeReg" name="concertDateTimeReg" placeholder="자동완성"
+                                aria-describedby="defaultFormControlHelp"
+                                th:value="${#dates.format(item?.concertDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"
+                                required disabled>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">수정일</label>
+                              <input type="text" class="form-control" id="concertDateTimeEdit" name="concertDateTimeEdit" placeholder="자동완성"
+                                aria-describedby="defaultFormControlHelp"
+                                th:value="${#dates.format(item?.concertDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"
+                                required disabled>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">사용 여부</label>
+                              <select class="form-select" id="concertUseNy" name="concertUseNy" aria-label="Default select example">
+                              	<option value="">사용 여부</option>
+                              	<option value="0" th:selected="${item?.concertUseNy == 0}">N</option>
+                              	<option value="1" th:selected="${item?.concertUseNy == 1}">Y</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="defaultFormControlInput" class="form-label">삭제 여부</label>
+                              <select class="form-select" id="concertDelNy" name="concertDelNy" aria-label="Default select example" disabled>
+                              	<option value="">삭제 여부</option>
+                              	<option value="0" th:selected="${item?.concertDelNy == 0}">N</option>
+                              	<option value="1" th:selected="${item?.concertDelNy == 1}">Y</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col d-flex justify-content-between">
+                            <button type="button" class="btn btn-icon btn-outline-primary">
+                              <span class="tf-icons bx bx-list-ul"></span>
+                            </button>
+                            <button type="submit" class="btn btn-icon btn-primary">
+                              <span class="tf-icons bx bxs-data"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            
             <!-- / Content -->
 
             <!-- Footer -->
@@ -833,6 +780,8 @@
     </div>
     <!-- / Layout wrapper -->
 
+    
+
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/jquery/jquery.js"></script>
@@ -849,55 +798,47 @@
     <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
 
     <!-- Page JS -->
-    
-    <!-- paging S -->
-    <script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>
-    <script src="/xdm/v1/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
-    <script type="text/javascript">
-	    window.addEventListener('load', function(){ // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
-			
-	    	$.datetimepicker.setLocale('ko'); // datetimepicker의 로케일을 한국어를 쓰겠다는 뜻이다.
-	    	
-	    	$("#shDateStart, #shDateEnd").datetimepicker({ // jquery의 datetimepicker 플러그인을 사용하여 id가 shDateStart, shDateEnd인 두 개의 날짜 입력 필드 요소 대해 datetimepicker를 활성화
-	    		timepicker:false, // 시간 선택을 비활성화
-	    		format:'Y-m-d'   // 날짜 형식을 'Y-m-d'로 설정
-	    	});
-	    });
-    </script>
-    
-    <script type="text/javascript">
-	    goList = function (thisPage) {
-		    document.querySelector("input[name=thisPage]").value = thisPage;
-		    document.querySelector("form[name=form]").action = "/v1/infra/member/memberXdmList";
-		    document.querySelector("form[name=form]").submit();
-		}
-    </script>
-    <!-- paging E -->
-    
-    <!-- total S -->
-    <script type="text/javascript">
-	    document.getElementById("changeRowNum").onchange = function () {
-	        document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
-	        form.action = "/v1/infra/member/memberXdmList";
-	        form.submit();
-	    }
-    </script>
-    <!-- total E -->
-    
-    <!-- btnForm S -->
-    <script type="text/javascript">
-    	document.getElementById("btnForm").onclick = function(){
-    		// name이 form인 것을 불러와서 저장
-    		let form = document.querySelector("[name=form]")
-    		// 데이터가 전송될 주소
-    		form.action = "/v1/infra/member/memberXdmForm";
-    		// 전송버튼과 동일
-    		form.submit();
-    	}
-    </script>
-    <!-- btnForm E -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>
+      // Flat pickr
+      const flatPickrEL = $(".flatpickr-validation");
+      if (flatPickrEL.length) {
+        flatPickrEL.flatpickr({
+          allowInput: true,
+          monthSelectorType: "static"
+        });
+      }
+
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var bsValidationForms = document.querySelectorAll(".needs-validation");
+
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(bsValidationForms).forEach(function(form) {
+        form.addEventListener(
+          "submit",
+          function(event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            } else {
+              // Submit your form
+              alert("Submitted!!!");
+            }
+
+            form.classList.add("was-validated");
+          },
+          false
+        );
+      });
+    </script>
+    
+    <script type="text/javascript">
+    	document.getElementById("btnSubmit").onclick = function() {
+    		form.action = "/v1/infra/concert/concertXdmInst";
+    		form.submit();
+    	}
+    </script>
   </body>
 </html>

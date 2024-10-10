@@ -51,7 +51,36 @@
                 </a>
                 
                 <!-- Main website navigation-->
-                <nav th:replace="~{usr/v1/infra/include/nav :: nav}"></nav>
+                <nav id="navigation-box">
+				<!-- Toggle for mobile menu mode -->
+					<a href="#" id="navigation-toggle">
+				    	<span class="menu-icon">
+				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
+				            <span class="lines"></span>
+				        </span>
+				    	</span>
+					</a>
+			
+				<!-- Link navigation -->
+				    <ul id="navigation">
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
+				        </li>
+				        <li>
+				            <span class="sub-nav-toggle plus"></span>
+				            <a href="#">콘서트티켓</a>
+				        </li>
+				    </ul>
+				</nav>
                 
                 <!-- Additional header buttons / Auth and direct link to booking-->
                 <div class="control-panel">
@@ -91,7 +120,7 @@
                     
                     <div class="field-wrap">
                     	<label for="mmId">아이디</label>
-	                    <input type="text" placeholder='한글, 영대소문자, 숫자, 4~10자리' name='mmId' class="login__input" id="mmId">
+	                    <input type="text" placeholder='아이디를 입력해 주세요' name='mmId' class="login__input" id="mmId">
 	                    <div class="invalidId">
 		                    <p class="inv-em alert alert-danger">
 		                    	<span class="icon-warning"></span>
@@ -107,7 +136,7 @@
 		                    </p>
 	                    </div>
 	                    <label for="mmPw">비밀번호</label>
-	                    <input type='password' placeholder='영대소문자, 숫자, 특수문자 8~15자리' name='mmPw' class="login__input" id="mmPw">
+	                    <input type='password' placeholder='비밀번호를 입력해 주세요' name='mmPw' class="login__input" id="mmPw">
 	                    <div class="invalidPw">
 		                    <p class="inv-em alert alert-danger">
 		                    	<span class="icon-warning"></span>
@@ -217,113 +246,119 @@
         
         <!-- btnSignIn S -->
         <script type="text/javascript">
-        	document.getElementById("btnSignIn").onclick = function() {
-//         		validation
-//         		아이디
-        		var mmId = document.getElementById("mmId");
-        		var mmIdValue = document.getElementById("mmId").value.trim();
-        		var invalidId = document.querySelector('.invalidId');
-        		var validId = document.querySelector('.validId');
-        		var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{4,10}$/;
-        		
-        		if(mmIdValue == '' || mmIdValue == null) {
-        			mmId.style.borderColor = '#fe505a';
-        			invalidId.style.display = 'block';
-        			validId.style.display = 'none';
-        			mmId.focus();
-        			return false;
-        		} else {
-        			mmId.style.borderColor = '#92DA7F';
-        			invalidId.style.display = 'none';
-        			validId.style.display = 'block';
-        		}
-        		
-        		if(!mmIdRegExp.test(mmIdValue)) {
-        			mmId.style.borderColor = '#fe505a';
-        			invalidId.style.display = 'block';
-        			validId.style.display = 'none';
-        			const messageElement = document.querySelector('.invalidId .inv-em');
-        			messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 4~10자리';
-        			mmId.focus();
-        			return false;
-        		} else {
-        			invalidId.style.display = 'none';
-        			validId.style.display = 'block';
-        		}
-        		
-//         		비밀번호
-        		var mmPw = document.getElementById("mmPw");
-        		var mmPwValue = document.getElementById("mmPw").value.trim();
-        		var invalidPw = document.querySelector('.invalidPw');
-        		var validPw = document.querySelector('.validPw');
-        		var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
-        		
-        		if(mmPwValue == '' || mmPwValue == null) {
-        			mmPw.style.borderColor = '#fe505a';
-        			invalidPw.style.display = 'block';
-        			validPw.style.display = 'none';
-        			mmPw.focus();
-        			return false;
-        		} else {
-        			mmPw.style.borderColor = '#92DA7F';
-        			invalidPw.style.display = 'none';
-        			validPw.style.display = 'block';
-        		}
-        		
-        		if(!mmPwRegExp.test(mmPwValue)) {
-        			mmPw.style.borderColor = '#fe505a';
-        			invalidPw.style.display = 'block';
-        			validPw.style.display = 'none';
-        			const messageElement = document.querySelector('.invalidPw .inv-em');
-        			messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 8~15자리';
-        			mmPw.focus();
-        			return false;
-        		} else {
-        			invalidPw.style.display = 'none';
-        			validPw.style.display = 'block';
-        		}
-        		
-        		$.ajax({
-    				async: true 
-    				,cache: false
-    				,type: "post"
-    				/* ,dataType:"json" */
-    				,url: "/v1/infra/member/signinXdmProc"
-    				/* ,data : $("#formLogin").serialize() */
-    				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
-    				,success: function(response) {
-    					if(response.rt == "success") {
-    						if(response.changePwd == "true") {
-    							location.href = "/v1/infra/index/indexUsrView";
-    						} else {
-    							location.href = "/v1/infra/index/indexUsrView";
-    						}
-    					} else {
-//     				 		validation
-    				 		mmId.style.borderColor = '#ff3e1d';
-    				 		mmPw.style.borderColor = '#ff3e1d';
-    				 		invalidId.style.display = 'block';
-    				 		invalidPw.style.display = 'block';
-    				 		validId.style.display = 'none';
-    				 		validPw.style.display = 'none';
-    				 		const messageElementId = document.querySelector('.invalidId .inv-em');
-    				 		messageElementId.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
-    				 		const messageElementPw = document.querySelector('.invalidPw .inv-em');
-    				 		messageElementPw.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
-    				 		
-//     				 		document.getElementById("modalAlertTitle").innerText = "확 인";
-//     				 		document.getElementById("modalAlertBody").innerText = "일치하는 회원이 존재 하지 않습니다!";
-							
-    					}
-    				}
-    				,error : function(jqXHR, textStatus, errorThrown){
-    					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
-    				}
-    			});
-        		
+        document.getElementById("btnSignIn").onclick = function() {
+        //  validation
+        //  아이디
+        	var mmId = document.getElementById("mmId");
+        	var mmIdValue = document.getElementById("mmId").value.trim();
+        	var invalidId = document.querySelector('.invalidId');
+        	var validId = document.querySelector('.validId');
+        	var mmIdRegExp = /^[ㄱ-ㅎ가-힣A-Za-z0-9]{4,10}$/;
+        	
+        	if(mmIdValue == '' || mmIdValue == null) {
+        		mmId.style.borderColor = '#fe505a';
+        		invalidId.style.display = 'block';
+        		validId.style.display = 'none';
+        		mmId.focus();
+        		return false;
+        	} else {
+        		mmId.style.borderColor = '#92DA7F';
+        		invalidId.style.display = 'none';
+        		validId.style.display = 'block';
         	}
+        	
+        	if(!mmIdRegExp.test(mmIdValue)) {
+        		mmId.style.borderColor = '#fe505a';
+        		invalidId.style.display = 'block';
+        		validId.style.display = 'none';
+        		const messageElement = document.querySelector('.invalidId .inv-em');
+        		messageElement.childNodes[2].textContent = '한글, 영대소문자, 숫자, 4~10자리';
+        		mmId.focus();
+        		return false;
+        	} else {
+        		invalidId.style.display = 'none';
+        		validId.style.display = 'block';
+        	}
+                		
+        //  비밀번호
+        	var mmPw = document.getElementById("mmPw");
+        	var mmPwValue = document.getElementById("mmPw").value.trim();
+        	var invalidPw = document.querySelector('.invalidPw');
+        	var validPw = document.querySelector('.validPw');
+        	var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+        	
+        	if(mmPwValue == '' || mmPwValue == null) {
+        		mmPw.style.borderColor = '#fe505a';
+        		invalidPw.style.display = 'block';
+        		validPw.style.display = 'none';
+        		mmPw.focus();
+        		return false;
+        	} else {
+        		mmPw.style.borderColor = '#92DA7F';
+        		invalidPw.style.display = 'none';
+        		validPw.style.display = 'block';
+        	}
+        	
+        	if(!mmPwRegExp.test(mmPwValue)) {
+        		mmPw.style.borderColor = '#fe505a';
+        		invalidPw.style.display = 'block';
+        		validPw.style.display = 'none';
+        		const messageElement = document.querySelector('.invalidPw .inv-em');
+        		messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 조합 8~15자리';
+        		mmPw.focus();
+        		return false;
+        	} else {
+        		invalidPw.style.display = 'none';
+        		validPw.style.display = 'block';
+        	}
+
+        	$.ajax({
+        		async: true 
+        		,cache: false
+        		,type: "post"
+        		/* ,dataType:"json" */
+        		,url: "/v1/infra/member/signinXdmProc"
+        		/* ,data : $("#formLogin").serialize() */
+        		,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
+        		,success: function(response) {
+        			if(response.rt == "success") {
+        				if(response.changePwd == "true") {
+        					location.href = "/v1/infra/index/indexUsrView";
+        				} else {
+        					location.href = "/v1/infra/index/indexUsrView";
+        				}
+        			} else {
+//             			validation
+        		 		mmId.style.borderColor = '#ff3e1d';
+        		 		mmPw.style.borderColor = '#ff3e1d';
+        		 		invalidId.style.display = 'block';
+        		 		invalidPw.style.display = 'block';
+        		 		validId.style.display = 'none';
+        		 		validPw.style.display = 'none';
+        		 		const messageElementId = document.querySelector('.invalidId .inv-em');
+        		 		messageElementId.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
+        		 		const messageElementPw = document.querySelector('.invalidPw .inv-em');
+        		 		messageElementPw.childNodes[2].textContent = '일치하는 회원정보가 없습니다!';
+        		 		
+        				
+        			}
+        		}
+        		,error : function(jqXHR, textStatus, errorThrown){
+        			alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+        		}
+        	});
+                		
+        }
         </script>
         <!-- btnSignIn E -->
+        
+        <script type="text/javascript">
+	        document.addEventListener("keypress", function(event) {
+		        if (event.key === "Enter") {
+		            document.getElementById("btnSignIn").click();
+		        }
+		    });
+        </script>
         
 </body>
 </html>

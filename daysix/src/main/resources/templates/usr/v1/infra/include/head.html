@@ -1,0 +1,91 @@
+<th:block th:if="${!#strings.isEmpty(session?.sessNameXdm)}" th:fragment="head">
+	<div class="container">
+		<!-- Logo link-->
+		<a href='/v1/infra/index/indexUsrView' class="logo"> <img
+			alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
+		</a>
+
+		<!-- Main website navigation-->
+		<nav id="navigation-box">
+			<!-- Toggle for mobile menu mode -->
+			<a href="#" id="navigation-toggle"> <span class="menu-icon">
+					<span class="icon-toggle" role="button"
+					aria-label="Toggle Navigation"> <span class="lines"></span>
+				</span>
+			</span>
+			</a>
+
+			<!-- Link navigation -->
+			<ul id="navigation">
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a -->
+<!-- 					href="/v1/infra/login/loginUsrSignIn">로그인</a></li> -->
+<!-- 				<li><span class="sub-nav-toggle plus"></span> <a -->
+<!-- 					href="/v1/infra/login/loginUsrSignUp">회원가입</a></li> -->
+				<li><span class="sub-nav-toggle plus"></span> <a
+					href="/v1/infra/concert/concertUsrList">콘서트</a></li>
+				<li><span class="sub-nav-toggle plus"></span> <a href="#">콘서트티켓</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Additional header buttons / Auth and direct link to booking-->
+		<div class="control-panel">
+			<div class="auth auth--home">
+				<div class="auth__show">
+					<span class="auth__image"> <img alt=""
+						src="/usr/v1/template/themeforest-1.0.0/images/client-photo/auth.png">
+					</span>
+				</div>
+				<a href="#" class="btn btn--sign btn--singin"
+					th:text="${session.sessNameXdm}"> </a>
+				<ul class="auth__function">
+					<li><a href="0_ticketBuy.html" class="auth__function-item">예약티켓</a></li>
+					<li><a class="auth__function-item" id="btnLogOut">로그아웃</a></li>
+				</ul>
+
+			</div>
+			<a href="#"
+				class="btn btn-md btn--warning btn--book btn-control--home login-window">티켓
+				예매</a>
+		</div>
+	</div>
+</th:block>
+
+<th:block th:if="${#strings.isEmpty(session?.sessNameXdm)}" th:fragment="head">
+	<div class="container">
+		<!-- Logo link-->
+		<a href='/v1/infra/index/indexUsrView' class="logo"> <img
+			alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
+		</a>
+
+		<!-- Main website navigation-->
+		<nav id="navigation-box">
+			<!-- Toggle for mobile menu mode -->
+			<a href="#" id="navigation-toggle"> <span class="menu-icon">
+					<span class="icon-toggle" role="button"
+					aria-label="Toggle Navigation"> <span class="lines"></span>
+				</span>
+			</span>
+			</a>
+
+			<!-- Link navigation -->
+			<ul id="navigation">
+				<li><span class="sub-nav-toggle plus"></span> <a
+					href="/v1/infra/login/loginUsrSignIn">로그인</a></li>
+				<li><span class="sub-nav-toggle plus"></span> <a
+					href="/v1/infra/login/loginUsrSignUp">회원가입</a></li>
+				<li><span class="sub-nav-toggle plus"></span> <a
+					href="/v1/infra/concert/concertUsrList">콘서트</a></li>
+				<li><span class="sub-nav-toggle plus"></span> <a href="#">콘서트티켓</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- Additional header buttons / Auth and direct link to booking-->
+		<div class="control-panel">
+			<a href="#" class="btn btn--sign">로그인</a> <a href="#"
+				class="btn btn-md btn--warning btn--book">티켓 예매</a>
+		</div>
+
+	</div>
+</th:block>

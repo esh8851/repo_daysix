@@ -23,7 +23,15 @@
 
 
 /******************************* loginUsrSignUp S *******************************/
-.invalidId, .validId, .invalidPw, .validPw, .validName, .invalidName, .validEmail, .invalidEmail, .invalidPhone, .validPhone, .invalidBirth, .validBirth, .invalidPwCheck, .validPwCheck, .invalidGender, .validGender{display:none;}
+.invalidId, .validId,
+.invalidPw, .validPw,
+.validName, .invalidName,
+.validEmail, .invalidEmail,
+.invalidPhone, .validPhone,
+.invalidBirth, .validBirth,
+.invalidPwCheck, .validPwCheck,
+.invalidGender, .validGender,
+.invalidAdr, .validAdr{display:none;}
 #form > .field-wrap > label:not(.login__check-info){display:block;margin-top:13px;}
 .login .login__check-info{margin-top:5px;}
 /******************************* loginUsrSignUp E *******************************/

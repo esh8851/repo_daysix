@@ -7,4 +7,91 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			a.concertSeq
+			,a.concertName
+			,a.concertPlayTime
+			,a.concertDate
+			,a.concertSinger
+			,a.concertAge
+			,a.concertGenre
+			,a.concertDesc
+			,a.concertDateTimeReg
+			,a.concertDateTimeEdit
+			,a.concertUseNy
+			,a.concertDelNy
+		FROM concert AS a
+		ORDER BY
+			a.concertSeq DESC
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO concert (
+			concertName
+			,concertPlayTime
+			,concertDate
+			,concertSinger
+			,concertAge
+			,concertGenre
+			,concertDesc
+			,concertDateTimeReg
+			,concertDateTimeEdit
+			,concertUseNy
+			,concertDelNy
+		)
+		VALUE (
+			#{concertName}
+			,#{concertPlayTime}
+			,#{concertDate}
+			,#{concertSinger}
+			,#{concertAge}
+			,#{concertGenre}
+			,#{concertDesc}
+			,now()
+			,now()
+			,1
+			,0
+		)
+		<selectKey resultType="String" keyProperty="concertSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			a.concertSeq
+			,a.concertName
+			,a.concertPlayTime
+			,a.concertDate
+			,a.concertSinger
+			,a.concertAge
+			,a.concertGenre
+			,a.concertDesc
+			,a.concertDateTimeReg
+			,a.concertDateTimeEdit
+			,a.concertUseNy
+			,a.concertDelNy
+		FROM concert AS a
+		WHERE 1 = 1
+			AND a.concertSeq = #{concertSeq}
+	</select>
+	
+	<update id="update">
+		UPDATE concert
+			SET
+				concertName = #{concertName}
+				,concertPlayTime = #{concertPlayTime}
+				,concertDate = #{concertDate}
+				,concertSinger = #{concertSinger}
+				,concertAge = #{concertAge}
+				,concertGenre = #{concertGenre}
+				,concertDesc = #{concertDesc}
+				,concertDateTimeReg = now()
+				,concertDateTimeEdit = now()
+				,concertUseNy = #{concertUseNy}
+			WHERE 1 = 1
+				AND concertSeq = #{concertSeq}
+	</update>
+	
 </mapper>
