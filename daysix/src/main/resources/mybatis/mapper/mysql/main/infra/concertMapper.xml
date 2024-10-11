@@ -8,22 +8,25 @@
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
 	<select id="selectList" resultMap="resultMapObj">
-		SELECT
-			a.concertSeq
-			,a.concertName
-			,a.concertPlayTime
-			,a.concertDate
-			,a.concertSinger
-			,a.concertAge
-			,a.concertGenre
-			,a.concertDesc
-			,a.concertDateTimeReg
-			,a.concertDateTimeEdit
-			,a.concertUseNy
-			,a.concertDelNy
-		FROM concert AS a
-		ORDER BY
-			a.concertSeq DESC
+		SELECT aa.* FROM (
+			SELECT
+				a.concertSeq
+				,a.concertName
+				,a.concertPlayTime
+				,a.concertDate
+				,a.concertSinger
+				,a.concertAge
+				,a.concertGenre
+				,a.concertDesc
+				,a.concertDateTimeReg
+				,a.concertDateTimeEdit
+				,a.concertUseNy
+				,a.concertDelNy
+			FROM concert AS a
+			ORDER BY
+				a.concertSeq DESC
+		) aa
+		limit #{rowNumToShow} offset #{startRnumForMysql}
 	</select>
 	
 	<insert id="insert">
@@ -75,6 +78,11 @@
 		FROM concert AS a
 		WHERE 1 = 1
 			AND a.concertSeq = #{concertSeq}
+	</select>
+	
+	<select id="selectOneCount" resultType="Integer">
+		SELECT COUNT(*)
+			FROM concert AS a
 	</select>
 	
 	<update id="update">

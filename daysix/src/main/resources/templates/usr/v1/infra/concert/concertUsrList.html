@@ -2,748 +2,418 @@
 <html xmlns:th="https://www.thymeleaf.org">
 
 <head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <title>AMovie - Movie list</title>
-    <meta name="description" content="A Template by Gozha.net">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="author" content="Gozha.net">
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>AMovie - Movie list</title>
+<meta name="description" content="A Template by Gozha.net">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Gozha.net">
 
-    <!-- Mobile Specific Metas-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="telephone=no" name="format-detection">
+<!-- Mobile Specific Metas-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="telephone=no" name="format-detection">
 
-    <!-- Fonts -->
-    <!-- Font awesome - icon font -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Roboto -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+<!-- Fonts -->
+<!-- Font awesome - icon font -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- Roboto -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
+	rel='stylesheet' type='text/css'>
 
-    <!-- Stylesheets -->
-    <!-- jQuery UI -->
-    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<!-- Stylesheets -->
+<!-- jQuery UI -->
+<link
+	href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
 
-    <!-- Mobile menu -->
-    <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
-    <!-- Select -->
-    <link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" />
+<!-- Mobile menu -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css"
+	rel="stylesheet" />
+<!-- Select -->
+<link
+	href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css"
+	rel="stylesheet" />
 
-    <!-- Custom -->
-    <link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+<!-- Custom -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1"
+	rel="stylesheet" />
 
-    <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+<link rel="stylesheet"
+	href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
 
-    <!-- Modernizr -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+<!-- Modernizr -->
+<script
+	src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
 
-    <!-- 0_style.css -->
-    <link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
+<!-- 0_style.css -->
+<link rel="stylesheet"
+	href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+
+<!-- Favicon -->
+<link rel="icon"
+	href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
 
 
 </head>
 
 <body>
-    <div class="wrapper">
-        <!-- Header section -->
-        <header class="header-wrapper">
-            <div class="container">
-                <!-- Logo link-->
-                <a href='/v1/infra/index/indexUsrView' class="logo">
-                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
-                </a>
+	<div class="wrapper">
+		<!-- Header section -->
+		<header class="header-wrapper">
+			<th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
+		</header>
 
-                <!-- Main website navigation-->
-                <nav id="navigation-box">
-				<!-- Toggle for mobile menu mode -->
-					<a href="#" id="navigation-toggle">
-				    	<span class="menu-icon">
-				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-				            <span class="lines"></span>
-				        </span>
-				    	</span>
-					</a>
-			
-				<!-- Link navigation -->
-				    <ul id="navigation">
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="#">콘서트티켓</a>
-				        </li>
-				    </ul>
-				</nav>
+		<!-- Search bar -->
+		<div class="search-wrapper">
+			<div class="container container--add">
+				<form id='search-form' method='get' class="search">
+					<input type="text" class="search__field" placeholder="찾기">
+					<select name="sorting_item" id="search-sort" class="search__sort"
+						tabindex="0">
+						<option value="1" selected='selected'>콘서트</option>
+						<option value="2">가수</option>
+						<option value="3">장르</option>
+					</select>
+					<button type='submit' class="btn btn-md btn--danger search__button">콘서트
+						검색</button>
+				</form>
+			</div>
+		</div>
 
-                <!-- Additional header buttons / Auth and direct link to booking-->
-                <div class="control-panel">
-                    <a href="#" class="btn btn--sign login-window">로그인</a>
-                    <a href="#" class="btn btn-md btn--warning btn--book login-window">티켓 예매</a>
-                </div>
+		<!-- Main content -->
+		<section class="container">
+			<div class="col-sm-12">
+				<h2 class="page-heading">콘서트</h2>
 
-            </div>
-        </header>
+				<div class="select-area">
+					<form class="select" method='get'>
+						<select name="select_item" class="select__sort" tabindex="0">
+							<option value="1" selected='selected'>서울</option>
+							<option value="2">인천</option>
+							<option value="3">부산</option>
+							<option value="4">울산</option>
+							<option value="5">경기</option>
+							<option value="3">당진</option>
+							<option value="4">안성</option>
+							<option value="5">전주</option>
+						</select>
+					</form>
 
-        <!-- Search bar -->
-        <div class="search-wrapper">
-            <div class="container container--add">
-                <form id='search-form' method='get' class="search">
-                    <input type="text" class="search__field" placeholder="찾기">
-                    <select name="sorting_item" id="search-sort" class="search__sort" tabindex="0">
-                        <option value="1" selected='selected'>콘서트</option>
-                        <option value="2">가수</option>
-                        <option value="3">장르</option>
-                    </select>
-                    <button type='submit' class="btn btn-md btn--danger search__button">콘서트 검색</button>
-                </form>
-            </div>
-        </div>
+					<div class="datepicker">
+						<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
+						<input type="text" id="datepicker" value='03/10/2014'
+							class="datepicker__input">
+					</div>
 
-        <!-- Main content -->
-        <section class="container">
-            <div class="col-sm-12">
-                <h2 class="page-heading">콘서트</h2>
+					<form class="select select--cinema" method='get'>
+						<select name="select_item" class="select__sort" tabindex="0">
+							<option value="1" selected='selected'>KBS부산홀</option>
+							<option value="2">예술의 전당 음악당 콘서트홀</option>
+							<option value="3">BEXCO 컨벤션홀 그랜드볼룸</option>
+							<option value="4">예술의 전당 오페라하우스 오페라극장</option>
+							<option value="5">KBS아레나</option>
+						</select>
+					</form>
 
-                <div class="select-area">
-                    <form class="select" method='get'>
-                        <select name="select_item" class="select__sort" tabindex="0">
-                            <option value="1" selected='selected'>서울</option>
-                            <option value="2">인천</option>
-                            <option value="3">부산</option>
-                            <option value="4">울산</option>
-                            <option value="5">경기</option>
-                            <option value="3">당진</option>
-                            <option value="4">안성</option>
-                            <option value="5">전주</option>
-                        </select>
-                    </form>
+					<form class="select select--film-category" method='get'>
+						<select name="select_item" class="select__sort" tabindex="0">
+							<option value="2" selected='selected'>발라드</option>
+							<option value="3">락/메탈</option>
+							<option value="4">랩/힙합</option>
+							<option value="5">재즈/소울</option>
+							<option value="6">포크/트로트</option>
+							<option value="7">인디</option>
+						</select>
+					</form>
 
-                    <div class="datepicker">
-                        <span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
-                        <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
-                    </div>
+				</div>
+				<form id="form" name="form" method="post" action="/v1/infra/concert/concertUsrList">
+					<input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1"/>
+					<input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}"/>
+					<div class="tags-area">
+						<div class="tags tags--unmarked">
+							<span class="tags__label">정렬:</span>
+							<ul>
+								<li class="item-wrap"><a href="#"
+									class="tags__item item-active" data-filter='all'>모두</a></li>
+								<li class="item-wrap"><a href="#" class="tags__item"
+									data-filter='release'>최신순</a></li>
+								<li class="item-wrap"><a href="#" class="tags__item"
+									data-filter='popularity'>인기순</a></li>
+								<li class="item-wrap"><a href="#" class="tags__item"
+									data-filter='comments'>댓글순</a></li>
+								<li class="item-wrap"><a href="#" class="tags__item"
+									data-filter='ending'>마감</a></li>
+							</ul>
+						</div>
+					</div>
+	
+					<!-- Movie preview item -->
+					<div th:each="list:${list}">
+						<div class="movie movie--preview movie--full release">
+							<!-- popularity, comments, ending -->
+							<div class="col-sm-3 col-md-2 col-lg-2">
+								<div class="movie__images">
+									<img alt=''
+										src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-sample1.png">
+								</div>
+								<div class="movie__feature">
+									<a href="#" class="movie__feature-item movie__feature--comment">123</a>
+									<a href="#" class="movie__feature-item movie__feature--video">456</a>
+									<a href="#" class="movie__feature-item movie__feature--photo">352</a>
+								</div>
+							</div>
+							<div class="col-sm-9 col-md-10 col-lg-10 movie__about">
+								<a class="movie__title link--huge"
+									th:href="@{/v1/infra/concert/concertUsrDetail(concertSeq=${list.concertSeq})}"
+									th:text="${list?.concertName}"></a>
+	
+								<p class="movie__time">
+									<span th:text="${list?.concertPlayTime}"></span> 분
+								</p>
+	
+								<p class="movie__option">
+									<strong>장르 : </strong><span th:text="${list?.concertGenre}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>공연일 : </strong><span th:text="${list?.concertDate}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>공연장 : </strong><span></span>
+								</p>
+								<p class="movie__option">
+									<strong>가수 : </strong><span th:text="${list?.concertSinger}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>연령 : </strong><span th:text="${list?.concertAge}"></span>세
+								</p>
+								<div class="movie__btns">
+									<a class="btn btn-md btn--warning"
+										th:href="@{/v1/infra/concert/concertUsrDetail(concertSeq=${list.concertSeq})}">
+										<span class="hidden-sm"><b>상세보기</b></span>
+									</a>
+								</div>
+	
+								<div class="preview-footer">
+									<div class="movie__rate">
+										<div class="score"></div>
+										<span class="movie__rate-number">170 투표</span> <span
+											class="movie__rating">5.0</span>
+									</div>
+									<a href="#" class="movie__show-btn">공연 시간</a>
+								</div>
+							</div>
+	
+							<div class="clearfix"></div>
+	
+							<!-- Time table (choose film start time)-->
+							<div class="time-select">
+								<div class="time-select__group group--first">
+									<div class="col-sm-4">
+										<p class="time-select__place">
+											<b>KBS 부산홀</b>
+										</p>
+									</div>
+									<ul class="col-sm-8 items-wrap">
+										<li class="time-select__item" data-time='09:40'>09:40</li>
+										<li class="time-select__item" data-time='13:45'>13:45</li>
+										<li class="time-select__item active" data-time='15:45'>15:45</li>
+										<li class="time-select__item" data-time='19:50'>19:50</li>
+										<li class="time-select__item" data-time='21:50'>21:50</li>
+									</ul>
+								</div>
+								<div class="time-select__group">
+									<div class="col-sm-4">
+										<p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
+									</div>
+									<ul class="col-sm-8 items-wrap">
+										<li class="time-select__item active" data-time='10:45'>10:45</li>
+										<li class="time-select__item" data-time='16:00'>16:00</li>
+										<li class="time-select__item" data-time='19:00'>19:00</li>
+										<li class="time-select__item" data-time='21:15'>21:15</li>
+										<li class="time-select__item" data-time='23:00'>23:00</li>
+									</ul>
+								</div>
+								<div class="time-select__group group--last">
+									<div class="col-sm-4">
+										<p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
+									</div>
+									<ul class="col-sm-8 items-wrap">
+										<li class="time-select__item" data-time='10:45'>10:45</li>
+										<li class="time-select__item" data-time='16:00'>16:00</li>
+										<li class="time-select__item" data-time='19:00'>19:00</li>
+										<li class="time-select__item" data-time='21:15'>21:15</li>
+										<li class="time-select__item active" data-time='23:00'>23:00</li>
+									</ul>
+								</div>
+							</div>
+							<!-- end time table-->
+	
+						</div>
+						<!-- end movie preview item -->
+					</div>
+					<!-- end movie preview item -->
+	
+					<div class="coloum-wrapper">
+						<ul class="pagination-leesh d-flex justify-content-center">
+							<li th:if="${vo.startPage gt vo.pageNumToShow}">
+								<a href="javascript:goList(${vo.startPage - 1})" th:attr="onclick=|goList('${vo.startPage - 1}')|">
+									<span><b>이전</b></span>
+								</a>
+							</li>
+							<li th:each="num: ${#numbers.sequence(vo.startPage, vo.endPage)}" th:classappend="${num eq vo.thisPage} ? active : ''">
+								<a th:attr="onclick=|goList('${num}')|" th:text="${num}">
+									<span><b>1</b></span>
+								</a>
+							</li>
+							<li th:if="${vo.endPage ne vo.totalPages}">
+								<a th:attr="onclick=|goList('${vo.endPage + 1}')|">
+									<span><b>2</b></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</form>
 
-                    <form class="select select--cinema" method='get'>
-                        <select name="select_item" class="select__sort" tabindex="0">
-                            <option value="1" selected='selected'>KBS부산홀</option>
-                            <option value="2">예술의 전당 음악당 콘서트홀</option>
-                            <option value="3">BEXCO 컨벤션홀 그랜드볼룸</option>
-                            <option value="4">예술의 전당 오페라하우스 오페라극장</option>
-                            <option value="5">KBS아레나</option>
-                        </select>
-                    </form>
+			</div>
 
-                    <form class="select select--film-category" method='get'>
-                        <select name="select_item" class="select__sort" tabindex="0">
-                            <option value="2" selected='selected'>발라드</option>
-                            <option value="3">락/메탈</option>
-                            <option value="4">랩/힙합</option>
-                            <option value="5">재즈/소울</option>
-                            <option value="6">포크/트로트</option>
-                            <option value="7">인디</option>
-                        </select>
-                    </form>
+		</section>
 
-                </div>
+		<div class="clearfix"></div>
 
-                <div class="tags-area">
-                    <div class="tags tags--unmarked">
-                        <span class="tags__label">정렬:</span>
-                        <ul>
-                            <li class="item-wrap"><a href="#" class="tags__item item-active" data-filter='all'>모두</a>
-                            </li>
-                            <li class="item-wrap"><a href="#" class="tags__item" data-filter='release'>최신순</a>
-                            </li>
-                            <li class="item-wrap"><a href="#" class="tags__item" data-filter='popularity'>인기순</a>
-                            </li>
-                            <li class="item-wrap"><a href="#" class="tags__item" data-filter='comments'>댓글순</a>
-                            </li>
-                            <li class="item-wrap"><a href="#" class="tags__item" data-filter='ending'>마감</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+		<th:block th:replace="~{/usr/v1/infra/include/footer :: footer}"></th:block>
+	</div>
 
-                <!-- Movie preview item -->
-                <div class="movie movie--preview movie--full release">
-                    <div class="col-sm-3 col-md-2 col-lg-2">
-                        <div class="movie__images">
-                            <img alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-sample1.png">
-                        </div>
-                        <div class="movie__feature">
-                            <a href="#" class="movie__feature-item movie__feature--comment">123</a>
-                            <a href="#" class="movie__feature-item movie__feature--video">456</a>
-                            <a href="#" class="movie__feature-item movie__feature--photo">352</a>
-                        </div>
-                    </div>
+	<!-- open/close -->
+	<div class="overlay overlay-hugeinc">
 
-                    <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
-                        <a href='0_concertSingle.html' class="movie__title link--huge"><b>임한별 별(別) 전국투어 콘서트 (2024)</b></a>
+		<section class="container">
 
-                        <p class="movie__time">105 분</p>
+			<div class="col-sm-4 col-sm-offset-4">
+				<button type="button" class="overlay-close">Close</button>
+				<form id="login-form" class="login" method='get' novalidate=''>
+					<p class="login__title">
+						로그인 <br> <span class="login-edition">welcome to
+							A.Movie</span>
+					</p>
 
-                        <p class="movie__option"><strong>장르: </strong><a href="#">발라드</a></p>
-                        <p class="movie__option"><strong>공연일: </strong>11/1, 2024</p>
-                        <p class="movie__option"><strong>공연장: </strong>KBS 부산홀</p>
-                        <p class="movie__option"><strong>가수: </strong><a href="#">임한별</a></p>
-                        <p class="movie__option"><strong>연령: </strong><a href="#">13</a></p>
-                        <div class="movie__btns">
-                            <a href="0_book.html" class="btn btn-md btn--warning">
-                                <b>콘서트&nbsp;</b>
-                                <span class="hidden-sm"><b>&nbsp;&nbsp;예매하기</b></span>
-                            </a>
-                        </div>
+					<div class="social social--colored">
+						<a href='#' class="social__variant fa fa-facebook"></a> <a
+							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
+							class="social__variant fa fa-tumblr"></a>
+					</div>
 
-                        <div class="preview-footer">
-                            <div class="movie__rate">
-                                <div class="score"></div>
-                                <span class="movie__rate-number">170 투표</span> 
-                                <span class="movie__rating">5.0</span>
-                            </div>
-                            <a href="#" class="movie__show-btn">공연 시간</a>
-                        </div>
-                    </div>
+					<p class="login__tracker">or</p>
 
-                    <div class="clearfix"></div>
+					<div class="field-wrap">
+						<input type='email' placeholder='이메일' name='user-email'
+							class="login__input"> <input type='password'
+							placeholder='비밀번호' name='user-password' class="login__input">
 
-                    <!-- Time table (choose film start time)-->
-                    <div class="time-select">
-                        <div class="time-select__group group--first">
-                            <div class="col-sm-4">
-                                <p class="time-select__place"><b>KBS 부산홀</b></p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time='09:40'>09:40</li>
-                                <li class="time-select__item" data-time='13:45'>13:45</li>
-                                <li class="time-select__item active" data-time='15:45'>15:45</li>
-                                <li class="time-select__item" data-time='19:50'>19:50</li>
-                                <li class="time-select__item" data-time='21:50'>21:50</li>
-                            </ul>
-                        </div>
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item active" data-time='10:45'>10:45</li>
-                                <li class="time-select__item" data-time='16:00'>16:00</li>
-                                <li class="time-select__item" data-time='19:00'>19:00</li>
-                                <li class="time-select__item" data-time='21:15'>21:15</li>
-                                <li class="time-select__item" data-time='23:00'>23:00</li>
-                            </ul>
-                        </div>
-                        <div class="time-select__group group--last">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time='10:45'>10:45</li>
-                                <li class="time-select__item" data-time='16:00'>16:00</li>
-                                <li class="time-select__item" data-time='19:00'>19:00</li>
-                                <li class="time-select__item" data-time='21:15'>21:15</li>
-                                <li class="time-select__item active" data-time='23:00'>23:00</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end time table-->
+						<input type='checkbox' id='#informed' class='login__check styled'>
+						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+					</div>
 
-                </div>
-                <div class="movie movie--preview movie--full popularity">
-                    <div class="col-sm-3 col-md-2 col-lg-2">
-                        <div class="movie__images">
-                            <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
-                        </div>
-                        <div class="movie__feature">
-                            <a href="#" class="movie__feature-item movie__feature--comment">123</a>
-                            <a href="#" class="movie__feature-item movie__feature--video">7</a>
-                            <a href="#" class="movie__feature-item movie__feature--photo">352</a>
-                        </div>
-                    </div>
-                
-                    <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
-                        <a href="0_concertSingle.html" class="movie__title link--huge">Last Vegas (2013)</a>
-                
-                        <p class="movie__time">105 min</p>
-                
-                        <p class="movie__option"><strong>Country: </strong><a href="#">USA</a></p>
-                        <p class="movie__option"><strong>Category: </strong><a href="#">Comady</a></p>
-                        <p class="movie__option"><strong>Release date: </strong>November 1, 2013</p>
-                        <p class="movie__option"><strong>Director: </strong><a href="#">Jon Turteltaub</a></p>
-                        <p class="movie__option"><strong>Actors: </strong><a href="#">Robert De Niro</a>, <a href="#">Michael
-                                Douglas</a>, <a href="#">Morgan Freeman</a>, <a href="#">Kevin Kline</a>, <a href="#">Mary
-                                Steenburgen</a>, <a href="#">Jerry Ferrara</a>, <a href="#">Romany Malco</a> <a href="#">...</a></p>
-                        <p class="movie__option"><strong>Age restriction: </strong><a href="#">13</a></p>
-                
-                        <div class="movie__btns">
-                            <a href="#" class="btn btn-md btn--warning">book a ticket <span class="hidden-sm">for this movie</span></a>
-                            <a href="#" class="watchlist">Add to watchlist</a>
-                        </div>
-                
-                        <div class="preview-footer">
-                            <div class="movie__rate">
-                                <div class="score" style="cursor: pointer;"></div>
-                                <span class="movie__rate-number">170 votes</span>
-                                <span class="movie__rating">5.0</span>
-                            </div>
-                
-                
-                            <a href="#" class="movie__show-btn">Showtime</a>
-                        </div>
-                    </div>
-                
-                    <div class="clearfix"></div>
-                
-                    <!-- Time table (choose film start time)-->
-                    <div class="time-select">
-                        <div class="time-select__group group--first">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Cineworld</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:40">09:40</li>
-                                <li class="time-select__item" data-time="13:45">13:45</li>
-                                <li class="time-select__item active" data-time="15:45">15:45</li>
-                                <li class="time-select__item" data-time="19:50">19:50</li>
-                                <li class="time-select__item" data-time="21:50">21:50</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Empire</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Curzon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:00">09:00</li>
-                                <li class="time-select__item" data-time="11:00">11:00</li>
-                                <li class="time-select__item" data-time="13:00">13:00</li>
-                                <li class="time-select__item" data-time="15:00">15:00</li>
-                                <li class="time-select__item" data-time="17:00">17:00</li>
-                                <li class="time-select__item" data-time="19:0">19:00</li>
-                                <li class="time-select__item" data-time="21:0">21:00</li>
-                                <li class="time-select__item" data-time="23:0">23:00</li>
-                                <li class="time-select__item" data-time="01:0">01:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Odeon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group group--last">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Picturehouse</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="17:45">17:45</li>
-                                <li class="time-select__item" data-time="21:30">21:30</li>
-                                <li class="time-select__item" data-time="02:20">02:20</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end time table-->
-                
-                </div>
-                <div class="movie movie--preview movie--full comments">
-                    <div class="col-sm-3 col-md-2 col-lg-2">
-                        <div class="movie__images">
-                            <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
-                        </div>
-                        <div class="movie__feature">
-                            <a href="#" class="movie__feature-item movie__feature--comment">123</a>
-                            <a href="#" class="movie__feature-item movie__feature--video">7</a>
-                            <a href="#" class="movie__feature-item movie__feature--photo">352</a>
-                        </div>
-                    </div>
-                
-                    <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
-                        <a href="0_concertSingle.html" class="movie__title link--huge">Last Vegas (2013)</a>
-                
-                        <p class="movie__time">105 min</p>
-                
-                        <p class="movie__option"><strong>Country: </strong><a href="#">USA</a></p>
-                        <p class="movie__option"><strong>Category: </strong><a href="#">Comady</a></p>
-                        <p class="movie__option"><strong>Release date: </strong>November 1, 2013</p>
-                        <p class="movie__option"><strong>Director: </strong><a href="#">Jon Turteltaub</a></p>
-                        <p class="movie__option"><strong>Actors: </strong><a href="#">Robert De Niro</a>, <a href="#">Michael
-                                Douglas</a>, <a href="#">Morgan Freeman</a>, <a href="#">Kevin Kline</a>, <a href="#">Mary
-                                Steenburgen</a>, <a href="#">Jerry Ferrara</a>, <a href="#">Romany Malco</a> <a href="#">...</a></p>
-                        <p class="movie__option"><strong>Age restriction: </strong><a href="#">13</a></p>
-                
-                        <div class="movie__btns">
-                            <a href="#" class="btn btn-md btn--warning">book a ticket <span class="hidden-sm">for this movie</span></a>
-                            <a href="#" class="watchlist">Add to watchlist</a>
-                        </div>
-                
-                        <div class="preview-footer">
-                            <div class="movie__rate">
-                                <div class="score" style="cursor: pointer;"></div>
-                                <span class="movie__rate-number">170 votes</span>
-                                <span class="movie__rating">5.0</span>
-                            </div>
-                
-                
-                            <a href="#" class="movie__show-btn">Showtime</a>
-                        </div>
-                    </div>
-                
-                    <div class="clearfix"></div>
-                
-                    <!-- Time table (choose film start time)-->
-                    <div class="time-select">
-                        <div class="time-select__group group--first">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Cineworld</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:40">09:40</li>
-                                <li class="time-select__item" data-time="13:45">13:45</li>
-                                <li class="time-select__item active" data-time="15:45">15:45</li>
-                                <li class="time-select__item" data-time="19:50">19:50</li>
-                                <li class="time-select__item" data-time="21:50">21:50</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Empire</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Curzon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:00">09:00</li>
-                                <li class="time-select__item" data-time="11:00">11:00</li>
-                                <li class="time-select__item" data-time="13:00">13:00</li>
-                                <li class="time-select__item" data-time="15:00">15:00</li>
-                                <li class="time-select__item" data-time="17:00">17:00</li>
-                                <li class="time-select__item" data-time="19:0">19:00</li>
-                                <li class="time-select__item" data-time="21:0">21:00</li>
-                                <li class="time-select__item" data-time="23:0">23:00</li>
-                                <li class="time-select__item" data-time="01:0">01:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Odeon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group group--last">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Picturehouse</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="17:45">17:45</li>
-                                <li class="time-select__item" data-time="21:30">21:30</li>
-                                <li class="time-select__item" data-time="02:20">02:20</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end time table-->
-                
-                </div>
-                <div class="movie movie--preview movie--full ending">
-                    <div class="col-sm-3 col-md-2 col-lg-2">
-                        <div class="movie__images">
-                            <img alt="" src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
-                        </div>
-                        <div class="movie__feature">
-                            <a href="#" class="movie__feature-item movie__feature--comment">123</a>
-                            <a href="#" class="movie__feature-item movie__feature--video">7</a>
-                            <a href="#" class="movie__feature-item movie__feature--photo">352</a>
-                        </div>
-                    </div>
-                
-                    <div class="col-sm-9 col-md-10 col-lg-10 movie__about">
-                        <a href="0_concertSingle.html" class="movie__title link--huge">Last Vegas (2013)</a>
-                
-                        <p class="movie__time">105 min</p>
-                
-                        <p class="movie__option"><strong>Country: </strong><a href="#">USA</a></p>
-                        <p class="movie__option"><strong>Category: </strong><a href="#">Comady</a></p>
-                        <p class="movie__option"><strong>Release date: </strong>November 1, 2013</p>
-                        <p class="movie__option"><strong>Director: </strong><a href="#">Jon Turteltaub</a></p>
-                        <p class="movie__option"><strong>Actors: </strong><a href="#">Robert De Niro</a>, <a href="#">Michael
-                                Douglas</a>, <a href="#">Morgan Freeman</a>, <a href="#">Kevin Kline</a>, <a href="#">Mary
-                                Steenburgen</a>, <a href="#">Jerry Ferrara</a>, <a href="#">Romany Malco</a> <a href="#">...</a></p>
-                        <p class="movie__option"><strong>Age restriction: </strong><a href="#">13</a></p>
-                
-                        <div class="movie__btns">
-                            <a href="#" class="btn btn-md btn--warning">book a ticket <span class="hidden-sm">for this movie</span></a>
-                            <a href="#" class="watchlist">Add to watchlist</a>
-                        </div>
-                
-                        <div class="preview-footer">
-                            <div class="movie__rate">
-                                <div class="score" style="cursor: pointer;"></div>
-                                <span class="movie__rate-number">170 votes</span>
-                                <span class="movie__rating">5.0</span>
-                            </div>
-                
-                
-                            <a href="#" class="movie__show-btn">Showtime</a>
-                        </div>
-                    </div>
-                
-                    <div class="clearfix"></div>
-                
-                    <!-- Time table (choose film start time)-->
-                    <div class="time-select">
-                        <div class="time-select__group group--first">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Cineworld</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:40">09:40</li>
-                                <li class="time-select__item" data-time="13:45">13:45</li>
-                                <li class="time-select__item active" data-time="15:45">15:45</li>
-                                <li class="time-select__item" data-time="19:50">19:50</li>
-                                <li class="time-select__item" data-time="21:50">21:50</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Empire</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Curzon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="09:00">09:00</li>
-                                <li class="time-select__item" data-time="11:00">11:00</li>
-                                <li class="time-select__item" data-time="13:00">13:00</li>
-                                <li class="time-select__item" data-time="15:00">15:00</li>
-                                <li class="time-select__item" data-time="17:00">17:00</li>
-                                <li class="time-select__item" data-time="19:0">19:00</li>
-                                <li class="time-select__item" data-time="21:0">21:00</li>
-                                <li class="time-select__item" data-time="23:0">23:00</li>
-                                <li class="time-select__item" data-time="01:0">01:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Odeon</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="10:45">10:45</li>
-                                <li class="time-select__item" data-time="16:00">16:00</li>
-                                <li class="time-select__item" data-time="19:00">19:00</li>
-                                <li class="time-select__item" data-time="21:15">21:15</li>
-                                <li class="time-select__item" data-time="23:00">23:00</li>
-                            </ul>
-                        </div>
-                
-                        <div class="time-select__group group--last">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">Picturehouse</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time="17:45">17:45</li>
-                                <li class="time-select__item" data-time="21:30">21:30</li>
-                                <li class="time-select__item" data-time="02:20">02:20</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end time table-->
-                
-                </div>
-                <!-- end movie preview item -->
+					<div class="login__control">
+						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
+						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
+					</div>
+				</form>
+			</div>
 
-                <div class="coloum-wrapper">
-                    <ul class="pagination-leesh d-flex justify-content-center">
-                        <li>
-                            <a href="#"><span><b>이전</b></span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span><b>1</b></span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span><b>2</b></span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span><b>3</b></span></a>
-                        </li>
-                        <li>
-                            <a href="#"><span><b>다음</b></span></a>
-                        </li>
-                    </ul>
-                </div>
+		</section>
+	</div>
 
-            </div>
+	<!-- JavaScript-->
+	<!-- jQuery 3.1.1-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')
+	</script>
+	<!-- Migrate -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- Bootstrap 3-->
+	<script
+		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
-        </section>
+	<!-- Mobile menu -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
+	<!-- Select -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
 
-        <div class="clearfix"></div>
+	<!-- Stars rate -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
 
-        <footer class="footer-wrapper">
-            <section class="container">
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_index.html" class="nav-link__item">홈</a></li>
-                        <li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
-                        <li><a href="0_book.html" class="nav-link__item">티켓</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_login.html" class="nav-link__item">로그인</a></li>
-                        <li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="footer-info">
-                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social
-                                media</span></p>
-        
-                        <div class="social">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-vk"></a>
-                            <a href='#' class="social__variant fa fa-instagram"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                            <a href='#' class="social__variant fa fa-pinterest"></a>
-                        </div>
-        
-                        <div class="clearfix"></div>
-                        <p class="copy">&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all rights reserved.</p>
-                    </div>
-                </div>
-            </section>
-        </footer>
-    </div>
+	<!-- Form element -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
 
-    <!-- open/close -->
-    <div class="overlay overlay-hugeinc">
-    
-        <section class="container">
-    
-            <div class="col-sm-4 col-sm-offset-4">
-                <button type="button" class="overlay-close">Close</button>
-                <form id="login-form" class="login" method='get' novalidate=''>
-                    <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
-    
-                    <div class="social social--colored">
-                        <a href='#' class="social__variant fa fa-facebook"></a>
-                        <a href='#' class="social__variant fa fa-twitter"></a>
-                        <a href='#' class="social__variant fa fa-tumblr"></a>
-                    </div>
-    
-                    <p class="login__tracker">or</p>
-    
-                    <div class="field-wrap">
-                        <input type='email' placeholder='이메일' name='user-email' class="login__input">
-                        <input type='password' placeholder='비밀번호' name='user-password' class="login__input">
-    
-                        <input type='checkbox' id='#informed' class='login__check styled'>
-                        <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-                    </div>
-    
-                    <div class="login__control">
-                        <button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
-                        <a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
-                    </div>
-                </form>
-            </div>
-    
-        </section>
-    </div>
+	<!-- Custom -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
 
-    <!-- JavaScript-->
-    <!-- jQuery 3.1.1-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')</script>
-    <!-- Migrate -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
-    <!-- jQuery UI -->
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <!-- Bootstrap 3-->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			init_MovieList();
+		});
+	</script>
 
-    <!-- Mobile menu -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
-    <!-- Select -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
+	<script type="text/javascript">
+		document.querySelector('.btn--singin').onclick = function() {
+			var auth = document.querySelector('.auth__function');
+			auth.classList.toggle('open-function');
+		}
+	</script>
 
-    <!-- Stars rate -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
+	<!-- btnLogOut S -->
+	<script type="text/javascript">
+		document.getElementById("btnLogOut").onclick = function() {
+			$.ajax({
+				async : true,
+				cache : false,
+				type : "post"
+				/* ,dataType:"json" */
+				,
+				url : "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,
+				success : function(response) {
+					if (response.rt == "success") {
+						location.href = "/v1/infra/login/loginUsrSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				},
+				error : function(jqXHR, textStatus, errorThrown) {
+					alert("ajaxUpdate " + jqXHR.textStatus + " : "
+							+ jqXHR.errorThrown);
+				}
+			});
+		}
+	</script>
+	<!-- btnLogOut E -->
 
-    <!-- Form element -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
-    <!-- Form validation -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
-
-    <!-- Custom -->
-    <script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function () {
-            init_MovieList();
-        });
-    </script>
+	<!-- paging -->
+	<script type="text/javascript">
+		goList = function(thisPage) {
+			document.querySelector("input[name=thisPage]").value = thisPage;
+			document.querySelector("form[name=form]").action = "/v1/infra/concert/concertUsrList";
+			document.querySelector("form[name=form]").submit();
+		}
+	</script>
 
 </body>
 

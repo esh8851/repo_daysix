@@ -22,5 +22,9 @@ public class ConcertService {
 	public ConcertDto selectOne(ConcertDto concertDto) {
 		return concertDao.selectOne(concertDto);
 	}
+	
+	public int selectOneCount(ConcertVo concertVo) {
+		return concertDao.selectOneCount(concertVo);
+	}
 
 }

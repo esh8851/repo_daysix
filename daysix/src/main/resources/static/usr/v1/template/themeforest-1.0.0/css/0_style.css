@@ -16,6 +16,8 @@
   outline:none ! important;
 }
 
+.movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
+
 /******************************* indexUsrView S *******************************/
 .auth__function > li > a{cursor:pointer;}
 .page-heading{font-weight:bold ! important;}
@@ -83,7 +85,7 @@
 
 /******************************* concertSingle S *******************************/
 .pagination-leesh{justify-content:center;}
-.pagination-leesh li a{border:1px solid #4c4145;padding:11px 17px;}
+.pagination-leesh li a{border:1px solid #4c4145;cursor:pointer;padding:11px 17px;}
 .pagination-leesh li:first-child a{border-radius:3px 0 0 3px;}
 .pagination-leesh li:last-child a{border-radius:0 3px 3px 0;}
 .pagination-leesh li a:hover span{color:#fe505a;transition:0.3s;}

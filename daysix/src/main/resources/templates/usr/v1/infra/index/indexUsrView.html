@@ -673,77 +673,8 @@
 
         <div class="clearfix"></div>
 
-        <footer class="footer-wrapper">
-            <section class="container">
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_index.html" class="nav-link__item">홈</a></li>
-                        <li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
-                        <li><a href="0_book.html" class="nav-link__item">티켓</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_login.html" class="nav-link__item">로그인</a></li>
-                        <li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="footer-info">
-                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social
-                                media</span></p>
-
-                        <div class="social">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-vk"></a>
-                            <a href='#' class="social__variant fa fa-instagram"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                            <a href='#' class="social__variant fa fa-pinterest"></a>
-                        </div>
-
-                        <div class="clearfix"></div>
-                        <p class="copy">&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all rights reserved.</p>
-                    </div>
-                </div>
-            </section>
-        </footer>
-    </div>
-
-    <!-- open/close -->
-    <div class="overlay overlay-hugeinc">
-    
-        <section class="container">
-    
-            <div class="col-sm-4 col-sm-offset-4">
-                <button type="button" class="overlay-close">Close</button>
-                <form id="login-form" class="login" method='get' novalidate=''>
-                    <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
-    
-                    <div class="social social--colored">
-                        <a href='#' class="social__variant fa fa-facebook"></a>
-                        <a href='#' class="social__variant fa fa-twitter"></a>
-                        <a href='#' class="social__variant fa fa-tumblr"></a>
-                    </div>
-    
-                    <p class="login__tracker">or</p>
-    
-                    <div class="field-wrap">
-                        <input type='email' placeholder='이메일' name='user-email' class="login__input">
-                        <input type='password' placeholder='비밀번호' name='user-password' class="login__input">
-    
-                        <input type='checkbox' id='#informed' class='login__check styled'>
-                        <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-                    </div>
-    
-                    <div class="login__control">
-                        <button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
-                        <a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
-                    </div>
-                </form>
-            </div>
-    
-        </section>
+        <th:block th:replace="~{/usr/v1/infra/include/footer :: footer}"></th:block>
+        
     </div>
 
     <!-- JavaScript-->

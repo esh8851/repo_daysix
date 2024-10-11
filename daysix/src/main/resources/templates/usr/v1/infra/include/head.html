@@ -1,3 +1,5 @@
+<!-- <th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block> -->
+
 <th:block th:if="${!#strings.isEmpty(session?.sessNameXdm)}" th:fragment="head">
 	<div class="container">
 		<!-- Logo link-->
@@ -17,13 +19,9 @@
 
 			<!-- Link navigation -->
 			<ul id="navigation">
-<!-- 				<li><span class="sub-nav-toggle plus"></span> <a -->
-<!-- 					href="/v1/infra/login/loginUsrSignIn">로그인</a></li> -->
-<!-- 				<li><span class="sub-nav-toggle plus"></span> <a -->
-<!-- 					href="/v1/infra/login/loginUsrSignUp">회원가입</a></li> -->
 				<li><span class="sub-nav-toggle plus"></span> <a
 					href="/v1/infra/concert/concertUsrList">콘서트</a></li>
-				<li><span class="sub-nav-toggle plus"></span> <a href="#">콘서트티켓</a>
+				<li><span class="sub-nav-toggle plus"></span> <a href="/v1/infra/book/bookUsrFirst">콘서트티켓</a>
 				</li>
 			</ul>
 		</nav>
@@ -83,7 +81,7 @@
 
 		<!-- Additional header buttons / Auth and direct link to booking-->
 		<div class="control-panel">
-			<a href="#" class="btn btn--sign">로그인</a> <a href="#"
+			<a href="/v1/infra/login/loginUsrSignIn" class="btn btn--sign">로그인</a> <a href="#"
 				class="btn btn-md btn--warning btn--book">티켓 예매</a>
 		</div>
 

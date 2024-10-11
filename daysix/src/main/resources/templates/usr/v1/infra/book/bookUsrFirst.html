@@ -1,0 +1,440 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>AMovie - Booking step 1</title>
+<meta name="description" content="A Template by Gozha.net">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Gozha.net">
+
+<!-- Mobile Specific Metas-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="telephone=no" name="format-detection">
+
+<!-- Fonts -->
+<!-- Font awesome - icon font -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- Roboto -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<!-- jQuery UI -->
+<link
+	href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
+
+<!-- Mobile menu -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
+<!-- Select -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css" rel="stylesheet" />
+<!-- Swiper slider -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/external/idangerous.swiper.css" rel="stylesheet" />
+
+<!-- Custom -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1" rel="stylesheet" />
+
+<!-- Modernizr -->
+<script src="/usr/v1/template/themeforest-1.0.0/js/external/modernizr.custom.js"></script>
+
+<!-- 0_style.css -->
+<link rel="stylesheet" href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+
+<!-- Favicon -->
+<link rel="icon" href="/usr/v1/template/themeforest-1.0.0/0_images/favicon/img-cat.jpg">
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header section -->
+		<header class="header-wrapper">
+			<th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
+		</header>
+
+		<!-- Search bar -->
+		<div class="search-wrapper">
+			<div class="container container--add">
+				<form id='search-form' method='get' class="search">
+					<input type="text" class="search__field" placeholder="찾기">
+					<select name="sorting_item" id="search-sort" class="search__sort"
+						tabindex="0">
+						<option value="1" selected='selected'>콘서트</option>
+						<option value="2">가수</option>
+						<option value="3">장르</option>
+					</select>
+					<button type='submit' class="btn btn-md btn--danger search__button">콘서트
+						검색</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Main content -->
+
+		<section class="container">
+			<div class="order-container">
+				<div class="order">
+					<img class="order__images" alt='' src="/usr/v1/template/themeforest-1.0.0/images/tickets.png">
+					<p class="order__title">
+						티켓 예매 <br>
+						<span class="order__descript">신나는 콘서트</span>
+					</p>
+					<div class="order__control">
+						<a href="#" class="order__control-btn active">구입</a> <a href="#"
+							class="order__control-btn">예약</a>
+					</div>
+				</div>
+			</div>
+			<div class="order-step-area">
+				<div class="order-step first--step">1. 콘서트 &amp; 장소 &amp; 시간</div>
+			</div>
+
+			<h2 class="page-heading heading--outcontainer">콘서트 선택</h2>
+		</section>
+
+		<div class="choose-film">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<!--First Slide-->
+					<div class="swiper-slide" data-film='The Fifth Estate'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+						</div>
+						<p class="choose-film__title">2024 임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르
+							in 서울</p>
+					</div>
+
+					<!--Second Slide-->
+					<div class="swiper-slide" data-film='Ender’s Game'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample2.jpg">
+						</div>
+						<p class="choose-film__title">2024 이솔로몬 소극장 콘서트 〈연무〉</p>
+					</div>
+
+					<!--Third Slide-->
+					<div class="swiper-slide" data-film='About Time'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample3.jpg">
+						</div>
+						<p class="choose-film__title">2F(신용재, 김원주) 2nd FAN CONCERT 〈2F
+							ONLY-SEASON</p>
+					</div>
+
+					<!--Four Slide-->
+					<div class="swiper-slide" data-film='Last Vegas'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample4.jpg">
+						</div>
+						<p class="choose-film__title">서울 어쿠스틱 2024</p>
+					</div>
+
+					<!--Five Slide-->
+					<div class="swiper-slide"
+						data-film='The Hunger Games: Cathing Fire'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample5.jpg">
+						</div>
+						<p class="choose-film__title">윤딴딴 투어 콘서트 ［딴딴한여름 2024］ : 청주</p>
+					</div>
+
+					<!--Six Slide-->
+					<div class="swiper-slide" data-film='The Counselor'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample6.jpg">
+						</div>
+						<p class="choose-film__title">베이빌론 콘서트 〈EGO 90’S CLASSIC〉</p>
+					</div>
+
+					<!--Seven Slide-->
+					<div class="swiper-slide" data-film='Free Birds'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample7.jpg">
+						</div>
+						<p class="choose-film__title">CHERRY WORLD ［노란 머리 체리］</p>
+					</div>
+
+					<!--Eight Slide-->
+					<div class="swiper-slide" data-film='Thor: The Dark World'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample8.jpg">
+						</div>
+						<p class="choose-film__title">HULLABALOO Vol.4</p>
+					</div>
+
+					<!--Nine Slide-->
+					<div class="swiper-slide" data-film='The Book Thief'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample9.jpg">
+						</div>
+						<p class="choose-film__title">NELL CLUB CONCERT 2024 ‘Our
+							Eutopia’</p>
+					</div>
+
+					<!--Ten Slide-->
+					<div class="swiper-slide" data-film='The Wolf of Wall Stree'>
+						<div class="film-images">
+							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample10.jpg">
+						</div>
+						<p class="choose-film__title">「RIOT KIDZ」 3rd Full Album 〈98%〉
+							Release Show!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<section class="container">
+			<div class="col-sm-12">
+				<div class="choose-indector choose-indector--film">
+					<strong>선택됨: </strong><span class="choosen-area"></span>
+				</div>
+
+				<h2 class="page-heading">도시 &amp; 날짜</h2>
+
+				<div class="choose-container choose-container--short">
+					<form id='select' class="select" method='get'>
+						<select name="select_item" id="select-sort" class="select__sort"
+							tabindex="0">
+							<option value="1" selected='selected'>서울</option>
+							<option value="2">인천</option>
+							<option value="3">부산</option>
+							<option value="4">울산</option>
+							<option value="5">경기</option>
+							<option value="3">당진</option>
+							<option value="4">안성</option>
+							<option value="5">전주</option>
+						</select>
+					</form>
+
+					<div class="datepicker">
+						<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
+						<input type="text" id="datepicker" value='03/10/2014'
+							class="datepicker__input">
+					</div>
+				</div>
+
+				<h2 class="page-heading">시간 선택</h2>
+
+				<div class="time-select time-select--wide">
+					<div class="time-select__group group--first">
+						<div class="col-sm-3">
+							<p class="time-select__place">KBS부산홀</p>
+						</div>
+						<ul class="col-sm-6 items-wrap">
+							<li class="time-select__item" data-time='09:40'>09:40</li>
+							<li class="time-select__item" data-time='13:45'>13:45</li>
+							<li class="time-select__item" data-time='15:45'>15:45</li>
+							<li class="time-select__item" data-time='19:50'>19:50</li>
+							<li class="time-select__item" data-time='21:50'>21:50</li>
+						</ul>
+					</div>
+
+					<div class="time-select__group">
+						<div class="col-sm-3">
+							<p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
+						</div>
+						<ul class="col-sm-6 items-wrap">
+							<li class="time-select__item" data-time='10:45'>10:45</li>
+							<li class="time-select__item" data-time='16:00'>16:00</li>
+							<li class="time-select__item" data-time='19:00'>19:00</li>
+							<li class="time-select__item" data-time='21:15'>21:15</li>
+							<li class="time-select__item" data-time='23:00'>23:00</li>
+						</ul>
+					</div>
+
+					<div class="time-select__group">
+						<div class="col-sm-3">
+							<p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
+						</div>
+						<ul class="col-sm-6 items-wrap">
+							<li class="time-select__item" data-time='09:00'>09:00</li>
+							<li class="time-select__item" data-time='11:00'>11:00</li>
+							<li class="time-select__item" data-time='13:00'>13:00</li>
+							<li class="time-select__item" data-time='15:00'>15:00</li>
+							<li class="time-select__item" data-time='17:00'>17:00</li>
+							<li class="time-select__item" data-time='19:00'>19:00</li>
+							<li class="time-select__item" data-time='21:00'>21:00</li>
+							<li class="time-select__item" data-time='23:00'>23:00</li>
+							<li class="time-select__item" data-time='01:00'>01:00</li>
+						</ul>
+					</div>
+
+					<div class="time-select__group">
+						<div class="col-sm-3">
+							<p class="time-select__place">예술의 전당 오페라하우스 오페라극장</p>
+						</div>
+						<ul class="col-sm-6 items-wrap">
+							<li class="time-select__item" data-time='10:45'>10:45</li>
+							<li class="time-select__item" data-time='16:00'>16:00</li>
+							<li class="time-select__item" data-time='19:00'>19:00</li>
+							<li class="time-select__item" data-time='21:15'>21:15</li>
+							<li class="time-select__item" data-time='23:00'>23:00</li>
+						</ul>
+					</div>
+
+					<div class="time-select__group group--last">
+						<div class="col-sm-3">
+							<p class="time-select__place">KBS아레나</p>
+						</div>
+						<ul class="col-sm-6 items-wrap">
+							<li class="time-select__item" data-time='17:45'>17:45</li>
+							<li class="time-select__item" data-time='21:30'>21:30</li>
+							<li class="time-select__item" data-time='02:20'>02:20</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="choose-indector choose-indector--time">
+					<strong>선택됨: </strong><span class="choosen-area"></span>
+				</div>
+			</div>
+
+		</section>
+
+		<div class="clearfix"></div>
+
+		<form id='film-and-time' class="booking-form" method='get'
+			action='book2.html'>
+			<input type='text' name='choosen-movie' class="choosen-movie">
+
+			<input type='text' name='choosen-city' class="choosen-city">
+			<input type='text' name='choosen-date' class="choosen-date">
+
+			<input type='text' name='choosen-cinema' class="choosen-cinema">
+			<input type='text' name='choosen-time' class="choosen-time">
+
+
+			<div class="booking-pagination">
+				<a href="#" class="booking-pagination__prev hide--arrow"> <span
+					class="arrow__text arrow--prev"></span> <span class="arrow__info"></span>
+				</a> <a href="0_book2.html" class="booking-pagination__next"> <span
+					class="arrow__text arrow--next">다음 단계</span> <span
+					class="arrow__info">좌석 선택</span>
+				</a>
+			</div>
+
+		</form>
+
+		<div class="clearfix"></div>
+		
+		<th:block th:replace="~{/usr/v1/infra/include/footer :: footer}"></th:block>
+
+	</div>
+
+	<!-- open/close -->
+	<div class="overlay overlay-hugeinc">
+
+		<section class="container">
+
+			<div class="col-sm-4 col-sm-offset-4">
+				<button type="button" class="overlay-close">Close</button>
+				<form id="login-form" class="login" method='get' novalidate=''>
+					<p class="login__title">
+						로그인 <br>
+						<span class="login-edition">welcome to A.Movie</span>
+					</p>
+
+					<div class="social social--colored">
+						<a href='#' class="social__variant fa fa-facebook"></a> <a
+							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
+							class="social__variant fa fa-tumblr"></a>
+					</div>
+
+					<p class="login__tracker">or</p>
+
+					<div class="field-wrap">
+						<input type='email' placeholder='이메일' name='user-email'
+							class="login__input"> <input type='password'
+							placeholder='비밀번호' name='user-password' class="login__input">
+
+						<input type='checkbox' id='#informed' class='login__check styled'>
+						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+					</div>
+
+					<div class="login__control">
+						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
+						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
+					</div>
+				</form>
+			</div>
+
+		</section>
+	</div>
+
+	<!-- JavaScript-->
+	<!-- jQuery 3.1.1-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')
+	</script>
+	<!-- Migrate -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- Bootstrap 3-->
+	<script
+		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+	<!-- Mobile menu -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
+	<!-- Select -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
+	<!-- Swiper slider -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/external/idangerous.swiper.min.js"></script>
+
+	<!-- Form element -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
+
+	<!-- Custom -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			init_BookingOne();
+		});
+	</script>
+	
+	<!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,success: function(response) {
+					if(response.rt == "success") {
+						location.href = "/v1/infra/login/loginUsrSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
+    
+    <script type="text/javascript">
+    	document.querySelector('.btn--singin').onclick = function() {
+    		var auth = document.querySelector('.auth__function');
+    		auth.classList.toggle('open-function');
+    	}
+    </script>
+
+</body>
+</html>

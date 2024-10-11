@@ -198,7 +198,7 @@
       </div>
       
       <!-- Modal S -->
-   	  <div th:replace="~{/xdm/v1/infra/include/modal :: modal}"></div>
+   	  <th:block th:replace="~{/xdm/v1/infra/include/modal :: modal}"></th:block>
    	  <!-- Modal E -->
       
     </div>
@@ -336,8 +336,16 @@
 	    }
     </script>
     <!-- validation E -->
-    
-    <!-- Place this tag in your head or just before your close body tag. -->
+
+	<script type="text/javascript">
+      document.addEventListener("keypress", function(event) {
+			if (event.key === "Enter") {
+				document.getElementById("btnSignIn").click();
+			}
+		});
+	</script>
+
+	<!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

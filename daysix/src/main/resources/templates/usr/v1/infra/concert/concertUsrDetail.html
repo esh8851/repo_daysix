@@ -51,51 +51,7 @@
     <div class="wrapper">
         <!-- Header section -->
         <header class="header-wrapper">
-            <div class="container">
-                <!-- Logo link-->
-                <a href='/v1/infra/index/indexUsrView' class="logo">
-                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
-                </a>
-                
-                <!-- Main website navigation-->
-                <nav id="navigation-box">
-				<!-- Toggle for mobile menu mode -->
-					<a href="#" id="navigation-toggle">
-				    	<span class="menu-icon">
-				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-				            <span class="lines"></span>
-				        </span>
-				    	</span>
-					</a>
-			
-				<!-- Link navigation -->
-				    <ul id="navigation">
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="#">콘서트티켓</a>
-				        </li>
-				    </ul>
-				</nav>
-                
-                <!-- Additional header buttons / Auth and direct link to booking-->
-                <div class="control-panel">
-                    <a href="#" class="btn btn--sign login-window">로그인</a>
-                    <a href="#" class="btn btn-md btn--warning btn--book login-window">티켓 예매</a>
-                </div>
-
-            </div>
+            <th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
         </header>
         
         <!-- Search bar -->
@@ -117,7 +73,7 @@
         <section class="container">
             <div class="col-sm-12">
                 <div class="movie">
-                    <h2 class="page-heading"><b>2024 임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르 in 서울</b></h2>
+                    <h2 class="page-heading"><b th:text="${item?.concertName}"></b></h2>
                     
                     <div class="movie__info">
                         <div class="col-sm-4 col-md-3 movie-mobile">
@@ -129,19 +85,19 @@
                         </div>
 
                         <div class="col-sm-8 col-md-9">
-                            <p class="movie__time">169 분</p>
+                            <p class="movie__time"><span th:text="${item?.concertPlayTime}"></span> 분</p>
 
-                            <p class="movie__option"><strong>장르: </strong><a href="#">발라드</a></p>
-                            <p class="movie__option"><strong>공연일: </strong>11/1, 2024</p>
-                            <p class="movie__option"><strong>공연장: </strong>KBS 부산홀</p>
-                            <p class="movie__option"><strong>가수: </strong><a href="#">임한별</a></p>
-                            <p class="movie__option"><strong>연령: </strong><a href="#">13</a></p>
-                            <p class="movie__option"><strong>가격: </strong><a href="#">120,000원</a> &nbsp;<a href="#">240,000원</a> &nbsp;<a href="#">360,000원</a></p>
+                            <p class="movie__option"><strong>장르 : </strong><span th:text="${item?.concertGenre}"></span></p>
+                            <p class="movie__option"><strong>공연일시 : </strong><span th:text="${item?.concertDate}"></span></p>
+                            <p class="movie__option"><strong>공연장 : </strong></p>
+                            <p class="movie__option"><strong>가수 : </strong><span th:text="${item?.concertSinger}"></span></p>
+                            <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세</p>
+                            <p class="movie__option"><strong>가격 : </strong><a href="#">120,000원</a> &nbsp;<a href="#">240,000원</a> &nbsp;<a href="#">360,000원</a></p>
 
-                            <a href="#" class="comment-link">댓글:&nbsp;&nbsp;&nbsp;15</a>
+                            <a href="#" class="comment-link">댓글 :&nbsp;&nbsp;&nbsp;15</a>
 
                             <div class="movie__btns movie__btns--full">
-                                <a href="#" class="btn btn-md btn--warning"><b>콘서트 예매하기</b></a>
+                                <a href="#" class="btn btn-md btn--warning"><b>티켓 예매</b></a>
                             </div>
 
                             <div class="share">
@@ -159,17 +115,7 @@
                     
                     <h2 class="page-heading">공연정보</h2>
 
-                    <p class="movie__describe">
-                        [무통장 입금 시간 안내]
-                        ※ 본 공연의 결제수단 중 '무통장 입금'으로 예매하신 분은 예매 당일 23:59시까지 입금하셔야 예매 취소가 되지 않습니다. 이 점 유의하시기 바랍니다. (예매 당일 23:59시까지 입금 / 미입금시 취소)
-                        [휠체어석 예매 안내]
-                        ※ 휠체어석은 티켓오픈 익일부터 coex신한카드artium고객센터를 통해서 예매 가능합니다.
-                        (문의: ☎1661-5628/ 운영시간: 09:00~18:00)
-                        ※ 휠체어석은 의자가 없는 공간으로 휠체어를 이용하는 관객만 구매 가능한 좌석입니다. 휠체어석 동반인도 티켓을 구매하셔야 입장이 가능합니다.
-                        ※ 장애인 및 국가유공자 할인받은 티켓은 현장수령만 가능하며, 할인증빙서류(복지카드, 유공자증 등) 미지참시 할인받은 금액 지불 후 티켓수령 가능합니다.
-                        ※ 할인된 금액으로 예매를 하셔야하며 정가로 예매된 티켓은 현장에서 할인 받으실 수 없으니 예매시 유의바랍니다.
-                        ※ 모든 할인은 타 할인과 중복적용 불가합니다.
-                    </p>
+                    <p class="movie__describe" th:text="${item?.concertDesc}"></p>
 
                     <h2 class="page-heading">사진 &amp; 비디오</h2>
                     
@@ -417,42 +363,9 @@
         </section>
         
         <div class="clearfix"></div>
+        
+        <th:block th:replace="~{/usr/v1/infra/include/footer :: footer}"></th:block>
 
-        <footer class="footer-wrapper">
-            <section class="container">
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_index.html" class="nav-link__item">홈</a></li>
-                        <li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
-                        <li><a href="0_book.html" class="nav-link__item">티켓</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-4 col-md-3 footer-nav">
-                    <ul class="nav-link">
-                        <li><a href="0_login.html" class="nav-link__item">로그인</a></li>
-                        <li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
-                    </ul>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="footer-info">
-                        <p class="heading-special--small">A.Movie<br><span class="title-edition">in the social
-                                media</span></p>
-        
-                        <div class="social">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-vk"></a>
-                            <a href='#' class="social__variant fa fa-instagram"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                            <a href='#' class="social__variant fa fa-pinterest"></a>
-                        </div>
-        
-                        <div class="clearfix"></div>
-                        <p class="copy">&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all rights reserved.</p>
-                    </div>
-                </div>
-            </section>
-        </footer>
     </div>
 
     <!-- open/close -->
@@ -537,6 +450,39 @@
                  init_MoviePageFull();
             });
 		</script>
+		
+		<script type="text/javascript">
+    	document.querySelector('.btn--singin').onclick = function() {
+    		var auth = document.querySelector('.auth__function');
+    		auth.classList.toggle('open-function');
+    	}
+    </script>
+    
+    <!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,success: function(response) {
+					if(response.rt == "success") {
+						location.href = "/v1/infra/login/loginUsrSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
 
 </body>
 </html>

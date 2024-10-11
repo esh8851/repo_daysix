@@ -2,8 +2,6 @@ package com.seon.infra.concert;
 
 import java.util.Date;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 public class ConcertDto {
 	
 //	----------------------------- field S -----------------------------

@@ -1,28 +1,28 @@
 <!-- Modal S -->
-<div class="modal fade" id="smallModal" tabindex="-1" aria-hidden="true" th:fragment="modal">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="smallModalTiTle">확 인 👋</h5>
-    <button
-    type="button"
-    class="btn-close"
-    data-bs-dismiss="modal"
-    aria-label="Close"
-    ></button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-          <div class="col mb-3">
-            <p class="modal-title" id="smallModalBody">일치하는 회원이 존재 하지 않습니다!</p>
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-          Close
-      </div>
-    </div>
-  </div>
-</div>
+<th:block th:fragment="modal">
+	<div class="modal fade" id="smallModal" tabindex="-1"
+		aria-hidden="true" th:fragment="modal">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="smallModalTiTle"><b>확 인 👋</b></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col mb-3">
+							<p class="modal-title" id="smallModalBody">일치하는 회원이 존재 하지
+								않습니다!</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-outline-secondary"
+						data-bs-dismiss="modal">Close
+				</div>
+			</div>
+		</div>
+	</div>
+</th:block>
 <!-- Modal E -->

@@ -1,0 +1,78 @@
+<th:block th:if="${!#strings.isEmpty(session?.sessNameXdm)}" th:fragment="footer">
+	<footer class="footer-wrapper">
+		<section class="container">
+			<div class="col-xs-4 col-md-3 footer-nav">
+				<ul class="nav-link">
+					<li><a href="/usr/v1/infra/index/indexUsrView" class="nav-link__item">홈</a></li>
+					<li><a href="/usr/v1/infra/concert/concertUsrList" class="nav-link__item">콘서트</a></li>
+					<li><a href="/usr/v1/infra/book/bookUsrFirst" class="nav-link__item">티켓</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-md-3 footer-nav"></div>
+			<div class="col-xs-12 col-md-6">
+				<div class="footer-info">
+					<p class="heading-special--small">
+						A.Movie<br>
+						<span class="title-edition">in the social media</span>
+					</p>
+
+					<div class="social">
+						<a href='#' class="social__variant fa fa-facebook"></a> <a
+							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
+							class="social__variant fa fa-vk"></a> <a href='#'
+							class="social__variant fa fa-instagram"></a> <a href='#'
+							class="social__variant fa fa-tumblr"></a> <a href='#'
+							class="social__variant fa fa-pinterest"></a>
+					</div>
+
+					<div class="clearfix"></div>
+					<p class="copy">
+						&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all
+						rights reserved.
+					</p>
+				</div>
+			</div>
+		</section>
+	</footer>
+</th:block>
+
+<th:block th:if="${#strings.isEmpty(session?.sessNameXdm)}" th:fragment="footer">
+	<footer class="footer-wrapper">
+		<section class="container">
+			<div class="col-xs-4 col-md-3 footer-nav">
+				<ul class="nav-link">
+					<li><a href="/v1/infra/index/indexUsrView" class="nav-link__item">홈</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-md-3 footer-nav">
+				<ul class="nav-link">
+					<li><a href="/v1/infra/login/loginUsrSignIn" class="nav-link__item">로그인</a></li>
+					<li><a href="/v1/infra/login/loginUsrSignUp" class="nav-link__item">회원가입</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-12 col-md-6">
+				<div class="footer-info">
+					<p class="heading-special--small">
+						A.Movie<br>
+						<span class="title-edition">in the social media</span>
+					</p>
+
+					<div class="social">
+						<a href='#' class="social__variant fa fa-facebook"></a> <a
+							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
+							class="social__variant fa fa-vk"></a> <a href='#'
+							class="social__variant fa fa-instagram"></a> <a href='#'
+							class="social__variant fa fa-tumblr"></a> <a href='#'
+							class="social__variant fa fa-pinterest"></a>
+					</div>
+
+					<div class="clearfix"></div>
+					<p class="copy">
+						&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all
+						rights reserved.
+					</p>
+				</div>
+			</div>
+		</section>
+	</footer>
+</th:block>
