@@ -23,6 +23,17 @@
 				,a.concertUseNy
 				,a.concertDelNy
 			FROM concert AS a
+			WHERE 1 = 1
+				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
+				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>
+				<choose>
+					<when test="shOption == 1">AND concertSeq = #{shOption}</when>
+					<when test="shOption == 2">AND concertName LIKE CONCAT('%', #{shValue}, '%')</when>
+				</choose>
+				<choose>
+					<when test="shOptionDate == 1">AND a.concertDateTimeReg BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+					<when test="shOptionDate == 2">AND a.concertDateTimeEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				</choose>
 			ORDER BY
 				a.concertSeq DESC
 		) aa
@@ -101,5 +112,19 @@
 			WHERE 1 = 1
 				AND concertSeq = #{concertSeq}
 	</update>
+	
+	<update id="uelete">
+		UPDATE concert
+			SET
+				ConcertDelNy = 1
+			WHERE 1 = 1
+				AND concertSeq = #{concertSeq}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM concert
+			WHERE 1 = 1
+			AND concertSeq = #{concertSeq}
+	</delete>
 	
 </mapper>

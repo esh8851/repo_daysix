@@ -106,7 +106,7 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmInst" novalidate>
+                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmUpdt" novalidate>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
@@ -226,10 +226,18 @@
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-primary">
-                              <span class="tf-icons bx bx-list-ul"></span>
-                            </button>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                          	<div>
+	                            <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
+	                              <span class="tf-icons bx bx-list-ul"></span>
+	                            </button>
+	                            <button type="button" class="btn btn-icon btn-danger" id="btnUel">
+	                              <span class="tf-icons bx bx-x"></span>
+	                            </button>
+	                            <button type="button" class="btn btn-icon btn-danger" id="btnDel">
+	                              <span class="tf-icons bx bx-trash"></span>
+	                            </button>
+                          	</div>
+                            <button type="button" class="btn btn-icon btn-primary" id="btnUpdt">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -341,12 +349,18 @@
       });
     </script>
     
+    <!-- btnList S -->
     <script type="text/javascript">
-    	document.getElementById("btnSubmit").onclick = function() {
-    		form.action = "/v1/infra/concert/concertXdmInst";
+    	document.getElementById("btnList").onclick = function() {
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/concert/concertXdmList";
+    		// 전송버튼과 동일
     		form.submit();
     	}
     </script>
+    <!-- btnList E -->
     
     <!-- btnLogOut S -->
     <script type="text/javascript">
@@ -373,6 +387,37 @@
     	}
     </script>
     <!-- btnLogOut E -->
+    
+    <!-- btnUpdt S -->
+    <script type="text/javascript">
+    	document.getElementById('btnUpt').onclick = function() {
+    		form.action = "/v1/infra/concert/concertXdmUpdt";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnUpdt E -->
+    
+    <!-- btnUel S -->
+    <script type="text/javascript">
+    	document.getElementById("btnUel").onclick = function() {
+    		alert("UELETE 확인")
+    		let form = document.querySelector("[name=form]")
+    		form.action = "/v1/infra/concert/concertXdmUel";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnUel E -->
+    
+    <!-- btnDel S -->
+    <script type="text/javascript">
+    	document.getElementById("btnDel").onclick = function() {
+			alert("DELETE 확인")
+			let form = document.querySelector("[name=form]")
+			form.action = "/v1/infra/concert/concertXdmDel";
+			form.submit();
+    	}
+    </script>
+    <!-- btnDel E -->
     
   </body>
 </html>
