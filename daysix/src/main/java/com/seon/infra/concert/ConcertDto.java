@@ -5,7 +5,7 @@ import java.util.Date;
 public class ConcertDto {
 	
 //	----------------------------- field S -----------------------------
-//	table
+//	concert
 	private String concertSeq;
 	private String concertName;
 	private Integer concertPlayTime;
@@ -18,11 +18,22 @@ public class ConcertDto {
 	private Date concertDateTimeEdit;
 	private Integer concertUseNy;
 	private Integer concertDelNy;
+	
+//	concertHall
+	private String hallSeq;
+	private String hallName;
+	private String hallAdr;
+	private String hallAdrDt;
+	private String hallZipNum;
+	private Integer hallUseNy;
+	private Integer hallDelNy;
+	private String hallWi;
+	private String hallGy;
 //	----------------------------- field E -----------------------------
 	
 	
 //	----------------------------- getter & setter S -----------------------------
-//	table
+//	concert
 	public String getConcertSeq() {
 		return concertSeq;
 	}
@@ -95,6 +106,63 @@ public class ConcertDto {
 	public void setConcertDelNy(Integer concertDelNy) {
 		this.concertDelNy = concertDelNy;
 	}
+	
+//	concertHall
+	public String getHallSeq() {
+		return hallSeq;
+	}
+	public void setHallSeq(String hallSeq) {
+		this.hallSeq = hallSeq;
+	}
+	public String getHallName() {
+		return hallName;
+	}
+	public void setHallName(String hallName) {
+		this.hallName = hallName;
+	}
+	public String getHallAdr() {
+		return hallAdr;
+	}
+	public void setHallAdr(String hallAdr) {
+		this.hallAdr = hallAdr;
+	}
+	public String getHallAdrDt() {
+		return hallAdrDt;
+	}
+	public void setHallAdrDt(String hallAdrDt) {
+		this.hallAdrDt = hallAdrDt;
+	}
+	public String getHallZipNum() {
+		return hallZipNum;
+	}
+	public void setHallZipNum(String hallZipNum) {
+		this.hallZipNum = hallZipNum;
+	}
+	public Integer getHallUseNy() {
+		return hallUseNy;
+	}
+	public void setHallUseNy(Integer hallUseNy) {
+		this.hallUseNy = hallUseNy;
+	}
+	public Integer getHallDelNy() {
+		return hallDelNy;
+	}
+	public void setHallDelNy(Integer hallDelNy) {
+		this.hallDelNy = hallDelNy;
+	}
+	public String getHallWi() {
+		return hallWi;
+	}
+	public void setHallWi(String hallWi) {
+		this.hallWi = hallWi;
+	}
+	public String getHallGy() {
+		return hallGy;
+	}
+	public void setHallGy(String hallGy) {
+		this.hallGy = hallGy;
+	}
+	
 //	----------------------------- getter & setter E -----------------------------
 
 }

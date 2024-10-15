@@ -19,6 +19,10 @@ public class ConcertService {
 		return concertDao.insert(concertDto);
 	}
 	
+	public int insertHall(ConcertDto concertDto) {
+		return concertDao.insertHall(concertDto);
+	}
+	
 	public int update(ConcertDto concertDto) {
 		return concertDao.update(concertDto);
 	}

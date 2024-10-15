@@ -54,7 +54,7 @@
 			,concertUseNy
 			,concertDelNy
 		)
-		VALUE (
+		VALUES (
 			#{concertName}
 			,#{concertPlayTime}
 			,#{concertDate}
@@ -66,6 +66,32 @@
 			,now()
 			,1
 			,0
+		)
+		<selectKey resultType="String" keyProperty="concertSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<insert id="insertHall">
+		INSERT INTO concertHall (
+			hallName
+			,hallAdr
+			,hallAdrDt
+			,hallZipNum
+			,hallUseNy
+			,hallDellNy
+			,hallWi
+			,hallGy
+		)
+		VALUES (
+			#{hallName}
+			,#{hallAdr}
+			,#{hallAdrDt}
+			,#{hallZipNum}
+			,1
+			,0
+			,#{hallWi}
+			,#{hallGy}
 		)
 		<selectKey resultType="String" keyProperty="concertSeq" order="AFTER">
 			SELECT last_insert_id()

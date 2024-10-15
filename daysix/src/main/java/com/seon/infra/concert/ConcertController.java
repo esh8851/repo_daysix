@@ -35,6 +35,7 @@ public class ConcertController {
 	@RequestMapping(value="/v1/infra/concert/concertXdmInst")
 	public String concertXdmInst(ConcertDto concertDto) {
 		concertService.insert(concertDto);
+		concertService.insertHall(concertDto);
 		return "redirect:/v1/infra/concert/concertXdmList";
 	}
 	
