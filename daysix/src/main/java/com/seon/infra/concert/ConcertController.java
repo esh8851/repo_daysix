@@ -45,7 +45,7 @@ public class ConcertController {
 		return "/xdm/v1/infra/concert/concertXdmMForm";
 	}
 	
-	@RequestMapping(value="/v1/infra/concert/concertXdmUpt")
+	@RequestMapping(value="/v1/infra/concert/concertXdmUpdt")
 	public String concertXdmUpt(ConcertDto concertDto) {
 		concertService.update(concertDto);
 		return "redirect:/v1/infra/concert/concertXdmList";

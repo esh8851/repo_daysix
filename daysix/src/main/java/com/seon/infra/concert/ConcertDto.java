@@ -29,6 +29,13 @@ public class ConcertDto {
 	private Integer hallDelNy;
 	private String hallWi;
 	private String hallGy;
+	private Date hallDateTimeReg;
+	private Date hallDateTimeEdit;
+	
+//	concertCity
+	private String citySeq;
+	private String concert_concertSeq;
+	private String concertHall_hallSeq;
 //	----------------------------- field E -----------------------------
 	
 	
@@ -161,6 +168,38 @@ public class ConcertDto {
 	}
 	public void setHallGy(String hallGy) {
 		this.hallGy = hallGy;
+	}
+	public Date getHallDateTimeReg() {
+		return hallDateTimeReg;
+	}
+	public void setHallDateTimeReg(Date hallDateTimeReg) {
+		this.hallDateTimeReg = hallDateTimeReg;
+	}
+	public Date getHallDateTimeEdit() {
+		return hallDateTimeEdit;
+	}
+	public void setHallDateTimeEdit(Date hallDateTimeEdit) {
+		this.hallDateTimeEdit = hallDateTimeEdit;
+	}
+	
+//	concertCity
+	public String getCitySeq() {
+		return citySeq;
+	}
+	public void setCitySeq(String citySeq) {
+		this.citySeq = citySeq;
+	}
+	public String getConcert_concertSeq() {
+		return concert_concertSeq;
+	}
+	public void setConcert_concertSeq(String concert_concertSeq) {
+		this.concert_concertSeq = concert_concertSeq;
+	}
+	public String getConcertHall_hallSeq() {
+		return concertHall_hallSeq;
+	}
+	public void setConcertHall_hallSeq(String concertHall_hallSeq) {
+		this.concertHall_hallSeq = concertHall_hallSeq;
 	}
 	
 //	----------------------------- getter & setter E -----------------------------

@@ -22,7 +22,9 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
+				,b.concertHall_hallSeq
 			FROM concert AS a
+				LEFT JOIN concertCity as b on b.concertHall_hallSeq = a.concertSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>
@@ -79,9 +81,11 @@
 			,hallAdrDt
 			,hallZipNum
 			,hallUseNy
-			,hallDellNy
+			,hallDelNy
 			,hallWi
 			,hallGy
+			,hallDateTimeReg
+			,hallDateTimeEdit
 		)
 		VALUES (
 			#{hallName}
@@ -92,8 +96,10 @@
 			,0
 			,#{hallWi}
 			,#{hallGy}
+			,now()
+			,now()
 		)
-		<selectKey resultType="String" keyProperty="concertSeq" order="AFTER">
+		<selectKey resultType="String" keyProperty="hallSeq" order="AFTER">
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
