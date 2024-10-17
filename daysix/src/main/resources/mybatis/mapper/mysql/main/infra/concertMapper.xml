@@ -22,7 +22,6 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
-				,b.cityName
 				,c.hallName
 			FROM concert AS a
 				LEFT JOIN concertCity AS b ON b.concert_concertSeq = a.concertSeq
@@ -120,7 +119,6 @@
 			,a.concertDateTimeEdit
 			,a.concertUseNy
 			,a.concertDelNy
-			,b.cityName
 			,c.hallName
 			,c.hallWi
 			,c.hallGy

@@ -181,13 +181,13 @@
 									<strong>공연일 : </strong><span th:text="${list?.concertDate}"></span>
 								</p>
 								<p class="movie__option">
-									<strong>공연장 : </strong><span></span>
+									<strong>공연장 : </strong><span th:text="${list?.hallName}"></span>
 								</p>
 								<p class="movie__option">
 									<strong>가수 : </strong><span th:text="${list?.concertSinger}"></span>
 								</p>
 								<p class="movie__option">
-									<strong>연령 : </strong><span th:text="${list?.concertAge}"></span>세
+									<strong>연령 : </strong><span th:text="${list?.concertAge}"></span>세 이상
 								</p>
 								<div class="movie__btns">
 									<a class="btn btn-md btn--warning"

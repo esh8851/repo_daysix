@@ -88,9 +88,9 @@
 
                             <p class="movie__option"><strong>장르 : </strong><span th:text="${item?.concertGenre}"></span></p>
                             <p class="movie__option"><strong>공연일시 : </strong><span th:text="${item?.concertDate}"></span></p>
-                            <p class="movie__option"><strong>공연장 : </strong></p>
+                            <p class="movie__option"><strong>공연장 : </strong><span th:text="${item?.hallName}"></span></p>
                             <p class="movie__option"><strong>가수 : </strong><span th:text="${item?.concertSinger}"></span></p>
-                            <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세</p>
+                            <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세 이상</p>
                             <p class="movie__option"><strong>가격 : </strong></p>
 
                             <a href="#" class="comment-link">댓글 :&nbsp;&nbsp;&nbsp;15</a>
