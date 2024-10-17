@@ -34,6 +34,7 @@ public class ConcertDto {
 	
 //	concertCity
 	private String citySeq;
+	private String cityName;
 	private String concert_concertSeq;
 	private String concertHall_hallSeq;
 //	----------------------------- field E -----------------------------
@@ -191,6 +192,12 @@ public class ConcertDto {
 	}
 	public String getConcert_concertSeq() {
 		return concert_concertSeq;
+	}
+	public String getCityName() {
+		return cityName;
+	}
+	public void setCityName(String cityName) {
+		this.cityName = cityName;
 	}
 	public void setConcert_concertSeq(String concert_concertSeq) {
 		this.concert_concertSeq = concert_concertSeq;

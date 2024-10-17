@@ -192,7 +192,7 @@
 		                          <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
 		                          <th>#</th>
 		                          <th>코드</th>
-		                          <th>홀 코드</th>
+		                          <th>콘서트 홀</th>
 		                          <th>콘서트</th>
 		                          <th>공연 시간</th>
 		                          <th>공연 일시</th>
@@ -217,7 +217,7 @@
 		                          <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
 		                          <td scope="row"></td>
 		                          <td th:text="${list.concertSeq}"></td>
-		                          <td th:text="${list.concertHall_hallSeq}"></td>
+		                          <td th:text="${list.hallName}"></td>
 		                          <td>
 		                          	<span class="text-primary">
 		                          	  <a th:href="@{/v1/infra/concert/concertXdmMForm(concertSeq=${list?.concertSeq})}">
