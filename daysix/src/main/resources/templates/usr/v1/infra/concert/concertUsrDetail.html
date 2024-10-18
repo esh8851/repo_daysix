@@ -271,90 +271,78 @@
 
                     <h2 class="page-heading">댓글 <span>(15)</span></h2>
 
-                    <div class="comment-wrapper">
-                        <form id="comment-form" class="comment-form" method='post'>
-                            <textarea class="comment-form__text" placeholder='댓글을 여기에 작성해주세요.'></textarea>
-                            <label class="comment-form__info">250자 내외</label>
-                            <button type='submit' class="btn btn-md btn--danger comment-form__btn">댓글 달기</button>
-                        </form>
+					<div class="comment-wrapper">
+						<form id="comment-form" class="comment-form" method='post'>
+							<textarea class="comment-form__text"
+								placeholder='댓글을 여기에 작성해주세요.'></textarea>
+							<label class="comment-form__info">250자 내외</label>
+							<button type='submit'
+								class="btn btn-md btn--danger comment-form__btn">댓글 달기</button>
+						</form>
 
-                        <div class="comment-sets">
+						<div class="comment-sets">
 
-                        <div class="comment">
-                            <div class="comment__images">
-                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
-                            </div>
+							<div class="comment" th:each="list:${list}">
+								<div class="comment__images">
+									<img alt=''
+										src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
+								</div>
 
-                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
-                            <p class="comment__date">today | 03:04</p>
-                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                            <a href='#' class="comment__reply">댓글</a>
-                        </div>
+								<a href='#' class="comment__author"><span
+									class="social-used fa fa-facebook"></span></a>
+								<p class="comment__date">today | 03:04</p>
+								<p class="comment__message" th:text="${list?.replyText}">Lorem ipsum dolor sit amet,
+									consectetur adipiscing elit. Ut vitae enim sollicitudin,
+									euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
+									ante justo, volutpat at viverra a, mattis in velit. Morbi
+									molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+								<a href='#' class="comment__reply">댓글</a>
+							</div>
 
-                        <div class="comment">
-                            <div class="comment__images">
-                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
-                            </div>
 
-                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
-                            <p class="comment__date">22.10.2013 | 14:40</p>
-                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                            <a href='#' class="comment__reply">댓글</a>
-                        </div>
+							<div id='hide-comments' class="hide-comments">
+								<div class="comment">
+									<div class="comment__images">
+										<img alt=''
+											src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
+									</div>
 
-                        <div class="comment comment--answer">
-                            <div class="comment__images">
-                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-dmitriy.jpg">
-                            </div>
+									<a href='#' class="comment__author"><span
+										class="social-used fa fa-facebook"></span>Roberta Inetti</a>
+									<p class="comment__date">today | 03:04</p>
+									<p class="comment__message">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit. Ut vitae enim sollicitudin,
+										euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
+										ante justo, volutpat at viverra a, mattis in velit. Morbi
+										molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+									<a href='#' class="comment__reply">댓글</a>
+								</div>
 
-                            <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Dmitriy Pustovalov</a>
-                            <p class="comment__date">today | 10:19</p>
-                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                            <a href='#' class="comment__reply">댓글</a>
-                        </div>
+								<div class="comment">
+									<div class="comment__images">
+										<img alt=''
+											src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
+									</div>
 
-                        <div class="comment comment--last">
-                            <div class="comment__images">
-                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-sia.jpg">
-                            </div>
+									<a href='#' class="comment__author"><span
+										class="social-used fa fa-vk"></span>Olia Gozha</a>
+									<p class="comment__date">22.10.2013 | 14:40</p>
+									<p class="comment__message">Lorem ipsum dolor sit amet,
+										consectetur adipiscing elit. Ut vitae enim sollicitudin,
+										euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
+										ante justo, volutpat at viverra a, mattis in velit. Morbi
+										molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+									<a href='#' class="comment__reply">댓글</a>
+								</div>
+							</div>
 
-                            <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Sia Andrews</a>
-                            <p class="comment__date"> 22.10.2013 | 12:31 </p>
-                            <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                            <a href='#' class="comment__reply">댓글</a>
-                        </div>
+							<div class="comment-more">
+								<a href="#" class="watchlist">댓글 더보기</a>
+							</div>
 
-                        <div id='hide-comments' class="hide-comments">
-                            <div class="comment">
-                                <div class="comment__images">
-                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
-                                </div>
-
-                                <a href='#' class="comment__author"><span class="social-used fa fa-facebook"></span>Roberta Inetti</a>
-                                <p class="comment__date">today | 03:04</p>
-                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                                <a href='#' class="comment__reply">댓글</a>
-                            </div>
-
-                            <div class="comment">
-                                <div class="comment__images">
-                                    <img alt='' src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
-                                </div>
-
-                                <a href='#' class="comment__author"><span class="social-used fa fa-vk"></span>Olia Gozha</a>
-                                <p class="comment__date">22.10.2013 | 14:40</p>
-                                <p class="comment__message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae enim sollicitudin, euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam ante justo, volutpat at viverra a, mattis in velit. Morbi molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-                                <a href='#' class="comment__reply">댓글</a>
-                            </div>
-                        </div>
-
-                        <div class="comment-more">
-                            <a href="#" class="watchlist">댓글 더보기</a>
-                        </div>
-
-                    </div>
-                    </div>
-                </div>
+						</div>
+					</div>
+				</div>
             </div>
 
         </section>
@@ -402,83 +390,106 @@
         </div>
 
 	<!-- JavaScript-->
-        <!-- jQuery 3.1.1--> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')</script>
-        <!-- Migrate --> 
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
-        <!-- jQuery UI -->
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <!-- Bootstrap 3--> 
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<!-- jQuery 3.1.1-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-3.1.1.min.js"><\/script>')
+	</script>
+	<!-- Migrate -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- Bootstrap 3-->
+	<script
+		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
-        <!-- Mobile menu -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
-         <!-- Select -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
+	<!-- Mobile menu -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/jquery.mobile.menu.js"></script>
+	<!-- Select -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.selectbox-0.2.min.js"></script>
 
-        <!-- Stars rate -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
-        <!-- Swiper slider -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/idangerous.swiper.min.js"></script>
-        <!-- Magnific-popup -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.magnific-popup.min.js"></script> 
+	<!-- Stars rate -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.raty.js"></script>
+	<!-- Swiper slider -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/idangerous.swiper.min.js"></script>
+	<!-- Magnific-popup -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/jquery.magnific-popup.min.js"></script>
 
-        <!--*** Google map  ***-->
-        <script src="https://maps.google.com/maps/api/js?sensor=true"></script> 
-        <!--*** Google map infobox  ***-->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/infobox.js"></script> 
+	<!--*** Google map  ***-->
+	<script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+	<!--*** Google map infobox  ***-->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/external/infobox.js"></script>
 
-        <!-- Share buttons -->
-        <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
+	<!-- Share buttons -->
+	<script type="text/javascript">
+		var addthis_config = {
+			"data_track_addressbar" : true
+		};
+	</script>
+	<script type="text/javascript"
+		src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-525fd5e9061e7ef0"></script>
 
-        <!-- Form element -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
-        <!-- Form validation -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
+	<!-- Form element -->
+	<script
+		src="/usr/v1/template/themeforest-1.0.0/js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/form.js"></script>
 
-        <!-- Custom -->
-        <script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
-		
-		<script type="text/javascript">
-            $(document).ready(function() {
-                init_MoviePage();
-                 init_MoviePageFull();
-            });
-		</script>
-		
-		<script type="text/javascript">
-    	document.querySelector('.btn--singin').onclick = function() {
-    		var auth = document.querySelector('.auth__function');
-    		auth.classList.toggle('open-function');
-    	}
-    </script>
-    
-    <!-- btnLogOut S -->
+	<!-- Custom -->
+	<script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			init_MoviePage();
+			init_MoviePageFull();
+		});
+	</script>
+
+	<script type="text/javascript">
+		document.querySelector('.btn--singin').onclick = function() {
+			var auth = document.querySelector('.auth__function');
+			auth.classList.toggle('open-function');
+		}
+	</script>
+
+	<!-- btnLogOut S -->
     <script type="text/javascript">
-    	document.getElementById("btnLogOut").onclick = function() {
-    		$.ajax({
-				async: true 
-				,cache: false
-				,type: "post"
-				/* ,dataType:"json" */
-				,url: "/v1/infra/member/signoutXdmProc"
-				/* ,data : $("#formLogin").serialize() */
-				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
-				,success: function(response) {
-					if(response.rt == "success") {
-						location.href = "/v1/infra/login/loginUsrSignIn";
-					} else {
-						alert("로그아웃 실패");
+					document.getElementById("btnLogOut").onclick = function() {
+						$
+								.ajax({
+									async : true,
+									cache : false,
+									type : "post"
+									/* ,dataType:"json" */
+									,
+									url : "/v1/infra/member/signoutXdmProc"
+									/* ,data : $("#formLogin").serialize() */
+									/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+									,
+									success : function(response) {
+										if (response.rt == "success") {
+											location.href = "/v1/infra/login/loginUsrSignIn";
+										} else {
+											alert("로그아웃 실패");
+										}
+									},
+									error : function(jqXHR, textStatus,
+											errorThrown) {
+										alert("ajaxUpdate " + jqXHR.textStatus
+												+ " : " + jqXHR.errorThrown);
+									}
+								});
 					}
-				}
-				,error : function(jqXHR, textStatus, errorThrown){
-					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
-				}
-			});
-    	}
-    </script>
+				</script>
     <!-- btnLogOut E -->
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0546a9953a7fe11920be0f6f364412e5"></script>

@@ -37,6 +37,13 @@ public class ConcertDto {
 	private String cityName;
 	private String concert_concertSeq;
 	private String concertHall_hallSeq;
+	
+//	reply
+	private String replySeq;
+	private String replyText;
+	private Date replyDateTime;
+	private String member_mmSeq;
+	private String reply_replySeq;
 //	----------------------------- field E -----------------------------
 	
 	
@@ -208,6 +215,39 @@ public class ConcertDto {
 	public void setConcertHall_hallSeq(String concertHall_hallSeq) {
 		this.concertHall_hallSeq = concertHall_hallSeq;
 	}
+	
+//	reply
+	public String getReplySeq() {
+		return replySeq;
+	}
+	public void setReplySeq(String replySeq) {
+		this.replySeq = replySeq;
+	}
+	public String getReplyText() {
+		return replyText;
+	}
+	public void setReplyText(String replyText) {
+		this.replyText = replyText;
+	}
+	public Date getReplyDateTime() {
+		return replyDateTime;
+	}
+	public void setReplyDateTime(Date replyDateTime) {
+		this.replyDateTime = replyDateTime;
+	}
+	public String getMember_mmSeq() {
+		return member_mmSeq;
+	}
+	public void setMember_mmSeq(String member_mmSeq) {
+		this.member_mmSeq = member_mmSeq;
+	}
+	public String getReply_replySeq() {
+		return reply_replySeq;
+	}
+	public void setReply_replySeq(String reply_replySeq) {
+		this.reply_replySeq = reply_replySeq;
+	}
+	
 	
 //	----------------------------- getter & setter E -----------------------------
 
