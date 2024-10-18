@@ -7,6 +7,22 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectListReply" resultMap="resultMapObj">
+		SELECT
+			a.replySeq
+			,a.replyText
+			,a.replyDateTime
+			,a.member_mmSeq
+			,a.concert_concertSeq
+			,a.reply_replySeq
+			,b.mmName
+		FROM reply AS a
+		LEFT JOIN member AS b ON b.mmSeq = a.member_mmSeq
+		LEFT JOIN concert AS c ON c.concertSeq = a.concert_concertSeq
+		ORDER BY
+			a.replySeq DESC
+	</select>
+	
 	<select id="selectList" resultMap="resultMapObj">
 		SELECT aa.* FROM (
 			SELECT
@@ -23,12 +39,9 @@
 				,a.concertUseNy
 				,a.concertDelNy
 				,c.hallName
-				,e.replyText
 			FROM concert AS a
 				LEFT JOIN concertCity AS b ON b.concert_concertSeq = a.concertSeq
 				LEFT JOIN concertHall AS c ON b.concertHall_hallSeq = c.hallSeq
-				LEFT JOIN reply AS e ON e.concert_concertSeq = a.concertSeq
-    			LEFT JOIN member AS d ON d.mmSeq = e.member_mmSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>

@@ -22,5 +22,7 @@ public interface ConcertDao {
 	public int update(ConcertDto concertDto);
 	
 	public int selectOneCount(ConcertVo concertVo);
+	
+	public List<ConcertDto> selectListReply();
 
 }

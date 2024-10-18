@@ -44,10 +44,14 @@ public class ConcertDto {
 	private Date replyDateTime;
 	private String member_mmSeq;
 	private String reply_replySeq;
+
+//	member
+	private String mmName;
+	
 //	----------------------------- field E -----------------------------
 	
 	
-//	----------------------------- getter & setter S -----------------------------
+	//	----------------------------- getter & setter S -----------------------------
 //	concert
 	public String getConcertSeq() {
 		return concertSeq;
@@ -246,6 +250,14 @@ public class ConcertDto {
 	}
 	public void setReply_replySeq(String reply_replySeq) {
 		this.reply_replySeq = reply_replySeq;
+	}
+	
+//	member
+	public String getMmName() {
+		return mmName;
+	}
+	public void setMmName(String mmName) {
+		this.mmName = mmName;
 	}
 	
 	

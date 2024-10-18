@@ -282,20 +282,16 @@
 
 						<div class="comment-sets">
 
-							<div class="comment" th:each="list:${list}">
+							<div class="comment" th:each="listReply:${listReply}">
 								<div class="comment__images">
 									<img alt=''
 										src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
 								</div>
 
 								<a href='#' class="comment__author"><span
-									class="social-used fa fa-facebook"></span></a>
-								<p class="comment__date">today | 03:04</p>
-								<p class="comment__message" th:text="${list?.replyText}">Lorem ipsum dolor sit amet,
-									consectetur adipiscing elit. Ut vitae enim sollicitudin,
-									euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
-									ante justo, volutpat at viverra a, mattis in velit. Morbi
-									molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
+									class="social-used fa fa-facebook"></span><span th:text="${listReply?.mmName}"></span></a>
+								<p class="comment__date" th:text="${#dates.format(listReply.replyDateTime, 'yyyy-MM-dd HH:mm:ss')}"></p>
+								<p class="comment__message" th:text="${listReply?.replyText}"></p>
 								<a href='#' class="comment__reply">댓글</a>
 							</div>
 

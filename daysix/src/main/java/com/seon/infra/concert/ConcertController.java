@@ -77,7 +77,7 @@ public class ConcertController {
 	@RequestMapping(value="/v1/infra/concert/concertUsrDetail")
 	public String concertUsrDatail(Model model, ConcertDto concertDto, ConcertVo concertVo) {
 		model.addAttribute("item", concertService.selectOne(concertDto));
-		model.addAttribute("list", concertService.selectList(concertVo));
+		model.addAttribute("listReply", concertService.selectListReply());
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
