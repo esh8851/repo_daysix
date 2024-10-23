@@ -11,8 +11,6 @@ public interface ConcertDao {
 	
 	public int insert(ConcertDto concertDto);
 	
-	public int insertHall(ConcertDto concertDto);
-	
 	public int uelete(ConcertDto concertDto);
 	
 	public int delete(ConcertDto concertDto);
@@ -23,6 +21,4 @@ public interface ConcertDao {
 	
 	public int selectOneCount(ConcertVo concertVo);
 	
-	public List<ConcertDto> selectListReply();
-
 }

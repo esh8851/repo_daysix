@@ -96,7 +96,7 @@
                       <li class="breadcrumb-item active">Dafault</li>
                     </ol>
                   </nav>
-                  <h2 class="mb-4">Concert</h5>
+                  <h2 class="mb-4">ConcertHall</h5>
                 </div>
               </div>
               <div class="row">
@@ -106,33 +106,49 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmInst" novalidate>
+                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concertHall/concertHallXdmUpdt" novalidate>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="exampleFormControlReadOnlyInput1" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
-                              <input class="form-control" type="text" id="concertSeq" name="concertSeq" placeholder="자동생성"
+                              <label for="hallSeq" class="form-label">코드<span class="text-danger"><b>&nbsp;*</b></span></label>
+                              <input class="form-control" type="text" id="hallSeq" name="hallSeq" placeholder="자동생성" th:value="${item?.hallSeq}"
                                 readonly="">
                             </div>
                           </div>
+                        </div>
+                        <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">콘서트</label>
-                              <input type="text" class="form-control" id="concertName" name="concertName" placeholder="콘서트"
+                              <label for="hallName" class="form-label">공연장</label>
+                              <input type="text" class="form-control" id="" name="hallName" placeholder="공연장" th:value="${item?.hallName}"
                                 aria-describedby="defaultFormControlHelp" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">공연 시간</label>
-                              <input type="text" class="form-control" id="concertPlayTime" name="concertPlayTime" placeholder="공연 시간"
+                              <label for="sample6_postcode" class="form-label">우편번호</label>
+                              <input type="text" class="form-control" id="sample6_postcode" name="hallZipNum" placeholder="우편번호" th:value="${item?.hallZipNum}"
                                 aria-describedby="defaultFormControlHelp" required>
+                              <input type="button" class="btn btn-sm btn-outline-primary" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" style="margin-top:7px;">
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">공연 일시</label>
-                              <input type="text" class="form-control" id="concertDate" name="concertDate" placeholder="yyyy-MM-dd HH:mm"
+                              <label for="sample6_address" class="form-label">주소</label>
+                              <input type="text" class="form-control" id="sample6_address" name="hallAdr" placeholder="주소" th:value="${item?.hallAdr}"
+                                aria-describedby="defaultFormControlHelp" required>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="sample6_detailAddress" class="form-label">상세주소</label>
+                              <input type="text" class="form-control" id="sample6_detailAddress" name="hallAdrDt" placeholder="상세주소" th:value="${item?.hallAdrDt}"
                                 aria-describedby="defaultFormControlHelp" required>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
@@ -142,8 +158,8 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">가수</label>
-                              <input type="text" class="form-control" id="concertSinger" name="concertSinger" placeholder="가수"
+                              <label for="latitude" class="form-label">위도</label>
+                              <input type="text" class="form-control" id="latitude" name="hallWi" placeholder="자동완성" th:value="${item?.hallWi}"
                                 aria-describedby="defaultFormControlHelp" required>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
@@ -151,28 +167,21 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">연령</label>
-                              <input type="text" class="form-control" id="concertAge" name="concertAge" placeholder="연령"
+                              <label for="longitude" class="form-label">경도</label>
+                              <input type="text" class="form-control" id="longitude" name="hallGy" placeholder="자동완성" th:value="${item?.hallGy}"
                                 aria-describedby="defaultFormControlHelp" required>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
-                            </div>
-                          </div>
-                          <div class="col-3">
-                            <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">장르</label>
-                              <input type="text" class="form-control" id="concertGenre" name="concertGenre" placeholder="장르"
-                                aria-describedby="defaultFormControlHelp" required>
-                              <div class="valid-feedback"> Looks good! </div>
-                              <div class="invalid-feedback"> Please enter your name. </div>
+                              <input type="hidden" id="latitude" />
+							  <input type="hidden" id="longitude" />
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-6">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">설명</label>
-                              <textarea class="form-control" id="concertDesc" name="concertDesc" rows="3" required></textarea>
+                              <label for="concertDesc" class="form-label">설명</label>
+                              <textarea class="form-control" id="hallDesc" name="hallDesc" rows="3" th:value="${item?.hallDesc}" required></textarea>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
@@ -181,8 +190,8 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">등록일</label>
-                              <input type="text" class="form-control" id="concertDateTimeReg" name="concertDateTimeReg" placeholder="자동완성"
+                              <label for="hallDateTimeReg" class="form-label">등록일</label>
+                              <input type="text" class="form-control" id="hallDateTimeReg" name="hallDateTimeReg" placeholder="자동완성" th:value="${#dates.format(item?.hallDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"
                                 aria-describedby="defaultFormControlHelp" required disabled>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
@@ -190,20 +199,48 @@
                           </div>
                           <div class="col-3">
                             <div class="mb-3">
-                              <label for="defaultFormControlInput" class="form-label">수정일</label>
-                              <input type="text" class="form-control" id="concertDateTimeEdit" name="concertDateTimeEdit" placeholder="자동완성"
+                              <label for="hallDateTimeEdit" class="form-label">수정일</label>
+                              <input type="text" class="form-control" id="hallDateTimeEdit" name="hallDateTimeEdit" placeholder="자동완성" th:value="${#dates.format(item?.hallDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"
                                 aria-describedby="defaultFormControlHelp" required disabled>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="hallUseNy" class="form-label">사용 여부</label>
+                              <select class="form-select" id="hallUseNy" name="hallUseNy" aria-label="Default select example">
+                              	<option value="">사용 여부</option>
+                              	<option value="0" th:selected="${item?.hallUseNy == 0}">N</option>
+                              	<option value="1" th:selected="${item?.hallUseNy == 1}">Y</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-3">
+                            <div class="mb-3">
+                              <label for="hallDelNy" class="form-label">삭제 여부</label>
+                              <select class="form-select" id="hallDelNy" name="hallDelNy" aria-label="Default select example" disabled>
+                              	<option value="">삭제 여부</option>
+                              	<option value="0" th:selected="${item?.hallDelNy == 0}">N</option>
+                              	<option value="1" th:selected="${item?.hallDelNy == 1}">Y</option>
+                              </select>
                             </div>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col d-flex justify-content-between">
-                            <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
-                              <span class="tf-icons bx bx-list-ul"></span>
-                            </button>
-                            <button type="submit" class="btn btn-icon btn-primary">
+                          	<div>
+	                            <button type="button" class="btn btn-icon btn-outline-primary" id="btnList">
+	                              <span class="tf-icons bx bx-list-ul"></span>
+	                            </button>
+	                            <button type="button" class="btn btn-icon btn-danger" id="btnUel">
+	                              <span class="tf-icons bx bx-x"></span>
+	                            </button>
+	                            <button type="button" class="btn btn-icon btn-danger" id="btnDel">
+	                              <span class="tf-icons bx bx-trash"></span>
+	                            </button>
+                          	</div>
+                            <button type="button" class="btn btn-icon btn-primary" id="btnUpdt">
                               <span class="tf-icons bx bxs-data"></span>
                             </button>
                           </div>
@@ -318,7 +355,7 @@
 	<!-- btnList S -->
 	<script type="text/javascript">
 		document.getElementById('btnList').onclick = function() {
-			window.location.href = "/v1/infra/concert/concertXdmList";
+			window.location.href = "/v1/infra/concertHall/concertHallXdmList";
 		}
 	</script>
 	<!-- btnList E -->
@@ -430,6 +467,76 @@
 	    }
 	</script>
 	<!-- 콘서트홀 주소 E -->
+	
+	<!-- btnList S -->
+    <script type="text/javascript">
+    	document.getElementById("btnList").onclick = function() {
+    		// name이 form인 것을 불러와서 저장
+    		let form = document.querySelector("[name=form]")
+    		// 데이터가 전송될 주소
+    		form.action = "/v1/infra/concertHall/concertHallXdmList";
+    		// 전송버튼과 동일
+    		form.submit();
+    	}
+    </script>
+    <!-- btnList E -->
+    
+    <!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,success: function(response) {
+					if(response.rt == "success") {
+						location.href = "/v1/infra/login/loginXdmSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
+    
+    <!-- btnUpdt S -->
+    <script type="text/javascript">
+    	document.getElementById('btnUpdt').onclick = function() {
+    		form.action = "/v1/infra/concertHall/concertHallXdmUpdt";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnUpdt E -->
+    
+    <!-- btnUel S -->
+    <script type="text/javascript">
+    	document.getElementById("btnUel").onclick = function() {
+    		alert("UELETE 확인")
+    		let form = document.querySelector("[name=form]")
+    		form.action = "/v1/infra/concertHall/concertHallXdmUel";
+    		form.submit();
+    	}
+    </script>
+    <!-- btnUel E -->
+    
+    <!-- btnDel S -->
+    <script type="text/javascript">
+    	document.getElementById("btnDel").onclick = function() {
+			alert("DELETE 확인")
+			let form = document.querySelector("[name=form]")
+			form.action = "/v1/infra/concertHall/concertHallXdmDel";
+			form.submit();
+    	}
+    </script>
+    <!-- btnDel E -->
     
   </body>
 </html>

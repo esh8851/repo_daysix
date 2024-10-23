@@ -35,7 +35,6 @@ public class ConcertController {
 	@RequestMapping(value="/v1/infra/concert/concertXdmInst")
 	public String concertXdmInst(ConcertDto concertDto) {
 		concertService.insert(concertDto);
-		concertService.insertHall(concertDto);
 		return "redirect:/v1/infra/concert/concertXdmList";
 	}
 	
@@ -77,7 +76,6 @@ public class ConcertController {
 	@RequestMapping(value="/v1/infra/concert/concertUsrDetail")
 	public String concertUsrDatail(Model model, ConcertDto concertDto, ConcertVo concertVo) {
 		model.addAttribute("item", concertService.selectOne(concertDto));
-		model.addAttribute("listReply", concertService.selectListReply());
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	

@@ -5,8 +5,127 @@
 <!-- namespace :  mapper와 연결될 dao -->
 <!-- xml에서 주석 단축키 : Ctrl + Shift + C -->
 
-	<resultMap type="com.seon.infra.concertHall.ConcertHallDao" id="resultMapObj"></resultMap>
+	<resultMap type="com.seon.infra.concertHall.ConcertHallDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT aa.* FROM (
+			SELECT
+				a.hallSeq
+				,a.hallName
+				,a.hallAdr
+				,a.hallAdrDt
+				,a.hallZipNum
+				,a.hallDesc
+				,a.hallUseNy
+				,a.hallDelNy
+				,a.hallWi
+				,a.hallGy
+				,a.hallDateTimeReg
+				,a.hallDateTimeEdit
+			FROM concertHall AS a
+			WHERE 1 = 1
+				<if test="shDelNy != null and !shDelNy.equals('')">AND hallDelNy = #{shDelNy}</if>
+				<if test="shUseNy != null and !shUseNy.equals('')">AND hallUseNy = #{shUseNy}</if>
+				<choose>
+					<when test="shOption == 1">AND hallSeq = #{shOption}</when>
+					<when test="shOption == 2">AND hallName LIKE CONCAT('%', #{shValue}, '%')</when>
+				</choose>
+				<choose>
+					<when test="shOptionDate == 1">AND a.hallDateTimeReg BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+					<when test="shOptionDate == 2">AND a.hallDateTimeEdit BETWEEN #{shDateStart} AND #{shDateEnd}</when>
+				</choose>
+			ORDER BY
+				a.hallSeq DESC
+		) aa
+		limit #{rowNumToShow} offset #{startRnumForMysql}
+	</select>
 	
+	<insert id="insert">
+		INSERT INTO concertHall (
+			hallName
+			,hallAdr
+			,hallAdrDt
+			,hallZipNum
+			,hallDesc
+			,hallUseNy
+			,hallDelNy
+			,hallWi
+			,hallGy
+			,hallDateTimeReg
+			,hallDateTimeEdit
+		)
+		VALUES (
+			#{hallName}
+			,#{hallAdr}
+			,#{hallAdrDt}
+			,#{hallZipNum}
+			,#{hallDesc}
+			,1
+			,0
+			,#{hallWi}
+			,#{hallGy}
+			,now()
+			,now()
+		)
+		<selectKey resultType="String" keyProperty="hallSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
+	<select id="selectOne" resultMap="resultMapObj">
+		SELECT
+			a.hallSeq
+			,a.hallName
+			,a.hallAdr
+			,a.hallAdrDt
+			,a.hallZipNum
+			,a.hallDesc
+			,a.hallUseNy
+			,a.hallDelNy
+			,a.hallWi
+			,a.hallGy
+			,a.hallDateTimeReg
+			,a.hallDateTimeEdit
+		FROM concertHall AS a
+		WHERE 1 = 1
+			AND a.hallSeq = #{hallSeq}
+	</select>
+	
+	<select id="selectOneCount" resultType="Integer">
+		SELECT COUNT(*)
+			FROM concertHall AS a
+	</select>
+	
+	<update id="update">
+		UPDATE concertHall
+			SET
+				hallName = #{hallName}
+				,hallName = #{hallName}
+				,hallAdr = #{hallAdr}
+				,hallAdrDt = #{hallAdrDt}
+				,hallZipNum = #{hallZipNum}
+				,hallDesc = #{hallDesc}
+				,hallUseNy = #{hallUseNy}
+				,hallWi = #{hallWi}
+				,hallGy = #{hallGy}
+				,hallDateTimeReg = now()
+				,hallDateTimeEdit = now()
+			WHERE 1 = 1
+				AND hallSeq = #{hallSeq}
+	</update>
+	
+	<update id="uelete">
+		UPDATE concertHall
+			SET
+				hallDelNy = 1
+			WHERE 1 = 1
+				AND hallSeq = #{hallSeq}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM concertHall
+			WHERE 1 = 1
+				AND hallSeq = #{hallSeq}
+	</delete>
 	
 </mapper>

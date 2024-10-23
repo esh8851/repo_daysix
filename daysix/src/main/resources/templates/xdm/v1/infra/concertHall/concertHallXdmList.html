@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<!-- =========================================================
+* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
+==============================================================
+
+* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
+* Created by: ThemeSelection
+* License: You must have a valid license purchased in order to legally use the theme for your project.
+* Copyright ThemeSelection (https://themeselection.com)
+
+=========================================================
+ -->
+<!-- beautify ignore:start -->
+<html
+  xmlns:th="https://www.thymeleaf.org"
+  lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="/xdm/v1/template/sneat-1.0.0/assets/"
+  data-template="vertical-menu-template-free"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+
+    <title>Tables - Basic Tables | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/xdm/v1/template/sneat-1.0.0/assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons. Uncomment required icon fonts -->
+    <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/vendor/fonts/boxicons.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/css/demo.css" />
+
+    <!-- Vendors CSS -->
+    <link rel="stylesheet" href="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    
+    <!-- by developer -->
+	<link rel="stylesheet" href="/xdm/v1/css/datetimepicker/jquery.datetimepicker.min.css" />
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/js/helpers.js"></script>
+
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/js/config.js"></script>
+  </head>
+
+  <body>
+    <!-- Layout wrapper -->
+    <div class="layout-wrapper layout-content-navbar">
+      <div class="layout-container">
+        <!-- Menu -->
+		<th:block th:replace="~{/xdm/v1/infra/include/aside :: aside}"></th:block>
+        <!-- / Menu -->
+
+        <!-- Layout container -->
+        <div class="layout-page">
+          <!-- Navbar -->
+		  <th:block th:replace="~{/xdm/v1/infra/include/nav :: nav}"></th:block>
+          <!-- / Navbar -->
+
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
+
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <div class="card-body">
+		            <form id="form" name="form" action="/v1/infra/concertHall/concertHallXdmList">
+		            <input type="hidden" name="thisPage" th:value="${vo.thisPage}" default="1" /> 
+					<input type="hidden" id="rowNumToShow" name="rowNumToShow" th:value="${vo.rowNumToShow}" />
+		              <!-- Custom style1 Breadcrumb -->
+		              <nav aria-label="breadcrumb">
+		                <ol class="breadcrumb breadcrumb-style1">
+		                  <li class="breadcrumb-item">
+		                    <a href="javascript:void(0);">Page&nbsp;1</a>
+		                  </li>
+		                  <li class="breadcrumb-item">
+		                    <a href="javascript:void(0);">Page&nbsp;2</a>
+		                  </li>
+		                  <li class="breadcrumb-item active">Default</li>
+		                </ol>
+		              </nav>
+		              <!--/ Custom style1 Breadcrumb -->
+		              <h2 class="mb-4">ConcertHall</h5>
+		              <div class="row">
+		                <div class="col">
+		                  <div class="mb-3">
+		                    <select class="form-select" id="shDelNy" name="shDelNy" aria-label="Default select example">
+		                      <option value="" th:selected="${vo.shDelNy} == null">삭제 여부</option>
+		                      <option value="1" th:selected="${vo.shDelNy} == 1">Y</option>
+		                      <option value="0" th:selected="${vo.shDelNy} == 0">N</option>
+		                    </select>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <div class="mb-3">
+		                    <select class="form-select" id="shUseNy" name="shUseNy" aria-label="Default select example">
+		                      <option value="" th:selected="${vo.shUseNy} == null">사용 여부</option>
+		                      <option value="1" th:selected="${vo.shUseNy} == 1">Y</option>
+		                      <option value="0" th:selected="${vo.shUseNy} == 0">N</option>
+		                    </select>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <div class="mb-3">
+		                    <select class="form-select" id="shOptionDate" name="shOptionDate" aria-label="Default select example">
+		                      <option value="">날짜 선택</option>
+		                      <option value="1">등록일</option>
+		                      <option value="2">수정일</option>
+		                    </select>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <input type="text" class="form-control" id="shDateStart" name="shDateStart" autocomplete="off"
+		                      aria-describedby="defaultFormControlHelp">
+		                </div>
+		                <div class="col">
+		                  <input type="text" class="form-control" id="shDateEnd" name="shDateEnd" autocomplete="off"
+		                      aria-describedby="defaultFormControlHelp">
+		                </div>
+		              </div>
+		              <div class="row">
+		                <div class="col">
+		                  <div class="mb-3">
+		                    <select class="form-select" id="shOption" name="shOption" aria-label="Default select example">
+		                      <option value="">검색구분</option>
+		                      <option value="1">코드</option>
+		                      <option value="2">콘서트</option>
+		                    </select>
+		                  </div>
+		                </div>
+		                <div class="col">
+		                  <input type="text" class="form-control" id="shValue" name="shValue" placeholder="검색어"
+		                    aria-describedby="defaultFormControlHelp">
+		                </div>
+		                <div class="col">
+		                  <button type="submit" class="btn btn-icon btn-outline-primary">
+		                    <span class="tf-icons bx bx-search"></span>
+		                  </button>
+		                  <button type="button" class="btn btn-icon btn-outline-primary">
+		                    <span class="tf-icons bx bx-refresh"></span>
+		                  </button>
+		                </div>
+		                <div class="col"></div>
+		                <div class="col"></div>
+		              </div>
+		              <div class="row align-items-center mb-3">
+		                <div class="col">
+	                      <h5 class="mb-0"><span th:text="'Total: ' + ${vo.totalRows}"></span></h5>
+	                    </div>
+		                <div class="col-2">
+	                      <select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example">
+	                        <option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
+	                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
+	                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
+	                        <option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
+	                        <option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
+	                        <option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
+	                      </select>
+	                    </div>
+		              </div>
+		              <!-- table S -->
+		              <div class="row">
+		                <div class="col">
+		                  <div class="table-responsive text-nowrap">
+		                    <table class="table">
+		                      <thead>
+		                        <tr class="text-nowrap text-center">
+		                          <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+		                          <th>#</th>
+		                          <th>코드</th>
+		                          <th>공연장</th>
+		                          <th>주소</th>
+		                          <th>주소 상세</th>
+		                          <th>우편번호</th>
+		                          <th>설명</th>
+		                          <th>위도</th>
+		                          <th>경도</th>
+		                          <th>등록일</th>
+		                          <th>수정일</th>
+		                          <th>사용</th>
+		                          <th>삭제</th>
+		                          <th></th>
+		                        </tr>
+		                      </thead>
+		                      <tbody>
+		                      	<tr th:if="${#lists.isEmpty(list)}">
+		                      		<td colspan="15">
+		                      			<p class="fw-bold text-center mt-3">데이터 없음</p>
+		                      		</td>
+		                      	</tr>
+		                        <tr class="text-center" th:each="list:${list}" th:if="${!#lists.isEmpty(list)}">
+		                          <th><input class="form-check-input" type="checkbox" value="" id="defaultCheck1"></th>
+		                          <td scope="row"></td>
+		                          <td th:text="${list.hallSeq}"></td>
+		                          <td>
+		                          	<span class="text-primary">
+		                          	  <a th:href="@{/v1/infra/concertHall/concertHallXdmMForm(hallSeq=${list?.hallSeq})}">
+			                          	<b th:text="${list.hallName}"></b>
+		                          	  </a>
+		                          	 </span>
+		                          </td>
+		                          <td th:text="${list.hallAdr}"></td>
+		                          <td th:text="${list.hallAdrDt}"></td>
+		                          <td th:text="${list.hallZipNum}"></td>
+		                          <td th:text="${list.hallDesc}"></td>
+		                          <td th:text="${list.hallWi}"></td>
+		                          <td th:text="${list.hallGy}"></td>
+		                          <td th:text="${#dates.format(list.hallDateTimeReg, 'yyyy-MM-dd HH:mm:ss')}"></td>
+		                          <td th:text="${#dates.format(list.hallDateTimeEdit, 'yyyy-MM-dd HH:mm:ss')}"></td>
+		                          <td th:if="${list.hallUseNy eq 0}">N</td>
+		                          <td th:unless="${list.hallUseNy eq 0}">Y</td>
+		                          <td th:if="${list.hallDelNy eq 0}">N</td>
+		                          <td th:unless="${list.hallDelNy eq 0}">Y</td>
+		                          <td><h3>&nbsp;</h3></td>
+		                        </tr>
+		                      </tbody>
+		                    </table>
+		                  </div>
+		                </div>
+		              </div>
+		              <!-- table E -->
+		              <div class="row">
+	                    <div class="col">
+	                      <div class="demo-inline-spacing d-flex justify-content-center">
+	                        <!-- Basic Pagination -->
+	                        <nav aria-label="Page navigation">
+	                          <ul class="pagination">
+	                            <li class="page-item prev" th:if="${vo.startPage gt vo.pageNumToShow}" style="cursor:pointer;">
+	                              <a class="page-link" href="javascript:goList(${vo.startPage - 1})" th:attr="onclick=|goList('${vo.startPage - 1}')|"><i class="tf-icon bx bx-chevron-left"></i></a>
+	                            </li>
+	                            <li class="page-item" th:each="num: ${#numbers.sequence(vo.startPage, vo.endPage)}" th:classappend="${num eq vo.thisPage} ? active : ''"  style="cursor:pointer;">
+	                              <a class="page-link" th:attr="onclick=|goList('${num}')|" th:text="${num}"><!-- ${i.index} -->></a>
+	                            </li>
+	                            <li class="page-item next" th:if="${vo.endPage ne vo.totalPages}"  style="cursor:pointer;">
+	                              <a class="page-link" th:attr="onclick=|goList('${vo.endPage + 1}')|"><i class="tf-icon bx bx-chevron-right"></i></a>
+	                            </li>
+	                          </ul>
+	                        </nav>
+	                        <!--/ Basic Pagination -->
+	                      </div>
+	                    </div>
+	                  </div>
+		              <div class="row">
+		                <div class="col">
+		                  <button type="button" class="btn btn-icon btn-danger">
+		                    <span class="tf-icons bx bx-x"></span>
+		                  </button>
+		                  <button type="button" class="btn btn-icon btn-danger">
+		                    <span class="tf-icons bx bx-trash"></span>
+		                  </button>
+		                </div>
+		                <div class="col d-flex justify-content-end">
+		                  <button type="button" class="btn btn-icon btn-success">
+		                    <span class="tf-icons bx bx-file"></span>
+		                  </button>
+		                  <button type="button" class="btn btn-icon btn-primary ms-1" id="btnForm">
+		                    <span class="tf-icons bx bx-plus"></span>
+		                  </button>
+		                </div>
+		              </div>
+		            </form>
+                </div>
+              </div>
+            </div>
+            
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                <div class="mb-2 mb-md-0">
+                  ©
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  , made with ❤️ by
+                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                </div>
+                <div>
+                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
+                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+
+                  <a
+                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Documentation</a
+                  >
+
+                  <a
+                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                    target="_blank"
+                    class="footer-link me-4"
+                    >Support</a
+                  >
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
+        </div>
+        <!-- / Layout page -->
+      </div>
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+    </div>
+    <!-- / Layout wrapper -->
+
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/popper/popper.js"></script>
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/js/bootstrap.js"></script>
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/vendor/js/menu.js"></script>
+    <!-- endbuild -->
+
+    <!-- Vendors JS -->
+
+    <!-- Main JS -->
+    <script src="/xdm/v1/template/sneat-1.0.0/assets/js/main.js"></script>
+
+    <!-- Page JS -->
+
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    
+    <!-- by developer -->	
+	<script src="/xdm/v1/jquery/jquery-3.7.1.min.js"></script>
+	<script src="/xdm/v1/js/datetimepicker/jquery.datetimepicker.full.min.js"></script>
+	
+	<script type="text/javascript">
+		window.addEventListener('load', function(){ // 브라우저에서 페이지가 완전히 로드되었을 때 실행되는 코드
+			
+			$.datetimepicker.setLocale('ko'); // datetimepicker의 로케일을 한국어를 쓰겠다는 뜻이다.
+			
+			$("#shDateStart, #shDateEnd").datetimepicker({ // jquery의 datetimepicker 플러그인을 사용하여 id가 shDateStart, shDateEnd인 두 개의 날짜 입력 필드 요소 대해 datetimepicker를 활성화
+				timepicker:false, // 시간 선택을 비활성화
+				format:'Y-m-d'   // 날짜 형식을 'Y-m-d'로 설정
+			});
+		});
+	</script>
+    
+    <script type="text/javascript">
+    	document.getElementById("btnForm").onclick = function() {
+    		let form = document.querySelector("[name=form]");
+    		form.action = "/v1/infra/concertHall/concertHallXdmForm";
+    		form.submit();
+    	}
+    </script>
+    
+    <!-- btnLogOut S -->
+    <script type="text/javascript">
+    	document.getElementById("btnLogOut").onclick = function() {
+    		$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				/* ,dataType:"json" */
+				,url: "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,success: function(response) {
+					if(response.rt == "success") {
+						location.href = "/v1/infra/login/loginXdmSignIn";
+					} else {
+						alert("로그아웃 실패");
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+			});
+    	}
+    </script>
+    <!-- btnLogOut E -->
+    
+    <!-- paging -->
+    <script type="text/javascript">
+	    goList = function(thisPage) {
+	    	document.querySelector("input[name=thisPage]").value = thisPage;
+	    	document.querySelector("form[name=form]").action = "/v1/infra/concertHall/concertHallXdmList";
+	    	document.querySelector("form[name=form]").submit();
+	    }
+    </script>
+    
+    <!-- total S -->
+    <script type="text/javascript">
+	    document.getElementById("changeRowNum").onchange = function () {
+	        document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
+	        form.action = "/v1/infra/concertHall/concertHallXdmList";
+	        form.submit();
+	    }
+    </script>
+    <!-- total E -->
+
+  </body>
+</html>

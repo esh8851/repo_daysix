@@ -38,10 +38,7 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
-				,c.hallName
 			FROM concert AS a
-				LEFT JOIN concertCity AS b ON b.concert_concertSeq = a.concertSeq
-				LEFT JOIN concertHall AS c ON b.concertHall_hallSeq = c.hallSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>
@@ -91,36 +88,6 @@
 		</selectKey>
 	</insert>
 	
-	<insert id="insertHall">
-		INSERT INTO concertHall (
-			hallName
-			,hallAdr
-			,hallAdrDt
-			,hallZipNum
-			,hallUseNy
-			,hallDelNy
-			,hallWi
-			,hallGy
-			,hallDateTimeReg
-			,hallDateTimeEdit
-		)
-		VALUES (
-			#{hallName}
-			,#{hallAdr}
-			,#{hallAdrDt}
-			,#{hallZipNum}
-			,1
-			,0
-			,#{hallWi}
-			,#{hallGy}
-			,now()
-			,now()
-		)
-		<selectKey resultType="String" keyProperty="hallSeq" order="AFTER">
-			SELECT last_insert_id()
-		</selectKey>
-	</insert>
-	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
 			a.concertSeq
@@ -135,12 +102,7 @@
 			,a.concertDateTimeEdit
 			,a.concertUseNy
 			,a.concertDelNy
-			,c.hallName
-			,c.hallWi
-			,c.hallGy
 		FROM concert AS a
-		LEFT JOIN concertCity AS b ON b.concert_concertSeq = a.concertSeq
-		LEFT JOIN concertHall AS c ON b.concertHall_hallSeq = c.hallSeq
 		WHERE 1 = 1
 			AND a.concertSeq = #{concertSeq}
 	</select>
@@ -178,7 +140,7 @@
 	<delete id="delete">
 		DELETE FROM concert
 			WHERE 1 = 1
-			AND concertSeq = #{concertSeq}
+				AND concertSeq = #{concertSeq}
 	</delete>
 	
 </mapper>
