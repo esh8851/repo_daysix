@@ -93,7 +93,7 @@
                             <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세 이상</p>
                             <p class="movie__option"><strong>가격 : </strong></p>
 
-                            <a href="#" class="comment-link">댓글 :&nbsp;&nbsp;&nbsp;15</a>
+                            <a href="#" class="comment-link">댓글 : <span th:text="${replyCount}"></span></a>
 
                             <div class="movie__btns movie__btns--full">
                                 <a href="#" class="btn btn-md btn--warning"><b>티켓 예매</b></a>
@@ -114,7 +114,7 @@
                     
                     <h2 class="page-heading">공연정보</h2>
 
-                    <p class="movie__describe" th:text="${item?.concertDesc}"></p>
+                    <p class="movie__describe" th:text="${item?.concertDesc}" style="white-space:break-spaces"></p>
 
                     <h2 class="page-heading">사진 &amp; 비디오</h2>
                     
@@ -269,7 +269,7 @@
                     <!-- hiden maps with multiple locator-->
                     <div id="staticMap" style="width:600px;height:350px;margin-top:13px;"></div>
 
-                    <h2 class="page-heading">댓글 <span>(15)</span></h2>
+                    <h2 class="page-heading">댓글 (<span th:text="${replyCount}"></span>)</h2>
 
 					<div class="comment-wrapper">
 						<form id="comment-form" class="comment-form" method='post'>
@@ -289,9 +289,9 @@
 								</div>
 
 								<a href='#' class="comment__author"><span
-									class="social-used fa fa-facebook"></span><span></span></a>
-								<p class="comment__date"></p>
-								<p class="comment__message"></p>
+									class="social-used fa fa-facebook"></span><span th:text="${listReply.mmName}"></span></a>
+								<p class="comment__date" th:text="${#dates.format(listReply.replyDateTime, 'yyyy-MM-dd HH:mm:ss')}">날짜</p>
+								<p class="comment__message" th:text="${listReply.replyText}">글</p>
 								<a href='#' class="comment__reply">댓글</a>
 							</div>
 

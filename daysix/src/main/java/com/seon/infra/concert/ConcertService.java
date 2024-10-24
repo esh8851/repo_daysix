@@ -39,4 +39,13 @@ public class ConcertService {
 		return concertDao.selectOneCount(concertVo);
 	}
 	
+//	reply
+	public List<ConcertDto> selectListReply(ConcertVo concertVo) {
+		return concertDao.selectListReply(concertVo);
+	}
+	
+	public int selectOneCountReply(ConcertVo concertVo) {
+		return concertDao.selectOneCountReply(concertVo);
+	}
+	
 }

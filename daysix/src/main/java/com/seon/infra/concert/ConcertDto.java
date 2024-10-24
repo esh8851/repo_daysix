@@ -19,6 +19,16 @@ public class ConcertDto {
 	private Integer concertUseNy;
 	private Integer concertDelNy;
 	
+//	reply
+	private String replySeq;
+	private String replyText;
+	private Date replyDateTime;
+	private String member_mmSeq;
+	private String concert_concertSeq;
+	
+//	member
+	private String mmName;
+	
 //	----------------------------- field E -----------------------------
 	
 	
@@ -96,6 +106,49 @@ public class ConcertDto {
 	public void setConcertDelNy(Integer concertDelNy) {
 		this.concertDelNy = concertDelNy;
 	}
+	
+//	reply
+	public String getReplySeq() {
+		return replySeq;
+	}
+	public void setReplySeq(String replySeq) {
+		this.replySeq = replySeq;
+	}
+	public String getReplyText() {
+		return replyText;
+	}
+	public void setReplyText(String replyText) {
+		this.replyText = replyText;
+	}
+	public Date getReplyDateTime() {
+		return replyDateTime;
+	}
+	public void setReplyDateTime(Date replyDateTime) {
+		this.replyDateTime = replyDateTime;
+	}
+	public String getMember_mmSeq() {
+		return member_mmSeq;
+	}
+	public void setMember_mmSeq(String member_mmSeq) {
+		this.member_mmSeq = member_mmSeq;
+	}
+	public String getConcert_concertSeq() {
+		return concert_concertSeq;
+	}
+	public void setConcert_concertSeq(String concert_concertSeq) {
+		this.concert_concertSeq = concert_concertSeq;
+	}
+	
+//	member
+	public String getMmName() {
+		return mmName;
+	}
+	public void setMmName(String mmName) {
+		this.mmName = mmName;
+	}
+	
+
+	
 	
 	
 	

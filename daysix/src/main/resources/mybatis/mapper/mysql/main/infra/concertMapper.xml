@@ -11,16 +11,22 @@
 		SELECT
 			a.replySeq
 			,a.replyText
-			,a.replyDateTime
-			,a.member_mmSeq
-			,a.concert_concertSeq
-			,a.reply_replySeq
-			,b.mmName
-		FROM reply AS a
-		LEFT JOIN member AS b ON b.mmSeq = a.member_mmSeq
-		LEFT JOIN concert AS c ON c.concertSeq = a.concert_concertSeq
+		    ,a.replyDateTime
+		    ,a.member_mmSeq
+		    ,a.concert_concertSeq
+		    ,b.concertSeq
+		    ,b.concertName
+		    ,c.mmName
+		FROM reply a
+			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
+			LEFT JOIN member AS c ON c.mmSeq = a.member_mmSeq
 		ORDER BY
 			a.replySeq DESC
+	</select>
+	
+	<select id="selectOneCountReply">
+		SELECT COUNT(*)
+			FROM reply
 	</select>
 	
 	<select id="selectList" resultMap="resultMapObj">

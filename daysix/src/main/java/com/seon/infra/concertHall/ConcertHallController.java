@@ -62,4 +62,11 @@ public class ConcertHallController {
 		return "redirect:/v1/infra/concertHall/concertHallXdmList";
 	}
 	
+//	Usr
+	@RequestMapping(value="/v1/infra/concert/concertUsrListHall")
+	public String concertUsrList(Model model, ConcertHallDto concertHallDto) {
+		model.addAttribute("itemHall", concertHallService.selectOne(concertHallDto));
+		return "/usr/v1/infra/concert/concertUsrList";
+	}
+	
 }

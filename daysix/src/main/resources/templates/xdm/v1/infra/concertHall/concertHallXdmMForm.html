@@ -180,8 +180,8 @@
                         <div class="row">
                           <div class="col-6">
                             <div class="mb-3">
-                              <label for="concertDesc" class="form-label">설명</label>
-                              <textarea class="form-control" id="hallDesc" name="hallDesc" rows="3" th:value="${item?.hallDesc}" required></textarea>
+                              <label for="hallDesc" class="form-label">설명</label>
+                              <textarea class="form-control" id="hallDesc" name="hallDesc" rows="3" th:text="${item?.hallDesc}" required></textarea>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
                             </div>
