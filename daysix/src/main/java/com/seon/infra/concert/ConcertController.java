@@ -65,20 +65,19 @@ public class ConcertController {
 	
 //	Usr
 	@RequestMapping(value="/v1/infra/concert/concertUsrList")
-	public String concertUsrList(@ModelAttribute("vo") ConcertVo concertVo, Model model) {
+	public String concertUsrList(@ModelAttribute("vo") ConcertVo concertVo, Model model, ConcertDto concertDto) {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
 		}
-		model.addAttribute("replyCount", concertService.selectOneCountReply(concertVo));
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
 
 	@RequestMapping(value="/v1/infra/concert/concertUsrDetail")
 	public String concertUsrDatail(@ModelAttribute ConcertVo concertVo, Model model, ConcertDto concertDto) {
 		model.addAttribute("item", concertService.selectOne(concertDto));
-		model.addAttribute("listReply", concertService.selectListReply(concertVo));
-		model.addAttribute("replyCount", concertService.selectOneCountReply(concertVo));
+		model.addAttribute("replyList", concertService.selectListReply(concertDto));
+		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	

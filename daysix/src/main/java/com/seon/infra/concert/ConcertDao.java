@@ -22,8 +22,9 @@ public interface ConcertDao {
 	public int selectOneCount(ConcertVo concertVo);
 	
 //	reply
-	public List<ConcertDto> selectListReply(ConcertVo concertVo);
+	public int selectOneCountReply(ConcertDto concertDto);
 	
-	public int selectOneCountReply(ConcertVo concertVo);
+	public List<ConcertDto> selectListReply(ConcertDto concertDto);
 	
+//	hall
 }

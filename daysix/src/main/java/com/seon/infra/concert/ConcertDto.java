@@ -19,6 +19,12 @@ public class ConcertDto {
 	private Integer concertUseNy;
 	private Integer concertDelNy;
 	
+//	count
+	private Integer replyCount;
+	
+//	hall
+	private String hallName;
+	
 //	reply
 	private String replySeq;
 	private String replyText;
@@ -107,7 +113,23 @@ public class ConcertDto {
 		this.concertDelNy = concertDelNy;
 	}
 	
-//	reply
+	//	count
+	public Integer getReplyCount() {
+		return replyCount;
+	}
+	public void setReplyCount(Integer replyCount) {
+		this.replyCount = replyCount;
+	}
+	
+//	hall
+	public String getHallName() {
+		return hallName;
+	}
+	public void setHallName(String hallName) {
+		this.hallName = hallName;
+	}
+	
+	//	reply
 	public String getReplySeq() {
 		return replySeq;
 	}

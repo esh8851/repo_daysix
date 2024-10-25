@@ -20,13 +20,17 @@
 		FROM reply a
 			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
 			LEFT JOIN member AS c ON c.mmSeq = a.member_mmSeq
+		WHERE 1 = 1
+			AND a.concert_concertSeq = #{concertSeq}
 		ORDER BY
 			a.replySeq DESC
 	</select>
 	
-	<select id="selectOneCountReply">
+	<select id="selectOneCountReply" resultType="Integer">
 		SELECT COUNT(*)
-			FROM reply
+			FROM reply AS a
+		WHERE 1 = 1
+			AND a.concert_concertSeq = ${concertSeq}
 	</select>
 	
 	<select id="selectList" resultMap="resultMapObj">
@@ -44,7 +48,11 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
+				,(select count(replySeq) from reply as b where 1 = 1 and concert_concertSeq = a.concertSeq) as replyCount
+<!-- 				,c.hallName -->
 			FROM concert AS a
+<!-- 				left join concertHallConcert as b on b.concert_concertSeq = a.concertSeq -->
+<!--     			left join concertHall as c on c.hallSeq = b.concertHall_hallSeq -->
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>

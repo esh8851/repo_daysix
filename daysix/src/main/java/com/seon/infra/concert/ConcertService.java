@@ -40,12 +40,14 @@ public class ConcertService {
 	}
 	
 //	reply
-	public List<ConcertDto> selectListReply(ConcertVo concertVo) {
-		return concertDao.selectListReply(concertVo);
+	public int selectOneCountReply(ConcertDto concertDto) {
+		return concertDao.selectOneCountReply(concertDto);
 	}
 	
-	public int selectOneCountReply(ConcertVo concertVo) {
-		return concertDao.selectOneCountReply(concertVo);
+	public List<ConcertDto> selectListReply(ConcertDto concertDto) {
+		return concertDao.selectListReply(concertDto);
 	}
+	
+//	hall
 	
 }
