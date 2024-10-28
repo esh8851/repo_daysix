@@ -23,7 +23,10 @@ public class ConcertDto {
 	private Integer replyCount;
 	
 //	hall
+	private String hallSeq;
 	private String hallName;
+	private String hallWi;
+	private String hallGy;
 	
 //	reply
 	private String replySeq;
@@ -121,12 +124,30 @@ public class ConcertDto {
 		this.replyCount = replyCount;
 	}
 	
-//	hall
+	//	hall
+	public String getHallSeq() {
+		return hallSeq;
+	}
+	public void setHallSeq(String hallSeq) {
+		this.hallSeq = hallSeq;
+	}
 	public String getHallName() {
 		return hallName;
 	}
 	public void setHallName(String hallName) {
 		this.hallName = hallName;
+	}
+	public String getHallWi() {
+		return hallWi;
+	}
+	public void setHallWi(String hallWi) {
+		this.hallWi = hallWi;
+	}
+	public String getHallGy() {
+		return hallGy;
+	}
+	public void setHallGy(String hallGy) {
+		this.hallGy = hallGy;
 	}
 	
 	//	reply

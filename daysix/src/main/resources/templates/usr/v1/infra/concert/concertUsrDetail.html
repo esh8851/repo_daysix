@@ -88,7 +88,7 @@
 
                             <p class="movie__option"><strong>장르 : </strong><span th:text="${item?.concertGenre}"></span></p>
                             <p class="movie__option"><strong>공연일시 : </strong><span th:text="${item?.concertDate}"></span></p>
-                            <p class="movie__option"><strong>공연장 : </strong><span></span></p>
+                            <p class="movie__option"><strong>공연장 : </strong><span th:text="${item?.hallName}"></span></p>
                             <p class="movie__option"><strong>가수 : </strong><span th:text="${item?.concertSinger}"></span></p>
                             <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세 이상</p>
                             <p class="movie__option"><strong>가격 : </strong></p>
@@ -491,7 +491,7 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0546a9953a7fe11920be0f6f364412e5"></script>
     <script type="text/javascript">
 		 // 이미지 지도에서 마커가 표시될 위치입니다 
-	    var markerPosition  = new kakao.maps.LatLng(37.4982125677913, 126.867088741096);
+	    var markerPosition  = new kakao.maps.LatLng("[[${item.hallWi}]]", "[[${item.hallGy}]]");
 	
 	    // 이미지 지도에 표시할 마커입니다
 	    // 이미지 지도에 표시할 마커는 Object 형태입니다
@@ -501,7 +501,7 @@
 	
 	    var staticMapContainer  = document.getElementById('staticMap'), // 이미지 지도를 표시할 div  
 	        staticMapOption = { 
-	            center: new kakao.maps.LatLng(37.4982125677913, 126.867088741096), // 이미지 지도의 중심좌표
+	            center: new kakao.maps.LatLng("[[${item.hallWi}]]", "[[${item.hallGy}]]"), // 이미지 지도의 중심좌표
 	            level: 3, // 이미지 지도의 확대 레벨
 	            marker: marker // 이미지 지도에 표시할 마커 
 	        };    
