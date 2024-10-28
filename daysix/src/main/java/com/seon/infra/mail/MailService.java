@@ -17,7 +17,7 @@ public class MailService {
     	simpleMailMessage.setTo("esh8851@gmail.com");
     	simpleMailMessage.setSubject("안녕하세요");
 //    	simpleMailMessage.setFrom("esh8851@gmail.com");
-    	simpleMailMessage.setText("안녕하세요\n\n 잘지내고 계시죠");
+    	simpleMailMessage.setText("안녕하세요\n\n 잘지내고 계시죠\n\n 쓰레드 썼다\n\n 로그인");
 
     	javaMailSender.send(simpleMailMessage);
 

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.seon.common.util.UtilDateTime;
+import com.seon.infra.mail.MailService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -19,6 +20,9 @@ public class MemberController {
 	
 	@Autowired
 	MemberService memberService;
+	
+	@Autowired
+	MailService mailService;
 	
 //	memberXdmList
 	@RequestMapping(value="/v1/infra/member/memberXdmList")
@@ -125,6 +129,18 @@ public class MemberController {
 //				rtMember2.setIfmmSocialLoginCd(103);
 //				rtMember2.setIflgResultNy(1);
 //				memberService.insertLogLogin(rtMember2);
+				
+//				이메일
+//				mailService.sendMailSimple(); //시간이 오래걸리니까 Thread를 쓴다
+				
+				Thread thread = new Thread(new Runnable() {
+					@Override
+					public void run() {
+						mailService.sendMailSimple();
+					}
+				});
+				
+				thread.start();
 
 				returnMap.put("rt", "success");
 			} else {
