@@ -22,6 +22,8 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
 						"/v1/infra/login/loginXdmSignIn",
 						"/v1/infra/member/signinXdmProc",
 						"/v1/infra/member/signoutXdmProc",
+						"/v1/infra/member/signinUsrProc",
+						"/v1/infra/member/signoutUsrProc",
 						"/v1/infra/login/loginUsrSignIn",
 						"/v1/infra/login/loginUsrSignUp",
 						"/v1/infra/index/indexUsrView"

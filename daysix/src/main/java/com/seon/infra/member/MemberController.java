@@ -186,5 +186,86 @@ public class MemberController {
 		return returnMap;
 	}
 	
+	@ResponseBody
+	@RequestMapping(value = "/v1/infra/member/signinUsrProc")
+	public Map<String, Object> signinUsrProc(MemberDto memberDto, HttpSession httpSession) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+		
+//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
+		
+		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
+		
+		MemberDto rtMember = memberService.selectOneId(memberDto);
+		
+		if (rtMember2 != null) {
+			
+//			if(matchesBcrypt(memberDto.getMmPw(), rtMember.getMmPw(), 10)) {
+			
+//				if(dto.getAutoLogin() == true) {
+//					UtilCookie.createCookie(
+//							Constants.COOKIE_SEQ_NAME_XDM, 
+//							rtMember2.getIfmmSeq(), 
+//							Constants.COOKIE_DOMAIN_XDM, 
+//							Constants.COOKIE_PATH_XDM, 
+//							Constants.COOKIE_MAXAGE_XDM);
+//				} else {
+//					// by pass
+//				}
+			
+				httpSession.setMaxInactiveInterval(60 * 30); // 60second * 30 = 30minute
+				httpSession.setAttribute("sessSeqUsr", rtMember2.getMmSeq());
+				httpSession.setAttribute("sessIdUsr", rtMember2.getMmId());
+				httpSession.setAttribute("sessNameUsr", rtMember2.getMmName());
+				
+				System.out.println("sessSeqUsr: " + httpSession.getAttribute("sessSeqUsr"));
+				System.out.println("sessIdUsr: " + httpSession.getAttribute("sessIdUsr"));
+				System.out.println("sessNameUsr: " + httpSession.getAttribute("sessNameUsr"));
+			
+//				rtMember2.setIfmmSocialLoginCd(103);
+//				rtMember2.setIflgResultNy(1);
+//				memberService.insertLogLogin(rtMember2);
+			
+//				이메일
+//				mailService.sendMailSimple(); //시간이 오래걸리니까 Thread를 쓴다
+//				Thread thread = new Thread(new Runnable() {
+//					@Override
+//					public void run() {
+//						mailService.sendMailSimple();
+//					}
+//				});
+//				thread.start();
+				
+				returnMap.put("rt", "success");
+				
+			} else {
+				System.out.println(rtMember.getMmPw());
+				returnMap.put("rt", "fail");
+			}
+			
+//		} else {
+////			memberDto.setIfmmSocialLoginCd(103);
+////			memberDto.setIfmmSeq(rtMember.getIfmmSeq());
+////			memberDto.setIflgResultNy(0);
+////			memberService.insertLogLogin(memberDto);
+//			returnMap.put("rt", "fail");
+//			
+//		}
+//			memberDto.setIfmmSocialLoginCd(103);
+//			memberDto.setIflgResultNy(0);
+//			memberService.insertLogLogin(memberDto);
+		return returnMap;
+		
+	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value = "/v1/infra/member/signoutUsrProc")
+	public Map<String, Object> signoutUsrProc(HttpSession httpSession) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+		httpSession.invalidate();
+		returnMap.put("rt", "success");
+		return returnMap;
+	}
+	
 	
 }
