@@ -149,6 +149,22 @@
 							</ul>
 						</div>
 					</div>
+					
+					<div class="d-flex" style="width:100%;justify-content:space-between;margin-top:17px;">
+						<div class="col">
+							<span th:text="'Total: ' + ${vo.totalRows}" style="font-size:20px;"></span>
+						</div>
+						<div class="col">
+							<select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example" style="width:84px;border:1px solid #dbdee1;border-radius:3px;font-size:17px">
+	                        	<option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
+		                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
+		                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
+		                        <option value="50" th:selected="${vo.rowNumToShow eq 50}">50</option>
+		                        <option value="80" th:selected="${vo.rowNumToShow eq 80}">80</option>
+		                        <option value="100" th:selected="${vo.rowNumToShow eq 100}">100</option>
+		                    </select>
+						</div>
+					</div>
 	
 					<!-- Movie preview item -->
 					<div th:each="list:${list}">
@@ -414,6 +430,16 @@
 			document.querySelector("form[name=form]").submit();
 		}
 	</script>
+	
+	<!-- total S -->
+    <script type="text/javascript">
+	    document.getElementById("changeRowNum").onchange = function () {
+	        document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
+	        form.action = "/v1/infra/concert/concertUsrList";
+	        form.submit();
+	    }
+    </script>
+    <!-- total E -->
 
 </body>
 

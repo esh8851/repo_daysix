@@ -23,7 +23,7 @@ public class ConcertController {
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
 		}
-		model.addAttribute("list", concertService.selectList(concertVo));
+//		model.addAttribute("list", concertService.selectList(concertVo));
 		return "/xdm/v1/infra/concert/concertXdmList";
 	}
 	
