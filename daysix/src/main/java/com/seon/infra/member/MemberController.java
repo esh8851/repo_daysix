@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -23,6 +24,15 @@ public class MemberController {
 	
 	@Autowired
 	MailService mailService;
+	
+//	암호화
+	public String encodeBcrypt(String planeText, int strength) {
+		  return new BCryptPasswordEncoder(strength).encode(planeText);
+	}
+	public boolean matchesBcrypt(String planeText, String hashValue, int strength) {
+	  BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(strength);
+	  return passwordEncoder.matches(planeText, hashValue);
+	}
 	
 //	memberXdmList
 	@RequestMapping(value="/v1/infra/member/memberXdmList")
@@ -61,6 +71,7 @@ public class MemberController {
 //	memberXdmInstUsr
 	@RequestMapping(value="/v1/infra/member/memberXdmInstUsr")
 	public String memberXdmInstUsr(MemberDto memberDto) {
+//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
 		memberService.insertUsr(memberDto);
 		return "redirect:/v1/infra/login/loginUsrSignIn";
 	}
@@ -77,7 +88,6 @@ public class MemberController {
 	@RequestMapping(value="/v1/infra/member/memberXdmUpdt")
 	public String memberXdmUpdt(MemberDto memberDto) {
 		memberService.update(memberDto);
-		System.out.println("update");
 		return "redirect:/v1/infra/member/memberXdmList";
 	}
 	
@@ -100,12 +110,16 @@ public class MemberController {
 	public Map<String, Object> signinXdmProc(MemberDto memberDto, HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		
-//		MemberDto rtMember = memberService.selectOneId(memberDto);
-
+//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
+		
 		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
-
-			if (rtMember2 != null) {
-				
+		
+		MemberDto rtMember = memberService.selectOneId(memberDto);
+		
+		if (rtMember2 != null) {
+			
+//			if(matchesBcrypt(memberDto.getMmPw(), rtMember.getMmPw(), 10)) {
+			
 //				if(dto.getAutoLogin() == true) {
 //					UtilCookie.createCookie(
 //							Constants.COOKIE_SEQ_NAME_XDM, 
@@ -116,7 +130,7 @@ public class MemberController {
 //				} else {
 //					// by pass
 //				}
-
+			
 				httpSession.setMaxInactiveInterval(60 * 30); // 60second * 30 = 30minute
 				httpSession.setAttribute("sessSeqXdm", rtMember2.getMmSeq());
 				httpSession.setAttribute("sessIdXdm", rtMember2.getMmId());
@@ -125,38 +139,43 @@ public class MemberController {
 				System.out.println("sessSeqXdm: " + httpSession.getAttribute("sessSeqXdm"));
 				System.out.println("sessIdXdm: " + httpSession.getAttribute("sessIdXdm"));
 				System.out.println("sessNameXdm: " + httpSession.getAttribute("sessNameXdm"));
-				
+			
 //				rtMember2.setIfmmSocialLoginCd(103);
 //				rtMember2.setIflgResultNy(1);
 //				memberService.insertLogLogin(rtMember2);
-				
+			
 //				이메일
 //				mailService.sendMailSimple(); //시간이 오래걸리니까 Thread를 쓴다
+//				Thread thread = new Thread(new Runnable() {
+//					@Override
+//					public void run() {
+//						mailService.sendMailSimple();
+//					}
+//				});
+//				thread.start();
 				
-				Thread thread = new Thread(new Runnable() {
-					@Override
-					public void run() {
-						mailService.sendMailSimple();
-					}
-				});
-				
-				thread.start();
-
 				returnMap.put("rt", "success");
+				
 			} else {
-//				memberDto.setIfmmSocialLoginCd(103);
-//				memberDto.setIfmmSeq(rtMember.getIfmmSeq());
-//				memberDto.setIflgResultNy(0);
-//				memberService.insertLogLogin(memberDto);
+				System.out.println(rtMember.getMmPw());
 				returnMap.put("rt", "fail");
 			}
+			
+//		} else {
+////			memberDto.setIfmmSocialLoginCd(103);
+////			memberDto.setIfmmSeq(rtMember.getIfmmSeq());
+////			memberDto.setIflgResultNy(0);
+////			memberService.insertLogLogin(memberDto);
+//			returnMap.put("rt", "fail");
+//			
+//		}
 //			memberDto.setIfmmSocialLoginCd(103);
 //			memberDto.setIflgResultNy(0);
 //			memberService.insertLogLogin(memberDto);
-			
 		return returnMap;
 		
 	}
+	
 	
 	@ResponseBody
 	@RequestMapping(value = "/v1/infra/member/signoutXdmProc")

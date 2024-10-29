@@ -38,6 +38,12 @@ public class ConcertDto {
 //	member
 	private String mmName;
 	
+//	star
+	private String stSeq;
+	private Integer stStar;
+	private Integer stVote;
+	private Integer stRating;
+	
 //	----------------------------- field E -----------------------------
 	
 	
@@ -190,10 +196,31 @@ public class ConcertDto {
 		this.mmName = mmName;
 	}
 	
-
-	
-	
-	
+//	star
+	public String getStSeq() {
+		return stSeq;
+	}
+	public void setStSeq(String stSeq) {
+		this.stSeq = stSeq;
+	}
+	public Integer getStStar() {
+		return stStar;
+	}
+	public void setStStar(Integer stStar) {
+		this.stStar = stStar;
+	}
+	public Integer getStVote() {
+		return stVote;
+	}
+	public void setStVote(Integer stVote) {
+		this.stVote = stVote;
+	}
+	public Integer getStRating() {
+		return stRating;
+	}
+	public void setStRating(Integer stRating) {
+		this.stRating = stRating;
+	}
 	
 //	----------------------------- getter & setter E -----------------------------
 

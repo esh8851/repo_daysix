@@ -99,6 +99,46 @@
 	</insert>
 	<!-- insert E -->
 	
+	<!-- insertUsr S -->
+	<insert id="insertUsr">
+		INSERT INTO member(
+			mmName
+			,mmGender
+			,mmId
+			,mmEmail
+			,mmPw
+			,mmBirth
+			,mmPhone
+			,mmDateTimeReg
+			,mmDateTimeEdit
+			,mmUseNy
+			,mmDelNy
+			,mmZipNum
+			,mmAdr
+			,mmAdrDt
+		)
+		VALUE(
+			#{mmName}
+		    ,#{mmGender}
+		    ,#{mmId}
+		    ,#{mmEmail}
+		    ,#{mmPw}
+		    ,#{mmBirth}
+		    ,#{mmPhone}
+		    ,now()
+		    ,now()
+		    ,1
+		    ,0
+		    ,#{mmZipNum}
+			,#{mmAdr}
+			,#{mmAdrDt}
+		)
+		<selectKey resultType="String" keyProperty="mmSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	<!-- insertUsr E -->
+	
 	<!-- selectOne S -->
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
@@ -179,5 +219,17 @@
 			AND a.mmPw = #{mmPw}
 	</select>
 	<!-- selectOneLogin E -->
+	
+	<!-- selectOneId S -->
+	<select id="selectOneId" resultMap="resultMapObj">
+		SELECT
+			a.mmSeq
+			,a.mmId
+			,a.mmPw
+		FROM member AS a
+		WHERE 1 = 1
+			AND a.mmId = #{mmId}
+	</select>
+	<!-- selectOneId E -->
 	
 </mapper>

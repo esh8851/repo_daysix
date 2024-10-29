@@ -26,6 +26,5 @@
 		ORDER BY
 			a.mmSeq DESC
 	</select>
-	
 	  
 </mapper>

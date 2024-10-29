@@ -250,36 +250,36 @@
         	}
                 		
         //  비밀번호
-        	var mmPw = document.getElementById("mmPw");
-        	var mmPwValue = document.getElementById("mmPw").value.trim();
-        	var invalidPw = document.querySelector('.invalidPw');
-        	var validPw = document.querySelector('.validPw');
-        	var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+//         	var mmPw = document.getElementById("mmPw");
+//         	var mmPwValue = document.getElementById("mmPw").value.trim();
+//         	var invalidPw = document.querySelector('.invalidPw');
+//         	var validPw = document.querySelector('.validPw');
+//         	var mmPwRegExp = /^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
         	
-        	if(mmPwValue == '' || mmPwValue == null) {
-        		mmPw.style.borderColor = '#fe505a';
-        		invalidPw.style.display = 'block';
-        		validPw.style.display = 'none';
-        		mmPw.focus();
-        		return false;
-        	} else {
-        		mmPw.style.borderColor = '#92DA7F';
-        		invalidPw.style.display = 'none';
-        		validPw.style.display = 'block';
-        	}
+//         	if(mmPwValue == '' || mmPwValue == null) {
+//         		mmPw.style.borderColor = '#fe505a';
+//         		invalidPw.style.display = 'block';
+//         		validPw.style.display = 'none';
+//         		mmPw.focus();
+//         		return false;
+//         	} else {
+//         		mmPw.style.borderColor = '#92DA7F';
+//         		invalidPw.style.display = 'none';
+//         		validPw.style.display = 'block';
+//         	}
         	
-        	if(!mmPwRegExp.test(mmPwValue)) {
-        		mmPw.style.borderColor = '#fe505a';
-        		invalidPw.style.display = 'block';
-        		validPw.style.display = 'none';
-        		const messageElement = document.querySelector('.invalidPw .inv-em');
-        		messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 조합 8~15자리';
-        		mmPw.focus();
-        		return false;
-        	} else {
-        		invalidPw.style.display = 'none';
-        		validPw.style.display = 'block';
-        	}
+//         	if(!mmPwRegExp.test(mmPwValue)) {
+//         		mmPw.style.borderColor = '#fe505a';
+//         		invalidPw.style.display = 'block';
+//         		validPw.style.display = 'none';
+//         		const messageElement = document.querySelector('.invalidPw .inv-em');
+//         		messageElement.childNodes[2].textContent = '영대소문자, 숫자, 특수문자 조합 8~15자리';
+//         		mmPw.focus();
+//         		return false;
+//         	} else {
+//         		invalidPw.style.display = 'none';
+//         		validPw.style.display = 'block';
+//         	}
 
         	$.ajax({
         		async: true 

@@ -7,6 +7,18 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectListStar" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stStar
+			,a.stVote
+			,a.stRating
+			,a.concert_concertSeq
+		FROM star AS a
+		ODER BY
+			a.stSeq DESC
+	</select>
+	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
 			a.replySeq

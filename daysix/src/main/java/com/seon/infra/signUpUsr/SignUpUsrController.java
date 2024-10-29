@@ -14,5 +14,5 @@ public class SignUpUsrController {
 	public String loginUsrSignUp() {
 		return "/usr/v1/infra/login/loginUsrSignUp";
 	}
-
+	
 }

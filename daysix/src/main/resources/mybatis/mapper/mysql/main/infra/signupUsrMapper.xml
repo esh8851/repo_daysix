@@ -7,5 +7,44 @@
 
 	<resultMap type="com.seon.infra.signUpUsr.SignUpUsrDto" id="resultMapObj"></resultMap>
 	
+	<!-- insert S -->
+	<insert id="insert">
+		INSERT INTO member(
+			mmName
+			,mmGender
+			,mmId
+			,mmEmail
+			,mmPw
+			,mmBirth
+			,mmPhone
+			,mmDateTimeReg
+			,mmDateTimeEdit
+			,mmUseNy
+			,mmDelNy
+			,mmZipNum
+			,mmAdr
+			,mmAdrDt
+		)
+		VALUE(
+			#{mmName}
+		    ,#{mmGender}
+		    ,#{mmId}
+		    ,#{mmEmail}
+		    ,#{mmPw}
+		    ,#{mmBirth}
+		    ,#{mmPhone}
+		    ,now()
+		    ,now()
+		    ,1
+		    ,0
+		    ,#{mmZipNum}
+			,#{mmAdr}
+			,#{mmAdrDt}
+		)
+		<selectKey resultType="String" keyProperty="mmSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	<!-- insert E -->
 	
 </mapper>

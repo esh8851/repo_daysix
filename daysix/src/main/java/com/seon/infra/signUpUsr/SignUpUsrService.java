@@ -8,5 +8,5 @@ public class SignUpUsrService {
 	
 	@Autowired
 	SignUpUsrDao signUpUsrDao;
-
+	
 }

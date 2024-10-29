@@ -62,7 +62,7 @@
         </div>
 
         <!-- Main content -->
-        <form id="form" name="form" class="login" method='post' action="/v1/infra/member/memberXdmInst">
+        <form id="form" name="form" class="login" method='post' action="/v1/infra/member/memberXdmInstUsr">
             <p class="login__title">회원가입 <br><span class="login-edition">welcome to A.Movie</span></p>
 
             <div class="social social--colored">
@@ -545,6 +545,7 @@
     			validAdr.style.display = 'block';
     		}
     		
+    		let form = document.querySelector("[name=form]");
     		form.action="/v1/infra/member/memberXdmInstUsr";
     		form.submit();
     		
