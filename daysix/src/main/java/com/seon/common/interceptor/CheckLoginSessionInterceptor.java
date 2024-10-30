@@ -23,7 +23,7 @@ public class CheckLoginSessionInterceptor implements HandlerInterceptor {
 		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 	
-	public boolean preHandle2(HttpServletRequest request, HttpServletResponse response, Object handler)
+	public boolean preHandleUsr(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		
 		if (request.getSession().getAttribute("sessSeqUsr") != null) {
