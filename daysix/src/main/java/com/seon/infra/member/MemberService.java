@@ -22,7 +22,7 @@ public class MemberService {
 		return memberDao.insert(memberDto);
 	}
 	
-//	insertUsr
+//	insert
 	public int insertUsr(MemberDto memberDto) {
 		return memberDao.insertUsr(memberDto);
 	}

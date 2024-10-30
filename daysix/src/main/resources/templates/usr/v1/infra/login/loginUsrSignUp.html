@@ -62,7 +62,7 @@
         </div>
 
         <!-- Main content -->
-        <form id="form" name="form" class="login" method='post' action="/v1/infra/member/memberXdmInstUsr">
+        <form id="form" name="form" class="login" method='post' action="/v1/infra/member/memberUsrInst">
             <p class="login__title">회원가입 <br><span class="login-edition">welcome to A.Movie</span></p>
 
             <div class="social social--colored">
@@ -199,7 +199,7 @@
                     	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
                     </p>
                 </div>
-                <label for="mmPhone">생년월일</label>
+                <label for="mmBirth">생년월일</label>
                 <input type="text" placeholder="YYYY-MM-DD" class="login__input" name="mmBirth" id="mmBirth">
                 <div class="invalidBirth">
 		        	<p class="inv-em alert alert-danger">
@@ -215,7 +215,7 @@
                     	<a class="close" data-dismiss="alert" href="#" aria-hidden="true"></a>
                     </p>
                 </div>
-               	<label for="">주소 입력</label>
+               	<label>주소 입력</label>
 			    <input type="text" class="login__input"  id="sample6_postcode" name="mmZipNum" placeholder="우편번호" readonly>
 			    <input type="button" onclick="sample6_execDaumPostcode()" id="zipNumSearch" value="우편번호 찾기"><br>
 			    <input type="text" class="login__input"  id="sample6_address" name="mmAdr" placeholder="주소"><br>
@@ -236,11 +236,11 @@
                     </p>
                 </div>
                 <input type='checkbox' id='#informed' class='login__check styled'>
-                <label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+                <label class='login__check-info'>회원정보 기억하기</label>
             </div>
 
             <div class="login__control">
-                <button type=button class="btn btn-md btn--warning btn--wider" id="btnSignUp">회원가입</button>
+                <button type="button" class="btn btn-md btn--warning btn--wider" id="btnSignUp">회원가입</button>
                 <a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
             </div>
         </form>
@@ -545,11 +545,8 @@
     			validAdr.style.display = 'block';
     		}
     		
-    		let form = document.querySelector("[name=form]");
-    		form.action="/v1/infra/member/memberXdmInstUsr";
+    		form.action="/v1/infra/member/memberUsrInst";
     		form.submit();
-    		
-    		
     	}
     </script>
     <!-- btnSignUp E -->
