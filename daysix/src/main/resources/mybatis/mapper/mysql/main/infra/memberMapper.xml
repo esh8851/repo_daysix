@@ -216,7 +216,6 @@
 			member AS a
 		WHERE 1 = 1
 			AND a.mmId = #{mmId}
-			AND a.mmPw = #{mmPw}
 	</select>
 	<!-- selectOneLogin E -->
 	

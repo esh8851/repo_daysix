@@ -26,13 +26,13 @@ public class MemberController {
 	MailService mailService;
 	
 //	암호화
-//	public String encodeBcrypt(String planeText, int strength) {
-//		  return new BCryptPasswordEncoder(strength).encode(planeText);
-//	}
-//	public boolean matchesBcrypt(String planeText, String hashValue, int strength) {
-//	  BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(strength);
-//	  return passwordEncoder.matches(planeText, hashValue);
-//	}
+	public String encodeBcrypt(String planeText, int strength) {
+		  return new BCryptPasswordEncoder(strength).encode(planeText);
+	}
+	public boolean matchesBcrypt(String planeText, String hashValue, int strength) {
+	  BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(strength);
+	  return passwordEncoder.matches(planeText, hashValue);
+	}
 	
 //	memberXdmList
 	@RequestMapping(value="/v1/infra/member/memberXdmList")
@@ -72,7 +72,7 @@ public class MemberController {
 	@RequestMapping(value="/v1/infra/member/memberUsrInst")
 	public String memberUsrInst(MemberDto memberDto) {
 //		암호화
-//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
+		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
 		memberService.insertUsr(memberDto);
 		return "redirect:/v1/infra/login/loginUsrSignIn";
 	}
@@ -114,8 +114,6 @@ public class MemberController {
 //		MemberDto rtMember = memberService.selectOneId(memberDto);
 		
 		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
-		
-//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
 		
 		if (rtMember2 != null) {
 			
@@ -165,15 +163,13 @@ public class MemberController {
 	public Map<String, Object> signinUsrProc(MemberDto memberDto, HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		
-//		MemberDto rtMember = memberService.selectOneId(memberDto);
+		MemberDto rtMember = memberService.selectOneId(memberDto);
 		
 		MemberDto rtMember2 = memberService.selectOneLogin(memberDto);
 		
-//		memberDto.setMmPw(encodeBcrypt(memberDto.getMmPw(), 10));
-		
 		if (rtMember2 != null) {
 			
-//			if(matchesBcrypt(memberDto.getMmPw(), rtMember.getMmPw(), 10)) {
+			if(matchesBcrypt(memberDto.getMmPw(), rtMember.getMmPw(), 10)) {
 			
 				httpSession.setMaxInactiveInterval(60 * 30); // 60second * 30 = 30minute
 				httpSession.setAttribute("sessSeqUsr", rtMember2.getMmSeq());
@@ -200,7 +196,7 @@ public class MemberController {
 				returnMap.put("rt", "fail");
 			}
 			
-//		}
+		}
 		return returnMap;
 	}
 	
