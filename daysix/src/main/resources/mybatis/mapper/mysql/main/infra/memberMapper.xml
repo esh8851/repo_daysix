@@ -99,9 +99,9 @@
 	</insert>
 	<!-- insert E -->
 	
-	<!-- insert S -->
+	<!-- insertUsr S -->
 	<insert id="insertUsr">
-		INSERT INTO member(
+		INSERT INTO member (
 			mmName
 			,mmGender
 			,mmId
@@ -117,7 +117,7 @@
 			,mmAdr
 			,mmAdrDt
 		)
-		VALUE(
+		VALUES (
 			#{mmName}
 		    ,#{mmGender}
 		    ,#{mmId}
@@ -137,7 +137,7 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	<!-- insert E -->
+	<!-- insertUsr E -->
 	
 	<!-- selectOne S -->
 	<select id="selectOne" resultMap="resultMapObj">

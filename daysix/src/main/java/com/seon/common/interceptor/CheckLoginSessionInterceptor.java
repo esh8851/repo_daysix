@@ -23,17 +23,4 @@ public class CheckLoginSessionInterceptor implements HandlerInterceptor {
 		return HandlerInterceptor.super.preHandle(request, response, handler);
 	}
 	
-	public boolean preHandleUsr(HttpServletRequest request, HttpServletResponse response, Object handler)
-			throws Exception {
-		
-		if (request.getSession().getAttribute("sessSeqUsr") != null) {
-			// by pass
-		} else {
-			response.sendRedirect(Constants.URL_LOGINFORM_USR);
-			return false;
-		}
-		
-		return HandlerInterceptor.super.preHandle(request, response, handler);
-	}
-
 }
