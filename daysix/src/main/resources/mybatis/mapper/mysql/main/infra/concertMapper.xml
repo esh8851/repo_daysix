@@ -7,18 +7,6 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
-	<select id="selectListStar" resultMap="resultMapObj">
-		SELECT
-			a.stSeq
-			,a.stStar
-			,a.stVote
-			,a.stRating
-			,a.concert_concertSeq
-		FROM star AS a
-		ODER BY
-			a.stSeq DESC
-	</select>
-	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
 			a.replySeq
@@ -60,6 +48,9 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
+				,a.concertStar
+				,a.concertVote
+				,a.concertAverage
 				,(select count(replySeq) from reply as b where 1 = 1 and concert_concertSeq = a.concertSeq) as replyCount
 				,c.hallName
 			FROM concert AS a
@@ -128,6 +119,9 @@
 			,a.concertDateTimeEdit
 			,a.concertUseNy
 			,a.concertDelNy
+			,a.concertStar
+			,a.concertVote
+			,a.concertAverage
 			,c.hallName
 			,c.hallWi
 			,c.hallGy

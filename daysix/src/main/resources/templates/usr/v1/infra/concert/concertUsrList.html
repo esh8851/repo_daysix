@@ -150,12 +150,12 @@
 						</div>
 					</div>
 					
-					<div class="d-flex" style="width:100%;justify-content:space-between;margin-top:17px;">
+					<div class="d-flex textToalWrap">
 						<div class="col">
-							<span th:text="'Total: ' + ${vo.totalRows}" style="font-size:20px;"></span>
+							<p class="textTotal">Total : <span th:text="${vo.totalRows}"></span></p>
 						</div>
 						<div class="col">
-							<select class="form-select" id="changeRowNum" name="changeRowNum" aria-label="Default select example" style="width:84px;border:1px solid #dbdee1;border-radius:3px;padding:3px;">
+							<select class="form-select selectTotal" id="changeRowNum" name="changeRowNum" aria-label="Default select example">
 	                        	<option value="5" th:selected="${vo.rowNumToShow eq 5}">5</option>
 		                        <option value="10" th:selected="${vo.rowNumToShow eq 10}">10</option>
 		                        <option value="30" th:selected="${vo.rowNumToShow eq 30}">30</option>
@@ -215,8 +215,12 @@
 								<div class="preview-footer">
 									<div class="movie__rate">
 										<div class="score"></div>
-										<span class="movie__rate-number">170 투표</span> <span
-											class="movie__rating">5.0</span>
+										<div class="starImg">
+											<img alt="1" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg">
+											<input type="hidden" id="starVal" value=""/> 
+										</div>
+										<span class="movie__rate-number" th:text="${list.concertVote} + '투표'"></span> <span
+											class="movie__rating" th:text="${list.concertAverage}"></span>
 									</div>
 									<a href="#" class="movie__show-btn">공연 시간</a>
 								</div>
@@ -440,7 +444,11 @@
 	    }
     </script>
     <!-- total E -->
-
+    
+    <script type="text/javascript">
+    	
+    </script>
+    
 </body>
 
 </html>

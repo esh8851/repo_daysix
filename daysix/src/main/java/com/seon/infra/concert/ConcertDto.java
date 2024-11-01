@@ -18,6 +18,9 @@ public class ConcertDto {
 	private Date concertDateTimeEdit;
 	private Integer concertUseNy;
 	private Integer concertDelNy;
+	private Integer concertStar;
+	private Integer concertVote;
+	private Integer concertAverage;
 	
 //	count
 	private Integer replyCount;
@@ -120,6 +123,24 @@ public class ConcertDto {
 	}
 	public void setConcertDelNy(Integer concertDelNy) {
 		this.concertDelNy = concertDelNy;
+	}
+	public Integer getConcertStar() {
+		return concertStar;
+	}
+	public void setConcertStar(Integer concertStar) {
+		this.concertStar = concertStar;
+	}
+	public Integer getConcertVote() {
+		return concertVote;
+	}
+	public void setConcertVote(Integer concertVote) {
+		this.concertVote = concertVote;
+	}
+	public Integer getConcertAverage() {
+		return concertAverage;
+	}
+	public void setConcertAverage(Integer concertAverage) {
+		this.concertAverage = concertAverage;
 	}
 	
 	//	count
