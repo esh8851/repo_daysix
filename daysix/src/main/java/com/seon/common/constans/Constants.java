@@ -8,4 +8,6 @@ public class Constants {
 	public static final String URL_LOGINFORM_XDM = "/v1/infra/login/loginXdmSignIn";
 	public static final String URL_LOGINFORM_USR = "/v1/infra/login/loginUsrSignIn";
 	
+	public static final String DATETIME_FORMAT_BASIC = "yyyy-MM-dd HH:mm:ss";
+	
 }

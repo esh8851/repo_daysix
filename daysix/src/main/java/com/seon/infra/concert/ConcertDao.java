@@ -26,5 +26,4 @@ public interface ConcertDao {
 	
 	public List<ConcertDto> selectListReply(ConcertDto concertDto);
 	
-//	hall
 }

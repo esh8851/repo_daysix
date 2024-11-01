@@ -2,6 +2,8 @@ package com.seon.infra.concert;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class ConcertDto {
 	
 //	----------------------------- field S -----------------------------
@@ -46,6 +48,21 @@ public class ConcertDto {
 	private Integer stStar;
 	private Integer stVote;
 	private Integer stRating;
+	
+//	photo
+	private String pseq;
+	private Integer type;
+	private Integer defaultNy;
+	private Integer sort;
+	private String path;
+	private String tableName;
+	private String originalName;
+	private String uuidName;
+	private String ext;
+	private Long size;
+	
+	private MultipartFile uploadFile;
+	private MultipartFile[] uploadFiles;
 	
 //	----------------------------- field E -----------------------------
 	
@@ -242,6 +259,83 @@ public class ConcertDto {
 	public void setStRating(Integer stRating) {
 		this.stRating = stRating;
 	}
+	
+//	photo
+	public String getPseq() {
+		return pseq;
+	}
+	public void setPseq(String pseq) {
+		this.pseq = pseq;
+	}
+	public Integer getType() {
+		return type;
+	}
+	public void setType(Integer type) {
+		this.type = type;
+	}
+	public Integer getDefaultNy() {
+		return defaultNy;
+	}
+	public void setDefaultNy(Integer defaultNy) {
+		this.defaultNy = defaultNy;
+	}
+	public Integer getSort() {
+		return sort;
+	}
+	public void setSort(Integer sort) {
+		this.sort = sort;
+	}
+	public String getPath() {
+		return path;
+	}
+	public void setPath(String path) {
+		this.path = path;
+	}
+	public String getTableName() {
+		return tableName;
+	}
+	public void setTableName(String tableName) {
+		this.tableName = tableName;
+	}
+	public String getOriginalName() {
+		return originalName;
+	}
+	public void setOriginalName(String originalName) {
+		this.originalName = originalName;
+	}
+	public String getUuidName() {
+		return uuidName;
+	}
+	public void setUuidName(String uuidName) {
+		this.uuidName = uuidName;
+	}
+	public String getExt() {
+		return ext;
+	}
+	public void setExt(String ext) {
+		this.ext = ext;
+	}
+	public Long getSize() {
+		return size;
+	}
+	public void setSize(Long size) {
+		this.size = size;
+	}
+	
+	
+	public MultipartFile getUploadFile() {
+		return uploadFile;
+	}
+	public void setUploadFile(MultipartFile uploadFile) {
+		this.uploadFile = uploadFile;
+	}
+	public MultipartFile[] getUploadFiles() {
+		return uploadFiles;
+	}
+	public void setUploadFiles(MultipartFile[] uploadFiles) {
+		this.uploadFiles = uploadFiles;
+	}
+	
 	
 //	----------------------------- getter & setter E -----------------------------
 

@@ -106,7 +106,7 @@
                       <h4 class="mt-1 mb-0"><b>기본정보</b></h4>
                     </div>
                     <div class="card-body">
-                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmInst" novalidate>
+                      <form class="needs-validation" id="form" name="form" method="post" action="/v1/infra/concert/concertXdmInst" enctype="multipart/form-data" novalidate>
                         <div class="row">
                           <div class="col-3">
                             <div class="mb-3">
@@ -173,6 +173,17 @@
                             <div class="mb-3">
                               <label for="defaultFormControlInput" class="form-label">설명</label>
                               <textarea class="form-control" id="concertDesc" name="concertDesc" rows="3" required></textarea>
+                              <div class="valid-feedback"> Looks good! </div>
+                              <div class="invalid-feedback"> Please enter your name. </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-3">
+                            <div class="mb-3">
+                        	  <label for="uploadFiles" class="form-label">파일 첨부</label>
+                        	  <input type="file" class="form-control" id="uploadFiles" name="uploadFiles" multiple placeholder="파일첨부"
+                                aria-describedby="defaultFormControlHelp" required>
                               <div class="valid-feedback"> Looks good! </div>
                               <div class="invalid-feedback"> Please enter your name. </div>
                             </div>

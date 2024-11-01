@@ -33,8 +33,8 @@ public class ConcertController {
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertXdmInst")
-	public String concertXdmInst(ConcertDto concertDto) {
-		concertService.insert(concertDto);
+	public String concertXdmInst(ConcertDto concertDto, Integer type) throws Exception {
+		concertService.insert(concertDto, type);
 		return "redirect:/v1/infra/concert/concertXdmList";
 	}
 	

@@ -105,6 +105,36 @@
 		</selectKey>
 	</insert>
 	
+	<insert id="insertUpload">
+		INSERT INTO concertPhoto (
+			a.type
+			,a.defaultNy
+			,a.sort
+			,a.path
+			,a.tableName
+			,a.originalName
+			,a.uuidName
+			,a.ext
+			,a.size
+			,a.concert_seq
+		)
+		VALUES (
+			#{type}
+			,#{defaultNy}
+			,#{sort}
+			,#{path}
+			,#{tableName}
+			,#{originalName}
+			,#{uuidName}
+			,#{ext}
+			,#{size}
+			,#{concert_seq}
+		)
+		<selectKey resultType="String" keyProperty="pseq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
 	<select id="selectOne" resultMap="resultMapObj">
 		SELECT
 			a.concertSeq
