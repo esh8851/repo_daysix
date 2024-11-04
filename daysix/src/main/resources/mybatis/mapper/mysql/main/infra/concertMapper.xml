@@ -116,7 +116,6 @@
 			,a.uuidName
 			,a.ext
 			,a.size
-			,a.concert_seq
 		)
 		VALUES (
 			#{type}
@@ -128,7 +127,6 @@
 			,#{uuidName}
 			,#{ext}
 			,#{size}
-			,#{concert_seq}
 		)
 		<selectKey resultType="String" keyProperty="pseq" order="AFTER">
 			SELECT last_insert_id()
