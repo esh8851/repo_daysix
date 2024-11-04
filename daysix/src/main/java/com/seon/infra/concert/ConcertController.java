@@ -34,7 +34,7 @@ public class ConcertController {
 	
 	@RequestMapping(value="/v1/infra/concert/concertXdmInst")
 	public String concertXdmInst(ConcertDto concertDto) throws Exception {
-		concertService.insert(concertDto, 1);
+		concertService.insert(concertDto, 1, "images", 0, "1");
 		return "redirect:/v1/infra/concert/concertXdmList";
 	}
 	

@@ -214,7 +214,15 @@
 	
 								<div class="preview-footer">
 									<div class="movie__rate">
-										<div class="score"></div>
+<!-- 										<div class="score"></div> -->
+											<div class="rating">
+												<img alt="1" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+												<img alt="2" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+												<img alt="3" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+												<img alt="4" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+												<img alt="5" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+											</div>
+											<input class="ratingInput" type="text"/>
 										<span class="movie__rate-number" th:text="${list.concertVote} + '투표'"></span> <span
 											class="movie__rating" th:text="${list.concertAverage}"></span>
 									</div>
@@ -442,7 +450,15 @@
     <!-- total E -->
     
     <script type="text/javascript">
-    	
+		var stars = document.querySelectorAll(".ratingStar");
+		stars.forEach((star, index) => {
+			star.onclick = function () {
+				for(let i=0; i<index+1; i++) {
+					stars[i].src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg";
+				}
+			}
+		});
+			
     </script>
     
 </body>

@@ -26,4 +26,6 @@ public interface ConcertDao {
 	
 	public List<ConcertDto> selectListReply(ConcertDto concertDto);
 	
+	public int insertUploaded(ConcertDto concertDto);
+	
 }

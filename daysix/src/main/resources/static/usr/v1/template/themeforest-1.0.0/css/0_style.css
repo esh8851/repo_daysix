@@ -22,9 +22,8 @@
 .textToalWrap{display:flex;justify-content:space-between;margin-top:15px;}
 .textTotal{font-size:20px;font-weight:700;}
 .selectTotal{width:84px;border:1px solid #dbdee1;font-size:15px;padding:3px;}
-/* .starImg{display:inline-block;} */
-.starImg>img{cursor:pointer;}
-.starImg>img:hover{content:url(/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg);}
+.rating{display:inline-block;}
+.ratingStar{cursor:pointer;}
 /******************************* concertUstList E *******************************/
 
 

@@ -23,7 +23,7 @@ public class ConcertService {
 		return concertDao.selectList(concertVo);
 	}
 	
-	public int insert(ConcertDto concertDto, int type) throws Exception {
+	public int insert(ConcertDto concertDto, int type, String tableName, int defaultNy, String pSeq) throws Exception {
 		
 		for(int i=0; i<concertDto.getUploadFiles().length; i++) {
 			
@@ -56,13 +56,13 @@ public class ConcertService {
 		        concertDto.setExt(ext);
 		        concertDto.setSize(concertDto.getUploadFiles()[i].getSize());
 				
-//		        concertDto.setTableName(tableName);
-//		        concertDto.setType(type);
-////						dto.setDefaultNy();
+		        concertDto.setTableName(tableName);
+		        concertDto.setType(type);
+		        concertDto.setDefaultNy(defaultNy);
 //		        concertDto.setSort(maxNumber + i);
-//		        concertDto.setPseq(pSeq);
-//				
-//		        concertDao.insertUploaded(concertDto);
+		        concertDto.setPseq(pSeq);
+				
+		        concertDao.insertUploaded(concertDto);
 			}
 		}
 		
