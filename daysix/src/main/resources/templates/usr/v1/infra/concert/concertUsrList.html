@@ -214,17 +214,16 @@
 	
 								<div class="preview-footer">
 									<div class="movie__rate">
-<!-- 										<div class="score"></div> -->
 											<div class="rating">
 												<img alt="1" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="2" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="3" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="4" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="5" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
+												<input class="ratingInput" type="hidden"/>
 											</div>
-											<input class="ratingInput" type="text"/>
-										<span class="movie__rate-number" th:text="${list.concertVote} + '투표'"></span> <span
-											class="movie__rating" th:text="${list.concertAverage}"></span>
+										<span class="movie__rate-number">123 표</span>
+										<span class="movie__rating"></span>
 									</div>
 									<a href="#" class="movie__show-btn">공연 시간</a>
 								</div>
@@ -449,18 +448,26 @@
     </script>
     <!-- total E -->
     
+    <!-- 별점 S -->
     <script type="text/javascript">
-		var stars = document.querySelectorAll(".ratingStar");
-		stars.forEach((star, index) => {
-			star.onclick = function () {
-				for(let i=0; i<index+1; i++) {
-					stars[i].src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg";
-				}
-				let ratingInput = document.querySelector(".ratingInput");
-				ratingInput.value = index+1;
-			}
-		});
+    	var starwrap = document.querySelectorAll(".rating");
+    	starwrap.forEach((wrap) => {
+			var stars = wrap.querySelectorAll(".ratingStar");
+			var ratingInput = wrap.querySelector(".ratingInput");
+			stars.forEach((star, index) => {
+				star.onclick = function () {
+					stars.forEach((star) => {
+						star.src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg";
+					});
+					for(let i=0; i<index+1; i++) {
+						stars[i].src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg";
+					}
+					ratingInput.value = index + 1;
+				};
+			});
+    	});
     </script>
+    <!-- 별점 E -->
     
 </body>
 

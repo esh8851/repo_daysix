@@ -20,9 +20,6 @@ public class ConcertDto {
 	private Date concertDateTimeEdit;
 	private Integer concertUseNy;
 	private Integer concertDelNy;
-	private Integer concertStar;
-	private Integer concertVote;
-	private Integer concertAverage;
 	
 //	count
 	private Integer replyCount;
@@ -61,6 +58,13 @@ public class ConcertDto {
 	private String ext;
 	private Long size;
 	
+//	score
+	private String csSeq;
+	private Integer csStar;
+	private Integer csVote;
+	private Integer csAverage;
+	
+//	AWS
 	private MultipartFile uploadFile;
 	private MultipartFile[] uploadFiles;
 	
@@ -140,24 +144,6 @@ public class ConcertDto {
 	}
 	public void setConcertDelNy(Integer concertDelNy) {
 		this.concertDelNy = concertDelNy;
-	}
-	public Integer getConcertStar() {
-		return concertStar;
-	}
-	public void setConcertStar(Integer concertStar) {
-		this.concertStar = concertStar;
-	}
-	public Integer getConcertVote() {
-		return concertVote;
-	}
-	public void setConcertVote(Integer concertVote) {
-		this.concertVote = concertVote;
-	}
-	public Integer getConcertAverage() {
-		return concertAverage;
-	}
-	public void setConcertAverage(Integer concertAverage) {
-		this.concertAverage = concertAverage;
 	}
 	
 	//	count
@@ -322,7 +308,33 @@ public class ConcertDto {
 		this.size = size;
 	}
 	
+//	score
+	public String getCsSeq() {
+		return csSeq;
+	}
+	public void setCsSeq(String csSeq) {
+		this.csSeq = csSeq;
+	}
+	public Integer getCsStar() {
+		return csStar;
+	}
+	public void setCsStar(Integer csStar) {
+		this.csStar = csStar;
+	}
+	public Integer getCsVote() {
+		return csVote;
+	}
+	public void setCsVote(Integer csVote) {
+		this.csVote = csVote;
+	}
+	public Integer getCsAverage() {
+		return csAverage;
+	}
+	public void setCsAverage(Integer csAverage) {
+		this.csAverage = csAverage;
+	}
 	
+//	AWS
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}

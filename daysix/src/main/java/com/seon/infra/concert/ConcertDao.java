@@ -28,4 +28,7 @@ public interface ConcertDao {
 	
 	public int insertUploaded(ConcertDto concertDto);
 	
+//	score
+	public int selectOneScore(ConcertDto concertDto);
+	
 }

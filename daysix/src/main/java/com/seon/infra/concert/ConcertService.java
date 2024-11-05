@@ -97,5 +97,8 @@ public class ConcertService {
 	public List<ConcertDto> selectListReply(ConcertDto concertDto) {
 		return concertDao.selectListReply(concertDto);
 	}
+	
+//	score
+	
 
 }

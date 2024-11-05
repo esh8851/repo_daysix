@@ -7,6 +7,22 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectOneScore">
+		SELECT
+			a.concertSeq
+			,b.csSeq
+			,b.csStar
+			,b.csVote
+			,b.csAverage
+			,b.concert_concertSeq
+		FROM concert AS a
+		LEFT JOIN concertScore AS b ON b.concert_concertSeq = a.concertSeq
+		WHERE 1 = 1
+			AND b.concert_concertSeq = #{concertSeq}
+		ORDER BY
+			b.csSeq DESC
+	</select>
+	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
 			a.replySeq
@@ -48,9 +64,6 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
-				,a.concertStar
-				,a.concertVote
-				,a.concertAverage
 				,(select count(replySeq) from reply as b where 1 = 1 and concert_concertSeq = a.concertSeq) as replyCount
 				,c.hallName
 			FROM concert AS a
@@ -147,9 +160,6 @@
 			,a.concertDateTimeEdit
 			,a.concertUseNy
 			,a.concertDelNy
-			,a.concertStar
-			,a.concertVote
-			,a.concertAverage
 			,c.hallName
 			,c.hallWi
 			,c.hallGy
