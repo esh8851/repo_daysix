@@ -81,4 +81,10 @@ public class ConcertController {
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
+	@RequestMapping(value="/v1/infra/concert/concertUsrUpdt")
+	public String concertUsrUpdt(ConcertDto concertDto) {
+		concertService.updateScore(concertDto);
+		return "redirect:/v1/infra/concert/concertUsrDetail";
+	}
+	
 }

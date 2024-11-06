@@ -212,21 +212,23 @@
 									</a>
 								</div>
 	
-								<div class="preview-footer">
-									<div class="movie__rate">
+								<form id="formScore" method="post" name="formScore" action="/v1/infra/concert/concertUsrUpdt">
+									<div class="preview-footer">
+										<div class="movie__rate">
 											<div class="rating">
 												<img alt="1" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="2" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="3" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="4" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="5" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
-												<input class="ratingInput" type="hidden"/>
+												<input class="ratingInput" type="text" name="csStar"/>
 											</div>
-										<span class="movie__rate-number">123 표</span>
-										<span class="movie__rating"></span>
+											<span class="movie__rate-number" th:text="${list.csVote} + ' 표'"></span>
+											<span class="movie__rating"></span>
+										</div>
+										<a href="#" class="movie__show-btn">공연 시간</a>
 									</div>
-									<a href="#" class="movie__show-btn">공연 시간</a>
-								</div>
+								</form>
 							</div>
 	
 							<div class="clearfix"></div>
@@ -448,12 +450,13 @@
     </script>
     <!-- total E -->
     
-    <!-- 별점 S -->
+    <!-- score S -->
     <script type="text/javascript">
     	var starwrap = document.querySelectorAll(".rating");
     	starwrap.forEach((wrap) => {
 			var stars = wrap.querySelectorAll(".ratingStar");
 			var ratingInput = wrap.querySelector(".ratingInput");
+			var starSubmit = document.getElementById("formScore");
 			stars.forEach((star, index) => {
 				star.onclick = function () {
 					stars.forEach((star) => {
@@ -467,7 +470,7 @@
 			});
     	});
     </script>
-    <!-- 별점 E -->
+    <!-- score E -->
     
 </body>
 

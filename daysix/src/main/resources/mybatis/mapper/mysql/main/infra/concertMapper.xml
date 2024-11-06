@@ -7,21 +7,13 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
-	<select id="selectOneScore">
-		SELECT
-			a.concertSeq
-			,b.csSeq
-			,b.csStar
-			,b.csVote
-			,b.csAverage
-			,b.concert_concertSeq
-		FROM concert AS a
-		LEFT JOIN concertScore AS b ON b.concert_concertSeq = a.concertSeq
-		WHERE 1 = 1
-			AND b.concert_concertSeq = #{concertSeq}
-		ORDER BY
-			b.csSeq DESC
-	</select>
+	<update id="updateScore">
+		UPDATE concertScore
+			SET
+				csStar = #{csStar}
+			WHERE 1 = 1
+				AND csSeq = #{csSeq}
+	</update>
 	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
@@ -46,7 +38,7 @@
 		SELECT COUNT(*)
 			FROM reply AS a
 		WHERE 1 = 1
-			AND a.concert_concertSeq = ${concertSeq}
+			AND a.concert_concertSeq = #{concertSeq}
 	</select>
 	
 	<select id="selectList" resultMap="resultMapObj">
@@ -66,9 +58,11 @@
 				,a.concertDelNy
 				,(select count(replySeq) from reply as b where 1 = 1 and concert_concertSeq = a.concertSeq) as replyCount
 				,c.hallName
+				,d.csVote
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
+			LEFT JOIN concertScore AS d ON d.concert_concertSeq = a.concertSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>

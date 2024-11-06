@@ -99,6 +99,8 @@ public class ConcertService {
 	}
 	
 //	score
-	
+	public int updateScore(ConcertDto concertDto) {
+		return concertDao.updateScore(concertDto);
+	}
 
 }
