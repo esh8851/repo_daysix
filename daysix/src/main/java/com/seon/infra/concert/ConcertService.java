@@ -99,6 +99,10 @@ public class ConcertService {
 	}
 	
 //	score
+	public Float selectOneAvg(ConcertDto concertDto) {
+		return concertDao.selectOneAvg(concertDto);
+	}
+	
 	public int updateScore(ConcertDto concertDto) {
 		return concertDao.updateScore(concertDto);
 	}

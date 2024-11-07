@@ -8,12 +8,20 @@
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
 	<update id="updateScore">
-		UPDATE concertScore
+		UPDATE concertScore AS a
+			LEFT JOIN concert AS b ON a.concert_concertSeq = b.concertSeq
 			SET
 				csStar = #{csStar}
-			WHERE 1 = 1
-				AND csSeq = #{csSeq}
+		WHERE 1 = 1
+			AND a.concert_concertSeq = #{concertSeq}
 	</update>
+	
+	<select id="selectOneAvg" resultType="Float">
+		SELECT AVG(csStar)
+		FROM concertScore
+		WHERE 1 = 1
+			AND concert_concertSeq = #{concertSeq}
+	</select>
 	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
@@ -56,9 +64,10 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
-				,(select count(replySeq) from reply as b where 1 = 1 and concert_concertSeq = a.concertSeq) as replyCount
+				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,c.hallName
 				,d.csVote
+				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
@@ -157,9 +166,11 @@
 			,c.hallName
 			,c.hallWi
 			,c.hallGy
+			,d.csStar
 		FROM concert AS a
 		LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 		LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
+		LEFT JOIN concertScore AS d ON d.concert_concertSeq = a.concertSeq
 		WHERE 1 = 1
 			AND a.concertSeq = #{concertSeq}
 	</select>

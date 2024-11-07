@@ -62,7 +62,8 @@ public class ConcertDto {
 	private String csSeq;
 	private Integer csStar;
 	private Integer csVote;
-	private Integer csAverage;
+	
+	private Float starAvg;
 	
 //	AWS
 	private MultipartFile uploadFile;
@@ -327,14 +328,14 @@ public class ConcertDto {
 	public void setCsVote(Integer csVote) {
 		this.csVote = csVote;
 	}
-	public Integer getCsAverage() {
-		return csAverage;
+	public Float getStarAvg() {
+		return starAvg;
 	}
-	public void setCsAverage(Integer csAverage) {
-		this.csAverage = csAverage;
+	public void setStarAvg(Float starAvg) {
+		this.starAvg = starAvg;
 	}
 	
-//	AWS
+	//	AWS
 	public MultipartFile getUploadFile() {
 		return uploadFile;
 	}

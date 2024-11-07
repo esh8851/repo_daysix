@@ -30,6 +30,8 @@ public interface ConcertDao {
 	public int insertUploaded(ConcertDto concertDto);
 	
 //	score
+	public Float selectOneAvg(ConcertDto concertDto);
+	
 	public int updateScore(ConcertDto concertDto);
 	
 }

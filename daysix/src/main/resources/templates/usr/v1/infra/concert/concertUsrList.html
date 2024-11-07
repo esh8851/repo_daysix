@@ -224,7 +224,7 @@
 												<input class="ratingInput" type="text" name="csStar"/>
 											</div>
 											<span class="movie__rate-number" th:text="${list.csVote} + ' 표'"></span>
-											<span class="movie__rating"></span>
+											<span class="movie__rating" th:text="${list.starAvg}"></span>
 										</div>
 										<a href="#" class="movie__show-btn">공연 시간</a>
 									</div>
@@ -466,6 +466,27 @@
 						stars[i].src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg";
 					}
 					ratingInput.value = index + 1;
+					
+					$.ajax({
+						async: true 
+						,cache: false
+						,type: "post"
+						/* ,dataType:"json" */
+						,url: "/v1/infra/concert/concertUsrUpdt"
+						/* ,data : $("#formLogin").serialize() */
+						/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+						,success: function(response) {
+							if(response.rt == "success") {
+								location.href = "/v1/infra/concert/concertUsrList";
+							} else {
+								alert("업데이트 실패");
+							}
+						}
+						,error : function(jqXHR, textStatus, errorThrown){
+							alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+						}
+					});
+					
 				};
 			});
     	});

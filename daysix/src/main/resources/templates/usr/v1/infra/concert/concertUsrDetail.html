@@ -77,10 +77,24 @@
                     <div class="movie__info">
                         <div class="col-sm-4 col-md-3 movie-mobile">
                             <div class="movie__images">
-                                <span class="movie__rating">5.0</span>
-                                <img alt='' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-single.png">
+                                <span class="movie__rating" th:text="${itemAvg}"></span>
+                                <img alt='1' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-single.png">
                             </div>
-                            <div class="movie__rate"><b>당신의 평점:</b> <div id='score' class="score"></div></div>
+                            <div class="movie__rate">
+                            	<b>당신의 평점 : </b>
+                            	<div id="starList" style="display:inline-block;">
+								    <img th:alt="1" 
+								         th:src="@{${item?.csStar >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								    <img th:alt="2" 
+								         th:src="@{${item?.csStar >= 2 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								    <img th:alt="3" 
+								         th:src="@{${item?.csStar >= 3 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								    <img th:alt="4" 
+								         th:src="@{${item?.csStar >= 4 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								    <img th:alt="5" 
+								         th:src="@{${item?.csStar >= 5 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+                            	</div>
+                            </div>
                         </div>
 
                         <div class="col-sm-8 col-md-9">

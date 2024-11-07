@@ -69,6 +69,7 @@ public class ConcertController {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
+			model.addAttribute("itemAvg", concertService.selectOneAvg(concertDto));
 		}
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
@@ -78,13 +79,16 @@ public class ConcertController {
 		model.addAttribute("item", concertService.selectOne(concertDto));
 		model.addAttribute("replyList", concertService.selectListReply(concertDto));
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
+		model.addAttribute("itemAvg", concertService.selectOneAvg(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertUsrUpdt")
 	public String concertUsrUpdt(ConcertDto concertDto) {
 		concertService.updateScore(concertDto);
-		return "redirect:/v1/infra/concert/concertUsrDetail";
+		return "redirect:/v1/infra/concert/concertUsrList";
 	}
+	
+	
 	
 }
