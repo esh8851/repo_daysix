@@ -9,19 +9,11 @@
 	
 	<update id="updateScore">
 		UPDATE concertScore AS a
-			LEFT JOIN concert AS b ON a.concert_concertSeq = b.concertSeq
 			SET
-				csStar = #{csStar}
-		WHERE 1 = 1
-			AND a.concert_concertSeq = #{concertSeq}
+				a.csStar = #{csStar}
+			WHERE 1 = 1
+				a.csSeq = #{csSeq}
 	</update>
-	
-	<select id="selectOneAvg" resultType="Float">
-		SELECT AVG(csStar)
-		FROM concertScore
-		WHERE 1 = 1
-			AND concert_concertSeq = #{concertSeq}
-	</select>
 	
 	<select id="selectListReply" resultMap="resultMapObj">
 		SELECT
@@ -167,6 +159,7 @@
 			,c.hallWi
 			,c.hallGy
 			,d.csStar
+			,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
 		FROM concert AS a
 		LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 		LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq

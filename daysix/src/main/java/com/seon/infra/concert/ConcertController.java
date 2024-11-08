@@ -1,10 +1,14 @@
 package com.seon.infra.concert;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ConcertController {
@@ -69,7 +73,6 @@ public class ConcertController {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
-			model.addAttribute("itemAvg", concertService.selectOneAvg(concertDto));
 		}
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
@@ -79,14 +82,16 @@ public class ConcertController {
 		model.addAttribute("item", concertService.selectOne(concertDto));
 		model.addAttribute("replyList", concertService.selectListReply(concertDto));
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
-		model.addAttribute("itemAvg", concertService.selectOneAvg(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
+	@ResponseBody
 	@RequestMapping(value="/v1/infra/concert/concertUsrUpdt")
-	public String concertUsrUpdt(ConcertDto concertDto) {
+	public Map<String, Object> concertUsrUpdt(ConcertDto concertDto) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
 		concertService.updateScore(concertDto);
-		return "redirect:/v1/infra/concert/concertUsrList";
+		returnMap.put("rt", "success");
+		return returnMap;
 	}
 	
 	
