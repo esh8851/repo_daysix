@@ -7,12 +7,25 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectListScore" resultMap="resultMapObj">
+		SELECT
+			a.csSeq
+			,a.csStar
+			,a.csVote
+			,a.concert_concertSeq
+		FROM
+			concertScore AS a
+			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
+		ORDER BY
+			a.csSeq DESC
+	</select>
+	
 	<update id="updateScore">
 		UPDATE concertScore AS a
 			SET
 				a.csStar = #{csStar}
 			WHERE 1 = 1
-				a.csSeq = #{csSeq}
+				AND a.csSeq = #{csSeq}
 	</update>
 	
 	<select id="selectListReply" resultMap="resultMapObj">
@@ -58,8 +71,9 @@
 				,a.concertDelNy
 				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,c.hallName
-				,d.csVote
 				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
+				,(SELECT csSeq FROM concertScore AS d WHERE 1 = 1 AND d.concert_concertSeq = a.concertSeq) AS csSeq
+				,(SELECT COUNT(csSeq) FROM concertScore AS e WHERE 1 = 1 AND e.concert_concertSeq = a.concertSeq) AS csVote
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq

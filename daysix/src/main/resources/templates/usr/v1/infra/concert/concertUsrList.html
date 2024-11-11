@@ -215,13 +215,14 @@
 								<form id="formScore" method="post" name="formScore" action="/v1/infra/concert/concertUsrUpdt">
 									<div class="preview-footer">
 										<div class="movie__rate">
-											<div class="rating" data-csSeq>
+											<div class="rating">
 												<img alt="1" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="2" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar" onclick=abc()>
 												<img alt="3" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="4" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<img alt="5" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
-												<input class="ratingInput" id="ratingInput" type="text" name="csStar" />
+												<input type="hidden" class="ratingInput" id="ratingInput" name="csStar" />
+												<input type="hidden" class="csSeq" name="csSeq" th:value="${list.csSeq}" />
 											</div>
 											<span class="movie__rate-number" th:text="${list.csVote} + ' 표'"></span>
 											<span class="movie__rating" th:text="${list.starAvg}"></span>
@@ -457,8 +458,7 @@
 			var stars = wrap.querySelectorAll(".ratingStar");
 			var ratingInput = wrap.querySelector(".ratingInput");
 			var starSubmit = document.getElementById("formScore");
-			var scoreSeq = document.querySelector("#scoreSeq");
-			var csSeq = wrap.getAttribute("data-csSeq");
+			var csSeq = wrap.querySelector(".csSeq");
 			
 			stars.forEach((star, index) => {
 				star.onclick = function () {
@@ -477,12 +477,14 @@
 						,url: "/v1/infra/concert/concertUsrUpdt"
 						/* ,data : $("#formLogin").serialize() */
 						/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
-						,data : {csStar : ratingInput.value, csSeq : csSeq}
+						,data : {csStar : ratingInput.value, csSeq : csSeq.value}
 						,success: function(response) {
 							if(response.rt == "success") {
-								location.href = "/v1/infra/concert/concertUsrList";
+// 								location.href = "/v1/infra/concert/concertUsrList";
+								// 
+// 								document.getElementById("aaa").innerText = "asa";
 							} else {
-								alert(ratingInput.value);
+								alert("업데이트 실패");
 							}
 						}
 						,error : function(jqXHR, textStatus, errorThrown){

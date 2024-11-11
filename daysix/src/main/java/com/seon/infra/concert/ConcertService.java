@@ -103,5 +103,9 @@ public class ConcertService {
 		return concertDao.updateScore(concertDto);
 	}
 	
+	public List<ConcertDto> selectListScore(ConcertDto concertDto) {
+		return concertDao.selectListScore(concertDto);
+	}
+	
 
 }

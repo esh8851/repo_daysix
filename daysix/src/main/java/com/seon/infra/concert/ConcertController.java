@@ -73,6 +73,7 @@ public class ConcertController {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
+			model.addAttribute("listScore", concertService.selectListScore(concertDto));
 		}
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
