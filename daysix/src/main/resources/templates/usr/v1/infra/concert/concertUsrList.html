@@ -173,7 +173,8 @@
 							<div class="col-sm-3 col-md-2 col-lg-2">
 								<div class="movie__images">
 									<img alt=''
-										src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-sample1.png">
+										th:src="${list.path}"
+										style="height:250px;">
 								</div>
 								<div class="movie__feature">
 									<a href="#" class="movie__feature-item movie__feature--comment" th:text="${list.replyCount}"></a>
@@ -223,59 +224,17 @@
 												<img alt="5" src="/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg" class="ratingStar">
 												<input type="hidden" class="ratingInput" id="ratingInput" name="csStar" />
 												<input type="hidden" class="csSeq" name="csSeq" th:value="${list.csSeq}" />
+												<input type="hidden" class="concert_concertSeq" name="concertSeq" th:value="${list.concertSeq}" />
 											</div>
 											<span class="movie__rate-number" th:text="${list.csVote} + ' 표'"></span>
 											<span class="movie__rating" th:text="${list.starAvg}"></span>
 										</div>
-										<a href="#" class="movie__show-btn">공연 시간</a>
 									</div>
 								</form>
 							</div>
 	
 							<div class="clearfix"></div>
 	
-							<!-- Time table (choose film start time)-->
-							<div class="time-select">
-								<div class="time-select__group group--first">
-									<div class="col-sm-4">
-										<p class="time-select__place">
-											<b>KBS 부산홀</b>
-										</p>
-									</div>
-									<ul class="col-sm-8 items-wrap">
-										<li class="time-select__item" data-time='09:40'>09:40</li>
-										<li class="time-select__item" data-time='13:45'>13:45</li>
-										<li class="time-select__item active" data-time='15:45'>15:45</li>
-										<li class="time-select__item" data-time='19:50'>19:50</li>
-										<li class="time-select__item" data-time='21:50'>21:50</li>
-									</ul>
-								</div>
-								<div class="time-select__group">
-									<div class="col-sm-4">
-										<p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
-									</div>
-									<ul class="col-sm-8 items-wrap">
-										<li class="time-select__item active" data-time='10:45'>10:45</li>
-										<li class="time-select__item" data-time='16:00'>16:00</li>
-										<li class="time-select__item" data-time='19:00'>19:00</li>
-										<li class="time-select__item" data-time='21:15'>21:15</li>
-										<li class="time-select__item" data-time='23:00'>23:00</li>
-									</ul>
-								</div>
-								<div class="time-select__group group--last">
-									<div class="col-sm-4">
-										<p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
-									</div>
-									<ul class="col-sm-8 items-wrap">
-										<li class="time-select__item" data-time='10:45'>10:45</li>
-										<li class="time-select__item" data-time='16:00'>16:00</li>
-										<li class="time-select__item" data-time='19:00'>19:00</li>
-										<li class="time-select__item" data-time='21:15'>21:15</li>
-										<li class="time-select__item active" data-time='23:00'>23:00</li>
-									</ul>
-								</div>
-							</div>
-							<!-- end time table-->
 	
 						</div>
 						<!-- end movie preview item -->
@@ -459,6 +418,7 @@
 			var ratingInput = wrap.querySelector(".ratingInput");
 			var starSubmit = document.getElementById("formScore");
 			var csSeq = wrap.querySelector(".csSeq");
+			var concert_concertSeq = wrap.querySelector(".concert_concertSeq");
 			
 			stars.forEach((star, index) => {
 				star.onclick = function () {
@@ -485,6 +445,29 @@
 // 								document.getElementById("aaa").innerText = "asa";
 							} else {
 								alert("업데이트 실패");
+							}
+						}
+						,error : function(jqXHR, textStatus, errorThrown){
+							alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+						}
+					});
+					
+					$.ajax({
+						async: true 
+						,cache: false
+						,type: "post"
+						/* ,dataType:"json" */
+						,url: "/v1/infra/concert/concertUsrInst"
+						/* ,data : $("#formLogin").serialize() */
+						/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+						,data : {csStar : ratingInput.value, concert_concertSeq : concert_concertSeq.value}
+						,success: function(response) {
+							if(response.rt == "success") {
+// 								location.href = "/v1/infra/concert/concertUsrList";
+								// 
+// 								document.getElementById("aaa").innerText = "asa";
+							} else {
+								alert("인서트 실패");
 							}
 						}
 						,error : function(jqXHR, textStatus, errorThrown){

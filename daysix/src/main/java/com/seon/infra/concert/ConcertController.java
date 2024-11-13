@@ -83,6 +83,7 @@ public class ConcertController {
 		model.addAttribute("item", concertService.selectOne(concertDto));
 		model.addAttribute("replyList", concertService.selectListReply(concertDto));
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
+		model.addAttribute("listScore", concertService.selectListScore(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
@@ -95,6 +96,14 @@ public class ConcertController {
 		return returnMap;
 	}
 	
+	@ResponseBody
+	@RequestMapping(value="/v1/infra/concert/concertUsrInst")
+	public Map<String, Object> concertUsrInst(ConcertDto concertDto) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+		concertService.insertScore(concertDto);
+		returnMap.put("rt", "success");
+		return returnMap;
+	}
 	
 	
 }

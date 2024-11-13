@@ -32,6 +32,8 @@ public interface ConcertDao {
 //	score
 	public int updateScore(ConcertDto concertDto);
 	
+	public int insertScore(ConcertDto concertDto);
+	
 	public List<ConcertDto> selectListScore(ConcertDto concertDto);
 	
 	

@@ -7,6 +7,20 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<insert id="insertScore">
+		INSERT INTO concertScore (
+			csStar
+			,concert_concertSeq
+		)
+		VALUES (
+			#{csStar}
+			,#{concert_concertSeq}
+		)
+		<selectKey resultType="String" keyProperty="csSeq" order="AFTER">
+			SELECT last_insert_id()
+		</selectKey>
+	</insert>
+	
 	<select id="selectListScore" resultMap="resultMapObj">
 		SELECT
 			a.csSeq
@@ -72,8 +86,10 @@
 				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,c.hallName
 				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
-				,(SELECT csSeq FROM concertScore AS d WHERE 1 = 1 AND d.concert_concertSeq = a.concertSeq) AS csSeq
+				,d.csSeq
+				,d.concert_concertSeq
 				,(SELECT COUNT(csSeq) FROM concertScore AS e WHERE 1 = 1 AND e.concert_concertSeq = a.concertSeq) AS csVote
+				,(SELECT path FROM concertPhoto AS f WHERE 1 = 1 AND f.pseq = a.concertSeq) AS path
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
@@ -174,6 +190,7 @@
 			,c.hallGy
 			,d.csStar
 			,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
+			,(SELECT path FROM concertPhoto AS d WHERE 1 = 1 AND d.pseq = a.concertSeq) AS path
 		FROM concert AS a
 		LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 		LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq

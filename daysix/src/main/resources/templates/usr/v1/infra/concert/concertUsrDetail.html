@@ -78,21 +78,21 @@
                         <div class="col-sm-4 col-md-3 movie-mobile">
                             <div class="movie__images">
                                 <span class="movie__rating" th:text="${item?.starAvg}"></span>
-                                <img alt='1' src="/usr/v1/template/themeforest-1.0.0/0_images/concert/concert-single.png">
+                                <img alt='1' th:src="${item?.path}">
                             </div>
                             <div class="movie__rate">
                             	<b>당신의 평점 : </b>
                             	<div id="starList" style="display:inline-block;">
 								    <img th:alt="1" 
-								         th:src="@{${item?.csStar >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${item?.starAvg >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="2" 
-								         th:src="@{${item?.csStar >= 2 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${item?.starAvg >= 2 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="3" 
-								         th:src="@{${item?.csStar >= 3 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${item?.starAvg >= 3 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="4" 
-								         th:src="@{${item?.csStar >= 4 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${item?.starAvg >= 4 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="5" 
-								         th:src="@{${item?.csStar >= 5 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${item?.starAvg >= 5 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
                             	</div>
                             </div>
                         </div>

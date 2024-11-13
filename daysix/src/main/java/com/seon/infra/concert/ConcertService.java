@@ -107,5 +107,8 @@ public class ConcertService {
 		return concertDao.selectListScore(concertDto);
 	}
 	
+	public int insertScore(ConcertDto concertDto) {
+		return concertDao.insertScore(concertDto);
+	}
 
 }
