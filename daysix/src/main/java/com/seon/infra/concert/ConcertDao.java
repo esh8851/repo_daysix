@@ -26,6 +26,8 @@ public interface ConcertDao {
 	
 	public List<ConcertDto> selectListReply(ConcertDto concertDto);
 	
+	public int insertReply(ConcertDto concertDto);
+	
 //	file
 	public int insertUploaded(ConcertDto concertDto);
 	
@@ -34,7 +36,7 @@ public interface ConcertDao {
 	
 	public int insertScore(ConcertDto concertDto);
 	
-	public List<ConcertDto> selectListScore(ConcertDto concertDto);
+	public Double selectOneAvg(ConcertDto concertDto);
 	
 	
 }

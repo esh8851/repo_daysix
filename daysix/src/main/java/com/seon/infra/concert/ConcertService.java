@@ -98,17 +98,21 @@ public class ConcertService {
 		return concertDao.selectListReply(concertDto);
 	}
 	
+	public int insertReply(ConcertDto concertDto) {
+		return concertDao.insertReply(concertDto);
+	}
+	
 //	score
 	public int updateScore(ConcertDto concertDto) {
 		return concertDao.updateScore(concertDto);
 	}
 	
-	public List<ConcertDto> selectListScore(ConcertDto concertDto) {
-		return concertDao.selectListScore(concertDto);
-	}
-	
 	public int insertScore(ConcertDto concertDto) {
 		return concertDao.insertScore(concertDto);
 	}
-
+	
+	public Double selectOneAvg(ConcertDto concertDto) {
+		return concertDao.selectOneAvg(concertDto);
+	}
+	
 }

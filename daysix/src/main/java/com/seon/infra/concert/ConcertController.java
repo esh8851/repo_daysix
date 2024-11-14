@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 public class ConcertController {
 	
@@ -73,7 +75,7 @@ public class ConcertController {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
-			model.addAttribute("listScore", concertService.selectListScore(concertDto));
+			model.addAttribute("scoreAvg", concertService.selectOneAvg(concertDto));
 		}
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
@@ -83,8 +85,15 @@ public class ConcertController {
 		model.addAttribute("item", concertService.selectOne(concertDto));
 		model.addAttribute("replyList", concertService.selectListReply(concertDto));
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
-		model.addAttribute("listScore", concertService.selectListScore(concertDto));
+		model.addAttribute("scoreAvg", concertService.selectOneAvg(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
+	}
+	
+	@RequestMapping(value="/v1/infra/concert/concertUsrReplyInst")
+	public String concertUsrReplyInst(Model model, @ModelAttribute("vo") ConcertVo concertVo,ConcertDto concertDto, HttpSession httpSession) {
+		concertDto.setMember_mmSeq(httpSession.getAttribute("sessSeqUsr").toString());
+		concertService.insertReply(concertDto);
+		return "redirect:/v1/infra/concert/concertUsrDetail?concertSeq=" + concertDto.getConcert_concertSeq();
 	}
 	
 	@ResponseBody

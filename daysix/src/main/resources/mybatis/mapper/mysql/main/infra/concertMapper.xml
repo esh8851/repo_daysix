@@ -7,6 +7,21 @@
 
 	<resultMap type="com.seon.infra.concert.ConcertDto" id="resultMapObj"></resultMap>
 	
+	<insert id="insertReply">
+		INSERT INTO reply (
+			replyText
+			,replyDateTime
+			,member_mmSeq
+			,concert_concertSeq
+		)
+		VALUES (
+			#{replyText}
+			,now()
+			,#{member_mmSeq}
+			,#{concert_concertSeq}
+		)
+	</insert>
+	
 	<insert id="insertScore">
 		INSERT INTO concertScore (
 			csStar
@@ -20,19 +35,6 @@
 			SELECT last_insert_id()
 		</selectKey>
 	</insert>
-	
-	<select id="selectListScore" resultMap="resultMapObj">
-		SELECT
-			a.csSeq
-			,a.csStar
-			,a.csVote
-			,a.concert_concertSeq
-		FROM
-			concertScore AS a
-			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
-		ORDER BY
-			a.csSeq DESC
-	</select>
 	
 	<update id="updateScore">
 		UPDATE concertScore AS a
@@ -83,17 +85,14 @@
 				,a.concertDateTimeEdit
 				,a.concertUseNy
 				,a.concertDelNy
-				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,c.hallName
+				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
-				,d.csSeq
-				,d.concert_concertSeq
-				,(SELECT COUNT(csSeq) FROM concertScore AS e WHERE 1 = 1 AND e.concert_concertSeq = a.concertSeq) AS csVote
-				,(SELECT path FROM concertPhoto AS f WHERE 1 = 1 AND f.pseq = a.concertSeq) AS path
+				,e.path
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
-			LEFT JOIN concertScore AS d ON d.concert_concertSeq = a.concertSeq
+			LEFT JOIN concertPhoto AS e ON e.pseq = a.concertSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>
@@ -188,15 +187,19 @@
 			,c.hallName
 			,c.hallWi
 			,c.hallGy
-			,d.csStar
-			,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
-			,(SELECT path FROM concertPhoto AS d WHERE 1 = 1 AND d.pseq = a.concertSeq) AS path
 		FROM concert AS a
 		LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 		LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
-		LEFT JOIN concertScore AS d ON d.concert_concertSeq = a.concertSeq
 		WHERE 1 = 1
 			AND a.concertSeq = #{concertSeq}
+	</select>
+	
+	<select id="selectOneAvg">
+		SELECT AVG(a.csStar)
+			FROM concertScore AS a
+			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
+		WHERE 1 = 1
+			AND a.concert_concertSeq = #{concertSeq}
 	</select>
 	
 	<select id="selectOneCount" resultType="Integer">

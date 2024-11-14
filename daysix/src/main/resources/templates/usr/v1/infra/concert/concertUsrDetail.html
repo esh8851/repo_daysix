@@ -77,22 +77,22 @@
                     <div class="movie__info">
                         <div class="col-sm-4 col-md-3 movie-mobile">
                             <div class="movie__images">
-                                <span class="movie__rating" th:text="${item?.starAvg}"></span>
+                                <span class="movie__rating" th:text="${scoreAvg}"></span>
                                 <img alt='1' th:src="${item?.path}">
                             </div>
                             <div class="movie__rate">
                             	<b>당신의 평점 : </b>
                             	<div id="starList" style="display:inline-block;">
 								    <img th:alt="1" 
-								         th:src="@{${item?.starAvg >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${scoreAvg >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="2" 
-								         th:src="@{${item?.starAvg >= 2 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${scoreAvg >= 2 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="3" 
-								         th:src="@{${item?.starAvg >= 3 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${scoreAvg >= 3 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="4" 
-								         th:src="@{${item?.starAvg >= 4 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${scoreAvg >= 4 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
 								    <img th:alt="5" 
-								         th:src="@{${item?.starAvg >= 5 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
+								         th:src="@{${scoreAvg >= 5 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">
                             	</div>
                             </div>
                         </div>
@@ -113,14 +113,6 @@
                                 <a href="#" class="btn btn-md btn--warning"><b>티켓 예매</b></a>
                             </div>
 
-                            <div class="share">
-                                <span class="share__marker">공유하기: </span>
-                                <div class="addthis_toolbox addthis_default_style">
-                                    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-                                    <a class="addthis_button_tweet"></a>
-                                    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -286,12 +278,13 @@
                     <h2 class="page-heading">댓글 (<span th:text="${replyCount}"></span>)</h2>
 
 					<div class="comment-wrapper">
-						<form id="comment-form" class="comment-form" method='post'>
+						<form id="comment-form" class="comment-form" name="replyForm" method='post'>
+						<input type="hidden" name="concert_concertSeq" th:value="${item?.concertSeq}"/>
 							<textarea class="comment-form__text"
-								placeholder='댓글을 여기에 작성해주세요.'></textarea>
+								placeholder='댓글을 여기에 작성해주세요.' name="replyText"></textarea>
 							<label class="comment-form__info">250자 내외</label>
-							<button type='submit'
-								class="btn btn-md btn--danger comment-form__btn">댓글 달기</button>
+							<button type='button'
+								class="btn btn-md btn--danger comment-form__btn" id="btnReply">댓글 달기</button>
 						</form>
 
 						<div class="comment-sets">
@@ -473,33 +466,32 @@
 
 	<!-- btnLogOut S -->
     <script type="text/javascript">
-					document.getElementById("btnLogOut").onclick = function() {
-						$
-								.ajax({
-									async : true,
-									cache : false,
-									type : "post"
-									/* ,dataType:"json" */
-									,
-									url : "/v1/infra/member/signoutXdmProc"
-									/* ,data : $("#formLogin").serialize() */
-									/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
-									,
-									success : function(response) {
-										if (response.rt == "success") {
-											location.href = "/v1/infra/login/loginUsrSignIn";
-										} else {
-											alert("로그아웃 실패");
-										}
-									},
-									error : function(jqXHR, textStatus,
-											errorThrown) {
-										alert("ajaxUpdate " + jqXHR.textStatus
-												+ " : " + jqXHR.errorThrown);
-									}
-								});
+		document.getElementById("btnLogOut").onclick = function() {
+			$.ajax({
+				async : true,
+				cache : false,
+				type : "post"
+				/* ,dataType:"json" */
+				,
+				url : "/v1/infra/member/signoutXdmProc"
+				/* ,data : $("#formLogin").serialize() */
+				/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
+				,
+				success : function(response) {
+					if (response.rt == "success") {
+						location.href = "/v1/infra/login/loginUsrSignIn";
+					} else {
+						alert("로그아웃 실패");
 					}
-				</script>
+				},
+				error : function(jqXHR, textStatus,
+						errorThrown) {
+					alert("ajaxUpdate " + jqXHR.textStatus
+							+ " : " + jqXHR.errorThrown);
+				}
+			});
+		}
+	</script>
     <!-- btnLogOut E -->
     
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0546a9953a7fe11920be0f6f364412e5"></script>
@@ -522,6 +514,14 @@
 	
 	    // 이미지 지도를 생성합니다
 	    var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
+    </script>
+    
+    <script type="text/javascript">
+    	document.getElementById("btnReply").onclick = function () {
+    		let form = document.querySelector("[name='replyForm']");
+    		form.action = "/v1/infra/concert/concertUsrReplyInst";
+    		form.submit();
+    	}
     </script>
     
 
