@@ -77,8 +77,8 @@
                     <div class="movie__info">
                         <div class="col-sm-4 col-md-3 movie-mobile">
                             <div class="movie__images">
-                                <span class="movie__rating" th:text="${scoreAvg}"></span>
-                                <img alt='1' th:src="${item?.path}">
+                                <span class="movie__rating" th:text="${#numbers.formatDecimal(scoreAvg,1,1)}"></span>
+                                <img alt='1' th:src="${itemImg?.path}">
                             </div>
                             <div class="movie__rate">
                             	<b>당신의 평점 : </b>
@@ -209,68 +209,10 @@
 
                 </div>
 
-                <h2 class="page-heading">시간 &amp; 티켓</h2>
+                <h2 class="page-heading">공연장</h2>
                 <div class="choose-container">
-                    <form id='select' class="select" method='get'>
-                          <select name="select_item" id="select-sort" class="select__sort" tabindex="0">
-                            <option value="1" selected='selected'>서울</option>
-                            <option value="2">대구</option>
-                            <option value="3">부산</option>
-                            <option value="4">울산</option>
-                            <option value="5">경기</option>
-                            <option value="3">인천</option>
-                            <option value="4">당진</option>
-                            <option value="5">안성</option>
-                        </select>
-                    </form>
-
-                    <div class="datepicker">
-                      <span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
-                      <input type="text" id="datepicker" value='03/10/2014' class="datepicker__input">
-                    </div>
 
                     <a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"><span class="show-map">공연장 위치</span><span  class="show-time">공연장 위치</span></a>
-                    
-                    <div class="clearfix"></div>
-
-                    <div class="time-select">
-                        <div class="time-select__group group--first">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">KBS 부산홀</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time='09:40'>09:40</li>
-                                <li class="time-select__item" data-time='13:45'>13:45</li>
-                                <li class="time-select__item active" data-time='15:45'>15:45</li>
-                                <li class="time-select__item" data-time='19:50'>19:50</li>
-                                <li class="time-select__item" data-time='21:50'>21:50</li>
-                            </ul>
-                        </div>
-                        <div class="time-select__group">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item active" data-time='10:45'>10:45</li>
-                                <li class="time-select__item" data-time='16:00'>16:00</li>
-                                <li class="time-select__item" data-time='19:00'>19:00</li>
-                                <li class="time-select__item" data-time='21:15'>21:15</li>
-                                <li class="time-select__item" data-time='23:00'>23:00</li>
-                            </ul>
-                        </div>
-                        <div class="time-select__group group--last">
-                            <div class="col-sm-4">
-                                <p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
-                            </div>
-                            <ul class="col-sm-8 items-wrap">
-                                <li class="time-select__item" data-time='10:45'>10:45</li>
-                                <li class="time-select__item" data-time='16:00'>16:00</li>
-                                <li class="time-select__item" data-time='19:00'>19:00</li>
-                                <li class="time-select__item" data-time='21:15'>21:15</li>
-                                <li class="time-select__item active" data-time='23:00'>23:00</li>
-                            </ul>
-                        </div>
-                    </div>
                     
                     <!-- hiden maps with multiple locator-->
                     <div id="staticMap" style="width:600px;height:350px;margin-top:13px;"></div>

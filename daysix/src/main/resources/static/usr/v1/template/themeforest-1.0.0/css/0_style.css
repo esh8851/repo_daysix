@@ -19,12 +19,16 @@
 
 
 /******************************* concertUstList S *******************************/
-.textToalWrap{display:flex;justify-content:space-between;margin-top:15px;}
-.textTotal{font-size:20px;font-weight:700;}
-.selectTotal{width:84px;border:1px solid #dbdee1;font-size:15px;padding:3px;}
+.textToalWrap{display:flex;justify-content:space-between;align-items:center;margin-top:15px;}
+.textTotal{font-size:20px;font-weight:700;margin-bottom:0;}
+.selectTotal{width:100px;border:1px solid #dbdee1;font-size:15px;padding:3px;}
 .rating{display:inline-block;}
 .ratingStar{cursor:pointer;}
 /******************************* concertUstList E *******************************/
+
+/******************************* concertUsrDetail S *******************************/
+/* .watchlist--map{float:left;} */
+/******************************* concertUsrDetail E *******************************/
 
 
 /******************************* indexUsrView S *******************************/

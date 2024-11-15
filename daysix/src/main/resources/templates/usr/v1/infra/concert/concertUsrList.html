@@ -226,8 +226,8 @@
 												<input type="hidden" class="csSeq" name="csSeq" th:value="${list.csSeq}" />
 												<input type="hidden" class="concert_concertSeq" name="concertSeq" th:value="${list.concertSeq}" />
 											</div>
-											<span class="movie__rate-number" th:text="${itemVote} + ' 표'"></span>
-											<span class="movie__rating" th:text="${list.starAvg}"></span>
+											<span class="movie__rate-number" th:text="${list.starVote} + ' 표'"></span>
+											<span class="movie__rating" th:text="${#numbers.formatDecimal(list.starAvg,1,1)}"></span>
 										</div>
 									</div>
 								</form>
@@ -429,28 +429,6 @@
 						stars[i].src = "/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg";
 					}
 					ratingInput.value = index + 1;
-					$.ajax({
-						async: true 
-						,cache: false
-						,type: "post"
-						/* ,dataType:"json" */
-						,url: "/v1/infra/concert/concertUsrUpdt"
-						/* ,data : $("#formLogin").serialize() */
-						/* ,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()} */
-						,data : {csStar : ratingInput.value, csSeq : csSeq.value}
-						,success: function(response) {
-							if(response.rt == "success") {
-// 								location.href = "/v1/infra/concert/concertUsrList";
-								// 
-// 								document.getElementById("aaa").innerText = "asa";
-							} else {
-								alert("업데이트 실패");
-							}
-						}
-						,error : function(jqXHR, textStatus, errorThrown){
-							alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
-						}
-					});
 					
 					$.ajax({
 						async: true 
@@ -463,11 +441,10 @@
 						,data : {csStar : ratingInput.value, concert_concertSeq : concert_concertSeq.value}
 						,success: function(response) {
 							if(response.rt == "success") {
-// 								location.href = "/v1/infra/concert/concertUsrList";
-								// 
-// 								document.getElementById("aaa").innerText = "asa";
+								location.href = "/v1/infra/concert/concertUsrList";
+// 								document.getElementById("vote").innerText = "aaa";
 							} else {
-								alert("인서트 실패");
+// 								by pass
 							}
 						}
 						,error : function(jqXHR, textStatus, errorThrown){

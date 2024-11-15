@@ -89,6 +89,7 @@
 				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
 				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
 				,e.path
+				,(SELECT COUNT(csSeq) FROM concertScore AS d WHERE 1 = 1 AND d.concert_concertSeq = a.concertSeq) AS starVote
 			FROM concert AS a
 			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
 			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
@@ -200,6 +201,15 @@
 			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
 		WHERE 1 = 1
 			AND a.concert_concertSeq = #{concertSeq}
+	</select>
+	
+	<select id="selectOneImg">
+		SELECT
+			a.path
+		FROM concertPhoto AS a
+		LEFT JOIN concert AS b ON b.concertSeq = a.pseq
+		WHERE 1 = 1
+			AND a.pseq = #{concertSeq}
 	</select>
 	
 	<select id="selectOneCount" resultType="Integer">

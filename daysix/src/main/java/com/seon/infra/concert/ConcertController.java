@@ -75,7 +75,6 @@ public class ConcertController {
 		concertVo.setParamsPaging(concertService.selectOneCount(concertVo));
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
-			model.addAttribute("scoreAvg", concertService.selectOneAvg(concertDto));
 		}
 		return "/usr/v1/infra/concert/concertUsrList";
 	}
@@ -86,6 +85,7 @@ public class ConcertController {
 		model.addAttribute("replyList", concertService.selectListReply(concertDto));
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
 		model.addAttribute("scoreAvg", concertService.selectOneAvg(concertDto));
+		model.addAttribute("itemImg", concertService.selectOneImg(concertDto));
 		return "/usr/v1/infra/concert/concertUsrDetail";
 	}
 	
@@ -94,15 +94,6 @@ public class ConcertController {
 		concertDto.setMember_mmSeq(httpSession.getAttribute("sessSeqUsr").toString());
 		concertService.insertReply(concertDto);
 		return "redirect:/v1/infra/concert/concertUsrDetail?concertSeq=" + concertDto.getConcert_concertSeq();
-	}
-	
-	@ResponseBody
-	@RequestMapping(value="/v1/infra/concert/concertUsrUpdt")
-	public Map<String, Object> concertUsrUpdt(ConcertDto concertDto) throws Exception {
-		Map<String, Object> returnMap = new HashMap<String, Object>();
-		concertService.updateScore(concertDto);
-		returnMap.put("rt", "success");
-		return returnMap;
 	}
 	
 	@ResponseBody

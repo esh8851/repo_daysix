@@ -103,16 +103,17 @@ public class ConcertService {
 	}
 	
 //	score
-	public int updateScore(ConcertDto concertDto) {
-		return concertDao.updateScore(concertDto);
-	}
-	
 	public int insertScore(ConcertDto concertDto) {
 		return concertDao.insertScore(concertDto);
 	}
 	
 	public Double selectOneAvg(ConcertDto concertDto) {
 		return concertDao.selectOneAvg(concertDto);
+	}
+	
+//	img
+	public ConcertDto selectOneImg(ConcertDto concertDto) {
+		return concertDao.selectOneImg(concertDto);
 	}
 	
 }

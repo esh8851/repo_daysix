@@ -32,11 +32,12 @@ public interface ConcertDao {
 	public int insertUploaded(ConcertDto concertDto);
 	
 //	score
-	public int updateScore(ConcertDto concertDto);
-	
 	public int insertScore(ConcertDto concertDto);
 	
 	public Double selectOneAvg(ConcertDto concertDto);
+	
+//	img
+	public ConcertDto selectOneImg(ConcertDto concertDto);
 	
 	
 }

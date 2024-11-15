@@ -64,6 +64,7 @@ public class ConcertDto {
 	private Integer csVote;
 	
 	private Float starAvg;
+	private Integer starVote;
 	
 //	AWS
 	private MultipartFile uploadFile;
@@ -333,6 +334,12 @@ public class ConcertDto {
 	}
 	public void setStarAvg(Float starAvg) {
 		this.starAvg = starAvg;
+	}
+	public Integer getStarVote() {
+		return starVote;
+	}
+	public void setStarVote(Integer starVote) {
+		this.starVote = starVote;
 	}
 	
 	//	AWS
