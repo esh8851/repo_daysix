@@ -73,7 +73,7 @@ public class ConcertDto {
 //	----------------------------- field E -----------------------------
 	
 	
-	//	----------------------------- getter & setter S -----------------------------
+//	----------------------------- getter & setter S -----------------------------
 //	concert
 	public String getConcertSeq() {
 		return concertSeq;
