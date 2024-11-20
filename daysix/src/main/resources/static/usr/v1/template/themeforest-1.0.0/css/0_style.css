@@ -12,11 +12,18 @@
 .btn.active:focus,
 .btn.focus,
 .btn:active.focus,
-.btn.active.focus {
-  outline:none ! important;
-}
+.btn.active.focus{outline:none ! important;}
 .movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
 
+
+/******************************* IndexUsrView S *******************************/
+#starList{display:inline-block;}
+.best-rate::before{content:'평점' ! important;background-image:none ! important;font-size:12px;width:100% ! important;left:7% ! important;}
+.best-rate::after{display:none;}
+.movie-best__rating::before{background-image:none ! important;}
+.movie-best__rating::after{background-image:none ! important;}
+.movie-best__rating{font-weight:600 ! important;}
+/******************************* IndexUsrView E *******************************/
 
 /******************************* concertUstList S *******************************/
 .textToalWrap{display:flex;justify-content:space-between;align-items:center;margin-top:15px;}
@@ -102,7 +109,7 @@
 .pagination-leesh li a:hover span{color:#fe505a;transition:0.3s;}
 .pagination-leesh li:not(:last-child) a{border-right:0;}
 .pagination-leesh span{font:13px 'aleoregular', sans-serif;color:#4c4145;text-transform:uppercase;}
-.movie .movie__rating{padding-top:12px;}
+.movie .movie__rating{padding-top:12px ! important;}
 .choose-container .select .sbToggle:after{content:'도시';}
 .time-select__place, .comment-form__btn, .watchlist{font-weight:bold;}
 .movie .movie__btns .watchlist, .watchlist--map{padding-top:7px;}

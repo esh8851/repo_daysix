@@ -99,89 +99,11 @@
 		<div class="choose-film">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<!--First Slide-->
-					<div class="swiper-slide" data-film='The Fifth Estate'>
+					<div class="swiper-slide" data-film='The Fifth Estate' th:each="list:${list}">
 						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample1.jpg">
+							<img alt='' th:src="${list.path}">
 						</div>
-						<p class="choose-film__title">2024 임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르
-							in 서울</p>
-					</div>
-
-					<!--Second Slide-->
-					<div class="swiper-slide" data-film='Ender’s Game'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample2.jpg">
-						</div>
-						<p class="choose-film__title">2024 이솔로몬 소극장 콘서트 〈연무〉</p>
-					</div>
-
-					<!--Third Slide-->
-					<div class="swiper-slide" data-film='About Time'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample3.jpg">
-						</div>
-						<p class="choose-film__title">2F(신용재, 김원주) 2nd FAN CONCERT 〈2F
-							ONLY-SEASON</p>
-					</div>
-
-					<!--Four Slide-->
-					<div class="swiper-slide" data-film='Last Vegas'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample4.jpg">
-						</div>
-						<p class="choose-film__title">서울 어쿠스틱 2024</p>
-					</div>
-
-					<!--Five Slide-->
-					<div class="swiper-slide"
-						data-film='The Hunger Games: Cathing Fire'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample5.jpg">
-						</div>
-						<p class="choose-film__title">윤딴딴 투어 콘서트 ［딴딴한여름 2024］ : 청주</p>
-					</div>
-
-					<!--Six Slide-->
-					<div class="swiper-slide" data-film='The Counselor'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample6.jpg">
-						</div>
-						<p class="choose-film__title">베이빌론 콘서트 〈EGO 90’S CLASSIC〉</p>
-					</div>
-
-					<!--Seven Slide-->
-					<div class="swiper-slide" data-film='Free Birds'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample7.jpg">
-						</div>
-						<p class="choose-film__title">CHERRY WORLD ［노란 머리 체리］</p>
-					</div>
-
-					<!--Eight Slide-->
-					<div class="swiper-slide" data-film='Thor: The Dark World'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample8.jpg">
-						</div>
-						<p class="choose-film__title">HULLABALOO Vol.4</p>
-					</div>
-
-					<!--Nine Slide-->
-					<div class="swiper-slide" data-film='The Book Thief'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample9.jpg">
-						</div>
-						<p class="choose-film__title">NELL CLUB CONCERT 2024 ‘Our
-							Eutopia’</p>
-					</div>
-
-					<!--Ten Slide-->
-					<div class="swiper-slide" data-film='The Wolf of Wall Stree'>
-						<div class="film-images">
-							<img alt='' src="/usr/v1/template/themeforest-1.0.0/images/movie/movie-sample10.jpg">
-						</div>
-						<p class="choose-film__title">「RIOT KIDZ」 3rd Full Album 〈98%〉
-							Release Show!</p>
+						<p class="choose-film__title" th:text="${list.concertName}"></p>
 					</div>
 				</div>
 			</div>
@@ -323,46 +245,6 @@
 		
 		<th:block th:replace="~{/usr/v1/infra/include/footer :: footer}"></th:block>
 
-	</div>
-
-	<!-- open/close -->
-	<div class="overlay overlay-hugeinc">
-
-		<section class="container">
-
-			<div class="col-sm-4 col-sm-offset-4">
-				<button type="button" class="overlay-close">Close</button>
-				<form id="login-form" class="login" method='get' novalidate=''>
-					<p class="login__title">
-						로그인 <br>
-						<span class="login-edition">welcome to A.Movie</span>
-					</p>
-
-					<div class="social social--colored">
-						<a href='#' class="social__variant fa fa-facebook"></a> <a
-							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
-							class="social__variant fa fa-tumblr"></a>
-					</div>
-
-					<p class="login__tracker">or</p>
-
-					<div class="field-wrap">
-						<input type='email' placeholder='이메일' name='user-email'
-							class="login__input"> <input type='password'
-							placeholder='비밀번호' name='user-password' class="login__input">
-
-						<input type='checkbox' id='#informed' class='login__check styled'>
-						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-					</div>
-
-					<div class="login__control">
-						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
-						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
-					</div>
-				</form>
-			</div>
-
-		</section>
 	</div>
 
 	<!-- JavaScript-->

@@ -7,5 +7,17 @@
 
 	<resultMap type="com.seon.infra.book.BookDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectList" resultMap="resultMapObj">
+		SELECT
+			a.concertSeq
+			,a.concertName
+			,b.path
+		FROM
+			concert AS a
+		LEFT JOIN concertPhoto AS b ON b.pseq = a.concertSeq
+		ORDER BY
+			a.concertSeq DESC
+	</select>
+	
 	
 </mapper>
