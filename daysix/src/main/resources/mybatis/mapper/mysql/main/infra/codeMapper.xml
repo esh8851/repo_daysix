@@ -22,7 +22,7 @@
 	<sql id="selectCommon">
 		from
 			code a
-			join codeGroup as b
+			join codegroup as b
 				on b.seq = a.codeGroup_seq
 		WHERE 1 = 1
 			<if test="shDelNy != null and !shDelNy.equals('')">AND a.delNy = #{shDelNy}</if>
@@ -67,7 +67,7 @@
 			a.seq
 			,a.cgName
 		from
-			codeGroup a
+			codegroup a
 		where 1 = 1
 			and a.delNy = 0
 		order by

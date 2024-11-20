@@ -23,7 +23,7 @@
 	</insert>
 	
 	<insert id="insertScore">
-		INSERT INTO concertScore (
+		INSERT INTO concertscore (
 			csStar
 			,concert_concertSeq
 		)
@@ -37,7 +37,7 @@
 	</insert>
 	
 	<update id="updateScore">
-		UPDATE concertScore AS a
+		UPDATE concertscore AS a
 			SET
 				a.csStar = #{csStar}
 			WHERE 1 = 1
@@ -87,13 +87,13 @@
 				,a.concertDelNy
 				,c.hallName
 				,(SELECT COUNT(replySeq) FROM reply AS b WHERE 1 = 1 AND b.concert_concertSeq = a.concertSeq) AS replyCount
-				,(SELECT AVG(csStar) FROM concertScore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
+				,(SELECT AVG(csStar) FROM concertscore AS c WHERE 1 = 1 AND c.concert_concertSeq = a.concertSeq) AS starAvg
 				,e.path
-				,(SELECT COUNT(csSeq) FROM concertScore AS d WHERE 1 = 1 AND d.concert_concertSeq = a.concertSeq) AS starVote
+				,(SELECT COUNT(csSeq) FROM concertscore AS d WHERE 1 = 1 AND d.concert_concertSeq = a.concertSeq) AS starVote
 			FROM concert AS a
-			LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
-			LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
-			LEFT JOIN concertPhoto AS e ON e.pseq = a.concertSeq
+			LEFT JOIN concerthallconcert AS b ON b.concert_concertSeq = a.concertSeq
+			LEFT JOIN concerthall AS c ON c.hallSeq = b.concertHall_hallSeq
+			LEFT JOIN concertphoto AS e ON e.pseq = a.concertSeq
 			WHERE 1 = 1
 				<if test="shDelNy != null and !shDelNy.equals('')">AND concertDelNy = #{shDelNy}</if>
 				<if test="shUseNy != null and !shUseNy.equals('')">AND concertUseNy = #{shUseNy}</if>
@@ -144,7 +144,7 @@
 	</insert>
 	
 	<insert id="insertUploaded">
-		INSERT INTO concertPhoto (
+		INSERT INTO concertphoto (
 			type
 			,defaultNy
 			,sort
@@ -189,15 +189,15 @@
 			,c.hallWi
 			,c.hallGy
 		FROM concert AS a
-		LEFT JOIN concertHallConcert AS b ON b.concert_concertSeq = a.concertSeq
-		LEFT JOIN concertHall AS c ON c.hallSeq = b.concertHall_hallSeq
+		LEFT JOIN concerthallconcert AS b ON b.concert_concertSeq = a.concertSeq
+		LEFT JOIN concerthall AS c ON c.hallSeq = b.concertHall_hallSeq
 		WHERE 1 = 1
 			AND a.concertSeq = #{concertSeq}
 	</select>
 	
 	<select id="selectOneAvg">
 		SELECT AVG(a.csStar)
-			FROM concertScore AS a
+			FROM concertscore AS a
 			LEFT JOIN concert AS b ON b.concertSeq = a.concert_concertSeq
 		WHERE 1 = 1
 			AND a.concert_concertSeq = #{concertSeq}
@@ -206,7 +206,7 @@
 	<select id="selectOneImg">
 		SELECT
 			a.path
-		FROM concertPhoto AS a
+		FROM concertphoto AS a
 		LEFT JOIN concert AS b ON b.concertSeq = a.pseq
 		WHERE 1 = 1
 			AND a.pseq = #{concertSeq}

@@ -24,10 +24,10 @@
 			,a.concertTodayNy
 			,b.path
 			,(SELECT COUNT(replySeq) FROM reply AS aa WHERE 1 = 1 AND aa.concert_concertSeq = a.concertSeq) AS replyCount
-			,(SELECT COUNT(csSeq) FROM concertScore AS bb WHERE 1 = 1 AND bb.concert_concertSeq = a.concertSeq) AS scoreVote
-			,(SELECT AVG(csStar) FROM concertScore AS cc WHERE 1 = 1 AND cc.concert_concertSeq = a.concertSeq) AS scoreAvg
+			,(SELECT COUNT(csSeq) FROM concertscore AS bb WHERE 1 = 1 AND bb.concert_concertSeq = a.concertSeq) AS scoreVote
+			,(SELECT AVG(csStar) FROM concertscore AS cc WHERE 1 = 1 AND cc.concert_concertSeq = a.concertSeq) AS scoreAvg
 		FROM concert AS a
-		LEFT JOIN concertPhoto AS b ON b.pseq = a.concertSeq
+		LEFT JOIN concertphoto AS b ON b.pseq = a.concertSeq
 		ORDER BY
 			a.concertSeq DESC
 	</select>

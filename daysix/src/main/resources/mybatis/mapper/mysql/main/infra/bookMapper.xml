@@ -14,7 +14,7 @@
 			,b.path
 		FROM
 			concert AS a
-		LEFT JOIN concertPhoto AS b ON b.pseq = a.concertSeq
+		LEFT JOIN concertphoto AS b ON b.pseq = a.concertSeq
 		ORDER BY
 			a.concertSeq DESC
 	</select>

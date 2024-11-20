@@ -9,7 +9,7 @@
 	
 	<sql id="selectCommon">
 		from
-			codeGroup a
+			codegroup a
 		where 1 = 1
 			<if test="shDelNy != null and !shDelNy.equals('')">and delNy = #{shDelNy}</if>
 			<if test="shUseNy != null and !shUseNy.equals('')">and cgUseNy = #{shUseNy}</if>
@@ -82,13 +82,13 @@
 		    ,a.cgDateTime
 		    ,a.cgDateTimeSvr
 		from
-			codeGroup a
+			codegroup a
 		where 1 = 1
 			and a.seq = #{seq}
 	</select>
 	
 	<update id="update">
-		update codeGroup
+		update codegroup
 			set
 				cgName = #{cgName}
 			    ,cgUseNy = #{cgUseNy}
@@ -103,7 +103,7 @@
 	
 	<!-- uelete  S -->
 	<update id="uelete">
-		UPDATE codeGroup
+		UPDATE codegroup
 			SET
 				delNy = 1
 			WHERE 1 = 1
@@ -113,7 +113,7 @@
 	
 	<!-- delete S -->
 	<delete id="delete">
-		DELETE FROM codeGroup
+		DELETE FROM codegroup
 			WHERE 1 = 1
 				AND seq = #{seq} 
 				
