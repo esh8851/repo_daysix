@@ -1,11 +1,15 @@
-<th:block th:if="${!#strings.isEmpty(session?.sessNameXdm)}" th:fragment="footer">
+<th:block th:if="${!#strings.isEmpty(session?.sessNameUsr)}" th:fragment="footer">
 	<footer class="footer-wrapper">
 		<section class="container">
 			<div class="col-xs-4 col-md-3 footer-nav">
 				<ul class="nav-link">
-					<li><a href="/usr/v1/infra/index/indexUsrView" class="nav-link__item">홈</a></li>
-					<li><a href="/usr/v1/infra/concert/concertUsrList" class="nav-link__item">콘서트</a></li>
-					<li><a href="/usr/v1/infra/book/bookUsrFirst" class="nav-link__item">티켓</a></li>
+					<li><a href="/v1/infra/index/indexUsrView" class="nav-link__item">홈</a></li>
+				</ul>
+			</div>
+			<div class="col-xs-4 col-md-3 footer-nav">
+				<ul class="nav-link">
+					<li><a href="/v1/infra/concert/concertUsrList" class="nav-link__item">콘서트</a></li>
+					<li><a href="/v1/infra/book/bookUsrFirst" class="nav-link__item">티켓</a></li>
 				</ul>
 			</div>
 			<div class="col-xs-4 col-md-3 footer-nav"></div>
@@ -36,7 +40,7 @@
 	</footer>
 </th:block>
 
-<th:block th:if="${#strings.isEmpty(session?.sessNameXdm)}" th:fragment="footer">
+<th:block th:if="${#strings.isEmpty(session?.sessNameUsr)}" th:fragment="footer">
 	<footer class="footer-wrapper">
 		<section class="container">
 			<div class="col-xs-4 col-md-3 footer-nav">

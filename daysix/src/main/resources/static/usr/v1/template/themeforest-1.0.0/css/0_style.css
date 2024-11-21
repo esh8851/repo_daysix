@@ -16,6 +16,11 @@
 .movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
 
 
+/******************************* bookUsrView S *******************************/
+.choose-container>.datepicker{margin-left:0;margin-top:27px;}
+/******************************* bookUsrView E *******************************/
+
+
 /******************************* IndexUsrView S *******************************/
 #starList{display:inline-block;}
 .best-rate::before{content:'평점' ! important;background-image:none ! important;font-size:12px;width:100% ! important;left:7% ! important;}

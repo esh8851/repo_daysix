@@ -90,16 +90,16 @@
 				</div>
 			</div>
 			<div class="order-step-area">
-				<div class="order-step first--step">1. 콘서트 &amp; 장소 &amp; 시간</div>
+				<div class="order-step first--step">1 . 콘서트  &amp; 날짜  &amp; 시간</div>
 			</div>
 
-			<h2 class="page-heading heading--outcontainer">콘서트 선택</h2>
+			<h2 class="page-heading heading--outcontainer">콘서트</h2>
 		</section>
 
 		<div class="choose-film">
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide" data-film='The Fifth Estate' th:each="list:${list}">
+					<div class="swiper-slide" th:attr="data-film=${list.concertName}" th:each="list:${list}">
 						<div class="film-images">
 							<img alt='' th:src="${list.path}">
 						</div>
@@ -112,34 +112,19 @@
 		<section class="container">
 			<div class="col-sm-12">
 				<div class="choose-indector choose-indector--film">
-					<strong>선택됨: </strong><span class="choosen-area"></span>
+					<strong>선택됨 : </strong><span class="choosen-area"></span>
 				</div>
 
-				<h2 class="page-heading">도시 &amp; 날짜</h2>
+				<h2 class="page-heading">날짜</h2>
 
 				<div class="choose-container choose-container--short">
-					<form id='select' class="select" method='get'>
-						<select name="select_item" id="select-sort" class="select__sort"
-							tabindex="0">
-							<option value="1" selected='selected'>서울</option>
-							<option value="2">인천</option>
-							<option value="3">부산</option>
-							<option value="4">울산</option>
-							<option value="5">경기</option>
-							<option value="3">당진</option>
-							<option value="4">안성</option>
-							<option value="5">전주</option>
-						</select>
-					</form>
-
 					<div class="datepicker">
 						<span class="datepicker__marker"><i class="fa fa-calendar"></i>날짜</span>
-						<input type="text" id="datepicker" value='03/10/2014'
-							class="datepicker__input">
+						<input type="text" id="datepicker" value="   날짜선택" class="datepicker__input">
 					</div>
 				</div>
 
-				<h2 class="page-heading">시간 선택</h2>
+				<h2 class="page-heading">시간</h2>
 
 				<div class="time-select time-select--wide">
 					<div class="time-select__group group--first">
@@ -211,7 +196,7 @@
 				</div>
 
 				<div class="choose-indector choose-indector--time">
-					<strong>선택됨: </strong><span class="choosen-area"></span>
+					<strong>선택됨 : </strong><span class="choosen-area"></span>
 				</div>
 			</div>
 
@@ -231,11 +216,9 @@
 
 
 			<div class="booking-pagination">
-				<a href="#" class="booking-pagination__prev hide--arrow"> <span
-					class="arrow__text arrow--prev"></span> <span class="arrow__info"></span>
-				</a> <a href="0_book2.html" class="booking-pagination__next"> <span
-					class="arrow__text arrow--next">다음 단계</span> <span
-					class="arrow__info">좌석 선택</span>
+				<a href="/v1/infra/book/bookUsrSecond" class="booking-pagination__next">
+					<span class="arrow__text arrow--next">다음 단계</span>
+					<span class="arrow__info">좌석 선택</span>
 				</a>
 			</div>
 
@@ -285,7 +268,7 @@
 		});
 	</script>
 	
-	<!-- btnLogOut S -->
+	<!-- btnLogOut -->
     <script type="text/javascript">
     	document.getElementById("btnLogOut").onclick = function() {
     		$.ajax({
@@ -309,7 +292,13 @@
 			});
     	}
     </script>
-    <!-- btnLogOut E -->
+    
+    <!-- btnBook -->
+    <script type="text/javascript">
+    	document.getElementById("btnBook").onclick = function() {
+    		window.location.href = "/v1/infra/book/bookUsrFirst";
+    	}
+    </script>
     
     <script type="text/javascript">
     	document.querySelector('.btn--singin').onclick = function() {

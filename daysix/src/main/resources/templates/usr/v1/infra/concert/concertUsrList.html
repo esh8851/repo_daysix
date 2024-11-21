@@ -272,44 +272,44 @@
 	</div>
 
 	<!-- open/close -->
-	<div class="overlay overlay-hugeinc">
+<!-- 	<div class="overlay overlay-hugeinc"> -->
 
-		<section class="container">
+<!-- 		<section class="container"> -->
 
-			<div class="col-sm-4 col-sm-offset-4">
-				<button type="button" class="overlay-close">Close</button>
-				<form id="login-form" class="login" method='get' novalidate=''>
-					<p class="login__title">
-						로그인 <br> <span class="login-edition">welcome to
-							A.Movie</span>
-					</p>
+<!-- 			<div class="col-sm-4 col-sm-offset-4"> -->
+<!-- 				<button type="button" class="overlay-close">Close</button> -->
+<!-- 				<form id="login-form" class="login" method='get' novalidate=''> -->
+<!-- 					<p class="login__title"> -->
+<!-- 						로그인 <br> <span class="login-edition">welcome to -->
+<!-- 							A.Movie</span> -->
+<!-- 					</p> -->
 
-					<div class="social social--colored">
-						<a href='#' class="social__variant fa fa-facebook"></a> <a
-							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
-							class="social__variant fa fa-tumblr"></a>
-					</div>
+<!-- 					<div class="social social--colored"> -->
+<!-- 						<a href='#' class="social__variant fa fa-facebook"></a> <a -->
+<!-- 							href='#' class="social__variant fa fa-twitter"></a> <a href='#' -->
+<!-- 							class="social__variant fa fa-tumblr"></a> -->
+<!-- 					</div> -->
 
-					<p class="login__tracker">or</p>
+<!-- 					<p class="login__tracker">or</p> -->
 
-					<div class="field-wrap">
-						<input type='email' placeholder='이메일' name='user-email'
-							class="login__input"> <input type='password'
-							placeholder='비밀번호' name='user-password' class="login__input">
+<!-- 					<div class="field-wrap"> -->
+<!-- 						<input type='email' placeholder='이메일' name='user-email' -->
+<!-- 							class="login__input"> <input type='password' -->
+<!-- 							placeholder='비밀번호' name='user-password' class="login__input"> -->
 
-						<input type='checkbox' id='#informed' class='login__check styled'>
-						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-					</div>
+<!-- 						<input type='checkbox' id='#informed' class='login__check styled'> -->
+<!-- 						<label for='#informed' class='login__check-info'>회원정보 기억하기</label> -->
+<!-- 					</div> -->
 
-					<div class="login__control">
-						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
-						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
-					</div>
-				</form>
-			</div>
+<!-- 					<div class="login__control"> -->
+<!-- 						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button> -->
+<!-- 						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a> -->
+<!-- 					</div> -->
+<!-- 				</form> -->
+<!-- 			</div> -->
 
-		</section>
-	</div>
+<!-- 		</section> -->
+<!-- 	</div> -->
 
 	<!-- JavaScript-->
 	<!-- jQuery 3.1.1-->
@@ -362,7 +362,7 @@
 		}
 	</script>
 
-	<!-- btnLogOut S -->
+	<!-- btnLogOut -->
 	<script type="text/javascript">
 		document.getElementById("btnLogOut").onclick = function() {
 			$.ajax({
@@ -389,7 +389,7 @@
 			});
 		}
 	</script>
-	<!-- btnLogOut E -->
+	<!-- btnLogOut -->
 
 	<!-- paging -->
 	<script type="text/javascript">
@@ -400,7 +400,7 @@
 		}
 	</script>
 	
-	<!-- total S -->
+	<!-- total -->
     <script type="text/javascript">
 	    document.getElementById("changeRowNum").onchange = function () {
 	        document.getElementById("rowNumToShow").value = document.getElementById("changeRowNum").value;
@@ -408,9 +408,8 @@
 	        form.submit();
 	    }
     </script>
-    <!-- total E -->
     
-    <!-- score S -->
+    <!-- score -->
     <script type="text/javascript">
     	var starwrap = document.querySelectorAll(".rating");
     	starwrap.forEach((wrap) => {
@@ -456,7 +455,13 @@
 			});
     	});
     </script>
-    <!-- score E -->
+    
+    <!-- btnBook -->
+    <script type="text/javascript">
+    	document.getElementById("btnBook").onclick = function() {
+    		window.location.href = "/v1/infra/book/bookUsrFirst";
+    	}
+    </script>
     
 </body>
 
