@@ -411,7 +411,7 @@
 	                <div class="row">
 	                    <div class="col-sm-8 col-md-12">
 	                        <!-- Movie variant with time -->
-	                        <div class="movie movie--test movie--test--light movie--test--left" th:each="list, limit : ${list}" th:if="${limit.index < 4}">
+	                        <div class="movie movie--test movie--test--light movie--test--left" th:each="list, limit : ${list}" th:if="${limit.index < 6}">
 	                            <div class="movie__images">
 	                                <a class="movie-beta__link" th:href="@{/v1/infra/concert/concertUsrDetail(concertSeq=${list.concertSeq})}">
 	                                    <img alt='' th:src="${list.path}">
@@ -423,9 +423,10 @@
 	
 	                                <p class="movie__time" th:text="${list.concertPlayTime} + '분'"></p>
 	
-	                                <p class="movie__option" th:text="${list.concertGenre}"></p>
-	
+	                                <p class="movie__option"><b>장르 : </b><span th:text="${list.concertGenre}"></span></p>
+	                                
 	                                <div class="movie__rate">
+	                                	<p class="movie__option"><b>평점</b></p>
 	                                    <div id="starList">
 										    <img th:alt="1" 
 										         th:src="@{${list.scoreAvg >= 1 ? '/usr/v1/template/themeforest-1.0.0/images/rate/star-on.svg' : '/usr/v1/template/themeforest-1.0.0/images/rate/star-off.svg'}}">

@@ -28,6 +28,7 @@
 .movie-best__rating::before{background-image:none ! important;}
 .movie-best__rating::after{background-image:none ! important;}
 .movie-best__rating{font-weight:600 ! important;}
+.movie-beta__link>img{width:278px;height:278px;}
 /******************************* IndexUsrView E *******************************/
 
 /******************************* concertUstList S *******************************/
