@@ -54,7 +54,7 @@ public class CodeGroupController {
 //			System.out.println(groups.getCgSeq() + "|" + groups.getCgName() + "|" + groups.getCgUseNy() + "|" + groups.getCgOrder() + "|" + groups.getCgDesc() + "|" + groups.getDelNy() + "|" + groups.getCgDateTime() + "|" + groups.getCgDateTimeSvr());
 //		}
 		
-//		API
+//		공공데이터 API
 //        StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/1471000/CovidDagnsRgntProdExprtStusService/getCovidDagnsRgntProdExprtStusInq"); /*URL*/
 //        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=nB6NdWetzSrcRvCx6o0WrgOjWDDlJ2wnT3vslxv%2BaCTpN9DDmqmKXDzJ0Q2xuBh4Y27RRTJZaGM6y4VlOFYpNg%3D%3D"); /*Service Key*/
 //        urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지 번호*/
@@ -123,12 +123,12 @@ public class CodeGroupController {
 		System.out.println("node.get(\"header\").get(\"resultMsg\").asText(): " + node.get("header").get("resultMsg").asText());
 		System.out.println("node.get(\"header\").get(\"resultMsg\").asText(): " + node.get("body").get("items").get(1).get("KIT_EXPRT_QTY").asText());
 		
-		return "/xdm/v1/infra/codegroup/codeGroupXdmList";
+		return "xdm/v1/infra/codegroup/codeGroupXdmList";
 	}
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmForm")
 	public String codeGroupXdmForm() {
-		return "/xdm/v1/infra/codegroup/codeGroupXdmForm";
+		return "xdm/v1/infra/codegroup/codeGroupXdmForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmInst")
@@ -150,7 +150,7 @@ public class CodeGroupController {
 	public String codeGroupXdmMForm(CodeGroupDto codeGroupDto, Model model) {
 		model.addAttribute("item", codeGroupService.selectOne(codeGroupDto));
 		System.out.println("selectOne 잘 넘어감");
-		return "/xdm/v1/infra/codegroup/codeGroupXdmMForm";
+		return "xdm/v1/infra/codegroup/codeGroupXdmMForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/codegroup/codeGroupXdmUpdt")

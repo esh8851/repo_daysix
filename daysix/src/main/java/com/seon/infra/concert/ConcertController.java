@@ -30,12 +30,12 @@ public class ConcertController {
 			model.addAttribute("list", concertService.selectList(concertVo));
 		}
 //		model.addAttribute("list", concertService.selectList(concertVo));
-		return "/xdm/v1/infra/concert/concertXdmList";
+		return "xdm/v1/infra/concert/concertXdmList";
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertXdmForm")
 	public String concertXdmForm() {
-		return "/xdm/v1/infra/concert/concertXdmForm";
+		return "xdm/v1/infra/concert/concertXdmForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertXdmInst")
@@ -47,7 +47,7 @@ public class ConcertController {
 	@RequestMapping(value="/v1/infra/concert/concertXdmMForm")
 	public String concertXdmMForm(Model model, ConcertDto concertDto) {
 		model.addAttribute("item", concertService.selectOne(concertDto));
-		return "/xdm/v1/infra/concert/concertXdmMForm";
+		return "xdm/v1/infra/concert/concertXdmMForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertXdmUpdt")
@@ -76,7 +76,7 @@ public class ConcertController {
 		if (concertVo.getTotalRows() > 0) {
 			model.addAttribute("list", concertService.selectList(concertVo));
 		}
-		return "/usr/v1/infra/concert/concertUsrList";
+		return "usr/v1/infra/concert/concertUsrList";
 	}
 
 	@RequestMapping(value="/v1/infra/concert/concertUsrDetail")
@@ -86,7 +86,7 @@ public class ConcertController {
 		model.addAttribute("replyCount", concertService.selectOneCountReply(concertDto));
 		model.addAttribute("scoreAvg", concertService.selectOneAvg(concertDto));
 		model.addAttribute("itemImg", concertService.selectOneImg(concertDto));
-		return "/usr/v1/infra/concert/concertUsrDetail";
+		return "usr/v1/infra/concert/concertUsrDetail";
 	}
 	
 	@RequestMapping(value="/v1/infra/concert/concertUsrReplyInst")

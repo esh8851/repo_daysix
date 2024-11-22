@@ -19,7 +19,7 @@ public class RestaurantController {
 //			System.out.println(restauranti.getSeq() + "|" + restauranti.getRestaurantType() + "|" + restauranti.getRestaurantName() + "|" + restauranti.getRestaurantOpenTime() + "|" + restauranti.getRestaurantCloseTime() + "|" + restauranti.getRestaurantPhone() + "|" + restauranti.getRestaurantHomePage() + "|" + restauranti.getRestaurantParkingNy() + "|" + restauranti.getRestaurantRegNy() + "|" + restauranti.getRestaurantCorkageNy() + "|" + restauranti.getRestaurantIntroText() + "|" + restauranti.getRestaurantRegDateTime() + "|" + restauranti.getRestaurantModDateTime());
 //		}
 		model.addAttribute("list", restaurantService.selectService());
-		return "/usr/v1/infra/restaurant/restaurantUsr";
+		return "usr/v1/infra/restaurant/restaurantUsr";
 	}
 
 }

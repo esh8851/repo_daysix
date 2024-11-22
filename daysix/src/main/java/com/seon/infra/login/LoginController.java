@@ -12,7 +12,7 @@ public class LoginController {
 	
 	@RequestMapping(value="/v1/infra/login/loginXdmSignIn")
 	public String longinXdmSignIn() {
-		return "/xdm/v1/infra/login/loginXdmSignIn";
+		return "xdm/v1/infra/login/loginXdmSignIn";
 	}
 
 }

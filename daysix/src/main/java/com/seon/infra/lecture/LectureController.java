@@ -19,7 +19,7 @@ public class LectureController {
 //			System.out.println(lecturei.getSeq() + "|" + lecturei.getLectureType() + "|" + lecturei.getLectureName() + "|" + lecturei.getLecturePrice() + "|" + lecturei.getLectureTeacher() + "|" + lecturei.getRegCourseStart() + "|" + lecturei.getRegCourseFinal() + "|" + lecturei.getLearningStart() + "|" + lecturei.getLearningFinal() + "|" + lecturei.getLecturePlace() + "|" + lecturei.getLecturedetail() + "|" + lecturei.getLectureRegDateTime() + "|" + lecturei.getLectureModDateTime());
 //		}
 		model.addAttribute("list", lectureService.selectService());
-		return "/usr/v1/infra/lecture/lectureUsr";
+		return "usr/v1/infra/lecture/lectureUsr";
 	}
 
 }

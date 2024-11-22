@@ -12,7 +12,7 @@ public class IndexController {
 	
 	@RequestMapping(value="/v1/infra/index/indexXdmView")
 	public String indexXdmView() {
-		return "/xdm/v1/infra/index/indexXdmView";
+		return "xdm/v1/infra/index/indexXdmView";
 	}
 
 }

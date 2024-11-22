@@ -14,12 +14,12 @@ public class BookController {
 	@RequestMapping(value="/v1/infra/book/bookUsrFirst")
 	public String bookUsrFirst(Model model, BookDto bookDto) {
 		model.addAttribute("list", bookService.selectList(bookDto));
-		return "/usr/v1/infra/book/bookUsrFirst";
+		return "usr/v1/infra/book/bookUsrFirst";
 	}
 	
 	@RequestMapping(value="/v1/infra/book/bookUsrSecond")
 	public String bookUsrSecond() {
-		return "/usr/v1/infra/book/bookUsrSecond";
+		return "usr/v1/infra/book/bookUsrSecond";
 	}
 
 }

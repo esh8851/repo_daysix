@@ -19,12 +19,12 @@ public class HoewonController {
 //			System.out.println(hoewoni.getSeq() + "|" + hoewoni.getAdminNy() + "|" + hoewoni.getHoewonName() + "|" + hoewoni.getHoewonId() + "|" + hoewoni.getHoewonPw() + "|" + hoewoni.getHoewonGender() + "|" + hoewoni.getHoewonBirth() + "|" + hoewoni.getHoewonEmail() + "|" + hoewoni.getHoewonEmail() + "|" + hoewoni.getHoewonPhone() + "|" + hoewoni.getHoewonDesc() + "|" + hoewoni.getHoewonRegDateTime() + "|" + hoewoni.getHoewonModDateTime());
 //		}
 		model.addAttribute("list", hoewonService.selectService());
-		return "/usr/v1/infra/hoewon/hoewonUsrList";
+		return "usr/v1/infra/hoewon/hoewonUsrList";
 	}
 	
 	@RequestMapping(value="/v1/infra/hoewon/hoewonUsrForm")
 	public String hoewonUsrForm() {
-		return "/usr/v1/infra/hoewon/hoewonUsrForm";
+		return "usr/v1/infra/hoewon/hoewonUsrForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/hoewon/hoewonUsrInst")

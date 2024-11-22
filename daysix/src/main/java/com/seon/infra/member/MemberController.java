@@ -52,13 +52,13 @@ public class MemberController {
 		}
 		
 //		model.addAttribute("list", memberService.selectList(memberVo));
-		return "/xdm/v1/infra/member/memberXdmList";
+		return "xdm/v1/infra/member/memberXdmList";
 	}
 	
 //	memberXdmForm
 	@RequestMapping(value="/v1/infra/member/memberXdmForm")
 	public String memberXdmForm() {
-		return "/xdm/v1/infra/member/memberXdmForm";
+		return "xdm/v1/infra/member/memberXdmForm";
 	}
 	
 //	memberXdmInst

@@ -24,12 +24,12 @@ public class ConcertHallController {
 			model.addAttribute("list", concertHallService.selectList(concertHallVo));
 		}
 		model.addAttribute("list", concertHallService.selectList(concertHallVo));
-		return "/xdm/v1/infra/concertHall/concertHallXdmList";
+		return "xdm/v1/infra/concertHall/concertHallXdmList";
 	}
 	
 	@RequestMapping(value="/v1/infra/concertHall/concertHallXdmForm")
 	public String concertHallXdmForm() {
-		return "/xdm/v1/infra/concertHall/concertHallXdmForm";
+		return "xdm/v1/infra/concertHall/concertHallXdmForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/concertHall/concertHallXdmInst")
@@ -41,7 +41,7 @@ public class ConcertHallController {
 	@RequestMapping(value="/v1/infra/concertHall/concertHallXdmMForm")
 	public String concertHallXdmMForm(Model model, ConcertHallDto concertHallDto) {
 		model.addAttribute("item", concertHallService.selectOne(concertHallDto));
-		return "/xdm/v1/infra/concertHall/concertHallXdmMForm";
+		return "xdm/v1/infra/concertHall/concertHallXdmMForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/concertHall/concertHallXdmUpdt")
@@ -66,7 +66,7 @@ public class ConcertHallController {
 	@RequestMapping(value="/v1/infra/concert/concertUsrListHall")
 	public String concertUsrList(Model model, ConcertHallDto concertHallDto) {
 		model.addAttribute("itemHall", concertHallService.selectOne(concertHallDto));
-		return "/usr/v1/infra/concert/concertUsrList";
+		return "usr/v1/infra/concert/concertUsrList";
 	}
 	
 }

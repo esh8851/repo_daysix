@@ -38,14 +38,14 @@ public class CodeController {
 			model.addAttribute("list", codeService.selectService(codeVo));
 		}
 		
-		return "/xdm/v1/infra/code/codeXdmList";
+		return "xdm/v1/infra/code/codeXdmList";
 	}
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmForm")
 	public String codeXdmForm(Model model) {
 //		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
 		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
-		return "/xdm/v1/infra/code/codeXdmForm";
+		return "xdm/v1/infra/code/codeXdmForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmInst")
@@ -59,7 +59,7 @@ public class CodeController {
 		model.addAttribute("item", codeService.selectOne(codeDto));
 //		List<CodeDto> codeGroups = codeService.selectListCodeGroup();
 		model.addAttribute("listCodeGroup", codeService.selectListCodeGroup());
-		return "/xdm/v1/infra/code/codeXdmMForm";
+		return "xdm/v1/infra/code/codeXdmMForm";
 	}
 	
 	@RequestMapping(value="/v1/infra/code/codeXdmUpdt")

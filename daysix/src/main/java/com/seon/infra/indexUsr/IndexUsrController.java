@@ -15,7 +15,7 @@ public class IndexUsrController {
 	@RequestMapping(value="/v1/infra/index/indexUsrView")
 	public String indexUsrView(Model model, IndexUsrDto indexUsrDto) {
 		model.addAttribute("list", indexUsrService.selectList(indexUsrDto));
-		return "/usr/v1/infra/index/indexUsrView";
+		return "usr/v1/infra/index/indexUsrView";
 	}
 	
 }
