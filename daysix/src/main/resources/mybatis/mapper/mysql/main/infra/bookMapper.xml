@@ -19,5 +19,20 @@
 			a.concertSeq DESC
 	</select>
 	
+	<select id="selectListTicket">
+		SELECT
+			a.tkSeq
+			,a.tkNo
+			,a.tkTime
+			,a.tkDelNy
+			,a.tkDate
+			,a.concertHall_hallSeq
+		FROM ticket AS a
+		WHERE 1 = 1
+			AND a.concertHall_hallSeq = #{}
+		ORDER BY
+			a.tkSeq DESC
+	</select>
+	
 	
 </mapper>
