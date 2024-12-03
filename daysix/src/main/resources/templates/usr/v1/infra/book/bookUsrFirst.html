@@ -104,7 +104,6 @@
 							<img alt='' th:src="${list.path}">
 						</div>
 						<p class="choose-film__title" th:text="${list.concertName}"></p>
-						<p class="choose-film__title" th:text="${list.concertSeq}"></p>
 					</div>
 				</div>
 			</div>
@@ -130,68 +129,10 @@
 				<div class="time-select time-select--wide">
 					<div class="time-select__group group--first">
 						<div class="col-sm-3">
-							<p class="time-select__place">KBS부산홀</p>
+							<p class="time-select__place" th:each="listTicket, iterStat:${listTicket}" th:text="${iterStat.index == 0 ? listTicket.hallName : ''}"></p>
 						</div>
 						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" data-time='09:40'>09:40</li>
-							<li class="time-select__item" data-time='13:45'>13:45</li>
-							<li class="time-select__item" data-time='15:45'>15:45</li>
-							<li class="time-select__item" data-time='19:50'>19:50</li>
-							<li class="time-select__item" data-time='21:50'>21:50</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-3">
-							<p class="time-select__place">예술의 전당 음악당 콘서트홀</p>
-						</div>
-						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" data-time='10:45'>10:45</li>
-							<li class="time-select__item" data-time='16:00'>16:00</li>
-							<li class="time-select__item" data-time='19:00'>19:00</li>
-							<li class="time-select__item" data-time='21:15'>21:15</li>
-							<li class="time-select__item" data-time='23:00'>23:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-3">
-							<p class="time-select__place">BEXCO 컨벤션홀 그랜드볼룸</p>
-						</div>
-						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" data-time='09:00'>09:00</li>
-							<li class="time-select__item" data-time='11:00'>11:00</li>
-							<li class="time-select__item" data-time='13:00'>13:00</li>
-							<li class="time-select__item" data-time='15:00'>15:00</li>
-							<li class="time-select__item" data-time='17:00'>17:00</li>
-							<li class="time-select__item" data-time='19:00'>19:00</li>
-							<li class="time-select__item" data-time='21:00'>21:00</li>
-							<li class="time-select__item" data-time='23:00'>23:00</li>
-							<li class="time-select__item" data-time='01:00'>01:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group">
-						<div class="col-sm-3">
-							<p class="time-select__place">예술의 전당 오페라하우스 오페라극장</p>
-						</div>
-						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" data-time='10:45'>10:45</li>
-							<li class="time-select__item" data-time='16:00'>16:00</li>
-							<li class="time-select__item" data-time='19:00'>19:00</li>
-							<li class="time-select__item" data-time='21:15'>21:15</li>
-							<li class="time-select__item" data-time='23:00'>23:00</li>
-						</ul>
-					</div>
-
-					<div class="time-select__group group--last">
-						<div class="col-sm-3">
-							<p class="time-select__place">KBS아레나</p>
-						</div>
-						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" data-time='17:45'>17:45</li>
-							<li class="time-select__item" data-time='21:30'>21:30</li>
-							<li class="time-select__item" data-time='02:20'>02:20</li>
+							<li class="time-select__item" th:each="listTicket:${listTicket}" th:text="${listTicket.tkTime}" th:attr="data-time=${listTicket.tkTime}"></li>
 						</ul>
 					</div>
 				</div>

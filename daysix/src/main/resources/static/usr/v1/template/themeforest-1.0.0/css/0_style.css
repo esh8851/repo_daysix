@@ -16,6 +16,13 @@
 .movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
 
 
+/******************************* bookUsrSecond S *******************************/
+.sits .sits__checked{width:80px;}
+.sits .sits__checked:before{left:35px;}
+.sits .sits__checked:after{left:35px;}
+/******************************* bookUsrSecond E *******************************/
+
+
 /******************************* bookUsrView S *******************************/
 .choose-container>.datepicker{margin-left:0;margin-top:27px;}
 /******************************* bookUsrView E *******************************/

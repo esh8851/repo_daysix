@@ -14,5 +14,25 @@ public class BookService {
 	public List<BookDto> selectList(BookDto bookDto) {
 		return bookDao.selectList(bookDto);
 	}
-
+	
+	public List<BookDto> selectListTicket() {
+		return bookDao.selectListTicket();
+	}
+	
+	public List<BookDto> selectListSeatA(BookDto bookDto) {
+		return bookDao.selectListSeatA(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatB(BookDto bookDto) {
+		return bookDao.selectListSeatB(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatC(BookDto bookDto) {
+		return bookDao.selectListSeatC(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatD(BookDto bookDto) {
+		return bookDao.selectListSeatD(bookDto);
+	}
+	
 }

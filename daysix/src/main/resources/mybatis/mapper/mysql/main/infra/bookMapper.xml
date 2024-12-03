@@ -19,20 +19,82 @@
 			a.concertSeq DESC
 	</select>
 	
-	<select id="selectListTicket">
+	<select id="selectListTicket" resultMap="resultMapObj">
 		SELECT
 			a.tkSeq
-			,a.tkNo
 			,a.tkTime
-			,a.tkDelNy
-			,a.tkDate
-			,a.concertHall_hallSeq
-		FROM ticket AS a
-		WHERE 1 = 1
-			AND a.concertHall_hallSeq = #{}
-		ORDER BY
-			a.tkSeq DESC
+			,b.hallName
+		FROM
+			ticket AS a
+		LEFT JOIN concerthall AS b ON b.hallSeq = a.concertHall_hallSeq
 	</select>
 	
+	<select id="selectListSeatA" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 3
+			AND a.stPrice = 120000
+			AND a.stName LIKE 'A%'
+	</select>
+	
+	<select id="selectListSeatB" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 3
+			AND a.stPrice = 120000
+			AND a.stName LIKE 'B%'
+	</select>
+	
+	<select id="selectListSeatC" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 3
+			AND a.stPrice = 120000
+			AND a.stName LIKE 'C%'
+	</select>
+	
+	<select id="selectListSeatD" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 3
+			AND a.stPrice = 120000
+			AND a.stName LIKE 'D%'
+	</select>
 	
 </mapper>
