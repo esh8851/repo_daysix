@@ -19,4 +19,18 @@ public interface BookDao {
 	
 	public List<BookDto> selectListSeatD(BookDto bookDto);
 	
+	public List<BookDto> selectListSeatE(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatF(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatG(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatI(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatJ(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatK(BookDto bookDto);
+	
+	public List<BookDto> selectListSeatL(BookDto bookDto);
+	
 }

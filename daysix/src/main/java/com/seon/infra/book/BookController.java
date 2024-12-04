@@ -24,6 +24,13 @@ public class BookController {
 		model.addAttribute("listSeatB", bookService.selectListSeatB(bookDto));
 		model.addAttribute("listSeatC", bookService.selectListSeatC(bookDto));
 		model.addAttribute("listSeatD", bookService.selectListSeatD(bookDto));
+		model.addAttribute("listSeatE", bookService.selectListSeatE(bookDto));
+		model.addAttribute("listSeatF", bookService.selectListSeatF(bookDto));
+		model.addAttribute("listSeatG", bookService.selectListSeatG(bookDto));
+		model.addAttribute("listSeatI", bookService.selectListSeatI(bookDto));
+		model.addAttribute("listSeatJ", bookService.selectListSeatJ(bookDto));
+		model.addAttribute("listSeatK", bookService.selectListSeatK(bookDto));
+		model.addAttribute("listSeatL", bookService.selectListSeatL(bookDto));
 		return "usr/v1/infra/book/bookUsrSecond";
 	}
 

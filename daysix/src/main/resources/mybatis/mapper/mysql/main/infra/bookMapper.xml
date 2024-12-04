@@ -97,4 +97,123 @@
 			AND a.stName LIKE 'D%'
 	</select>
 	
+	<select id="selectListSeatE" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 2
+			AND a.stPrice = 240000
+			AND a.stName LIKE 'E%'
+	</select>
+	
+	<select id="selectListSeatF" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 2
+			AND a.stPrice = 240000
+			AND a.stName LIKE 'F%'
+	</select>
+	
+	<select id="selectListSeatG" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 2
+			AND a.stPrice = 240000
+			AND a.stName LIKE 'G%'
+	</select>
+	
+	<select id="selectListSeatI" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 2
+			AND a.stPrice = 240000
+			AND a.stName LIKE 'I%'
+	</select>
+	
+	<select id="selectListSeatJ" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 1
+			AND a.stPrice = 360000
+			AND a.stName LIKE 'J%'
+	</select>
+	
+	<select id="selectListSeatK" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 1
+			AND a.stPrice = 360000
+			AND a.stName LIKE 'K%'
+	</select>
+	
+	<select id="selectListSeatL" resultMap="resultMapObj">
+		SELECT
+			a.stSeq
+			,a.stTypeNy
+			,a.stRating
+			,a.stName
+			,a.stPrice
+			,a.stDelNy
+			,a.concertHall_hallSeq
+		FROM
+			seat AS a
+		WHERE 1 = 1
+			AND a.stRating = 1
+			AND a.stPrice = 360000
+			AND a.stName LIKE 'L%'
+	</select>
+	
 </mapper>

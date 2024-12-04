@@ -35,4 +35,32 @@ public class BookService {
 		return bookDao.selectListSeatD(bookDto);
 	}
 	
+	public List<BookDto> selectListSeatE(BookDto bookDto) {
+		return bookDao.selectListSeatE(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatF(BookDto bookDto) {
+		return bookDao.selectListSeatF(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatG(BookDto bookDto) {
+		return bookDao.selectListSeatG(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatI(BookDto bookDto) {
+		return bookDao.selectListSeatI(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatJ(BookDto bookDto) {
+		return bookDao.selectListSeatJ(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatK(BookDto bookDto) {
+		return bookDao.selectListSeatK(bookDto);
+	}
+	
+	public List<BookDto> selectListSeatL(BookDto bookDto) {
+		return bookDao.selectListSeatL(bookDto);
+	}
+	
 }
