@@ -47,42 +47,7 @@
 	<div class="wrapper place-wrapper">
 		<!-- Header section -->
 		<header class="header-wrapper">
-			<div class="container">
-				<!-- Logo link-->
-				<a href='0_index.html' class="logo"> <img alt='logo'
-					src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
-				</a>
-
-				<!-- Main website navigation-->
-				<nav id="navigation-box">
-					<!-- Toggle for mobile menu mode -->
-					<a href="#" id="navigation-toggle"> <span class="menu-icon">
-							<span class="icon-toggle" role="button"
-							aria-label="Toggle Navigation"> <span class="lines"></span>
-						</span>
-					</span>
-					</a>
-
-					<!-- Link navigation -->
-					<ul id="navigation">
-						<li><span class="sub-nav-toggle plus"></span> <a
-							href="0_login.html">로그인</a></li>
-						<li><span class="sub-nav-toggle plus"></span> <a
-							href="0_signUp.html">회원가입</a></li>
-						<li><span class="sub-nav-toggle plus"></span> <a
-							href="0_concertList.html">콘서트</a></li>
-						<li><span class="sub-nav-toggle plus"></span> <a
-							href="0_book.html">콘서트티켓</a></li>
-					</ul>
-				</nav>
-
-				<!-- Additional header buttons / Auth and direct link to booking-->
-				<div class="control-panel">
-					<a href="#" class="btn btn--sign login-window">로그인</a> <a href="#"
-						class="btn btn-md btn--warning btn--book login-window">티켓 예매</a>
-				</div>
-
-			</div>
+			<th:block th:replace="~{usr/v1/infra/include/head :: head}"></th:block>
 		</header>
 
 		<!-- Search bar -->
@@ -237,60 +202,7 @@
 						</div>
 					</div>
 
-					<div class="col-sm-12 visible-xs">
-						<div class="sits-area--mobile">
-							<div class="sits-area--mobile-wrap">
-								<div class="sits-select">
-									<select name="sorting_item" class="sits__sort sit-row"
-										tabindex="0">
-										<option value="1" selected='selected'>A</option>
-										<option value="2">B</option>
-										<option value="3">C</option>
-										<option value="4">D</option>
-										<option value="5">E</option>
-										<option value="6">F</option>
-										<option value="7">G</option>
-										<option value="8">I</option>
-										<option value="9">J</option>
-										<option value="10">K</option>
-										<option value="11">L</option>
-									</select> <select name="sorting_item" class="sits__sort sit-number"
-										tabindex="1">
-										<option value="1" selected='selected'>1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-										<option value="6">6</option>
-										<option value="7">7</option>
-										<option value="8">8</option>
-										<option value="9">9</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-										<option value="13">13</option>
-										<option value="14">14</option>
-										<option value="15">15</option>
-										<option value="16">16</option>
-										<option value="17">17</option>
-										<option value="18">18</option>
-									</select> <a href="#" class="btn btn-md btn--warning toogle-sits">Choose
-										sit</a>
-								</div>
-							</div>
-
-							<a href="#" class="watchlist add-sits-line">Add new sit</a>
-
-							<aside class="sits__checked">
-								<div class="checked-place">
-									<span class="choosen-place"></span>
-								</div>
-								<div class="checked-result">$0</div>
-							</aside>
-
-							<img alt="" src="/usr/v1/template/themeforest-1.0.0/images/components/sits_mobile.png">
-						</div>
-					</div>
+					
 
 				</div>
 		</div>
@@ -317,7 +229,7 @@
 			<a href="/v1/infra/book/bookUsrFirst" class="booking-pagination__prev"> <span
 				class="arrow__text arrow--prev">이전 단계</span> <span
 				class="arrow__info">콘서트&amp;장소&amp;시간</span>
-			</a> <a href="0_book3_buy.html" class="booking-pagination__next"> <span
+			</a> <a href="/v1/infra/book/bookUsrThirdBuy" class="booking-pagination__next"> <span
 				class="arrow__text arrow--next">다음 단계</span> <span
 				class="arrow__info">체크아웃</span>
 			</a>
@@ -411,6 +323,34 @@
 	            price.textContent = "0원";
 	        }
 	    };
+	</script>
+	
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function(){
+			document.querySelector(".booking-pagination__next").onclick = function(){
+				var bookcount = document.querySelectorAll(".choosen-place").length;
+				alert(bookcount);
+				
+				$.ajax({
+					async: true 
+					,cache: false
+					,type: "post"
+					,url: "/v1/infra/book/bookUsrProc"
+					,data : {bookcount : bookcount}
+					,success: function(response) {
+						if(response.rt == "success") {
+							
+						} else {
+// 							by pass
+						}
+					}
+					,error : function(jqXHR, textStatus, errorThrown){
+						alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+					}
+				});
+				
+			}
+		});
 	</script>
 
 </body>

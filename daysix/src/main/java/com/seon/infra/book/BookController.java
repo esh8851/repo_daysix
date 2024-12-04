@@ -1,9 +1,13 @@
 package com.seon.infra.book;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class BookController {
@@ -32,6 +36,19 @@ public class BookController {
 		model.addAttribute("listSeatK", bookService.selectListSeatK(bookDto));
 		model.addAttribute("listSeatL", bookService.selectListSeatL(bookDto));
 		return "usr/v1/infra/book/bookUsrSecond";
+	}
+	
+	@RequestMapping(value="/v1/infra/book/bookUsrThirdBuy")
+	public String bookUsrThirdBuy() {
+		return "usr/v1/infra/book/bookUsrThirdBuy";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/v1/infra/book/bookUsrProc")
+	public Map<String, Object> bookUsrProc(BookDto bookDto) throws Exception {
+		Map<String, Object> returnMap = new HashMap<String, Object>();
+		returnMap.put("rt", "success");
+		return returnMap;
 	}
 
 }

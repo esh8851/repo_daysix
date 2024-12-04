@@ -458,11 +458,36 @@
 	    var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
     </script>
     
+<!--     <script type="text/javascript"> -->
+//     	document.getElementById("btnReply").onclick = function () {
+//     		let form = document.querySelector("[name='replyForm']");
+//     		form.action = "/v1/infra/concert/concertUsrReplyInst";
+//     		form.submit();
+//     	}
+<!--     </script> -->
+    
     <script type="text/javascript">
-    	document.getElementById("btnReply").onclick = function () {
-    		let form = document.querySelector("[name='replyForm']");
-    		form.action = "/v1/infra/concert/concertUsrReplyInst";
-    		form.submit();
+    	document.getElementById("btnReply").onclick = function() {
+    		var replyText = document.querySelector("textarea[name='replyText']").value;
+    		var comments = document.querySelector(".comment");
+    		$.ajax({
+				async : true,
+				cache : false,
+				type : "post"
+				,url : "/v1/infra/concert/replyUsrProc"
+				,success : function(response) {
+					if (response.rt == "success") {
+						
+					} else {
+						alert("bb");
+					}
+				},
+				error : function(jqXHR, textStatus,
+						errorThrown) {
+					alert("ajaxUpdate " + jqXHR.textStatus
+							+ " : " + jqXHR.errorThrown);
+				}
+			});
     	}
     </script>
     
