@@ -3,7 +3,7 @@
 <head>
 <!-- Basic Page Needs -->
 <meta charset="utf-8">
-<title>AMovie - Booking step 3</title>
+<title>AMovie - Booking final</title>
 <meta name="description" content="A Template by Gozha.net">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Gozha.net">
@@ -17,11 +17,18 @@
 <link
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
 	rel="stylesheet">
+<!-- Mono font -->
+<link href='http://fonts.googleapis.com/css?family=PT+Mono'
+	rel='stylesheet' type='text/css'>
 <!-- Roboto -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
 	rel='stylesheet' type='text/css'>
 
 <!-- Stylesheets -->
+<!-- jQuery UI -->
+<link
+	href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
 
 <!-- Mobile menu -->
 <link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css" rel="stylesheet" />
@@ -44,7 +51,7 @@
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper place-wrapper">
 		<!-- Header section -->
 		<header class="header-wrapper">
 			<th:block th:replace="~{usr/v1/infra/include/head :: head}"></th:block>
@@ -68,138 +75,63 @@
 		</div>
 
 		<!-- Main content -->
+
 		<section class="container">
 			<div class="order-container">
 				<div class="order">
-					<img class="order__images" alt='' src="/usr/v1/template/themeforest-1.0.0/images/tickets.png">
+					<img class="order__images" alt='' src="images/tickets.png">
 					<p class="order__title">
-						티켓 예매 <br>
-						<span class="order__descript">신나는 콘서트</span>
+						감사합니다! <br>
+						<span class="order__descript">티켓을 성공적으로 구매하셨습니다.</span>
 					</p>
-					<div class="order__control">
-						<a href="#" class="order__control-btn active">구입</a> <a
-							href="0_book3_reserve.html" class="order__control-btn">예약</a>
+				</div>
+
+				<div class="ticket">
+					<div class="ticket-position">
+						<div class="ticket__indecator indecator--pre">
+							<div class="indecator-text pre--text">온라인 티켓</div>
+						</div>
+						<div class="ticket__inner">
+
+							<div class="ticket-secondary">
+								<span class="ticket__item">티켓 번호 <strong
+									class="ticket__number">a126bym4</strong></span> <span
+									class="ticket__item ticket__date">25/10/2013</span> <span
+									class="ticket__item ticket__time">17:45</span> <span
+									class="ticket__item">콘서트: <span class="ticket__cinema">2024
+										임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르 in 서울</span></span> <span class="ticket__item">공연장:
+									<span class="ticket__hall">KBS부산홀</span>
+								</span> <span class="ticket__item ticket__price">가격: <strong
+									class="ticket__cost">360,000</strong></span>
+							</div>
+
+							<div class="ticket-primery">
+								<span class="ticket__item ticket__item--primery ticket__film">콘서트<br>
+								<strong class="ticket__movie">2024 임한별의 별(別) 전국투어 콘서트
+										〈시작〉 앙코르 in 서울</strong></span> <span
+									class="ticket__item ticket__item--primery">좌석: <span
+									class="ticket__place">11F, 12F, 13F</span></span>
+							</div>
+
+
+						</div>
+						<div class="ticket__indecator indecator--post">
+							<div class="indecator-text post--text">온라인 티켓</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="order-step-area">
-				<div class="order-step first--step order-step--disable ">1.
-					콘서트 &amp; 장소 &amp; 시간</div>
-				<div class="order-step second--step order-step--disable">2. 좌석
-					선택</div>
-				<div class="order-step third--step">3. 체크아웃</div>
-			</div>
 
-			<div class="col-sm-12">
-				<div class="checkout-wrapper">
-					<h2 class="page-heading">가격</h2>
-					<ul class="book-result">
-						<li class="book-result__item">티켓: <span
-							class="book-result__count booking-ticket" th:text="${session.bookCount}">0</span></li>
-						<li class="book-result__item">가격: <span
-							class="book-result__count booking-price" th:text="${session.bookPrice} + '원'">$20</span></li>
-					</ul>
-
-					<h2 class="page-heading">결제 방법 선택</h2>
-					<div class="payment">
-						<a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay1.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay2.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay3.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay4.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay5.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay6.png">
-						</a> <a href="#" class="payment__item"> <img alt=''
-							src="/usr/v1/template/themeforest-1.0.0/images/payment/pay7.png">
-						</a>
-					</div>
-
-					<h2 class="page-heading">연락처 정보</h2>
-
-					<form id='contact-info' method='post' novalidate=""
-						class="form contact-info">
-						<div class="contact-info__field contact-info__field-mail">
-							<input type='email' name='user-mail' placeholder='이메일'
-								class="form__mail" th:value="${session.sessEmailUsr}" readonly>
-						</div>
-						<div class="contact-info__field contact-info__field-tel">
-							<input type='tel' name='user-tel' placeholder='휴대전화'
-								class="form__mail" th:value="${session.sessPhoneUsr}" readonly>
-						</div>
-					</form>
-
-
-				</div>
-
-				<div class="order">
-					<a href="/v1/infra/book/bookUsrFinal"
-						class="btn btn-md btn--warning btn--wide">구입</a>
+				<div class="ticket-control">
+					<a href="#" class="watchlist list--download">다운로드</a> <a href="#"
+						class="watchlist list--print">프린트</a>
 				</div>
 
 			</div>
-
 		</section>
 
-
 		<div class="clearfix"></div>
 
-		<div class="booking-pagination">
-			<a href="/v1/infra/book/bookUsrSecond" class="booking-pagination__prev">
-				<p class="arrow__text arrow--prev">이전 단계</p> <span
-				class="arrow__info">좌석 선택</span>
-			</a> <a href="#" class="booking-pagination__next hide--arrow">
-				<p class="arrow__text arrow--next">다음 단계</p> <span
-				class="arrow__info"></span>
-			</a>
-		</div>
-
-		<div class="clearfix"></div>
-
-		<footer class="footer-wrapper">
-			<section class="container">
-				<div class="col-xs-4 col-md-3 footer-nav">
-					<ul class="nav-link">
-						<li><a href="0_index.html" class="nav-link__item">홈</a></li>
-						<li><a href="0_concertList.html" class="nav-link__item">콘서트</a></li>
-						<li><a href="0_book.html" class="nav-link__item">티켓</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-4 col-md-3 footer-nav">
-					<ul class="nav-link">
-						<li><a href="0_login.html" class="nav-link__item">로그인</a></li>
-						<li><a href="0_signUp.html" class="nav-link__item">회원가입</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<div class="footer-info">
-						<p class="heading-special--small">
-							A.Movie<br>
-							<span class="title-edition">in the social media</span>
-						</p>
-
-						<div class="social">
-							<a href='#' class="social__variant fa fa-facebook"></a> <a
-								href='#' class="social__variant fa fa-twitter"></a> <a href='#'
-								class="social__variant fa fa-vk"></a> <a href='#'
-								class="social__variant fa fa-instagram"></a> <a href='#'
-								class="social__variant fa fa-tumblr"></a> <a href='#'
-								class="social__variant fa fa-pinterest"></a>
-						</div>
-
-						<div class="clearfix"></div>
-						<p class="copy">
-							&copy; Copyright 2024. <a href="0_index.html">Seonho Lee</a> all
-							rights reserved.
-						</p>
-					</div>
-				</div>
-			</section>
-		</footer>
+		<th:block th:replace="~{usr/v1/infra/include/footer :: footer}"></th:block>
 	</div>
 
 	<!-- open/close -->
@@ -253,6 +185,8 @@
 	</script>
 	<!-- Migrate -->
 	<script src="/usr/v1/template/themeforest-1.0.0/js/external/jquery-migrate-1.2.1.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 	<!-- Bootstrap 3-->
 	<script
 		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
@@ -269,6 +203,12 @@
 
 	<!-- Custom -->
 	<script src="/usr/v1/template/themeforest-1.0.0/js/custom.js"></script>
-	
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.top-scroll').parent().find('.top-scroll').remove();
+		});
+	</script>
+
 </body>
 </html>

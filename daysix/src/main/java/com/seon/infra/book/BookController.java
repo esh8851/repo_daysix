@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class BookController {
@@ -43,10 +46,17 @@ public class BookController {
 		return "usr/v1/infra/book/bookUsrThirdBuy";
 	}
 	
+	@RequestMapping(value="/v1/infra/book/bookUsrFinal")
+	public String bookUsrFinal() {
+		return "usr/v1/infra/book/bookUsrFinal";
+	}
+	
 	@ResponseBody
 	@RequestMapping(value="/v1/infra/book/bookUsrProc")
-	public Map<String, Object> bookUsrProc(BookDto bookDto) throws Exception {
+	public Map<String, Object> bookUsrProc(@RequestParam("bookCount") int bookCount, @RequestParam("bookPrice") int bookPrice, HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
+		httpSession.setAttribute("bookCount", bookCount);
+		httpSession.setAttribute("bookPrice", bookPrice);
 		returnMap.put("rt", "success");
 		return returnMap;
 	}

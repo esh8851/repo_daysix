@@ -29,6 +29,7 @@ public class BookDto {
 	private String stName;
 	private Integer stPrice;
 	private Integer stDelNy;
+	
 //	----------------------------- field E -----------------------------
 	
 	

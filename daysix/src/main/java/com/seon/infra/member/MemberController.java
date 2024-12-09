@@ -175,10 +175,14 @@ public class MemberController {
 				httpSession.setAttribute("sessSeqUsr", rtMember2.getMmSeq());
 				httpSession.setAttribute("sessIdUsr", rtMember2.getMmId());
 				httpSession.setAttribute("sessNameUsr", rtMember2.getMmName());
+				httpSession.setAttribute("sessEmailUsr", rtMember2.getMmEmail());
+				httpSession.setAttribute("sessPhoneUsr", rtMember2.getMmPhone());
 				
 				System.out.println("sessSeqUsr: " + httpSession.getAttribute("sessSeqUsr"));
 				System.out.println("sessIdUsr: " + httpSession.getAttribute("sessIdUsr"));
 				System.out.println("sessNameUsr: " + httpSession.getAttribute("sessNameUsr"));
+				System.out.println("sessEmailUsr: " + httpSession.getAttribute("sessEmailUsr"));
+				System.out.println("sessPhoneUsr: " + httpSession.getAttribute("sessPhoneUsr"));
 			
 //				이메일
 //				mailService.sendMailSimple(); //시간이 오래걸리니까 Thread를 쓴다

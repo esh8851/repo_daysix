@@ -328,15 +328,17 @@
 	<script type="text/javascript">
 		document.addEventListener("DOMContentLoaded", function(){
 			document.querySelector(".booking-pagination__next").onclick = function(){
-				var bookcount = document.querySelectorAll(".choosen-place").length;
-				alert(bookcount);
+				var bookCount = document.querySelectorAll(".choosen-place").length;
+				var bookPriceText = document.querySelector(".checked-result").textContent;
+				var bookPriceTrim = bookPriceText.replace("원", "").trim();
+				var bookPrice = parseInt(bookPriceTrim, 10);
 				
 				$.ajax({
 					async: true 
 					,cache: false
 					,type: "post"
 					,url: "/v1/infra/book/bookUsrProc"
-					,data : {bookcount : bookcount}
+					,data : {bookCount : bookCount, bookPrice : bookPrice}
 					,success: function(response) {
 						if(response.rt == "success") {
 							

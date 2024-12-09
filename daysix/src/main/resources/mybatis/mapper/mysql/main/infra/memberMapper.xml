@@ -212,6 +212,8 @@
 			,a.mmId
 			,a.mmPw
 			,a.mmName
+			,a.mmEmail
+			,a.mmPhone
 		FROM
 			member AS a
 		WHERE 1 = 1
