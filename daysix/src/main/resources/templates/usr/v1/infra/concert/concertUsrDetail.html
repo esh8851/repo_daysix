@@ -222,6 +222,7 @@
 					<div class="comment-wrapper">
 						<form id="comment-form" class="comment-form" name="replyForm" method='post'>
 						<input type="hidden" name="concert_concertSeq" th:value="${item?.concertSeq}"/>
+						<input type="hidden" name="member_mmSeq" th:value="${session.sessSeqUsr}"/>
 							<textarea class="comment-form__text"
 								placeholder='댓글을 여기에 작성해주세요.' name="replyText"></textarea>
 							<label class="comment-form__info">250자 내외</label>
@@ -229,7 +230,7 @@
 								class="btn btn-md btn--danger comment-form__btn" id="btnReply">댓글 달기</button>
 						</form>
 
-						<div class="comment-sets">
+						<div class="comment-sets" id="aaa">
 
 							<div class="comment" th:each="replyList:${replyList}">
 								<div class="comment__images">
@@ -241,50 +242,8 @@
 									class="social-used fa fa-facebook"></span><span th:text="${replyList.mmName}"></span></a>
 								<p class="comment__date" th:text="${#dates.format(replyList.replyDateTime, 'yyyy-MM-dd HH:mm:ss')}"></p>
 								<p class="comment__message" th:text="${replyList.replyText}"></p>
-								<a href='#' class="comment__reply">댓글</a>
 							</div>
-
-
-							<div id='hide-comments' class="hide-comments">
-								<div class="comment">
-									<div class="comment__images">
-										<img alt=''
-											src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">
-									</div>
-
-									<a href='#' class="comment__author"><span
-										class="social-used fa fa-facebook"></span>Roberta Inetti</a>
-									<p class="comment__date">today | 03:04</p>
-									<p class="comment__message">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Ut vitae enim sollicitudin,
-										euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
-										ante justo, volutpat at viverra a, mattis in velit. Morbi
-										molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-									<a href='#' class="comment__reply">댓글</a>
-								</div>
-
-								<div class="comment">
-									<div class="comment__images">
-										<img alt=''
-											src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar-olia.jpg">
-									</div>
-
-									<a href='#' class="comment__author"><span
-										class="social-used fa fa-vk"></span>Olia Gozha</a>
-									<p class="comment__date">22.10.2013 | 14:40</p>
-									<p class="comment__message">Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit. Ut vitae enim sollicitudin,
-										euismod erat id, fringilla lacus. Cras ut rutrum lectus. Etiam
-										ante justo, volutpat at viverra a, mattis in velit. Morbi
-										molestie rhoncus enim, vitae sagittis dolor tristique et.</p>
-									<a href='#' class="comment__reply">댓글</a>
-								</div>
-							</div>
-
-							<div class="comment-more">
-								<a href="#" class="watchlist">댓글 더보기</a>
-							</div>
-
+							
 						</div>
 					</div>
 				</div>
@@ -434,8 +393,8 @@
 			});
 		}
 	</script>
-    <!-- btnLogOut E -->
     
+    <!-- Map -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0546a9953a7fe11920be0f6f364412e5"></script>
     <script type="text/javascript">
 		 // 이미지 지도에서 마커가 표시될 위치입니다 
@@ -458,28 +417,51 @@
 	    var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
     </script>
     
-<!--     <script type="text/javascript"> -->
-//     	document.getElementById("btnReply").onclick = function () {
-//     		let form = document.querySelector("[name='replyForm']");
-//     		form.action = "/v1/infra/concert/concertUsrReplyInst";
-//     		form.submit();
-//     	}
-<!--     </script> -->
-    
+    <!-- Reply -->
     <script type="text/javascript">
     	document.getElementById("btnReply").onclick = function() {
     		var replyText = document.querySelector("textarea[name='replyText']").value;
-    		var comments = document.querySelector(".comment");
+    		var concert_concertSeq = parseInt(document.querySelector("[name='concert_concertSeq']").value);
+    		var member_mmSeq = document.querySelector("[name='member_mmSeq']").value;
     		$.ajax({
 				async : true,
 				cache : false,
 				type : "post"
+				,data : {concert_concertSeq : concert_concertSeq, replyText : replyText, member_mmSeq : member_mmSeq}
 				,url : "/v1/infra/concert/replyUsrProc"
 				,success : function(response) {
 					if (response.rt == "success") {
+						var replyDateTime = new Date(response.replyDateTime);
+	                    var formattedDate = replyDateTime.getFullYear() + '-' // 연도 추출
+	                        + String(replyDateTime.getMonth() + 1).padStart(2, '0') + '-' // getMonth는 0월 시작이기 때문에 +1, padStart는 자리수 맞추기 위해 01,02...
+	                        + String(replyDateTime.getDate()).padStart(2, '0') + ' ' 
+	                        + String(replyDateTime.getHours()).padStart(2, '0') + ':' 
+	                        + String(replyDateTime.getMinutes()).padStart(2, '0') + ':' 
+	                        + String(replyDateTime.getSeconds()).padStart(2, '0');
+						raw = "";
+						raw += '<div class="comment">';
+						raw += '<div class="comment__images">';
+						raw += '<img alt="" src="/usr/v1/template/themeforest-1.0.0/images/comment/avatar.jpg">';
+						raw += '</div>';
+						raw += '<a href="#" class="comment__author">';
+						raw += '<span class="social-used fa fa-facebook">';
+						raw += '</span>';
+						raw += '<span>' + response.sessNameUsr;
+						raw += '</span>';
+						raw += '</a>';
+						raw += '<p class="comment__date">' + formattedDate;
+						raw += '</p>';
+						raw += '<p class="comment__message">' + replyText;
+						raw += '</p>';
+						raw += '</div>';
 						
+						$("#aaa").append(raw);
+// 						var commentContainer = document.querySelector(".comment-sets");
+// 						insertAdjacentHTML(위치, 변수)
+// 						commentContainer.insertAdjacentHTML('afterbegin', raw);
+// 						alert(response.replyDateTime);
 					} else {
-						alert("bb");
+// 						by pass
 					}
 				},
 				error : function(jqXHR, textStatus,
@@ -488,6 +470,12 @@
 							+ " : " + jqXHR.errorThrown);
 				}
 			});
+    	}
+    </script>
+    
+    <script type="text/javascript">
+    	document.querySelector(".comment__reply").onclick = function() {
+    		
     	}
     </script>
     

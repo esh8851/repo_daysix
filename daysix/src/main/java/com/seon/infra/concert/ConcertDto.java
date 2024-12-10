@@ -196,6 +196,9 @@ public class ConcertDto {
 		this.replyText = replyText;
 	}
 	public Date getReplyDateTime() {
+		if(this.replyDateTime == null) {
+			return new Date();
+		}
 		return replyDateTime;
 	}
 	public void setReplyDateTime(Date replyDateTime) {

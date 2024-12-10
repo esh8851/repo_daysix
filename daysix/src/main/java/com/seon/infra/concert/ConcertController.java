@@ -5,7 +5,6 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -108,8 +107,12 @@ public class ConcertController {
 	
 	@ResponseBody
 	@RequestMapping(value="/v1/infra/concert/replyUsrProc")
-	public Map<String, Object> replyUsrProc(ConcertDto concertDto) throws Exception {
+	public Map<String, Object> replyUsrProc(HttpSession httpSession, ConcertDto concertDto, Model model) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
+		concertDto.setMember_mmSeq(httpSession.getAttribute("sessSeqUsr").toString());
+		returnMap.put("sessNameUsr", httpSession.getAttribute("sessNameUsr"));
+		returnMap.put("replyDateTime", concertDto.getReplyDateTime());
+		concertService.insertReply(concertDto);
 		returnMap.put("rt", "success");
 		return returnMap;
 	}
