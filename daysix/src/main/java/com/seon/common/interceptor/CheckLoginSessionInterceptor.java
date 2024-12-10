@@ -13,11 +13,25 @@ public class CheckLoginSessionInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		
-		if (request.getSession().getAttribute("sessSeqXdm") != null || request.getSession().getAttribute("sessSeqUsr") != null) {
+		boolean redirectToLogin = false;
+		String redirectUrl = null;
+		
+		if (request.getSession().getAttribute("sessSeqUsr") != null) {
 			// by pass
 		} else {
-			response.sendRedirect(Constants.URL_LOGINFORM_XDM);
-	        return false;
+			redirectToLogin = true;
+			redirectUrl = Constants.URL_LOGINFORM_USR;
+		}
+		if (request.getSession().getAttribute("sessSeqXdm") != null) {
+			// by pass
+		} else {
+			redirectToLogin = true;
+			redirectUrl = Constants.URL_LOGINFORM_XDM;
+		}
+		
+		if(redirectToLogin) {
+			response.sendRedirect(redirectUrl);
+			return false;
 		}
 		
 		return HandlerInterceptor.super.preHandle(request, response, handler);

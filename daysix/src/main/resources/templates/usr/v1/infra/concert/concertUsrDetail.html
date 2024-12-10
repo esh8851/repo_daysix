@@ -105,7 +105,6 @@
                             <p class="movie__option"><strong>공연장 : </strong><span th:text="${item?.hallName}"></span></p>
                             <p class="movie__option"><strong>가수 : </strong><span th:text="${item?.concertSinger}"></span></p>
                             <p class="movie__option"><strong>연령 : </strong><span th:text="${item?.concertAge}"></span>세 이상</p>
-                            <p class="movie__option"><strong>가격 : </strong></p>
 
                             <a href="#" class="comment-link">댓글 : <span th:text="${replyCount}"></span></a>
 
@@ -212,7 +211,7 @@
                 <h2 class="page-heading">공연장</h2>
                 <div class="choose-container">
 
-                    <a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"><span class="show-map">공연장 위치</span><span  class="show-time">공연장 위치</span></a>
+                    <a href="#" id="map-switch" class="watchlist watchlist--map watchlist--map-full"><span class="show-map">카카오 맵</span><span  class="show-time">공연장 위치</span></a>
                     
                     <!-- hiden maps with multiple locator-->
                     <div id="staticMap" style="width:600px;height:350px;margin-top:13px;"></div>
@@ -413,7 +412,15 @@
 	    	position : markerPosition
 	    });
 	    marker.setMap(map);
-	    
+    </script>
+    
+    <script type="text/javascript">
+    	document.getElementById("map-switch").onclick = function() {
+    		var hallWi = "[[${item.hallWi}]]";
+    		var hallGy = "[[${item.hallGy}]]";
+    		var mapUrl = "https://map.kakao.com/link/to/공연장," + hallWi + "," + hallGy;
+    		window.open(mapUrl, '_blank');
+    	}
     </script>
     
     <!-- Reply -->
