@@ -27,7 +27,8 @@ public class WebMvcConfigurerImpl implements WebMvcConfigurer {
 						"/v1/infra/member/memberUsrInst",
 						"/v1/infra/login/loginUsrSignIn",
 						"/v1/infra/login/loginUsrSignUp",
-						"/v1/infra/index/indexUsrView"
+						"/v1/infra/index/indexUsrView",
+						"/v1/infra/book/bookUsrProc"
 		);
 	}
 

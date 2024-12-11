@@ -145,6 +145,7 @@ public class BookDto {
 		this.stDelNy = stDelNy;
 	}
 	
+	
 //	----------------------------- getter & setter E -----------------------------
 
 }

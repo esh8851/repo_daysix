@@ -77,10 +77,6 @@
 							티켓 예매 <br>
 							<span class="order__descript">신나는 콘서트</span>
 						</p>
-						<div class="order__control">
-							<a href="#" class="order__control-btn active">구입</a> <a href="#"
-								class="order__control-btn">예약</a>
-						</div>
 					</div>
 				</div>
 				<div class="order-step-area">
@@ -229,7 +225,7 @@
 			<a href="/v1/infra/book/bookUsrFirst" class="booking-pagination__prev"> <span
 				class="arrow__text arrow--prev">이전 단계</span> <span
 				class="arrow__info">콘서트&amp;장소&amp;시간</span>
-			</a> <a href="/v1/infra/book/bookUsrThirdBuy" class="booking-pagination__next"> <span
+			</a> <a href="/v1/infra/book/bookUsrThird" class="booking-pagination__next"> <span
 				class="arrow__text arrow--next">다음 단계</span> <span
 				class="arrow__info">체크아웃</span>
 			</a>
@@ -337,11 +333,11 @@
 					async: true 
 					,cache: false
 					,type: "post"
-					,url: "/v1/infra/book/bookUsrProc"
+					,url: "/v1/infra/book/bookUsrSecondProc"
 					,data : {bookCount : bookCount, bookPrice : bookPrice}
 					,success: function(response) {
 						if(response.rt == "success") {
-							
+							alert(fName);
 						} else {
 // 							by pass
 						}

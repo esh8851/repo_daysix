@@ -83,10 +83,6 @@
 						티켓 예매 <br>
 						<span class="order__descript">신나는 콘서트</span>
 					</p>
-					<div class="order__control">
-						<a href="#" class="order__control-btn active">구입</a> <a href="#"
-							class="order__control-btn">예약</a>
-					</div>
 				</div>
 			</div>
 			<div class="order-step-area">
@@ -112,7 +108,7 @@
 		<section class="container">
 			<div class="col-sm-12">
 				<div class="choose-indector choose-indector--film">
-					<strong>선택됨 : </strong><span class="choosen-area"></span>
+					<strong>선택됨 : </strong><span class="choosen-area" name="bookConcert"></span>
 				</div>
 
 				<h2 class="page-heading">날짜</h2>
@@ -138,7 +134,7 @@
 				</div>
 
 				<div class="choose-indector choose-indector--time">
-					<strong>선택됨 : </strong><span class="choosen-area"></span>
+					<strong>선택됨 : </strong><span class="choosen-area" name="bookTime"></span>
 				</div>
 			</div>
 
@@ -251,9 +247,31 @@
     
     <script type="text/javascript">
     	document.querySelector(".booking-pagination__next").onclick = function() {
-	    	var bookConcert = document.querySelector(".choosen-area").textContent;
+	    	var bookConcert = document.querySelector("[name='bookConcert']").textContent;
+	    	var bookTime = document.querySelector("[name='bookTime']").textContent;
+	    	var bookDate = document.getElementById("datepicker").value;
+	    	
+	    	$.ajax({
+				async: true 
+				,cache: false
+				,type: "post"
+				,url: "/v1/infra/book/bookUsrFirstProc"
+				,data : {bookConcert : bookConcert, bookTime : bookTime, bookDate : bookDate}
+				,success: function(response) {
+					if(response.rt == "success") {
+						
+					} else {
+// 						by pass
+					}
+				}
+				,error : function(jqXHR, textStatus, errorThrown){
+					alert("ajaxUpdate " + jqXHR.textStatus + " : " + jqXHR.errorThrown);
+				}
+
+	    	});
+	    	
     	}
     </script>
-
+    
 </body>
 </html>
