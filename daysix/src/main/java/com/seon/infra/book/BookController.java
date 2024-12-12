@@ -48,7 +48,7 @@ public class BookController {
 	}
 	
 	@RequestMapping(value="/v1/infra/book/bookUsrFinal")
-	public String bookUsrFinal() {
+	public String bookUsrFinal(HttpSession httpSession) {
 		return "usr/v1/infra/book/bookUsrFinal";
 	}
 	
@@ -70,6 +70,7 @@ public class BookController {
 	@RequestMapping(value="/v1/infra/book/bookUsrSecondProc")
 	public Map<String, Object> bookUsrProc(@RequestParam("bookCount") int bookCount,
 		@RequestParam("bookPrice") int bookPrice,
+		@RequestParam("bookSeat") String bookSeat,
 		HttpSession httpSession) throws Exception {
 			Map<String, Object> returnMap = new HashMap<String, Object>();
 			httpSession.setAttribute("bookCount", bookCount);

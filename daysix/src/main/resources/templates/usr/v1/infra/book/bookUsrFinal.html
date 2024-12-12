@@ -96,21 +96,19 @@
 							<div class="ticket-secondary">
 								<span class="ticket__item">티켓 번호 <strong
 									class="ticket__number">a126bym4</strong></span> <span
-									class="ticket__item ticket__date">25/10/2013</span> <span
-									class="ticket__item ticket__time">17:45</span> <span
-									class="ticket__item">콘서트: <span class="ticket__cinema">2024
-										임한별의 별(別) 전국투어 콘서트 〈시작〉 앙코르 in 서울</span></span> <span class="ticket__item">공연장:
+									class="ticket__item ticket__date" th:text="${session.bookDate}"></span> <span
+									class="ticket__item ticket__time" th:text="${session.bookTime}"></span> <span
+									class="ticket__item">콘서트: <span class="ticket__cinema" th:text="${session.bookConcert}"></span></span> <span class="ticket__item">공연장:
 									<span class="ticket__hall">KBS부산홀</span>
 								</span> <span class="ticket__item ticket__price">가격: <strong
-									class="ticket__cost">360,000</strong></span>
+									class="ticket__cost" th:text="${session.bookPrice}"></strong></span>
 							</div>
 
 							<div class="ticket-primery">
 								<span class="ticket__item ticket__item--primery ticket__film">콘서트<br>
-								<strong class="ticket__movie">2024 임한별의 별(別) 전국투어 콘서트
-										〈시작〉 앙코르 in 서울</strong></span> <span
+								<strong class="ticket__movie" th:text="${session.bookConcert}"></strong></span> <span
 									class="ticket__item ticket__item--primery">좌석: <span
-									class="ticket__place">11F, 12F, 13F</span></span>
+									class="ticket__place" th:text="${session.bookSeat}"></span></span>
 							</div>
 
 
