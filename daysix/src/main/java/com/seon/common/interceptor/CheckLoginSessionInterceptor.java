@@ -13,22 +13,23 @@ public class CheckLoginSessionInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		
-		if (request.getSession().getAttribute("sessSeqUsr") != null || request.getSession().getAttribute("sessSeqXdm") != null) {
+		if (request.getSession().getAttribute("sessSeqUsr") != null) {
 //			by pass
 		} else {
 			response.sendRedirect(Constants.URL_LOGINFORM_USR);
 			return false;
 		}
 		
-		if (request.getSession().getAttribute("sessSeqXdm") != null || request.getSession().getAttribute("sessSeqUsr") != null) {
+		if (request.getSession().getAttribute("sessSeqXdm") != null) {
 //			by pass
 		} else {
 			response.sendRedirect(Constants.URL_LOGINFORM_XDM);
 			return false;
 		}
 		
+		
 		return HandlerInterceptor.super.preHandle(request, response, handler);
+		
 	}
-	
 	
 }

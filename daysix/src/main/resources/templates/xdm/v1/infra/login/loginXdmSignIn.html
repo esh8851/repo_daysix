@@ -310,11 +310,7 @@
 				,data : { "mmId" : $("#mmId").val(), "mmPw" : $("#mmPw").val()}
 				,success: function(response) {
 					if(response.rt == "success") {
-						if(response.changePwd == "true") {
-							location.href = "/v1/infra/index/indexXdmView";
-						} else {
-// 							by pass
-						}
+						location.href = "/v1/infra/index/indexXdmView";
 					} else {
 // 				 		validation
 				 		mmId.style.borderColor = '#ff3e1d';
