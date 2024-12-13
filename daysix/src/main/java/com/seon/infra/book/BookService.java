@@ -19,6 +19,10 @@ public class BookService {
 		return bookDao.selectListTicket();
 	}
 	
+	public List<BookDto> selectListTicketTime() {
+		return bookDao.selectListTicketTime();
+	}
+	
 	public List<BookDto> selectListSeatA(BookDto bookDto) {
 		return bookDao.selectListSeatA(bookDto);
 	}

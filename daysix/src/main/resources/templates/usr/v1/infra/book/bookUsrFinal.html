@@ -79,7 +79,7 @@
 		<section class="container">
 			<div class="order-container">
 				<div class="order">
-					<img class="order__images" alt='' src="images/tickets.png">
+					<img class="order__images" alt='' src="/usr/v1/template/themeforest-1.0.0/images/tickets.png">
 					<p class="order__title">
 						감사합니다! <br>
 						<span class="order__descript">티켓을 성공적으로 구매하셨습니다.</span>
@@ -95,20 +95,20 @@
 
 							<div class="ticket-secondary">
 								<span class="ticket__item">티켓 번호 <strong
-									class="ticket__number">a126bym4</strong></span> <span
+									class="ticket__number" th:text="${session.bookNo}"></strong></span> <span
 									class="ticket__item ticket__date" th:text="${session.bookDate}"></span> <span
 									class="ticket__item ticket__time" th:text="${session.bookTime}"></span> <span
 									class="ticket__item">콘서트: <span class="ticket__cinema" th:text="${session.bookConcert}"></span></span> <span class="ticket__item">공연장:
-									<span class="ticket__hall">KBS부산홀</span>
+									<span class="ticket__hall" th:text="${session.bookHall}"></span>
 								</span> <span class="ticket__item ticket__price">가격: <strong
-									class="ticket__cost" th:text="${session.bookPrice}"></strong></span>
+									class="ticket__cost" th:text="${#numbers.formatInteger(session.bookPrice, 3, 'COMMA')}"></strong></span>
 							</div>
 
 							<div class="ticket-primery">
 								<span class="ticket__item ticket__item--primery ticket__film">콘서트<br>
 								<strong class="ticket__movie" th:text="${session.bookConcert}"></strong></span> <span
 									class="ticket__item ticket__item--primery">좌석: <span
-									class="ticket__place" th:text="${session.bookSeat}"></span></span>
+									class="ticket__place" th:text="${session.bookSeats}"></span></span>
 							</div>
 
 

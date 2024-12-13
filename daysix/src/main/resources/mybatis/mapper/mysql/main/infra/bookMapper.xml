@@ -21,12 +21,19 @@
 	
 	<select id="selectListTicket" resultMap="resultMapObj">
 		SELECT
-			a.tkSeq
-			,a.tkTime
-			,b.hallName
+			a.hallName
+		FROM
+			concerthall AS a
+	</select>
+	
+	<select id="selectListTicketTime" resultMap="resultMapObj">
+		SELECT
+			a.tkTime
 		FROM
 			ticket AS a
 		LEFT JOIN concerthall AS b ON b.hallSeq = a.concertHall_hallSeq
+		WHERE 1 = 1
+			AND 
 	</select>
 	
 	<select id="selectListSeatA" resultMap="resultMapObj">

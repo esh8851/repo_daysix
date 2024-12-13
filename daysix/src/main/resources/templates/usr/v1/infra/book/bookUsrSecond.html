@@ -326,19 +326,25 @@
 			document.querySelector(".booking-pagination__next").onclick = function(){
 				var bookCount = document.querySelectorAll(".choosen-place").length;
 				var bookSeat = document.querySelectorAll(".choosen-place");
+				var bookSeats = [];
+				bookSeat.forEach(function(span){
+					bookSeats.push(span.textContent);
+				});
 				var bookPriceText = document.querySelector(".checked-result").textContent;
 				var bookPriceTrim = bookPriceText.replace("원", "").trim();
 				var bookPrice = parseInt(bookPriceTrim, 10);
+				
+				var bookNo = Math.random().toString(16).substr(2,6);
 				
 				$.ajax({
 					async: true 
 					,cache: false
 					,type: "post"
 					,url: "/v1/infra/book/bookUsrSecondProc"
-					,data : {bookCount : bookCount, bookPrice : bookPrice, bookSeat : bookSeat}
+					,data : {bookCount : bookCount, bookPrice : bookPrice, bookSeats : bookSeats, bookNo : bookNo}
 					,success: function(response) {
 						if(response.rt == "success") {
-							alert(bookSeat);
+							
 						} else {
 // 							by pass
 						}

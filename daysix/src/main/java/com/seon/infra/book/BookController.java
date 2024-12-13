@@ -6,7 +6,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +22,7 @@ public class BookController {
 	public String bookUsrFirst(Model model, BookDto bookDto) {
 		model.addAttribute("list", bookService.selectList(bookDto));
 		model.addAttribute("listTicket", bookService.selectListTicket());
+		model.addAttribute("listTicketTime", bookService.selectListTicketTime());
 		return "usr/v1/infra/book/bookUsrFirst";
 	}
 	
@@ -48,7 +48,7 @@ public class BookController {
 	}
 	
 	@RequestMapping(value="/v1/infra/book/bookUsrFinal")
-	public String bookUsrFinal(HttpSession httpSession) {
+	public String bookUsrFinal() {
 		return "usr/v1/infra/book/bookUsrFinal";
 	}
 	
@@ -57,11 +57,13 @@ public class BookController {
 	public Map<String, Object> bookUsrProc(@RequestParam("bookConcert") String bookConcert,
 			@RequestParam("bookTime") String bookTime,
 			@RequestParam("bookDate") String bookDate,
+			@RequestParam("bookHall") String bookHall,
 			HttpSession httpSession) throws Exception {
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		httpSession.setAttribute("bookConcert", bookConcert);
 		httpSession.setAttribute("bookTime", bookTime);
 		httpSession.setAttribute("bookDate", bookDate);
+		httpSession.setAttribute("bookHall", bookHall);
 		returnMap.put("rt", "success");
 		return returnMap;
 	}
@@ -70,11 +72,15 @@ public class BookController {
 	@RequestMapping(value="/v1/infra/book/bookUsrSecondProc")
 	public Map<String, Object> bookUsrProc(@RequestParam("bookCount") int bookCount,
 		@RequestParam("bookPrice") int bookPrice,
-		@RequestParam("bookSeat") String bookSeat,
+		@RequestParam("bookSeats") String [] bookSeats,
+		@RequestParam("bookNo") String bookNo,
 		HttpSession httpSession) throws Exception {
 			Map<String, Object> returnMap = new HashMap<String, Object>();
 			httpSession.setAttribute("bookCount", bookCount);
 			httpSession.setAttribute("bookPrice", bookPrice);
+			String bookSeatJoin = String.join(",", bookSeats);
+			httpSession.setAttribute("bookSeats", bookSeatJoin);
+			httpSession.setAttribute("bookNo", bookNo);
 			returnMap.put("rt", "success");
 		return returnMap;
 	}

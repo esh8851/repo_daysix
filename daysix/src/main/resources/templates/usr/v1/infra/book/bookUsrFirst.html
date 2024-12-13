@@ -125,14 +125,14 @@
 				<div class="time-select time-select--wide">
 					<div class="time-select__group group--first">
 						<div class="col-sm-3">
-							<p class="time-select__place" th:each="listTicket, iterStat:${listTicket}" th:text="${iterStat.index == 0 ? listTicket.hallName : ''}"></p>
+							<p class="time-select__place" th:each="listTicket:${listTicket}" th:text="${listTicket.hallName}">aaa</p>
 						</div>
-						<ul class="col-sm-6 items-wrap">
-							<li class="time-select__item" th:each="listTicket:${listTicket}" th:text="${listTicket.tkTime}" th:attr="data-time=${listTicket.tkTime}"></li>
+						<ul class="col-sm-9 items-wrap">
+							<li class="time-select__item" th:each="listTicketTime:${listTicketTime}" th:text="${listTicketTime.tkTime}">09:00
+							</li>
 						</ul>
 					</div>
 				</div>
-
 				<div class="choose-indector choose-indector--time">
 					<strong>선택됨 : </strong><span class="choosen-area" name="bookTime"></span>
 				</div>
@@ -250,13 +250,14 @@
 	    	var bookConcert = document.querySelector("[name='bookConcert']").textContent;
 	    	var bookTime = document.querySelector("[name='bookTime']").textContent;
 	    	var bookDate = document.getElementById("datepicker").value;
+	    	var bookHall = document.querySelector(".time-select__place").textContent;
 	    	
 	    	$.ajax({
 				async: true 
 				,cache: false
 				,type: "post"
 				,url: "/v1/infra/book/bookUsrFirstProc"
-				,data : {bookConcert : bookConcert, bookTime : bookTime, bookDate : bookDate}
+				,data : {bookConcert : bookConcert, bookTime : bookTime, bookDate : bookDate, bookHall : bookHall}
 				,success: function(response) {
 					if(response.rt == "success") {
 						

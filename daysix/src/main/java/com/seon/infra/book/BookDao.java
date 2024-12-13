@@ -11,6 +11,8 @@ public interface BookDao {
 	
 	public List<BookDto> selectListTicket();
 	
+	public List<BookDto> selectListTicketTime();
+	
 	public List<BookDto> selectListSeatA(BookDto bookDto);
 	
 	public List<BookDto> selectListSeatB(BookDto bookDto);
