@@ -1,0 +1,248 @@
+<!doctype html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+<!-- Basic Page Needs -->
+<meta charset="utf-8">
+<title>AMovie - Movie list</title>
+<meta name="description" content="A Template by Gozha.net">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Gozha.net">
+
+<!-- Mobile Specific Metas-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta content="telephone=no" name="format-detection">
+
+<!-- Fonts -->
+<!-- Font awesome - icon font -->
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
+<!-- Roboto -->
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,700'
+	rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<!-- jQuery UI -->
+<link
+	href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css"
+	rel="stylesheet">
+
+<!-- Mobile menu -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/gozha-nav.css"
+	rel="stylesheet" />
+<!-- Select -->
+<link
+	href="/usr/v1/template/themeforest-1.0.0/css/external/jquery.selectbox.css"
+	rel="stylesheet" />
+
+<!-- Custom -->
+<link href="/usr/v1/template/themeforest-1.0.0/css/style.css?v=1"
+	rel="stylesheet" />
+
+<link rel="stylesheet"
+	href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+
+<!-- Modernizr -->
+<script src="js/external/modernizr.custom.js"></script>
+
+<!-- 0_style.css -->
+<link rel="stylesheet"
+	href="/usr/v1/template/themeforest-1.0.0/css/0_style.css">
+
+<!-- Favicon -->
+<link rel="icon" href="0_images/img-cat.jpg">
+
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- Header section -->
+		<header class="header-wrapper">
+			<th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
+		</header>
+
+		<!-- Search bar -->
+		<div class="search-wrapper">
+			<div class="container container--add">
+				<form id='search-form' method='get' class="search">
+					<input type="text" class="search__field" placeholder="찾기">
+					<select name="sorting_item" id="search-sort" class="search__sort"
+						tabindex="0">
+						<option value="1" selected='selected'>콘서트</option>
+						<option value="2">가수</option>
+						<option value="3">장르</option>
+					</select>
+					<button type='submit' class="btn btn-md btn--danger search__button">콘서트
+						검색</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Main content -->
+		<section class="container">
+			<div class="col-sm-12">
+				<h2 class="page-heading">예매 목록</h2>
+				<!-- Movie preview item -->
+				<div class="movie movie--preview movie--full">
+
+					<div class="col-sm-11 col-md-12 col-lg-12 movie__about">
+
+						<div class="d-flex" th:each="listBook:${listBook}" style="border:1px solid #4c4145;padding:30px;border-radius:15px 0 0 0;margin-bottom:30px;">
+							<div class="first-line">
+								<p class="movie__option">
+									<strong>티켓 번호 : </strong><span th:text="${listBook.bkNo}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>티켓 가격 : </strong><span th:text="${#numbers.formatInteger(listBook.bkPrice, 3, 'COMMA')}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>예약 일시 : </strong><span th:text="${#dates.format(listBook.bkReg,'yyyy-MM-dd HH:mm:ss')}"></span>
+								</p>
+
+							</div>
+							<div class="second-line">
+								<p class="movie__option">
+									<strong>공연장 : </strong><span th:text="${listBook.bkHall}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>시간 : </strong><span th:text="${listBook.bkTime}"></span>
+								</p>
+								<p class="movie__option">
+									<strong>좌석 : </strong><span th:text="${listBook.bkSeat}"></span>
+								</p>
+							</div>
+							<div class="third-line">
+								<p class="movie__option">
+									<strong>공연일 : </strong><span th:text="${listBook.bkDate}"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+
+					<!-- Time table (choose film start time)-->
+					<div class="time-select">
+						<div class="time-select__group">
+							<div class="col-sm-4">
+								<p class="time-select__place">
+									<b>KBS 부산홀</b>
+								</p>
+							</div>
+							<ul class="col-sm-8 items-wrap">
+								<li class="time-select__item" data-time='09:40'>09:40</li>
+								<li class="time-select__item" data-time='13:45'>13:45</li>
+								<li class="time-select__item active" data-time='15:45'>15:45</li>
+								<li class="time-select__item" data-time='19:50'>19:50</li>
+								<li class="time-select__item" data-time='21:50'>21:50</li>
+							</ul>
+						</div>
+					</div>
+					<!-- end time table-->
+
+				</div>
+				<!-- end movie preview item -->
+
+				<div class="coloum-wrapper">
+					<ul class="pagination-leesh d-flex justify-content-center">
+						<li><a href="#"><span><b>이전</b></span></a></li>
+						<li><a href="#"><span><b>1</b></span></a></li>
+						<li><a href="#"><span><b>2</b></span></a></li>
+						<li><a href="#"><span><b>3</b></span></a></li>
+						<li><a href="#"><span><b>다음</b></span></a></li>
+					</ul>
+				</div>
+
+			</div>
+
+		</section>
+
+		<div class="clearfix"></div>
+
+		<th:block th:replace="~{usr/v1/infra/include/footer :: footer}"></th:block>
+	</div>
+
+	<!-- open/close -->
+	<div class="overlay overlay-hugeinc">
+
+		<section class="container">
+
+			<div class="col-sm-4 col-sm-offset-4">
+				<button type="button" class="overlay-close">Close</button>
+				<form id="login-form" class="login" method='get' novalidate=''>
+					<p class="login__title">
+						로그인 <br> <span class="login-edition">welcome to
+							A.Movie</span>
+					</p>
+
+					<div class="social social--colored">
+						<a href='#' class="social__variant fa fa-facebook"></a> <a
+							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
+							class="social__variant fa fa-tumblr"></a>
+					</div>
+
+					<p class="login__tracker">or</p>
+
+					<div class="field-wrap">
+						<input type='email' placeholder='이메일' name='user-email'
+							class="login__input"> <input type='password'
+							placeholder='비밀번호' name='user-password' class="login__input">
+
+						<input type='checkbox' id='#informed' class='login__check styled'>
+						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
+					</div>
+
+					<div class="login__control">
+						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
+						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
+					</div>
+				</form>
+			</div>
+
+		</section>
+	</div>
+
+	<!-- JavaScript-->
+	<!-- jQuery 3.1.1-->
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		window.jQuery
+				|| document
+						.write('<script src="js/external/jquery-3.1.1.min.js"><\/script>')
+	</script>
+	<!-- Migrate -->
+	<script src="js/external/jquery-migrate-1.2.1.min.js"></script>
+	<!-- jQuery UI -->
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<!-- Bootstrap 3-->
+	<script
+		src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+
+	<!-- Mobile menu -->
+	<script src="js/jquery.mobile.menu.js"></script>
+	<!-- Select -->
+	<script src="js/external/jquery.selectbox-0.2.min.js"></script>
+
+	<!-- Stars rate -->
+	<script src="js/external/jquery.raty.js"></script>
+
+	<!-- Form element -->
+	<script src="js/external/form-element.js"></script>
+	<!-- Form validation -->
+	<script src="js/form.js"></script>
+
+	<!-- Custom -->
+	<script src="js/custom.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			init_MovieList();
+		});
+	</script>
+
+</body>
+
+</html>

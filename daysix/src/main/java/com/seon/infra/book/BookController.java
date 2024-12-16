@@ -1,6 +1,7 @@
 package com.seon.infra.book;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +22,7 @@ public class BookController {
 	@RequestMapping(value="/v1/infra/book/bookUsrFirst")
 	public String bookUsrFirst(Model model, BookDto bookDto) {
 		model.addAttribute("list", bookService.selectList(bookDto));
-		model.addAttribute("listTicket", bookService.selectListTicket());
-		model.addAttribute("listTicketTime", bookService.selectListTicketTime());
+		model.addAttribute("listTicket", bookService.selectListTicket(bookDto));
 		return "usr/v1/infra/book/bookUsrFirst";
 	}
 	
@@ -50,6 +50,12 @@ public class BookController {
 	@RequestMapping(value="/v1/infra/book/bookUsrFinal")
 	public String bookUsrFinal() {
 		return "usr/v1/infra/book/bookUsrFinal";
+	}
+	
+	@RequestMapping(value="/v1/infra/book/bookUsrInst")
+	public String bookUsrInst(BookDto bookDto) {
+		bookService.insertBook(bookDto);
+		return "redirect:/v1/infra/book/bookUsrFinal";
 	}
 	
 	@ResponseBody
@@ -83,6 +89,12 @@ public class BookController {
 			httpSession.setAttribute("bookNo", bookNo);
 			returnMap.put("rt", "success");
 		return returnMap;
+	}
+	
+	@RequestMapping(value="/v1/infra/book/bookUsrList")
+	public String bookUsrList(Model model, BookDto bookDto) {
+		model.addAttribute("listBook", bookService.selectListBook(bookDto));
+		return "usr/v1/infra/book/bookUsrList";
 	}
 
 }

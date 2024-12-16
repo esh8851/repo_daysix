@@ -11,16 +11,20 @@ public class BookService {
 	@Autowired
 	BookDao bookDao;
 	
+	public List<BookDto> selectListBook(BookDto bookDto) {
+		return bookDao.selectListBook(bookDto);
+	}
+	
+	public int insertBook(BookDto bookDto) {
+		return bookDao.insertBook(bookDto);
+	}
+	
 	public List<BookDto> selectList(BookDto bookDto) {
 		return bookDao.selectList(bookDto);
 	}
 	
-	public List<BookDto> selectListTicket() {
-		return bookDao.selectListTicket();
-	}
-	
-	public List<BookDto> selectListTicketTime() {
-		return bookDao.selectListTicketTime();
+	public List<BookDto> selectListTicket(BookDto bookDto) {
+		return bookDao.selectListTicket(bookDto);
 	}
 	
 	public List<BookDto> selectListSeatA(BookDto bookDto) {

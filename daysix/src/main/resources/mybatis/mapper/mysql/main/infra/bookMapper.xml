@@ -7,6 +7,50 @@
 
 	<resultMap type="com.seon.infra.book.BookDto" id="resultMapObj"></resultMap>
 	
+	<select id="selectListBook" resultMap="resultMapObj">
+		SELECT
+			a.bkSeq
+			,a.bkNo
+			,a.bkDate
+			,a.bkTime
+			,a.bkConcert
+			,a.bkHall
+			,a.bkPrice
+			,a.bkSeat
+			,a.bkCount
+			,a.bkReg
+			,a.member_mmSeq
+		FROM book AS a
+		ORDER BY
+			a.bkSeq DESC
+	</select>
+	
+	<insert id="insertBook">
+		INSERT INTO book (
+			bkNo
+			,bkDate
+			,bkTime
+			,bkConcert
+			,bkHall
+			,bkPrice
+			,bkSeat
+			,bkCount
+			,bkReg
+			,member_mmSeq
+		) VALUES (
+			#{bkNo}
+			,#{bkDate}
+			,#{bkTime}
+			,#{bkConcert}
+			,#{bkHall}
+			,#{bkPrice}
+			,#{bkSeat}
+			,#{bkCount}
+			,now()
+			,#{member_mmSeq}
+		)
+	</insert>
+	
 	<select id="selectList" resultMap="resultMapObj">
 		SELECT
 			a.concertSeq
@@ -22,18 +66,10 @@
 	<select id="selectListTicket" resultMap="resultMapObj">
 		SELECT
 			a.hallName
-		FROM
-			concerthall AS a
-	</select>
-	
-	<select id="selectListTicketTime" resultMap="resultMapObj">
-		SELECT
-			a.tkTime
-		FROM
-			ticket AS a
-		LEFT JOIN concerthall AS b ON b.hallSeq = a.concertHall_hallSeq
-		WHERE 1 = 1
-			AND 
+			,GROUP_CONCAT(b.tkTime ORDER BY b.tkTime SEPARATOR ' ') AS times
+		FROM concerthall AS a
+		JOIN ticket AS b ON b.concertHall_hallSeq = a.hallSeq
+		GROUP BY a.hallName
 	</select>
 	
 	<select id="selectListSeatA" resultMap="resultMapObj">

@@ -85,40 +85,50 @@
 						<span class="order__descript">티켓을 성공적으로 구매하셨습니다.</span>
 					</p>
 				</div>
-
-				<div class="ticket">
-					<div class="ticket-position">
-						<div class="ticket__indecator indecator--pre">
-							<div class="indecator-text pre--text">온라인 티켓</div>
-						</div>
-						<div class="ticket__inner">
-
-							<div class="ticket-secondary">
-								<span class="ticket__item">티켓 번호 <strong
-									class="ticket__number" th:text="${session.bookNo}"></strong></span> <span
-									class="ticket__item ticket__date" th:text="${session.bookDate}"></span> <span
-									class="ticket__item ticket__time" th:text="${session.bookTime}"></span> <span
-									class="ticket__item">콘서트: <span class="ticket__cinema" th:text="${session.bookConcert}"></span></span> <span class="ticket__item">공연장:
-									<span class="ticket__hall" th:text="${session.bookHall}"></span>
-								</span> <span class="ticket__item ticket__price">가격: <strong
-									class="ticket__cost" th:text="${#numbers.formatInteger(session.bookPrice, 3, 'COMMA')}"></strong></span>
+				
+				<form name="formBook" method="post" action="/v1/infra/book/bookUsrInst">
+					<div class="ticket">
+						<div class="ticket-position">
+							<div class="ticket__indecator indecator--pre">
+								<div class="indecator-text pre--text">온라인 티켓</div>
 							</div>
-
-							<div class="ticket-primery">
-								<span class="ticket__item ticket__item--primery ticket__film">콘서트<br>
-								<strong class="ticket__movie" th:text="${session.bookConcert}"></strong></span> <span
-									class="ticket__item ticket__item--primery">좌석: <span
-									class="ticket__place" th:text="${session.bookSeats}"></span></span>
+							<div class="ticket__inner">
+								<input type="hidden" th:value="${session.sessSeqUsr}" name="member_mmSeq"/>
+								<input type="hidden" th:value="${session.bookNo}" name="bkNo"/>
+								<input type="hidden" th:value="${session.bookCount}" name="bkCount"/>
+								<input type="hidden" th:value="${session.bookDate}" name="bkDate"/>
+								<input type="hidden" th:value="${session.bookTime}" name="bkTime"/>
+								<input type="hidden" th:value="${session.bookConcert}" name="bkConcert"/>
+								<input type="hidden" th:value="${session.bookHall}" name="bkHall"/>
+								<input type="hidden" th:value="${session.bookPrice}" name="bkPrice"/>
+								<input type="hidden" th:value="${session.bookSeats}" name="bkSeat"/>
+	
+								<div class="ticket-secondary">
+									<span class="ticket__item">티켓 번호: <strong class="ticket__number" th:text="${session.bookNo}" name="bkNo"></strong></span>
+									<span class="ticket__item">인원: <strong class="ticket__number"  th:text="${session.bookCount}" name="bkCount"></strong></span>
+									<span class="ticket__item ticket__date" th:text="${session.bookDate}" name="bkDate"></span>
+									<span class="ticket__item ticket__time" th:text="${session.bookTime}" name="bkTime"></span>
+									<span class="ticket__item">콘서트: <span class="ticket__cinema" th:text="${session.bookConcert}" name="bkConcert"></span></span>
+									<span class="ticket__item">공연장: <span class="ticket__hall" th:text="${session.bookHall}" name="bkHall"></span></span>
+									<span class="ticket__item ticket__price">가격: <strong class="ticket__cost" th:text="${#numbers.formatInteger(session.bookPrice, 3, 'COMMA')}" name="bkPrice"></strong></span>
+								</div>
+	
+								<div class="ticket-primery">
+									<span class="ticket__item ticket__item--primery ticket__film">콘서트<br>
+									<strong class="ticket__movie" th:text="${session.bookConcert}"></strong></span> <span
+										class="ticket__item ticket__item--primery">좌석: <span
+										class="ticket__place" th:text="${session.bookSeats}"></span></span>
+								</div>
+	
+	
 							</div>
-
-
-						</div>
-						<div class="ticket__indecator indecator--post">
-							<div class="indecator-text post--text">온라인 티켓</div>
+							<div class="ticket__indecator indecator--post">
+								<div class="indecator-text post--text">온라인 티켓</div>
+							</div>
 						</div>
 					</div>
-				</div>
-
+				</form>
+				
 				<div class="ticket-control">
 					<a href="#" class="watchlist list--download">다운로드</a> <a href="#"
 						class="watchlist list--print">프린트</a>
@@ -132,45 +142,6 @@
 		<th:block th:replace="~{usr/v1/infra/include/footer :: footer}"></th:block>
 	</div>
 
-	<!-- open/close -->
-	<div class="overlay overlay-hugeinc">
-
-		<section class="container">
-
-			<div class="col-sm-4 col-sm-offset-4">
-				<button type="button" class="overlay-close">Close</button>
-				<form id="login-form" class="login" method='get' novalidate=''>
-					<p class="login__title">
-						로그인 <br>
-						<span class="login-edition">welcome to A.Movie</span>
-					</p>
-
-					<div class="social social--colored">
-						<a href='#' class="social__variant fa fa-facebook"></a> <a
-							href='#' class="social__variant fa fa-twitter"></a> <a href='#'
-							class="social__variant fa fa-tumblr"></a>
-					</div>
-
-					<p class="login__tracker">or</p>
-
-					<div class="field-wrap">
-						<input type='email' placeholder='이메일' name='user-email'
-							class="login__input"> <input type='password'
-							placeholder='비밀번호' name='user-password' class="login__input">
-
-						<input type='checkbox' id='#informed' class='login__check styled'>
-						<label for='#informed' class='login__check-info'>회원정보 기억하기</label>
-					</div>
-
-					<div class="login__control">
-						<button type='submit' class="btn btn-md btn--warning btn--wider">로그인</button>
-						<a href="#" class="login__tracker form__tracker">비밀번호를 잊으셨나요?</a>
-					</div>
-				</form>
-			</div>
-
-		</section>
-	</div>
 
 	<!-- JavaScript-->
 	<!-- jQuery 3.1.1-->
@@ -206,6 +177,19 @@
 		$(document).ready(function() {
 			$('.top-scroll').parent().find('.top-scroll').remove();
 		});
+	</script>
+	
+	<script type="text/javascript">
+		window.onload = function () {
+			let form = document.querySelector("[name='formBook']");
+			if (!sessionStorage.getItem('formSubmitted')) {
+	            sessionStorage.setItem('formSubmitted', 'true');
+	            form.action = "/v1/infra/book/bookUsrInst";
+	            form.submit();
+	        } else {
+	        	sessionStorage.removeItem('formSubmitted');
+	        }
+		}
 	</script>
 
 </body>

@@ -123,13 +123,12 @@
 				<h2 class="page-heading">시간</h2>
 
 				<div class="time-select time-select--wide">
-					<div class="time-select__group group--first">
+					<div class="time-select__group group--first" th:each="ticket:${listTicket}">
 						<div class="col-sm-3">
-							<p class="time-select__place" th:each="listTicket:${listTicket}" th:text="${listTicket.hallName}">aaa</p>
+							<p class="time-select__place" th:text="${ticket.hallName}"></p>
 						</div>
 						<ul class="col-sm-9 items-wrap">
-							<li class="time-select__item" th:each="listTicketTime:${listTicketTime}" th:text="${listTicketTime.tkTime}">09:00
-							</li>
+							<li class="time-select__item" th:each="time : ${ticket.times}" th:text="${time}" th:attr="data-time=${time}"></li>
 						</ul>
 					</div>
 				</div>

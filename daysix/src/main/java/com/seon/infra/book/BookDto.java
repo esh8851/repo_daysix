@@ -1,5 +1,9 @@
 package com.seon.infra.book;
 
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+
 public class BookDto {
 	
 //	----------------------------- field S -----------------------------
@@ -29,6 +33,20 @@ public class BookDto {
 	private String stName;
 	private Integer stPrice;
 	private Integer stDelNy;
+	
+	private List<String> times;
+	
+//	book
+	private String bkNo;
+	private String bkDate;
+	private String bkTime;
+	private String bkConcert;
+	private String bkHall;
+	private Integer bkPrice;
+	private String bkSeat;
+	private Integer bkCount;
+	private Date bkReg;
+	private String member_mmSeq;
 	
 //	----------------------------- field E -----------------------------
 	
@@ -143,6 +161,76 @@ public class BookDto {
 	}
 	public void setStDelNy(Integer stDelNy) {
 		this.stDelNy = stDelNy;
+	}
+	
+	
+	public List<String> getTimes() {
+		return times;
+	}
+	public void setTimes(String times) {
+		this.times = Arrays.asList(times.split(" "));
+	}
+	
+	//	book
+	public String getBkNo() {
+		return bkNo;
+	}
+	public void setBkNo(String bkNo) {
+		this.bkNo = bkNo;
+	}
+	public String getBkDate() {
+		return bkDate;
+	}
+	public void setBkDate(String bkDate) {
+		this.bkDate = bkDate;
+	}
+	public String getBkTime() {
+		return bkTime;
+	}
+	public void setBkTime(String bkTime) {
+		this.bkTime = bkTime;
+	}
+	public String getBkConcert() {
+		return bkConcert;
+	}
+	public void setBkConcert(String bkConcert) {
+		this.bkConcert = bkConcert;
+	}
+	public String getBkHall() {
+		return bkHall;
+	}
+	public void setBkHall(String bkHall) {
+		this.bkHall = bkHall;
+	}
+	public Integer getBkPrice() {
+		return bkPrice;
+	}
+	public void setBkPrice(Integer bkPrice) {
+		this.bkPrice = bkPrice;
+	}
+	public String getBkSeat() {
+		return bkSeat;
+	}
+	public void setBkSeat(String bkSeat) {
+		this.bkSeat = bkSeat;
+	}
+	public Integer getBkCount() {
+		return bkCount;
+	}
+	public void setBkCount(Integer bkCount) {
+		this.bkCount = bkCount;
+	}
+	public Date getBkReg() {
+		return bkReg;
+	}
+	public void setBkReg(Date bkReg) {
+		this.bkReg = bkReg;
+	}
+	public String getMember_mmSeq() {
+		return member_mmSeq;
+	}
+	public void setMember_mmSeq(String member_mmSeq) {
+		this.member_mmSeq = member_mmSeq;
 	}
 	
 	

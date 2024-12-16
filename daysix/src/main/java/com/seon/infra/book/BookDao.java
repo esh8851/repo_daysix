@@ -7,11 +7,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookDao {
 	
+	public List<BookDto> selectListBook(BookDto bookDto);
+	
+	public int insertBook(BookDto bookDto);
+	
 	public List<BookDto> selectList(BookDto bookDto);
 	
-	public List<BookDto> selectListTicket();
-	
-	public List<BookDto> selectListTicketTime();
+	public List<BookDto> selectListTicket(BookDto bookDto);
 	
 	public List<BookDto> selectListSeatA(BookDto bookDto);
 	

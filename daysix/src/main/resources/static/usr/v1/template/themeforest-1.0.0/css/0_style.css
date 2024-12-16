@@ -15,6 +15,8 @@
 .btn.active.focus{outline:none ! important;}
 .movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
 
+.ticket-secondary{padding-top:30px;}
+
 
 /******************************* bookUsrSecond S *******************************/
 .sits .sits__checked{width:80px;}
@@ -146,7 +148,7 @@
 
 
 /******************************* ticketBuy S *******************************/
-.first-line{margin-right:100px;}
-.second-line{border-left:1px solid #dbdee1;margin-right:100px;padding-left:100px;}
-.third-line{border-left: 1px solid #dbdee1;padding-left: 100px;}
+.first-line{margin-right:150px;}
+.second-line{border-left:1px solid #dbdee1;margin-right:150px;padding-left:150px;}
+.third-line{border-left: 1px solid #dbdee1;padding-left:100px;}
 /******************************* ticketBuy E *******************************/
