@@ -16,6 +16,7 @@
 .movie__title{max-width:700px ! important;font-weight:bold;cursor:pointer;}
 
 .ticket-secondary{padding-top:30px;}
+.movie__option{white-space:nowrap;}
 
 
 /******************************* bookUsrSecond S *******************************/
@@ -150,5 +151,5 @@
 /******************************* ticketBuy S *******************************/
 .first-line{margin-right:150px;}
 .second-line{border-left:1px solid #dbdee1;margin-right:150px;padding-left:150px;}
-.third-line{border-left: 1px solid #dbdee1;padding-left:100px;}
+.third-line{border-left: 1px solid #dbdee1;padding-left:40px;}
 /******************************* ticketBuy E *******************************/
