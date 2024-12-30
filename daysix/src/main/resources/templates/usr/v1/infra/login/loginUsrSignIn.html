@@ -44,51 +44,7 @@
     <div class="wrapper">
         <!-- Header section -->
         <header class="header-wrapper">
-            <div class="container">
-                <!-- Logo link-->
-                <a href='/v1/infra/index/indexUsrView' class="logo">
-                    <img alt='logo' src="/usr/v1/template/themeforest-1.0.0/images/logo.png">
-                </a>
-                
-                <!-- Main website navigation-->
-                <nav id="navigation-box">
-				<!-- Toggle for mobile menu mode -->
-					<a href="#" id="navigation-toggle">
-				    	<span class="menu-icon">
-				        <span class="icon-toggle" role="button" aria-label="Toggle Navigation">
-				            <span class="lines"></span>
-				        </span>
-				    	</span>
-					</a>
-			
-				<!-- Link navigation -->
-				    <ul id="navigation">
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignIn">로그인</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/login/loginUsrSignUp">회원가입</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="/v1/infra/concert/concertUsrList">콘서트</a>
-				        </li>
-				        <li>
-				            <span class="sub-nav-toggle plus"></span>
-				            <a href="#">콘서트티켓</a>
-				        </li>
-				    </ul>
-				</nav>
-                
-                <!-- Additional header buttons / Auth and direct link to booking-->
-                <div class="control-panel">
-                    <a href="#" class="btn btn--sign">로그인</a>
-                    <a href="#" class="btn btn-md btn--warning btn--book">티켓 예매</a>
-                </div>
-
-            </div>
+            <th:block th:replace="~{/usr/v1/infra/include/head :: head}"></th:block>
         </header>
         
         <!-- Search bar -->
@@ -108,15 +64,9 @@
         
         <!-- Main content -->
                 <form id="form" class="login" method='post' novalidate='' action="/v1/infra/login/loginUsrSignIn">
-                    <p class="login__title">로그인 <br><span class="login-edition">welcome to A.Movie</span></p>
+                    <p class="login__title">로그인 <br><span class="login-edition">welcome to Concert</span></p>
 
-                    <div class="social social--colored">
-                            <a href='#' class="social__variant fa fa-facebook"></a>
-                            <a href='#' class="social__variant fa fa-twitter"></a>
-                            <a href='#' class="social__variant fa fa-tumblr"></a>
-                    </div>
-
-                    <p class="login__tracker">or</p>
+                    <p class="login__tracker"></p>
                     
                     <div class="field-wrap">
                     	<label for="mmId">아이디</label>
@@ -159,12 +109,16 @@
                     <div class="login__control" style="margin-bottom:13px;">
                         <button type='button' class="btn btn-md btn--warning btn--wider" id="btnSignIn">로그인</button>
                     </div>
-                    <a id="kakao-login-btn" href="javascript:loginWithKakao()">
-					  <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="150" alt="카카오 로그인 버튼">
-					</a>
+                    <div class="login__control" style="margin-bottom:13px;">
+                        <a id="kakao-login-btn" href="javascript:loginWithKakao()">
+						  <img src="https://k.kakaocdn.net/14/dn/btroDszwNrM/I6efHub1SN5KCJqLm1Ovx1/o.jpg" width="222"
+						    alt="카카오 로그인 버튼" />
+						</a>
+						<p id="token-result"></p>
+                    </div>
                 </form>
                 
-        <div class="clearfix"></div>
+        <div class="clearfix" style="margin-bottom:138px;"></div>
         
         <th:block th:replace="~{usr/v1/infra/include/footer :: footer}"></th:block>
         
@@ -331,83 +285,12 @@
 		    });
         </script>
         
-        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-        <script type="text/javascript">
-
-	        // 카카오 SDK 초기화
-	        Kakao.init('0546a9953a7fe11920be0f6f364412e5'); 
-	        console.log(Kakao.isInitialized());
-	
-	        // 카카오 로그인 함수
-	        function loginWithKakao() {
-	          Kakao.Auth.authorize({
-	            redirectUri: 'http://localhost:8080/v1/infra/index/indexUsrView',
-	          });
-	        }
-	
-	        // 로그인 성공 후 토큰 확인 및 메시지 전송
-	        function displayToken() {
-	          var token = getCookie('authorize-access-token');
-	
-	          if (token) {
-	            Kakao.Auth.setAccessToken(token);
-	            Kakao.Auth.getStatusInfo()
-	              .then(function (res) {
-	                if (res.status === 'connected') {
-	                  document.getElementById('token-result').innerText =
-	                    'login success, token: ' + Kakao.Auth.getAccessToken();
-	                  
-	                  // 여기서 메시지 API를 호출합니다.
-	                  sendKakaoMessage();
-	                }
-	              })
-	              .catch(function (err) {
-	                console.error(err);
-	                Kakao.Auth.setAccessToken(null);
-	              });
-	          }
-	        }
-	
-	        // 카카오 메시지 보내기 함수
-	        function sendKakaoMessage() {
-	          Kakao.API.request({
-	            url: '/v2/api/talk/memo/default/send',
-	            data: {
-	              template_object: {
-	                object_type: 'text',
-	                text: '카카오 로그인에 성공했습니다! 🎉',
-	                link: {
-	                  web_url: '/usr/v1/infra/index/indexUsrView', // 이동할 URL
-	                  mobile_web_url: '/usr/v1/infra/index/indexUsrView'
-	                }
-	              }
-	            }
-	          })
-	            .then(function (res) {
-	              console.log('메시지 전송 성공', res);
-	              alert('카카오톡으로 로그인 알림 메시지를 보냈습니다!');
-	            })
-	            .catch(function (err) {
-	              console.error('메시지 전송 실패', err);
-	              alert('메시지 전송에 실패했습니다.');
-	            });
-	        }
-	
-	        // 쿠키 가져오는 함수
-	        function getCookie(name) {
-	          var parts = document.cookie.split(name + '=');
-	          if (parts.length === 2) {
-	            return parts[1].split(';')[0];
-	          }
-	        }
-	
-	        // 엔터키 로그인 버튼 활성화
-	        document.addEventListener('keydown', function (event) {
-	          if (event.key == 'Enter') {
-	            document.getElementById('btnLogin').click();
-	          }
-	        });
-        </script>
-        
+        <!-- 카카오 로그인 -->
+		<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.4/kakao.min.js"
+		  integrity="sha384-DKYJZ8NLiK8MN4/C5P2dtSmLQ4KwPaoqAfyA/DfmEc1VDxu4yyC7wy6K1Hs90nka" crossorigin="anonymous"></script>
+		<script>
+		  Kakao.init('0546a9953a7fe11920be0f6f364412e5'); // 사용하려는 앱의 JavaScript 키 입력
+		</script>
+		
 </body>
 </html>
