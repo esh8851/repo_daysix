@@ -14,7 +14,7 @@ java {
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
@@ -43,8 +43,6 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-aws
 	implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-aws', version: '2.2.6.RELEASE'
 	
-	// 카카오 SDK 사용자 로그인 기능
-	implementation 'com.kakao.sdk:v2-user:2.7.4'
 	implementation 'org.json:json:20210307'
 
 }
