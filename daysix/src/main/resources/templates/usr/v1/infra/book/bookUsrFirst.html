@@ -246,8 +246,8 @@
     
     <script type="text/javascript">
 	    document.querySelectorAll(".time-select__item").forEach(function(item) {
+	    	var bookHall = "";
 		    item.onclick = function() {
-		    	let bookHall = "";
 		        if (item.classList.contains("active")) {
 		            let groupElement = item.closest('.time-select__group');
 		            if (groupElement) {
@@ -257,7 +257,6 @@
 		                }
 		            }
 		        }
-		        alert(bookHall);
 		    };
 		});
     </script>
