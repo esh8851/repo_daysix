@@ -245,6 +245,24 @@
     </script>
     
     <script type="text/javascript">
+	    document.querySelectorAll(".time-select__item").forEach(function(item) {
+		    item.onclick = function() {
+		    	let bookHall = "";
+		        if (item.classList.contains("active")) {
+		            let groupElement = item.closest('.time-select__group');
+		            if (groupElement) {
+		                let pElement = groupElement.querySelector('.col-sm-3 .time-select__place');
+		                if (pElement) {
+		                	bookHall = pElement.textContent;
+		                }
+		            }
+		        }
+		        alert(bookHall);
+		    };
+		});
+    </script>
+    
+    <script type="text/javascript">
     	document.querySelector(".booking-pagination__next").onclick = function() {
 	    	var bookConcert = document.querySelector("[name='bookConcert']").textContent;
 	    	var bookTime = document.querySelector("[name='bookTime']").textContent;
@@ -270,7 +288,7 @@
 
 	    	});
 	    	
-    	}
+    	};
     </script>
     
 </body>
